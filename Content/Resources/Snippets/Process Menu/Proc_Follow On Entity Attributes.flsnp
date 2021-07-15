@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table style="mc-table-style: url('../../TableStyles/MG_TableStyle01Grey.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+            </col>
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+            </col>
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                        <p>Attribute</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1" MadCap:conditions="">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Chained Processes</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Processes listed in this table will be initiated at the completion of processes initiated for this entity.</p>
+                        <p>Processes are run in the order listed in this table. Use the <span class="ButtonArrows">Up</span> and <span class="ButtonArrows">Down</span> buttons to move processes around.</p>
+                        <p style="font-weight: normal;"><b>Entity Code</b> - The entity for which a process is to be submitted.</p>
+                        <p style="font-weight: normal;"><b>Process Code</b> - A drop down list of process names which can be run for the selected entity.</p>
+                        <p style="font-weight: normal;"><b>Calendar</b> - The calendar selected here will be used to determine valid processing days for submitting the follow on process.</p>
+                        <p style="font-weight: normal;"><b>Use Calendar Schedule Entity</b> - If selected, calendar schedule functionality is used to overlay the pControl calendar dates to further limit the number of valid processing dates.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Process Chaining Active</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>If selected, the 'chained processes' listed in the table will be initiated in the order displayed in the table.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Sub_Heading" MadCap:pattern="18">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Sub_Heading" colspan="2">
+                        <p colspan="2">Schedule</p>
+                        <p colspan="2" style="font-style: italic;">Note: Schedule attributes are used for the scheduling of the process to be run by this entity, not the chained processes.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Resubmit</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>If selected, this entity's process will be automatically restarted at the dates and times specified below.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Process Start Time</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The time this entity's process will be automatically restarted.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Process End Time</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The time processes are scheduled to stop being resubmitted.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Interval between checks (mins)</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The number of minutes between successful completion of the process and resubmission.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Run until end time parameter is met?</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>If selected, this entity's process will continue to be resubmitted until the 'process end time'.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Run date scheduling calendar</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p style="font-weight: normal;">If selected, calendar schedule functionality is used to overlay pControl calendar dates to further limit the number of valid processing dates.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Run date calendar</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The pControl calendar which specifies the valid dates for submitting / running the process.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Effective date scheduling calendar</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>If selected, calendar schedule functionality is used to overlay pControl calendar dates to further limit the number of valid effective dates.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Effective date calendar</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The pControl calendar which specifies the valid effective dates for the process to be run for.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Use Alternate Calendar Source?</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>If selected, the valid processing dates are derived from the <b class="BufferandFunctionBold">L390: Working Days</b> worktable.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1" MadCap:conditions="">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Align Effective Date with Run Date</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>If selected, the effective date of this process is set to the same date as the run date.</p>
+                        <p style="font-style: italic;">Note: When this option is selected on a 'Run STP Processing' entity, the effective date of the STP process, and all processes in the P400 triggered by this entity to be the same as the run date.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                        <p>Update System State</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                        <p>If selected, this process will be displayed and tracked on the dashboard.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

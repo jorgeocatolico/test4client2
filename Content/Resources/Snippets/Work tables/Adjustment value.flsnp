@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The value of the adjustment to be made. Specifies the:</p>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">$ amount to adjust the component by (if the Adjustment Type is set to $)</li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">% amount to adjust the component by (if the Adjustment Type is set to %).</li>
+        </ul>
+    </body>
+</html>

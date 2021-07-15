@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h3>Process Dependencies</h3>
+        <p>pControl can manage the dependencies using follow on logic, which is attached to most processes in pControl. The below is an example of chaining processes from teh expected price process. </p>
+        <p class="zoom4Detail">
+            <img src="../../Images/NAV Oversight Images/MG_STP_OH3.png" />
+        </p>
+        <h3>Follow On Processing</h3>
+        <p>The process to be ‘chained’ to the entity is defined, along with the entity code for which the chained process applies.  Other attributes that need to be configured include the ‘Trigger Status’ i.e. the status that the initial process needs to be in before the follow-on process will be submitted.</p>
+        <p class="zoom4Detail">
+            <img src="../../Images/NAV Oversight Images/MG_STP_OH4.png" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>When dual authorisation functionality is activated, and a change made to an entity's attributes that requires approval, the pending change will display under the Entities tab of the Pending Changes Dashboard. </p>
+        <p>&#160;</p>
+        <p class="zoom4Detail">
+            <img src="../../Images/Pending Changes/PC_EditEntity.png" />
+        </p>
+        <ol class="stepList">
+            <li class="stepList">
+                <p>Navigate to the entity and make the required changes. For example, deselect the 'Include in Processing' attribute and update the Cut Off Time. Save the changes by selecting &lt;Save&gt;. </p>
+                <p>The 'Include in Processing' attribute has dual authorisation applied. The Cut Off Time attribute does not require dual authorisation. </p>
+            </li>
+            <li class="stepList">The changes with dual authorisation  will display in the pending changes panel on the right hand side. To display all changes including those that do not require dual authorisation, select the &lt;Show all&gt; toggle.</li>
+            <li class="stepList">
+                <p>Transition the record to the appropriate state in the status stream, i.e. 'Ready to Authorise' by selecting from the dual authorisation drop-down menu.</p>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>Where multiple edits are made to the same entity, and at least one of the edits falls under dual authorisation; none of the changes will take effect until the entity has been transitioned.</p>
+                </div>
+            </li>
+            <li class="stepList">
+                <p>The second user, or approver, will now be able to view the entity with the pending change on the Pending Changes dashboard. From here, the approver can select &lt;Review&gt; to navigate to the entity, where the transition can be made. </p>
+                <p class="zoom4Detail">
+                    <img src="../../Images/NAV Oversight Images/PendingChangesDashboardEntities.png" />
+                </p>
+            </li>
+            <li class="stepList">
+                <p class="stepList">The second user will see all changes that have been made on that entity, including those that do not require dual authorisation, in the Pending Changes panel on the right side of the view.</p>
+                <p class="stepList"> <p class="zoom4Detail"><img src="../../Images/NAV Oversight Images/PendingChangesDashboardEntities2.png" /></p></p>
+            </li>
+            <li class="stepList">Transition the entity to the appropriate state. Once transitioned, the entity will no longer appear in the Pending Changes Dashboard.</li>
+        </ol>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

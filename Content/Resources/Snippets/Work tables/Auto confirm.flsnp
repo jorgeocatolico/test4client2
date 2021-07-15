@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>If selected, an order will automatically be confirmed when the order has been executed in the market, the prices received, and entered into pControl and the transaction unitised.</p>
+        <p>Orders can be confirmed manually, or auto confirmation will occur upon unitisation of the order.</p>
+    </body>
+</html>

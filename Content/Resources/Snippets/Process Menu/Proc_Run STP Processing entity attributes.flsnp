@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h3 class="_orange">STP Processing Tab</h3>
+        <table style="mc-table-style: url('../../TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                        <p>Request Processing Field</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1" MadCap:conditions="">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Process Flow</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The name of the process flow, which contains the business rules (code) to be executed when this process is run.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Sub_Heading" MadCap:pattern="18">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Sub_Heading" colspan="2">
+                        <p>Event Handling</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Consume STP Events after Processing</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>If selected, each row of process types listed in the <b class="BufferandFunctionBold">P400: STP Configuration</b> worktable, which are associated to this entity, will have their 'P status' value set to  'C' (Completed)' when this STP process has completed. Therefore, no further processes will be triggered by this STP entity on subsequent days.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Align Processing Date with Effective Date</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>If selected, the effective date on the P400 worktable is used for both the effective date and run date of the STP process.</p>
+                        <p><i>Note: Selecting this check box will effectively make the effective date static, unless the P400 worktable is updated regularly.</i>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                        <p>Cash Flows required for Cash Allocation</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                        <p>If selected, the Cash Allocation and Rebalancing process will be performed on the entity, if records have been loaded to the <b class="BufferandFunctionBold">U110: Cashflows and Orders</b> worktable for the effective date of the process. If there are no cashflows, a message is displayed.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3 class="_orange">Follow on (STP) Tab</h3>
+        <p>Functions available on the Follow on tab for STP are used if there are follow on processes to be completed. </p>
+        <p>Details of each function on the tab are included in the table. </p>
+        <MadCap:snippetBlock src="Proc_Follow On Entity Attributes.flsnp" />
+    </body>
+</html>

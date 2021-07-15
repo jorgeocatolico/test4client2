@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../TableStyles/MG_TableStyle02TableinaTable.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table class="TableStyle-MG_TableStyle02TableinaTable" style="mc-table-style: url('../../TableStyles/MG_TableStyle02TableinaTable.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" style="width: 67px;" />
+            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" style="width: 223px;" />
+            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1" style="text-align: center;">&#160;</th>
+                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1" style="text-align: center;">
+                        <p>&#160;</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1">
+                        <p>Formula</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;" rowspan="3">
+                        <p>Days in </p>
+                        <p>Current</p>
+                        <p> Period</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">
+                        <p>Policy for accruing income or expense for non working days = <b>After</b> non working period or blank or blank</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                        <p>
+                            <MadCap:equation>$\small Days\, in\, Current\, Period\, =\, Effective\, Date\, -\, Last\ Known\, NAV\, Date$</MadCap:equation>
+                        </p>
+                        <table class="TableStyle-MG_TableStyle02TableinaTable" style="mc-table-style: url('../../TableStyles/MG_TableStyle02TableinaTable.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+                            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                            <thead>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1" style="text-align: center;" colspan="2">
+                                        <p colspan="2">Example</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: left;">
+                                        <p>Effective Date</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                        <p>Mon 21 Aug</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: left;">
+                                        <p>Last Known NAV Date</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                        <p>Fri 18 Aug</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font" style="text-align: left;">
+                                        <p>Days in Current Period</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font">
+                                        <p>Mon date - Fri date</p>
+                                        <p>= 3 days</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;" rowspan="2">
+                        <p rowspan="2">Policy for accruing income or expense for non working days = <b>Before</b> non working period</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                        <p>If next calendar day is a non working day: </p>
+                        <p>
+                            <MadCap:equation>$\small Days\, in\, current\, period\,  =\, Next\, Working\, Day\, -\, Last\ Known\, NAV\, Date\, -\, 1$</MadCap:equation>
+                        </p>
+                        <table class="TableStyle-MG_TableStyle02TableinaTable" style="mc-table-style: url('../../TableStyles/MG_TableStyle02TableinaTable.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+                            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                            <thead>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1" style="text-align: center;" colspan="2">
+                                        <p colspan="2">Example</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: left;">
+                                        <p>Effective Date</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                        <p>Sat 19 Aug</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: left;">
+                                        <p>Last Known NAV Date</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                        <p>Fri 18 Aug</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font" style="text-align: left;">
+                                        <p>Days in Current Period</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font">
+                                        <p>Mon date - Fri date -1</p>
+                                        <p>= 2 days</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font">
+                        <p>If next calendar day is a  working day: </p>
+                        <p>
+                            <MadCap:equation>$\small Days\, in\, current\, period\,  =\, Effective\, Date\, -\, Last\ Known\, NAV\, Date$</MadCap:equation>
+                        </p>
+                        <table class="TableStyle-MG_TableStyle02TableinaTable" style="mc-table-style: url('../../TableStyles/MG_TableStyle02TableinaTable.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+                            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                            <thead>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1" style="text-align: center;" colspan="2">
+                                        <p colspan="2">Example</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: left;">
+                                        <p>Effective Date</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                        <p>Fri 18 Aug</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: left;">
+                                        <p>Last Known NAV Date</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                        <p>Thurs 17 Aug</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font" style="text-align: left;">
+                                        <p>Days in Current Period</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font">
+                                        <p>Fri date -Thurs date</p>
+                                        <p>= 1 day</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <table class="TableStyle-MG_TableStyle02TableinaTable" style="mc-table-style: url('../../TableStyles/MG_TableStyle02TableinaTable.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" style="width: 67px;" />
+            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" style="width: 223px;" />
+            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1" style="text-align: center;">&#160;</th>
+                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1" style="text-align: center;">
+                        <p>&#160;</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1">
+                        <p>Formula</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;" rowspan="3">
+                        <p>Days in </p>
+                        <p>Prior</p>
+                        <p> Period</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">
+                        <p>Policy for accruing income or expense for non working days = <b>After</b> non working period or blank or blank</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                        <p>
+                            <MadCap:equation>$\small Days\, in\, Prior\, Period\, =\,  Last\, Known\, NAV\, Date\, -\, Previous\, business\, day\, to\, Last\, Known\, NAV\, Date$</MadCap:equation>
+                        </p>
+                        <p style="font-size: 10pt;font-style: italic;">Note: "Previous business day" is as per the calendar associated to the processing entity.</p>
+                        <table class="TableStyle-MG_TableStyle02TableinaTable" style="mc-table-style: url('../../TableStyles/MG_TableStyle02TableinaTable.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+                            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                            <thead>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1" style="text-align: center;" colspan="2">
+                                        <p colspan="2">Example</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: left;">
+                                        <p>Effective Date</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                        <p>Fri 18Aug</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: left;">
+                                        <p>Last Known NAV Date</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                        <p>Thurs 17 Aug</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font" style="text-align: left;">
+                                        <p>Days in Prior Period</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font">
+                                        <p>Thurs date - Wed date</p>
+                                        <p>= 1 day</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;" rowspan="2">Policy for accruing income or expense for non working days = <b>Before</b> non working period</td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                        <p>If  calendar day after last known NAV date is a non working day: </p>
+                        <p>
+                            <MadCap:equation>$\small Days\, in\, prior\, period\,  =\, Next\, Working\, Day\, after\ Last\ Known\ NAV\ date -\, Last\ Known\, NAV\, Date$</MadCap:equation>
+                        </p>
+                        <table class="TableStyle-MG_TableStyle02TableinaTable" style="mc-table-style: url('../../TableStyles/MG_TableStyle02TableinaTable.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+                            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                            <thead>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1" style="text-align: center;" colspan="2">
+                                        <p colspan="2">Example</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: left;">
+                                        <p>Effective Date</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                        <p>Sat 19 Aug</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: left;">
+                                        <p>Last Known NAV Date</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                        <p>Fri 18 Aug</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font" style="text-align: left;">
+                                        <p>Days in Prior Period</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font">
+                                        <p>Mon date - Fri date</p>
+                                        <p>= 3 days</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font">
+                        <p>If  calendar day after last known NAV date is a  working day: </p>
+                        <p>
+                            <MadCap:equation>$\small Days\, in\, current\, period\,  =\, Effective\, Date\, -\, Last\ Known\, NAV\, Date$</MadCap:equation>
+                        </p>
+                        <table class="TableStyle-MG_TableStyle02TableinaTable" style="mc-table-style: url('../../TableStyles/MG_TableStyle02TableinaTable.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+                            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                            <thead>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1" style="text-align: center;" colspan="2">
+                                        <p colspan="2">Example</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: left;">
+                                        <p>Effective Date</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                        <p>Fri 18 Aug</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: left;">
+                                        <p>Last Known NAV Date</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                        <p>Thurs 17 Aug</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font" style="text-align: left;">
+                                        <p>Days in Prior Period</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font">
+                                        <p>Fri date -Thurs date</p>
+                                        <p>= 1 day</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

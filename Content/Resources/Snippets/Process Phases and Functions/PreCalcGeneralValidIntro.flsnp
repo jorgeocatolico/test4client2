@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The pre-calc validations processing phase contains a number of functions that are used to check that the data loaded in the data load phase is reconciled and validated.</p>
+    </body>
+</html>

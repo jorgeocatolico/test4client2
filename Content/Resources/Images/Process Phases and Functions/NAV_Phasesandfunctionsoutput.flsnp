@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <ul class="FirstLevelBlueBullet">
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Process status messages report the status of this check.</li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the results of this check exceed a tolerance, an exception will be raised and displayed on the Exceptions view</li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Results of this validation check are written to the <b class="BufferandFunctionBold">A99: Validation</b> worktable.</li>
+        </ul>
+    </body>
+</html>

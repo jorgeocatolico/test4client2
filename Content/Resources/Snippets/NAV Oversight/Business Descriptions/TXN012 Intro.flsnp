@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>For each transaction, will fail the test if the profit/loss generated from the transaction is greater than the tolerance set as a % of the entity's previous NAV/GAV.</p>
+        <p>This validation is intended to check each transaction record to ensure that the P&amp;L of the transaction does not represent more than a specified percentage of the entity’s previous valuation.</p>
+        <p>This is a validation that calculates a difference between two values and tests that % difference against the tolerances set for the validation.</p>
+        <p>Will check purchase and sale transactions only.</p>
+    </body>
+</html>

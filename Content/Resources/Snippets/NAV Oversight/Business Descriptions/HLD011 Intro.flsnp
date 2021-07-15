@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Will fail the test if the change in the number of units held in an asset from one pricing point to the next does not equal (% tolerance) the number of units transacted in that asset over the period
+
+This validation is intended to check each holding record to ensure that the change in the number of units held in the asset from the previous pricing point is consistent with the asset transactions that have occurred over the period - which should be the case for all holdings.
+
+This is a validation that calculates a difference between two values and tests that % difference against the tolerances set for the validation.
+</body>
+</html>

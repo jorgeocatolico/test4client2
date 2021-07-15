@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Cash Allocation Post Processing</title>
+        <link href="../../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Cash Allocation Post Processing</h1>
+        <h2 class="_orange">In the Processing Module</h2>
+        <p>The post-processing phase executes any post-processing functions that are required.</p>
+        <p>
+            <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_PostProcessingFunctionsontheCATemplate_1.png" />
+        </p>
+        <h3 class="_orange">Cash Allocation Functions</h3>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Calculate After Positions / Weights - NOT IN pCONTROL</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                    </col>
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                    </col>
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Processing Phase</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Post Processing</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Description</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>This function calculates the after positions / weights for the entity, i.e., the % actual allocation that the fund will have into each of its investments if the proposed orders calculated in a preceding function were executed.</p>
+                                <p>The calculation performed is as follows:</p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">For each investment, the starting investment value is added to the proposed order to generate the proposed / after investment value</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">For each investment, the proposed / after investment value is divided by the total investment value of the fund to calculate the proposed/after weight of the investment and rounded to 4 decimal point.</li>
+                                </ul>
+                                <p>All information on these calculations and tests is written out as status messages.</p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_CalculateAfterPositionsWeights_1.png" />
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Function type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Process Template</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Entity data attributes used</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>None</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Tolerance type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>No tolerance required</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Pre-requisite functions</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The following functions are optional pre-requisites but will impact the starting positions calculated by this function:
+</p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Calculate Liquidity Balance (Cash to Allocate)
+</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Calculate Starting Positions/Weights
+</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Calculate Proposed Orders
+</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Outputs</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">After positions / weights output to the status messages</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Write Proposed Orders - NOT IN pCONTROL</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                    </col>
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                    </col>
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Processing Phase</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Post Processing</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Description</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>This function creates the Proposed Orders records in pControl with one of the following statuses:</p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Exception – if the ‘Run Compliance Rules’ option has been selected (see below for function description) and the proposed order has failed or breached the compliance rules that have been set for the fund, the proposed order is put into a state of ‘Exception’</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Approved – when ‘Automatically Approve Proposed Orders’ attribute is selected, AND the ‘Automatically Approve Proposed Orders to State’ is set to ‘Approved’, the proposed orders are created with Approved state (if compliance rules have not been executed or have passed – see below), physical orders will also be created in pControl.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Calculated – when ‘Automatically Approve Proposed Orders’ attribute is selected, AND the ‘Automatically Approve Proposed Orders to State’ is set to ‘Calculated’, the Proposed Orders are created in a Calculated state (if compliance rules have not been executed or have passed – see below).</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Calculated – Warnings – when ‘Automatically Approve Proposed Order’ is selected AND the ‘Automatically Approve Proposed Orders to State’ is set to ‘Calculated’ together with the event lists configured on the ‘issue Warning on these Events, the proposed orders will be created with a status of Calculated – Warnings if any of the events have been breached. For example, if the Issue Warning attribute has Min / Max Breach listed and the original ideal order breached the minimum or maximum transaction size, then the proposed order will be created with a ‘Calculated-Warning’ status.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Proposed – when ‘Automatically Approve Proposed Order’ is not selected, the proposed order will be created with a status of Proposed if none of the events listed in the ‘Issue Warning on these Events’ attribute have been breached.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Proposed – Warnings – when ‘Automatically Approve Proposed Order’ is not selected or the ‘Do not Automatically Approve on Warnings’ is selected together with the event lists configured on the ‘issue Warning on these Events, the proposed orders will be created with a status of Proposed – Warnings if any of the events have been breached. For example, if the Issue Warning attribute has Min / Max Breach listed and the original ideal order breached the minimum or maximum transaction size, then the proposed order will be created with a ‘Proposed-Warning’ status.</li>
+                                </ul>
+                                <p MadCap:conditions="Note To Selfs.ScreenOnly"><span style="background-color: #00ff00;">Note/s: For details on the fields on a Proposed Order refer to Appendix A – Proposed Order Record Definition</span>. </p>
+                                <p MadCap:conditions="Note To Selfs.ScreenOnly"><span style="background-color: #00ff00;">For full explanation of proposed order states and transitions, refer to Section 5.3.2 Proposed Order Status Stream</span>.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Function type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Process Template </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Entity data attributes used</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>&#160;</p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_WriteProposedOrders.png" />
+                                </p>
+                                <p>Automatically Approve Proposed Orders</p>
+                                <p>&#160;</p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If selected, proposed orders will be automatically approved to a state which is specified in the Automatically Approve Proposed Orders to State.</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">When Automatically Approve Proposed Orders to State = Approved. The proposed orders will be created in Approved state and<ul><li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If ‘Automatically Approve Orders’ is selected – Real orders will also be created in approved state or</li><li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If ‘Automatically Approve Orders’ is not selected – Real orders will also be created in unapproved state.</li></ul></li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">When Automatically Approve Proposed Orders to State = Calculated. The proposed orders will be created in Calculated state</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If not selected, proposed orders will be created in Unapproved state</li>
+                                    <li>Do Not Automatically Approve on Warnings</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If ‘Automatically Approve Proposed Orders’ is not selected and this attribute is selected, the proposed orders that have warnings on them will not automatically be approved. This attribute should be used in conjunction with the warning types listed in the ‘Issue Warning on these Events’ attribute as well as ‘Do Not Automatically Approve on Warnings (with dropdown list).</li>
+                                    <li>
+                                        <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_WriteProposedOrders_2.png" />
+                                    </li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">When Do Not Automatically Approve on Warnings (with dropdown list) = All Proposed Orders, none of the proposed orders will be approved if there are warnings on any other proposed orders.</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">When Do Not Automatically Approve on Warnings (with dropdown list) = Single Proposed Order, then the proposed order that has a warning will not be automatically approved, but other proposed orders (that do not have warnings) will be approved.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If ‘Automatically Approve Proposed Orders’ is not selected and this attribute is also not selected, proposed orders will be created in unapproved state.</li>
+                                </ul>
+                                <p><i>Note: The Liquidity proposed order will always be created in the approved state regardless of whether proposed orders have been set to automatically approve.</i>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Tolerance type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">No tolerance required</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Pre-requisite functions</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Calculate Proposed Orders</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Outputs</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">Creation of proposed / physical orders depending on the attribute settings on the fund and the results of compliance processing.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Import Proposed Orders - NEW</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                    </col>
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                    </col>
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Processing Phase</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Post Processing</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Description</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Function type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">&#160;</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Entity data attributes used</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">&#160;</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Tolerance type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">&#160;</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Pre-requisite functions</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">&#160;</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Outputs</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">&#160;</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

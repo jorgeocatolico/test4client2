@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <ul class="TableListBullets">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Process status messages</li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Where tolerance is breached, the severity of the breach is reported via the Analysis View report, Exceptions dashboard and status messages.</li>
+        </ul>
+    </body>
+</html>

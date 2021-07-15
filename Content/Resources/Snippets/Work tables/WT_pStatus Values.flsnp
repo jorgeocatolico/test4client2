@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../TableStyles/MG_TableStyle01Grey.css');">
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Columncentred" MadCap:pattern="15" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Columncentred-Header1">
+                        <p>p_status value</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                        <p>Status</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                        <p>Processing where status is set</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">?</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">LOAD_IN_PROGRESS</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Take On</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Data is in the process of being loaded. This state is used when the data take on is loading data in batches.</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">A</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ACKNOWLEDGED</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">P135: Import Register</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">There has been an issue with the load i.e. data load has been rejected. This has subsequently been manually transitioned to 'A' to reflect the fact that the issue has been acknowledged. Nothing further will happen with this record.</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">B</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">BEFORE_FINAL_PROCESSING</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Data Poller</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">This status is intended for use in the data poller as an interim state before the record is moved to a completed (C) state.</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">C</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">COMPLETED</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Hand Off</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">All processing has been 'Completed' by pControl. Processing of this record has been finalised.</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">D</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">DUPLICATE</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Take On or Enrichment and Validation</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Duplicate detection has been undertaken (either during the data take on or during the enrichment and validation process) and the record has been identified as a duplicate. (Subject to the duplicate criteria configured).</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">E</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">EXCLUSION_FOR_REC</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Reconciliation</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">This status marks a record as being excluded from the specific reconciliation. Used during prepare data phase. </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">F</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">FIXED</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Various</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Data has been processed by pControl and is now fixed (not editable). Typically used in editable worktable definitions where certain rows must be locked to prevent further processing.</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">G</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">IN_PROGRESS_ERROR</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Enrichment and Validation</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">An exception has occurred during processing. This is an interim state, where the record is awaiting user interaction.</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>I</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>INSERTED</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>User Interface</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Data has been manually keyed or ‘Inserted’ to the worktable via the pControl UI.</p>
+                        <p><i>Note: Should not be set to this state in rules.</i>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>J</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>LOAD_REJECTED</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Take On</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>An issue has arisen during the take on and the data load has been rejected. This is an end state and affects all records in the load.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>L</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>LOADED</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Take On</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Data has been ‘Loaded’ successfully.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>M</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>TRIGGERED FROM POLLER</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Data Poller</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>This is used by the data polling process as an interim state to notify a downstream process.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>N</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>NEW</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>External Load</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Data is ‘New’ and has been brought into pControl via an external system directly i.e. not a data take on. Indicates insertion complete.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>O </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>LOAD_EXCEPTION</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Take On</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>An exception has occurred during the data load phase. This is an interim state, where the record is awaiting user interaction.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>P</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>IN_PROGRESS</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Enrichment and Validation</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Data is in the process of being validated as part of enrichment and validation processing.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>R</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>REC_AMENDED</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Reconciliation</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Used specifically for reconciliations (during data refresh); to reflect the amendment of the reconciliation record.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>S</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>IN_PROGRESS_VALIDATED</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Enrichment and Validation</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Data is valid but is part of a data set that contains both valid and invalid data.</p>
+                        <p>This is an interim state, where the record is awaiting user interaction.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>T</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>REC_DELETED</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Reconciliation</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Used specifically for reconciliations; to reflect the fact that the reconciliation record has been deleted.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>U</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>UPDATED</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>User Interface</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Data has been manually modified or ‘Updated’ to the worktable via the pControl UI.</p>
+                        <p><i>Note: Record can be set to this state in rules if updating item.</i>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>V</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>VALIDATED</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Enrichment and Validation</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The record has been loaded and has completed validation processing successfully.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>W</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>WAITING</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>P135: Import Register</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Only used by the P135 worktable for take ons awaiting files or data to arrive.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>X</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>EXCLUSION</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Enrichment and Validation</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Data has been specifically excluded from further downstream processing.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Columncentred-Row1">
+                        <p>Z</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                        <p>ERROR</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">Enrichment and Validation</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                        <p>Record has failed during the validation phase.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

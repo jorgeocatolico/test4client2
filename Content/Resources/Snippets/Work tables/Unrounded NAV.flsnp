@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The unrounded Net Asset Value  of an entity. This is calculated as:</p>
+        <p style="font-size: 6pt;">&#160;</p>
+        <p style="font-size: 11pt;">
+            <MadCap:equation>$\ {\left (  Entity's\ Gross\ Asset\ Value\ -\ Fees\ and\ Taxes \right)}
+$</MadCap:equation>
+        </p>
+    </body>
+</html>

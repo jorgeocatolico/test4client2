@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This field is automatically populated from Security selected. pControl calculates the date by applying the relevant redemption attributes. Holdback option, type, date, offset and calendar attributes can be edited assuming the user has appropriate security permissions.</p>
+    </body>
+</html>

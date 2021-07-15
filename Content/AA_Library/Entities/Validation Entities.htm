@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Validation Entities</h1>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Library/LY_Validation_ent.flsnp" />
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Types of Validation entities</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>There are two types of validation entities in pControl: Asset Validation and Per Unit Impact Validation.</p>
+                <p>
+                    <img src="../../Resources/Images/NAV Oversight Images/AssetValidationIcon.png" />Asset Validation entities are used for validations which:</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"> have a denominator which is included in the validation calculation i.e. absolute value checks where the denominator is 1.</li>
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">require a basis point impact, calculated using a denominator of NAV/GAV.</li>
+                    <p><i>Note: The 'NAV/GAV denominator' is a mandatory attribute which is specified on the entity the validation is being run for (Data Exports tab). </i>
+                    </p>
+                    <p>&#160;</p>
+                </ul>
+                <p>
+                    <img src="../../Resources/Images/NAV Oversight Images/AssetValidationPUIIcon.png" />Per Unit Impact Validation entities are used for validations which:</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">require a denominator of units on issue.</li>
+                    <p><i>Note: The units on issue denominator values can be sourced from within pControl or from an external source. </i>
+                    </p>
+                </ul>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Validation Entity Example</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <MadCap:snippetBlock src="../../Resources/Snippets/All/ValidationsChecks.flsnp" />
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Validation Entity attributes</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The 'common' data attributes on the validation entity provide general information about the nature of the validation; the classification of the validation, the business description of the test being conducted and the actual formula that is used in the validation, i.e. the 'will fail if' scenarios</p>
+                <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Attribute</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Sub_Heading" MadCap:pattern="18">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Sub_Heading" colspan="2">
+                                <p>Common</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1" MadCap:conditions="">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Validation Classification</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>A drop down field indicating the type of validation check. Values include"\:</p>
+                                <ul class="FirstLevelBlueBullet">
+                                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Source data validation - These validations perform checks on the data used as inputs to a process.</li>
+                                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Valuation Data Validation - These validation checks are performed on the output values of a process. For example if the process calculates a NAV price, any checks performed on that NAV price would fall under this classification.</li>
+                                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Value Add Function - A validation check performed on the values within analysis reporting produced at the end of a process</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Business Description</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>A short description of the check being performed by this validation.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Validation Formula (will fail if)</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>The formula used by the check calculation.</p>
+                                <p style="font-style: italic;">Note: This formula is only displayed for information purposes. pControl rules contains the technical formula used by this check.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Validation Calculation formula</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>Each  pControl validation is specified as an equation with a left hand side (LHS) and right hand side (RHS); this equation forms the 'failure condition' for the validation. </p>
+                        <p>Where the failure condition is specified as:</p>
+                        <p>
+                            <MadCap:equation>$\small u100.base\_ mv\_ close
+
+&lt; &gt; 
+
+	u100.base \_ capital \_ value\ +\ 
+
+u100.base \_ accrued\_ interest$</MadCap:equation>
+                        </p>
+                        <p>LHS of the equation: <MadCap:equation>$\small u100.base\_mv\_close$</MadCap:equation></p>
+                        <p>RHS of the equation: <MadCap:equation>$\small u100.base\_capital\_value\ + u100.base\_accrued\_interest$</MadCap:equation></p>
+                        <p>The validation logic is as follows:</p>
+                        <p>If LHS = RHS, then</p>
+                        <ul class="FirstLevelBlueBullet">
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Check Value = 0 (validation always passes unless tolerance is set to 0)</li>
+                        </ul>
+                        <p>Else, if LHS = 0, then </p>
+                        <ul class="FirstLevelBlueBullet">
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Check Value = a value other than 0. </li>
+                        </ul>
+                        <p>Else </p>
+                        <ul class="FirstLevelBlueBullet">
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                                <MadCap:equation>$\small Check\ value\ =\ \left (\frac{RHS}{LHS} \right )\ -1$</MadCap:equation>
+                            </li>
+                        </ul>
+                        <p>The 'check value' is then compared against the tolerances set for the validation  (if the validation is not simply a true/false validation). Where the check value is greater than the tolerance specified, an exception will be raised. Check values, (and exceptions) are reported in the following places:</p>
+                        <ul>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Process status messages</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Process detail worktables, (e.g. A07, A02)</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Exception events (if the tolerance is breached)</li>
+                        </ul>
+                        <div class="note_label">Note</div>
+                        <div class="note_content">
+                            <p>The business description and validation formula displayed on validation entities is for information purposes only. pControl rules contain the actual validation formula used by this check.</p>
+                        </div>
+                        <p>&#160;</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Validation Configuration</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" style="width: 92px;" />
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                        <p>Attribute</p>
+                                    </th>
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                        <p>Description</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Sub_Heading" MadCap:pattern="18">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Sub_Heading" colspan="2">
+                                        <p>Validation Configuration</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Rules File</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>This field contains the name of the rules file which is executed when this validation check is performed.</p>
+                                        <p><i>Note: The contents of this rule file cannot be viewed via the web or processing modes.</i>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1" MadCap:conditions="">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Exception Event Calculation Details Rules</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>A drop down list of the criteria fields an auto clearance rule requires, and to support any APIs needed.</p>
+                                        <p><i>Note: Auto clearance of exceptions will only occur on those fund entities configured to allow auto clearance. For further details, refer to </i>
+                                            <MadCap:xref href="../../C_Process/Exceptions.htm#Auto_Clearance" style="font-style: italic;">Auto Clearance </MadCap:xref><i>.</i>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Run On Initialisation</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>If selected, this validation check will  be run when the process is run in initialisation mode.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Validation Type</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>This identifies what type of data this validation will be performed on, i.e., Holding, Transaction, Product, Category or Entity.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Comparison Type</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>This determines how the value calculated by the validation will be compared to the tolerance that has been set for the validation for this entity:</p>
+                                        <p><b>Absolute</b>: if the absolute calculated value is greater than the tolerance value then tolerance is breached. </p>
+                                        <p><b>Less than</b>: if the calculated value is less than tolerance value then the tolerance is breached.</p>
+                                        <p><b>Greater than</b>: if the calculated value is greater than the tolerance value then the tolerance is breached.</p>
+                                        <p><b>Not equal</b>: if the calculated value is not equal to the tolerance value then the tolerance is breached.</p>
+                                        <p><b>Equal</b>: if the calculated value is equal to the tolerance value then the tolerance is breached.</p>
+                                        <p><b>Not applicable</b>: if the validation does not require a comparison to the tolerance, e.g. it is testing for a zero cost base or zero market value so is not a comparison test but a TRUE/FALSE test.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Tolerance Value Type</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>This determines whether the value calculated by the validation and the tolerance specified is a:</p>
+                                        <ul class="TableListBullets">
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">percentage figure</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">basis point figure or</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">flat amount.</li>
+                                        </ul>
+                                        <p style="font-style: italic;">Note: The validation entities will be pre-configured to have the correct value type and should only be updated after careful consideration of the impact.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Format String</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>This determines how the output from the validation will be presented via the status messages and in pControl worktables, e.g. the format mask determining the number of decimal places shown, whether the value will be shown as a percentage, commas for thousand separators and any other standard formatting masks supported by the pControl 'FormatDecimal' function.</p>
+                                        <p>Examples of formatting masks that could be entered into this field are provided below:</p>
+                                        <ul class="TableListBullets">
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">0.0000 - show value with 4 decimal places.</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">0.00% - present the value as a percent, showing two decimal places and with a percent sign.</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">###,###.00 - present the value showing two decimal places with commas for thousand separators.</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">AUD0.00 - present the value showing two decimal places with the text 'AUD' prefixing the number.</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">0.00bp - present the value showing two decimal places with the text 'bp' suffixing the number.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Status / Override Message</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>Text entered into this field will be used to prefix all status messages and exception events produced from this validation, e.g. if the text string 'SECURITY TEAM' was entered, then any status message or exception event produced by this validation would have the text string 'SECURITY TEAM' at the start of the message. </p>
+                                        <p>The intention of this function is so that specific validations can easily be identified for specific purposes, e.g. to allocate to a specific team of people for resolution.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Fixed Comment Lists</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>Multiple pre-configured comment lists that can be linked to a validation entity according to various reporting locations. If configured, users are able to utilise the fixed comment list when overriding validation exceptions of appending comments in control records. </p>
+                                        <p>When adding the fixed comment lists, the following fields should be populated:</p>
+                                        <ul class="TableListBullets">
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Location - the location where a particular fixed comment list is assigned to.</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Fixed Comment Lists - drop-down lists of pre-defined comments that have been configured in system administration mode.</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Mandatory - if selected, the fixed comment field in exception events / append comment will be populated with the comment from the selected fixed comment list.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Sub_Heading" MadCap:pattern="18">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Sub_Heading" colspan="2">
+                                        <p>Tolerances</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Check Against Tolerances</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>Determines whether the validation will actually check the calculated value against a tolerance or merely calculate the value and report it through status messages and output to the pControl worktables.</p>
+                                        <p>Typically, this box will always be selected. If this was not selected, no exceptions would ever be raised for the validation check, however, the results would still be produced and reported. </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Use Tolerance Entity rather than L200 Tolerances?</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>Some validations allow the use of a tolerance entity rather than the tolerance as specified in the L200: Tolerance worktable. This must be selected if the tolerance entity is to be used. </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Sub_Heading" MadCap:conditions="" MadCap:pattern="18">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Sub_Heading" colspan="2">
+                                        <p>Validation Detail Output</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1" MadCap:conditions="">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Create Summary Record</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>If selected, an additional record will be written to the relevant detail validation worktable showing the total count of process runs, as well as the total count of validation checks performed and tolerance level incurred.</p>
+                                        <p>E.g. "Total runs = 26 | OK = 23 | Exception = 3"</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1" MadCap:conditions="">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Always Export All Detail Output</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>If selected, a record will be written to the relevant detail validation worktable showing the results of all validation checks performed. This includes validation checks that passed, as well as those that breached their tolerance.</p>
+                                        <p>The setting of this attribute at validation entity level means all entities which perform this validation check will have a record written to the detail validation worktable, regardless of whether the  "Export ALL detail output"&#160;attribute at entity level is selected or not.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Sub_Heading" MadCap:conditions="" MadCap:pattern="18">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Sub_Heading" colspan="2">
+                                        <p>Override Summary</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1" MadCap:conditions="">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Group for Override Summary</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>Free format text field. The value in this field is  used for classifying exceptions on the Exceptions View.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Sort Order within the Group</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>This determines the order that the validation entity codes appear within the exception event summary groups. Number '0' is the highest sort order.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Sub_Heading" MadCap:pattern="18">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Sub_Heading">
+                                        <p>Key Indicator</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Sub_Heading">
+                                        <p>&#160;</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                        <p>Key Indicator Category Code</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                        <p>Contains a drop down list of Key Indicator category codes. If selected, the results of this validation check, will be compared to the tolerance, and reported on the VMAS report, and Fund Summary screen.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>&#160;</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Validation entity 'applies to' data attributes</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>The 'applies to' attributes on a validation entity are used to determine which types of instrument or investment category, a specific validation will be applied to. Certain validations are only applicable for specific instrument types i.e. various accrued income checks are only applicable to, or sensible to perform on fixed income securities. </p>
+                        <p>The specific instrument types or categories that are validated by a specific validation can be controlled using the criteria and instrument groups/types attributes.</p>
+                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                        <p>Attribute</p>
+                                    </th>
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                        <p>Description</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Criteria </p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>Determines whether the selected instrument types (those present on the right hand side of the selection box) are to be included in this validation or ‘excluded by this validation.</p>
+                                        <ul class="FirstLevelBlueBullet">
+                                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the criteria is set to ‘Include’ and there are no instrument types selected, the validation will not run.</li>
+                                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the criteria is set to ‘Exclude’ and there are no instrument types selected, the validation will process all instrument groups / types present in the import worktables.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Instrument Groups / Types</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>This is the attribute that can be used to select the set of instrument types which will either be included in this validation or excluded from it. The list of instrument groups / types is driven by the instrument groups and types present in the ‘L220: Instrument Type Mappings’ static worktable where the mapping from client specific instrument codes to pControl instrument types is maintained.</p>
+                                        <p>For example, when loading investment holdings via ‘U100: Investment Holdings’, data enrichment validation will map client specific instrument codes into corresponding pControl instrument types maintained in ‘L220: Investment Type Mappings’.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                        <p>Categories</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                        <p>Where categories are shown in the 'selected' list, (right hand side), this validation check will only be performed on data records with the category code listed. </p>
+                                        <p>If the value of any category exceeds the tolerance set for this validation check, the exception will be reported in the NAV Movement Analysis report, as well as all the other places exceptions are reported.</p>
+                                        <div class="example_label">Example</div>
+                                        <div class="example_content_in_list">
+                                            <p>In processes where [CAT002] - UP Category Impact check is turned on, pControl will perform this check on all investment holding records with a category code that matches one of the codes from the list in the right hand column.</p>
+                                            <p class="zoom4Detail">
+                                                <img src="../../Resources/Images/Library Images/LY_Validation_Catgy_attb.png" alt="" title="" class="greyborder" />
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>&#160;</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Validation entity 'Override Events' attribute</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>The 'Override Events' attribute on the validation entity provides the ability to order exceptions, by the priority of the validation as well as by location. The sort order assigned to the validation, i.e. 1, 2, 3 is defined on the validation entity and different orders can be set for different locations. To sort by location, the location specified on the validation entity must match the Price Release Location selected on the fund, as shown below.</p>
+                        <p>The sort order number may or may not appear on the Exceptions view, subject to data view that is applied. </p>
+                        <p class="zoom4Detail">
+                            <img src="../../Resources/Images/NAV Oversight Images/Entities_SortOrder.png" />
+                        </p>
+                        <p>&#160;</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+    </body>
+</html>

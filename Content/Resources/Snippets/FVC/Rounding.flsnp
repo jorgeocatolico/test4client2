@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Rounding is applied to the prices based on category using the Security Price Rounding Details function on the Validation entity. The default is set to 5 decimal places.</body>
+</html>

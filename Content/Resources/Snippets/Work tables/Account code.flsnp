@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>pControl account code from <b class="BufferandFunctionBold">U104: General Ledger</b>. </p>
+        <p>It will be populated only on export records for individual accounts.</p>
+    </body>
+</html>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>A rebate agreement with a fund manager which is linked to information defining which investment relationships (Originator/Asset) are part of it along with the methodology to use, the frequency to calculate and other data to support the calculation.</p>
+        <p>Defines the rebate agreement entity that contains this investment relationship. </p>
+    </body>
+</html>

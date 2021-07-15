@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>If The 'Calculate Unexplained Values' attribute on the fund entity is selected, these values are calculated using the following formula:</p>
+        <p>
+            <img src="../../Images/NAV Oversight Images/AMAS_VA850_CalculateUnexplainedValues.png" />
+        </p>
+        <p>
+            <MadCap:equation>$\small Unexplained\ Values\ =\ \small Fund\ NAV\ -\ \sum\ constituent\  NAV\ accounts$</MadCap:equation>
+        </p>
+        <p>Unexplained Values represent all constituent accounts that have not been assigned to an account-based category in the AMAS. </p>
+    </body>
+</html>

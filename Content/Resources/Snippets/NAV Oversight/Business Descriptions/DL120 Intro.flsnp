@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Loads external price data from the <b class="BufferandFunctionBold">U101</b> worktable.</p>
+        <p style="font-style: italic;">Note: For oversight pool entities, there is an option to load data from the ‘Masterclass’ entity rather than the pool. To do this select the ‘load from masterclass’ checkbox, and specify the masterclass entity within the <b class="BufferandFunctionBold">[UPC195]</b> attributes of the pool entity.</p>
+        <p style="font-style: italic;">This option is only available on ‘oversight pool’ and ‘oversight class’ entities. It is not available on ‘multi class pool’ or ‘unit/share class’ entities.</p>
+    </body>
+</html>

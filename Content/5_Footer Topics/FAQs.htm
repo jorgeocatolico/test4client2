@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>FAQs</h1>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Process status is 'Waiting'. What is my process waiting for?</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>When a process is in a ‘Waiting’ state in the ‘Data Load’ phase, the process is waiting for one or both of the following:</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Data (records) to arrive in the import worktables which have been configured as mandatory;</li>
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">A control record (i.e. price, distribution rate etc.) for one or more of the entity’s underlying investments to be approved. Once this dependent process is completed and approved, the 'waiting' process will then continue on.</li>
+                </ul>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>In the Unit Pricing module, a manual prerequisite checklist can be configured as part of the unit pricing process. Once selected it becomes a mandatory part of the process, the unit pricing process will refer to that checklist in the<b class="BufferandFunctionBold"> P170: Prerequisite Streams</b> worktable during different process phases. The process will enter a ‘Wait’ state until such time as the checklist has been completed.</p>
+                </div>
+                <p>To determine exactly what an entity is waiting for, there are two methods:</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Processing Status Messages </li>
+                    <ul>
+                        <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Refer to the status messages (Ctrl + S) in the Processing Module; or the 'Status Messages' on the Price Control Summary view. </li>
+                        <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Drill down to the lowest level of the messages, this will indicate the process phase and function which are in the 'wait' state. </li>
+                        <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Refer to the relevant user guide for that function to determine the data requirement for that function. It is most likely the worktable used as the input source for that function has been set to 'Mandatory', and that worktable does not yet have today's data record. Once the record is loaded to that worktable, the process will continue.</li>
+                    </ul>
+                    <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Data Load Monitor – the data load monitor is a pControl worktable [<b class="BufferandFunctionBold">P183</b>] which is used by processing to record all of the ‘wait events’ that the process for a fund is currently waiting for.</li>
+                </ul>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Why is my process in a state of 'Exception'</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>A process is usually in state of 'Exception' because a validation check has breached it's tolerance. The Exception must be investigated, and either overridden, or the underlying data corrected to move past the exception and allow the process to continue.</p>
+                <p>To find the exception, there are two methods:</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Processing Status Messages </li>
+                    <ul>
+                        <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Refer to the status messages (Ctrl + S) in the Processing Module; or the 'Status Messages' on the Price Control Summary view. </li>
+                        <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Drill down to the lowest level of the message in the exception state, this will indicate the process phase and function where the exception occurred, as well as the reason for the exception. </li>
+                        <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The <b class="BufferandFunctionBold">L200: Tolerance</b> record for this validation check will also indicate why the exception occurred.</li>
+                        <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"> The exception can either be overridden on the 'All Prices' (processing mode) screen or the 'Price Control Summary' view (web mode). - Right click on the exception and override the exception. Refer to Processing Volume III guide on the <MadCap:xref href="PDF Downloads.htm">PDF Downloads</MadCap:xref> page for further detail on overriding exceptions.</li>
+                    </ul>
+                    <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Control Record View</li>
+                    <ul>
+                        <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Navigate to the 'All Prices' page (Processing Mode) or 'Price Control Summary' view (Web mode).</li>
+                        <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Select the control record in a state of 'Exception'; The second panel will open.</li>
+                        <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Select the 'Exceptions' tab in the second panel.</li>
+                        <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Locate the exception and investigate. Then either override the exception  by right clicking and selecting 'override'; Or refer back to the <b class="BufferandFunctionBold">L200: Tolerance</b> worktable to determine if the tolerance values are correct; Or check the worktable data used as an input to the process to determine if it is correct.</li>
+                    </ul>
+                </ul>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>Some validation checks in the 'Post Processing Validation' phase, require one or more sources of data in order to perform the validation check. If those data values, or prerequisite process values are not loaded into the process during the 'Data Load' phase,  the validation check may produce erroneous results or no results at all.</p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Why is my process in a state of 'Assistance'?</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>A process will be in a state of 'Assistance' because an error has occurred, or the process has failed.</p>
+                <p>To find the source of the error, refer to the process status messages:</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Navigate to Ctrl + S in the Processing Mode; or the 'Status Messages' on the Price Control Summary view.</li>
+                    <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Drill down to the lowest level of the message in the assistance state, this will indicate the process phase and function where the assistance occurred. The message displayed will indicate the source of assistance. </li>
+                </ul>
+                <p>Investigation of pControl rules and / or infrastructure may be required,</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown MadCap:conditions="Note To Selfs.ScreenOnly">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Why can't I see the same menu as my colleague? </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Your menu is according to user permission therefore it may differ from others. </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

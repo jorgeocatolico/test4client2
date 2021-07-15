@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This methodology allows a different benchmark to be assigned to each holding via the <b class="BufferandFunctionBold">L235: Benchmark Mappings</b> worktable. Some holdings may be 'mapped to self', in which case the security price from the <b class="BufferandFunctionBold">U175: Security Prices</b> worktable is used to revalue the holding.</p>
+        <p>The weighted return of each holding is then calculated using the Daily ROR of the specified benchmark, or the U175 price. The sum of all weighted returns is used in the Expected NAV&#160;calculations.</p>
+    </body>
+</html>

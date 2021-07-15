@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The highest possible tolerance status level, that the breach of validation check could cause. Tolerance statuses, and their respective tolerance values are defined in the Tolerance Value field.</p>
+    </body>
+</html>

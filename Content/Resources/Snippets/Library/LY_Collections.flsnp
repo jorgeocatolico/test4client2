@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Collections are groupings of entities that can either be dynamic groupings, (based on the results of specified search criteria) or static groupings, (a user specified list of entities). Collections allow entities to be grouped and displayed in different ways to the library tree. An entity can belong to one or more collections, whilst remaining on the library tree.</p>
+    </body>
+</html>

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Cash Allocation Process Cashflows</h1>
+        <h2 class="_orange">In the Processing Module</h2>
+        <p>For cash allocation processing to run, pControl requires incoming / outgoing cashflows i.e. application / redemption orders to be present for the top level (receiving) entities. These orders represent the transactions from transfer agencies and registries, and are therefore known as ‘registry orders’. </p>
+        <p>The creation of cashflows/registry orders is incorporated into the cash allocation process via the selection of new process template functions / attributes as shown below.</p>
+        <p>
+            <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_ProcessCashflowsConfigProcessTemplate.png" />
+        </p>
+        <h3 class="_orange">Cash Allocation Functions</h3>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Generate Cashflow Records from Unit Movements</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Processing Phase</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Process Cashflows</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Description</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>This function is typically used by Life Companies for the generation of cashflow records from unit movements based on unit balances loaded into the U108: Units on Issue input worktable as sourced from Life Company policy administration systems.</p>
+                                <p>This function compares the total units on issue loaded today against the total units on issue at the previous working day to calculate a unit inflow or outflow.</p>
+                                <p><i>Note: The unit inflow / outflow calculated here are used in later functions to calculate a cash amount cashflow record.</i>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Function type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Process Template</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Entity data attributes used</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p style="font-style: italic;">Note: The following attributes are located on the policy administration system entity – they define the parameters of the originator of the entries.</p>
+                                <p style="font-style: italic;">Multiple policy administration systems can be used to originate these entries. The parameters below can differ depending on the particular policy administration system.</p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_GenerateCashflowRecordsfromUnitMovements.png" />
+                                </p>
+                                <p><b>Calculate Cash Amount?</b>
+                                </p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If this attribute is selected, pControl will calculate a cash amount and populate the ‘Cash Amount’ field together with the field ‘Calculate Cash Amount’ selected in the U110 Cashflows and Orders worktable.</li>
+                                </ul>
+                                <p>The cash amount will be calculated based on the unit movements between the two working days, X and the latest available price.</p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_CalculateCashAmount_1.png" class="greyborder" />
+                                </p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If this attribute is not selected, pControl will calculate the unit movements and populate the 'Unit Amount' field.</li>
+                                </ul>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_CalculateCashAmount_2.png" class="greyborder" />
+                                </p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Price Type - The type of price i.e. Buy Price, Sell Price etc that should be recorded against the record in the U110 worktable.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Positive Transaction Type - The transaction type that should be recorded against the record in the U110 worktable if the value is a positive amount (i.e. Application).</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Negative Transaction Type - The transaction type that should be recorded against the record in the U110 worktable if the value is a negative amount (i.e. Redemption).</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Tolerance type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>No tolerance required</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Pre-requisite data</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>In order for pControl to generate the cashflow records, the following additional data is required.</p>
+                                <p>U108 Units on Issue – there should be two records present in the U108 worktable with the ‘Unit Mvt Status’ = ‘L’ (for loading) and ‘Calc Unit Mvt’ selected.</p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_CalculateCashAmount_3.png" class="greyborder" />
+                                </p>
+                                <p><i>Note: In order to view ‘Unit Mvt Status’ and ‘Calc Unit Mvt’ fields, the U108 worktable must be in ‘Details’ view (i.e. the ‘Details’ box must be selected on the work area toolbar).</i>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Outputs</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>U110: Cashflows and Orders records containing the unit amount (or with a zero unit amount in preparation for the ‘Calculate Cash Amounts on Cashflow Records’ function).</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Calculate Cash Amounts on Cashflow Records</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Processing Phase</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Process  Cashflows</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Description</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>This function is typically used by Life Companies to convert unit cashflow records created from the 'Generate Cashflow Records from Unit Movements' function into a cash amount, and then record them in the U110: Cashflows worktable.</p>
+                                <p>pControl will retrieve the latest approved unit price for the entity, price run type and price date and will use this price to calculate the cash value of the inflow / outflow (to 2dp).</p>
+                                <p><i>Note: The records in the U110 worktable now contain the cash value and will be used in the ‘Create Registry Order’.</i>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Function type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Process Template</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Entity data attributes used</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>None</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Tolerance type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>No tolerance required</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Pre-requisite functions</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>None</p>
+                                <p style="font-style: italic;">Note: The previous ‘Generate Cashflows from Unit Movements’ function if selected has prepared the U110 worktable records for the calculation of cash. The previous function is not a pre-requisite function – if not selected, the U110 records can be populated directly with all requirements for this function to run.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Outputs</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>The record in the U110: Cashflows and Orders worktable is updated with the cash value.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Create Registry Orders</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Processing Phase</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Process  Cashflows</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Description</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>This function is used to create registry orders using the data in the U110: Cashflows and Orders worktable. These orders are created via the Cash Allocation process based on the ‘Unit Amount’, ‘Cash Amount’ or the combination of both populated in the U110 worktable.</p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_CreateRegistryOrders_1.png" class="greyborder" />
+                                </p>
+                                <p>The registry orders generated simulate the cashflow into the top-level entities that may receive their cash from external registries or transfer agencies, or through direct investment from investors.</p>
+                                <p><i>Note: This function may also include the creation of ‘Reservation Orders’ if these are included in the U110: Cashflows import worktable. If included, these may be subsequently reversed</i>
+                                    <MadCap:conditionalText MadCap:conditions="Note To Selfs.ScreenOnly"><i><span style="background-color: #00ff00;"> see section 4.3.3.1 Reverse Previous Reservation Orders</span>.</i>
+                                    </MadCap:conditionalText>
+                                </p>
+                                <p>This function incorporates the creation of registry orders into the Cash allocation process, replacing the need to run the general process ‘Create Registry Orders’.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Function type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Process Template</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Entity data attributes used</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Date to use for Cash Settlement – allows a choice to be made regarding the date that will be used for the cash settlement of registry orders i.e. the ‘Price Date’ or the ‘Effective Date’ of the U110: Cashflows and Orders record which will influence when the registry transaction hits the configured accounts.</p>
+                                <p><i>Note: If left blank, ‘Price Date’ is the default selection.</i>
+                                </p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_CreateRegistryOrders_2.png" />
+                                </p>
+                                <p><i>Note: The following attribute is located on the Default Processing Attributes entity.</i>
+                                </p>
+                                <p><b>Create Registry Orders in Approved Statu</b>s - Registry orders can be created in an ‘Unapproved’ or ‘Approved’ state. <MadCap:conditionalText MadCap:conditions="Note To Selfs.ScreenOnly"><span style="background-color: #00ff00;">For further details please refer to Section 4.2.5 Default Processing Attributes.</span></MadCap:conditionalText></p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_CreateRegistryOrders_3.png" />
+                                </p>
+                                <p><b>Reservation Order Transaction Types</b> - A reservation is the notification that cash is available to invest or redeem (i.e. for premium receipts, claim notifications and scheme transfers). <MadCap:conditionalText MadCap:conditions="Note To Selfs.ScreenOnly">For further information regarding Reservation Order transaction types <span style="background-color: #00ff00;">refer to section 4.3.3.1 Reverse Previous Reservation Orders</span></MadCap:conditionalText></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Tolerance type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>No tolerance required</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Pre-requisite functions</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>None</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Outputs</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>Registry orders into the top-level or receiving funds (for registry cashflows and reservation orders).</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+    </body>
+</html>

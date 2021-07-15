@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <ul class="FirstLevelBlueBullet">
+            <li style="font-weight: normal;" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Linked Pool</li>
+            <p>An 'Oversight Pool' must be linked to the class entity via the 'Pool Class Relationship' attribute. This is used to determine which pool's expected return % is to be used to calculate the class' expected return. </p>
+            <p>
+                <img src="../../../Images/NAV Oversight Images/NO_Pool_Class_Relationship.png" alt="" title="" />
+            </p>
+            <MadCap:snippetBlock src="../NO_Attribute located under DP tab.flsnp" />
+        </ul>
+    </body>
+</html>

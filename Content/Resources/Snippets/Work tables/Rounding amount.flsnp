@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Captures any rounding amount to be applied to enable the cash amount to equal the contract note. Normally required where the contract note has had the unit price rounded.</p>
+    </body>
+</html>

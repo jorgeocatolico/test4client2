@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This function is only typically used for entities that are historically priced although it can be executed for forward priced entities.
+This check tests whether there has been a significant amount of cash inflow or outflow.  If the check fails, appropriate action will be taken as defined by the tolerance in the L200: Tolerance worktable. </p>
+    </body>
+</html>

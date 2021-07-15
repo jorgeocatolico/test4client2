@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Portfolio Management.ScreenOnly">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Investment Parameters</h1>
+        <p>Investment Parameters work in conjunction with classification structures and are used to apply checks against target weights, and their  tolerances and bounds on any proposed transaction. It is possible to configure investment parameters to a single originator plan and a multi-level plan. </p>
+        <p>The Investment Plans panel displays all plans according to the search criteria selected in the  filters. Selecting a plan, will open the second panel which displays all investment parameters associated with the plan. </p>
+        <h2 class="_orange">Understanding Investment Parameters</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Investment Parameters panel</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <div class="example_label">Example</div>
+                <div class="example_content">
+                    <p>A Portfolio Manager may decide to make changes to Schroders HKD&#160;Infrastructure, one of the assets within the Plan H1 shown below. Any changes made are required to be validated before being committed to the system. Should the changes not fall within the target weight and its associated tolerances and bounds, a hard or soft warning will display indicating each line and its error that requires to be corrected before being validated and committed. It is not possible to commit without passing the validation stage.</p>
+                    <p>&#160;</p>
+                    <p class="zoom4Detail">
+                        <img src="../../Resources/Images/Portfolio Management Images/PM_AllocationParametersCallOuts.png" />
+                    </p>
+                    <p>Investment Parameters can be exported as a .csv or .pdf file and will display as shown on screen. </p>
+                    <p MadCap:conditions="Note To Selfs.ScreenOnly">Updated this screenshot to include the "export" button; needs reviewed</p>
+                </div>
+                <MadCap:snippetBlock src="../../Resources/Snippets/All/Tip - Using the tab key.flsnp" />
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Investment Parameters example</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <div class="example_label">Example</div>
+                <div class="example_content">
+                    <p>Every allocation parameter has an originator, a counterparty and an asset as well as being able to attach a plan. Plans can either be single or multiple originator. The investment structure target weight will always add to 100%, irrelevant of how many levels. </p>
+                    <p>For example, a Single Originator Plan, the Australian Shares Plan invests 30% into Australian Equities, 20% into International Fixed Income, 5% into Domestic Property Sector and 45% into Global Equities, as shown  below. The total target weight of the shares amounts to 100%. In the Investment Parameters panel, the originator will default to the plan name i.e. Australian Shares Plan.</p>
+                    <p class="zoom4Detail">
+                        <img src="../../Resources/Images/Portfolio Management Images/PM_SingleOriginatorSlide.png" />
+                    </p>
+                    <p>For a multiple originator/multi level plan, the counterparties from the single originator plan now become the originators for the next level. For example, the Australian Shares Plan invests 30% into Australian Equities. Australian Equities then invests  into Dollar and Sense AU Equities, Conviction AU Equities and MG Aus-shares. Australian Equities acts as both a counterparty and an originator in multi level plans. The total target weight of the shares across each level will amount to 100% and parameters are set which will apply checks to ensure these investments remain within their bounds and tolerances of the target weights. </p>
+                    <p>In the Investment Parameters panel, it is possible to modify the originator so as to represent a multi-level plan.</p>
+                    <p class="zoom4Detail">
+                        <img src="../../Resources/Images/Portfolio Management Images/PM_InvestmentParametersExample.png" />
+                    </p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Understanding Investment Parameters with Dual Authorisation</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Using dual authorisation</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <MadCap:snippetText src="../../Resources/Snippets/Portfolio Management/PM_DualAuthIntro.flsnp" />
+                </p>
+                <p>&#160;</p>
+                <p class="zoom4Detail">
+                    <img src="../../Resources/Images/Portfolio Management Images/PM_DualAuthInvScreen.png" />
+                </p>
+                <p>&#160;</p>
+                <MadCap:snippetBlock src="../../Resources/Snippets/Portfolio Management/PM_HighlightedRowColours.flsnp" />
+                <MadCap:snippetBlock src="../../Resources/Snippets/Portfolio Management/PM_DualAuthColourDots.flsnp" />
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>If Dual Authorisation is not active, the Authorisation Status column will not be displayed. Authorisation Status transitions will not be available via the ellipsis menu however, the ellipsis will be displayed in red to indicate pending changes. Dual authorisation can be activated via system administration.</p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Modifying Investment Parameters with Dual Authorisation</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To validate a record</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Records can be validated at any time, with or without changes by selecting   &lt;Validate&gt; on the Investment Parameters.</p>
+                <p>A confirmation of the validated record or any hard or soft warnings will display to the right of the Investment Parameters panel.</p>
+                <p>
+                    <img src="../../Resources/Images/Portfolio Management Images/PM_RecordValidated.png" class="greyborder" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Portfolio Management/PM_SaveRecordandInitiateDualAuth.flsnp" />
+        <MadCap:snippetBlock src="../../Resources/Snippets/Portfolio Management/PM_AuthStatusDefaultSettings.flsnp" />
+        <h2 class="_orange">Review Pending Changes and Propose New State</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To review and propose new state</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <MadCap:snippetBlock src="../../Resources/Snippets/Portfolio Management/PM_ReviewandProposeNewState.flsnp" />
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Accessing audit history of Investment Parameters</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The audit history for Investment Parameters is available through Processing Mode via Audit &gt; Allocation Parameters. Details will display as shown below. </p>
+                <p class="zoom4Detail">
+                    <img src="../../Resources/Images/Portfolio Management Images/PM_AuditHistoryinSwingInvestmentParameters.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

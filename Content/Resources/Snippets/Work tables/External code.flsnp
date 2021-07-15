@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The code specified for the account in an external system. This may be an external General Ledger Code (to manage importing and exporting of the data to an external GL) or a field in the report that is being imported to pControl and the data is mapped to a pControl account.</p>
+    </body>
+</html>

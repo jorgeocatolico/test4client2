@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Authorisation status default settings</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>When adding a new record to the investment parameter or classification parameter, the authorisation status will default to the 'In Progress' state.</p>
+                <p>When editing an existing record that does not have any pending changes, the authorisation status will default to 'In Progress'. The status will remain as 'In Progress' if further changes are made. </p>
+                <p>When deleting a record, the authorisation status will default to 'In Progress'.</p>
+                <p>When changing the authorisation status on a record that has pending changes, the available status stream states are listed, ready to select.</p>
+                <p>The only editable states are 'In Progress' and 'Requires Modification'.</p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

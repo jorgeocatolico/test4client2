@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Holds the unit prices and sometimes total NAV of funds where the price is calculated outside of pControl e.g.  a third party administrator. </body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="WebHelp2"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  conditions="NAV Oversight.ScreenOnly"
+  DefaultUrl="/Content/Home.htm"
+  Skin="/Project/Skins/HTML5 - Top Navigation.flskn"
+  ConditionTagExpression="include[&quot;NAV Oversight.ScreenOnly&quot;] exclude[&quot;External for Perforce.PrintOnly&quot; or &quot;External for Perforce.ScreenOnly&quot; or General.Online or General.PDF or &quot;MG Staff Only.PrintOnly&quot; or &quot;MG Staff Only.ScreenOnly&quot; or &quot;NAV Oversight.PrintOnly&quot; or &quot;Note To Selfs.PrintOnly&quot; or &quot;Note To Selfs.ScreenOnly&quot; or &quot;Portfolio Management.PrintOnly&quot; or &quot;Portfolio Management.ScreenOnly&quot; or PrintGuides.UserGuideA or PrintGuides.UserGuideB] "
+  GetLatestBeforeCompile="true"
+  TopNavTocPath="true"
+  PreCompileScaledImages="false"
+  EquationsOutputType="PNG"
+  MasterPage="/Content/Resources/MasterPages/OtherTopics.flmsp"
+  SearchBarSkin="/Project/Skins/HomeSearchBar.flskn">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="true" />
+</CatapultTarget>

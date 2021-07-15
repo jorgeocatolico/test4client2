@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Note To Selfs.ScreenOnly">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Pricing Entity</h1>
+        <p style="background-color: #00ff00;">Page not yet included in TOC as it doesn't cover all attributes, only a small selection of attributes</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Common tab</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Attributes  displayed on the <b>Common</b> tab of processing entities, such as the asset type, and currency, are used by one or more processes. The following table details the attributes of the common tab. </p>
+                <p>
+                    <img src="../../Resources/Images/Library Images/LY_Entity_attb_common.png" alt="" title="" class="greyborder" />
+                </p>
+                <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Attribute Tab</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Attribute Field</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" rowspan="4">
+                                <p>Common</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset Type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Indicates whether the entity represents a hedge fund or mutual fund, for differences in asset transaction processing.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Base Currency</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The default currency of an entity. This is a mandatory field when setting up a new entity. It is used for reporting in accounts views and in currency conversions.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Custodian?</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>If selected, the entity is recognised as a custodian, and can therefore trade certain assets on behalf of a target fund with a specific list of counterparties. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Transaction Type Template</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>This attribute defines all transaction types used for various processes which can be run against this entity.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" rowspan="9">
+                                <p>Funds Processing</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Investor can receive Income</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Specifies if the entity can be an investor (either a registered or beneficial owner) of an external product and who can receive income.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Life or Pension</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Specifies the fund classification to be executed, either life or pension.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Default Settlement Type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Stipulates whether a unitholder will be paid their income in cash or reinvestment units if they have not notified their reinvestment preference (and the fund is an income fund).</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Nominee Account</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The nominee account being used by the company that the originator for FUM is in. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Allow beneficial owner display</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Enables the management and display of the 'Beneficial Owner' for unitholders view; where pControl may be acting as a type of Nominee such as for 'Deal Consolidator' or 'Box Management' entities.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Fund's Sector</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The sector of the fund i.e. fixed interest, property.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Fund id</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The internal system id of the fund. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Express distribution value per unit as</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Depicts how to display values.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Income or Accumulation</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Type of fund.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" rowspan="2">
+                                <p>Foreign Exchange </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>FX Rate Type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The default FX Rate Type is used by an entity when FX Rate Type is not configured for a particular process. The drop-down list includes 0800 or End of Day.</p>
+                                <p><i>Note: If FX Rate Type is not configured for an entity, pControl will use 'End of Day' as the default FX Rate Type.</i>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>FX Price Type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The default FX Price Type used in a particular process by an entity. It is a mandatory field when setting up a new entity. The drop-down list includes Buy, Mid and Sell FX Rate.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" rowspan="3">
+                                <p>Cash Account</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Default Cash Account</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The default cash account selected from this drop-down menu will be included as part of the cash balances in a business process (i.e. Daily Pricing or Cash Allocation) for an entity. It is a mandatory field when setting up a new entity.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Cash Account Category Code</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>When 'Load Cash Balance as Holding' in 'Data loads' is selected on the Daily Pricing process, this attribute becomes a mandatory field. The drop-down list contains the values from the U350: Classification Hierarchy. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Cash Account Instrument Group and Type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>When 'Load Cash Balance as Holding' in 'Data loads' is selected on the Daily Pricing process, this attribute becomes a mandatory field. The drop-down list contains the values from U350: Classification Hierarchy.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" rowspan="11">
+                                <p>Financials</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Jurisdiction</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>A free text field to record the legal jurisdiction of this entity. This field is used for information purposes only. It is not linked to any rules.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Distribution Frequency</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The validation to ensure the correct date is used for the distribution is based on the dates allocated in the Distribution Calendar attribute. This field is for information only.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Entity Tax Type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>This attribute is used in L275: Tax Rate table and L380: Category split table.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Published MER Rate</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>This attribute stores the information on published Management Expense Ratio. For further information, refer to the pControl User Guide - Management Fee Rebate and Invoicing.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Base Class for comparative / Class for nil expense</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>If selected, this entity will not receive any apportioning of expenses during a distribution process.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Financial Year End Day</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The day of the month the financial year ends for that entity.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Financial Year End Month</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The month the financial year will end in for that entity.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Tax Year End Day</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The day of the month the tax year ends for that entity.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Tax Year End Month</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The month the tax year will end in for that entity.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Country of Domicile</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>This is a mandatory field when setting up a new entity.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Legal Structure</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>This is a mandatory field when setting up a new entity.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="Pricing_Schedule_(SLA)_attributes"></a>Pricing Schedule (SLA) attributes</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>'Pricing Schedule' attributes are also known as SLA attributes. They are used for reporting the red / amber / green status of a process on the <a href="../../B_Dashboard/Process Dashboard/Process Dashboard.htm#Process_Summary">Process Summary</a> view.</p>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>The following example shows the 'Pricing Schedule' attributes  for a daily pricing process, however the same attributes appear under most process tabs.</p>
+                </div>
+                <p>
+                    <img src="../../Resources/Images/Library Images/LY_Entity_attb_Pricing_Schedule.png" alt="" title="" class="greyborder" />
+                </p>
+                <table class="TableStyle-MG_TableStyle01Grey" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css'); margin-left: 0; margin-right: auto;" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Attribute</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Price Release Location</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The geographic location where the SLA time applies to. </p>
+                                <p>E.g. if Daily Pricing is processed in India for an Australian fund, this attribute will be set to an Australian city location.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Use Effective Date</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">If selected, the SLA will be calculated using the effective date of the process plus the offset.</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Price to be Released By</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The time a process needs to be completed by in order to meet its SLA.</p>
+                                <p><i>Note: This is the local time at the 'Price Release Location'.</i>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Price Release Offset Days</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>If the 'Use Effective Date' checkbox is selected, the SLA time will be calculated using the date and time the process is run + offset days.</p>
+                                <p>E.g. If a fund is priced on T+2 basis, this attribute will be set to 2.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Data to be Loaded By</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The time data needs to be received into pControl in order to meet its SLA.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Data Load Offset Days</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>If the data for an entity's process is received<i>n</i>days after T, (e.g. 2 days after T). This attribute will be set to 2</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Price Run Type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The process type used to calculate a price or other output. This is especially useful for entities which have several processes run for them each day, e.g. Expected Pricing, Daily Pricing, Distribution etc. </p>
+                                <p>The value entered into the price run type field will be used in the output of the process to identify the different processes.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Deferral Period (days)</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The number entered here is added to the effective date for use in export worktables, such as  the U141.Deferred Effective Date field.</p>
+                                <p> E.g. If this attribute is set to 3, the above field on the U141 will be populated with a calculated date, i.e. effective date + 3.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Pricing Notes</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>The text entered will be displayed on all price records run for this fund.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

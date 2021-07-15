@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Data Mapping for Analysis Views</title>
+    </head>
+    <body>
+        <h1>Data Mapping for Analysis Views</h1>
+        <p>Data is mapped for each of the analysis views via the <b class="BufferandFunctionBold">U104: General Ledger</b>, <b class="BufferandFunctionBold">L315: Account Code Mapping</b>, <b class="BufferandFunctionBold">L184: Account Category</b> and <b class="BufferandFunctionBold">U350: Category Hierarchy</b> worktables. An example of data mapping for AMAS is shown below, however, the same approach is used for all analysis views. </p>
+        <p>The pControl Account is mapped from the U104: General Ledger to the L315: Account Code Mapping. The L315: Account Code Mapping allows for accounts to be mapped to account groups, where relevant and provides an option to  exclude in account codes. The account group from the L315: Account Code Mapping is used in the L184: Account Category, where the category code is identified. The category code is subsequently used in the analysis view, and the hierarchy of category codes can be defined in the U350: Category Hierarchy.</p>
+        <h2 class="_orange" MadCap:conditions="MG Staff Only.ScreenOnly">Example of data mapping for DYAS </h2>
+        <p MadCap:conditions="MG Staff Only.ScreenOnly">
+            <MadCap:snippetText src="../../../Resources/Snippets/All/NewContentforReview.flsnp" /><span style="background-color: #ff4500;"> - DYAS image requires review; AMAS already approved </span>
+        </p>
+        <p class="zoom4Detail">
+            <img src="../../../Resources/Images/NAV Oversight Images/DYASMapping01.png" MadCap:conditions="MG Staff Only.ScreenOnly" />
+        </p>
+        <p MadCap:conditions="MG Staff Only.ScreenOnly">&#160;</p>
+        <h2 class="_orange">Example of data mapping for AMAS</h2>
+        <p class="zoom4Detail">
+            <img src="../../../Resources/Images/NAV Oversight Images/AMAS_DataMappingv2.png" />
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

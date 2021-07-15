@@ -1,0 +1,1386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/MG_TableStyle01Grey_9pt.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Approval Status Streams</h1>
+        <p>The following table describes the states and transitions for control record approvals.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/MG_TableStyle01Grey_9pt.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle-MG_TableStyle01Grey_9pt" cellspacing="0">
+            <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1">
+                        <p>State</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1">
+                        <p>State Description</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1">
+                        <p>Transitions</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1">
+                        <p>Manual Processing</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1">
+                        <p>pControl Rules Processing</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1">
+                        <p>Date/Time on Transitions </p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadD-Regular-Header1">
+                        <p>Comment Required</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                        <p>Not started</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                        <p>Start state for the approval flow</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Not calculated</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>pControl business rules will transition to the interim state of 'Not Calculated' once the processing has begun.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Defaults to current date and time taken from the entity attribute 'to be released by'.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Initialised</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>For Day 1 processing only - pControl business rules will transition to 'Initialised' once the processing has begun.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Initialised</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Initialisation process is used to identify prior day values for the first run in pControl.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="6">
+                        <p>Not calculated</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="6">
+                        <p>A process is running and under way but a control record has not yet been calculated.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Calculated</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">N/A</td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>pControl business rules move the state to ‘Calculated’ if no exceptions have been raised by the processing phases and the attribute for auto- approval is set to auto approve to ‘Calculated’</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Defaults to current date and time taken from the entity attribute ‘to be released by’</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">N/A</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Approved</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">N/A</td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>pControl business rules move the state to ‘Approved’ if no exceptions have been raised by the processing phases and the attribute for auto- approval is set to auto approve to ‘Approved’</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Defaults to current date and time taken from the entity attribute ‘to be released by’</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">N/A</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Exceptions in Price</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">N/A</td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>pControl business rules move the state to ‘Exceptions in Price’ if exceptions have been raised by any of the processing phases</p>
+                        <p>Exceptions need to be cleared.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Defaults to current date and time taken from the entity attribute ‘to be released by’</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">N/A</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Unable to Price</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">N/A</td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>pControl business rules move the state to ‘Unable to Price’ if process validations have failed and the control record cannot be calculated for the entity on the processing day.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Defaults to current date and time taken from the entity attribute ‘to be released by’</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">N/A</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Unapproved</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">N/A</td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>pControl business rules move the state to ‘Unapproved’ if there are no validation exceptions and the attribute for auto-approval is not set to ‘auto-approve’</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Defaults to current date and time taken from the entity attribute ‘to be released by’</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">N/A</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Initialised</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>pControl business rules can initialise a control record that has already tried to be run and was not allowed. The initialisation process will try and move the approval status to Initialised.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="4">
+                        <p>Unable to process</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="4">
+                        <p>Control record cannot be calculated for the entity on the processing day because process validations have failed. The process ends once this state is reached.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Run Again</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>User will manually transition the state to ‘Run Again’ to force the process to re-execute the process validations after changes have been made to correct the issue.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">Optional</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Run in Error</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>User will manually transition to ‘Run in Error’ if the process was executed mistakenly and no validation should be run for the entity on the processing day or the process was run again on the entity by mistake.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">Optional</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Not Released</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>User will transition to ‘Not Released’ if this control record (i.e. price) is not to be approved or released to market.</p>
+                        <p>The process ends once this state is reached.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Initialised</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>pControl business rules can initialise a control record that has already tried to be run and wasn’t allowed for some reason. The initialisation process will try and move the approval status to Initialised.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Run in error</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Process was run in error for the entity on the processing day so the control record is invalid and is not to be used</p>
+                        <p>The process ends once this state is reached.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="7">
+                        <p>Exceptions in Pricing</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="7">
+                        <p>Exceptions have been raised by one or more of the processing phases which need to be overridden before the control record can be approved.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Overridden</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>When all exception events associated to the control record on the processing day have been overridden by a user, pControl’s business rules will move the status to ‘Overridden’ automatically.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Defaults to current date and time taken from entity attribute ‘to be released by’</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Mandatory</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Overridden with L2 Exceptions</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>When all exception events associated to the control record on the processing day have been overridden by a user, pControl’s business rules will move the status to ‘Overridden with L2 Exceptions’, where L2 exceptions were encountered (as defined on the L200 Tolerance worktable).</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Defaults to current date and time taken from entity attribute ‘to be released by’</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Mandatory</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Overridden with L3 Exceptions</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>When all exception events associated to the control record on the processing day have been overridden by a user, pControl’s business rules will move the status to ‘Overridden with L3 Exceptions’ where L3 exceptions were encountered (as defined on the L200 Tolerance worktable).</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Defaults to current date and time taken from entity attribute ‘to be released by’</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Mandatory</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Overridden with L2 and L3 Exceptions</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>When all exception events associated to the control record on the processing day have been overridden by a user, pControl’s business rules will move the status to ‘Overridden with L2 and L3 Exceptions’ where both L2 and L3 exceptions were encountered (as defined in the L200 Tolerance worktable).</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Defaults to current date and time taken from entity attribute ‘to be released by’</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Mandatory</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Run again</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>The user can force the process to be run again from the start by transitioning the control record to this state via the Fund Sign Off view </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>pControl business rules will start the process again from the start and re-validate the data using any new information present</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Not released</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>User will transition to 'Not released' if this control record is not to be approved or released to market. The process ends once this state is reached.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Run in error</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>The user can manually transition this record which is in an exception state to advise that it was run in error.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Run again</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Temporary state which the user moves a control record to with the effect of forcing the process to re-start from the beginning</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Not calculated</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Automatic transition by pControl business rules to this interim state when the user wants to start the process again.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Defaults to current date and time taken from teh entity attribute 'to be released by'</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                        <p>Overridden</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                        <p>This state indicates that all exceptions raised by the process have been overridden by a user and the control record is ready to be approved.</p>
+                        <p><i>Note: If an ‘Authorisation Level’ for approval has been configured in the entity attributes, the same authorisation level will need to be specified on the status stream transition alongside the user group which has permission to make this transition.</i>
+                        </p>
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Pending Approval</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">A user with the correct security access will be able to make this transition to approve a control record via the ‘Fund Sign Off’ view such that it can be approved / released and any dependent processing can continue.
+</td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Optional</p>
+                        <p>Defaults to current date / time or user can define.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Not Released</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+User will transition to ‘Not Released’ if this control record is not to be approved or released to market.
+The process ends once this state is reached.
+</td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                        <p>Overridden with L2 Exceptions</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                        <p>This state indicates that all L2 Exceptions raised by the process have been overridden by a user and the control record is ready to be approved</p>
+                        <p style="font-style: italic;">Note: If an ‘Authorisation Level’ for approval has been configured in the entity attributes, the same authorisation level will need to be specified on the status stream transition alongside the user group which has permission to make this transition.</p>
+                        <p>&#160;</p>
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Pending Approval</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>An alternate user with L2 security access will be able to make this transition to approve a control record via the 'Fund Sign Off' view such that it can be released an any dependent processing can continue.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Optional</p>
+                        <p>Defaults to current date / time or user can define.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Overridden with L3 Exceptions</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>A user with the right to override L2 exceptions can make this transition in order to request a further level of override by a L3 authorised user.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Optional</p>
+                        <p>Defaults to current date / time or user can define.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Not Released</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>User will transition to ‘Not Released’ if this control record is not to be approved or released to market.</p>
+                        <p>The process ends once this state is reached.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                        <p>Overridden with L3 Exceptions</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                        <p>This state indicates that all L3 Exceptions raised by the process have been overridden by a user and the control record is ready to be approved.</p>
+                        <p><i>Note: If an ‘Authorisation Level’ for approval has been configured in the entity attributes, the same authorisation level will need to be specified on the status stream transition alongside the user group which has permission to make this transition.</i>
+                        </p>
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Pending Approval</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>An alternate user with L3 security access will be able to make this transition to approve a control record via the ‘Fund Sign Off' such that it can be released and any dependent processing can continue.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Optional</p>
+                        <p>Defaults to current date / time or user can define.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Not Released</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>User will transition to ‘Not Released’ via the ‘Fund Sign Off' if this control record is not to be approved or released to market.</p>
+                        <p>The process ends once this state is reached.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Overridden with L2 and L3 Exceptions</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>This state indicates that a combination of L2 and L3 exceptions raised by the process have been overridden by a user and the control record is ready to be further overridden by a user with L3 security access.</p>
+                        <p style="font-style: italic;">Note: If an ‘Authorisation Level’ for has been configured in the entity attributes, the same authorisation level will need to be specified on the status stream transition alongside the user group which has permission to make this transition.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Overridden with L3 Exceptions</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>A user with L2 security access can make this transition via the ‘Fund Sign Off' in order for the required further override by a L3 authorised user.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Optional</p>
+                        <p>Defaults to current date / time or user can define.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                        <p>Approved with Override</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                        <p>The state is used to indicate that a control record is approved but that there were exceptions that were overridden prior to the approval.</p>
+                        <p>This means that the control record is available to dependent processing.</p>
+                        <p><i>Note: If an ‘Authorisation Level’ for release has been configured in the entity attributes, the same authorisation level will need to be specified on the status stream transition alongside the user group which has permission to make this transition.</i>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Released with Override</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>A user with the correct security access will be able to make this transition via the ‘Fund Sign Off' to release a control record that had exceptions prior to the approval such that it can be released and any dependent processing can continue.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Not Released</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>User will transition to ‘Not Released’ via the ‘Fund Sign Off' viewif this control record is not to be approved or released to market.</p>
+                        <p>The process ends once this state is reached.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Pending Unapproved</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>User with the correct security access will transition to pending unapproved when they want to have the control record unapproved so they can run it again.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Default to Current Date /Time or user defined date time</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="5">
+                        <p>Unapproved </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="5">
+                        <p>The status used to indicate that there were no exceptions found during the processing but the control record is yet to be approved</p>
+                        <p>Control records that are ‘Unapproved’ will not be available for dependent control records (valuations/prices) to use.</p>
+                        <p><i>Note: If an ‘Authorisation Level’ for approval has been configured in the entity attributes, the same authorisation level will need to be specified on the status stream transition alongside the user group which has permission to make this transition.</i>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Pending Approval</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>A user with the correct security access will be able to make this transition to approve a control record via the ‘Fund Sign Off’ view  such that it can be released and any dependent control records (valuations/prices) can continue processing.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>For distribution calculations, pControl checks that the Distribution Declared Control Record value equals the value in the Distribution Declared Tables.</p>
+                        <p>If the validation had passed and Distribution Declared Control Record Value equals the value in the Distribution Declared Tables – then the record would be transitioned to Approved.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Optional</p>
+                        <p>Current Date / Time or user defined date time</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Not Released</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>User will transition to 'Not Released' via the 'Fund Sign Off' view if this control record is not to be approved or released to market. </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Not Calculated</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>pControl business rules move the state from 'Unapproved' to 'Not Calculated' when processing is re-run</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Run Again</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>User with the correct security access will transition to run again when they want to run processing again for the control record.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Run in Error </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>The user can manually transition this record which is in an unapproved state to advise that it was run in error.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                        <p>Approved </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                        <p>The state used to indicate that a control record is ‘Approved’.</p>
+                        <p>This means that the control record is available to dependent control records (valuations/ prices).</p>
+                        <p>Note: If an ‘Authorisation Level’ for release has been configured in the entity attributes, the same authorisation level will need to be specified on the status stream transition alongside the user group which has permission to make this transition.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Pending Unapprove</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>A user with correct security access i.e. to unapprove a control record will make this transition to indicate that a control record was ‘Approved in error’ and should not be available for use i.e. to strike prices or for dependent processing.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Default to Current Date / Time or user defined date time</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Released</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>If the entity is not set to ‘Auto-Release’, a user will have to manually transition to this state via the ‘Fund Sign Off’ view  to indicate that the control record can be released</p>
+                        <p>The process ends once this state is reached.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>If the entity is set to ‘Auto-Release’, pControl business rules will transition to ‘Released’ automatically</p>
+                        <p>The process ends once this state is reached.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Not Released</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>User will transition to ‘Not Released’ if the control record was not released, even though it was approved</p>
+                        <p>The process ends once this state is reached.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                        <p rowspan="2">Calculated</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                        <p>The state used to indicate that there were no exceptions raised in the process, the control record has not yet been formally approved but it can be used to for dependent processing if appropriate.</p>
+                        <p>Note: If an ‘Authorisation Level’ for approval has been configured in the entity attributes, the same authorisation level will need to be specified on the status stream transition alongside the user group which has permission to make this transition.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Pending Approval</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>A user with the correct security access i.e  to approve a control record will transition to ‘Pending Approval’ so the control record is ready for the pControl business rules to transition to approved such that it can be released and any dependent processing can continue.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Optional</p>
+                        <p>Default to Current Date / Time or user defined date time</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Not Released</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>User will transition to ‘Not Released’ via the ‘Fund Sign Off’ view  if this control record is not to be approved or released to market.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="4">
+                        <p>Pending Approval</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="4">
+                        <p>The state used to indicate that a control record is ready to be approved.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Approved</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>pControl business rules move the state from ‘Pending Approval’ to ‘Approved’ if no exceptions have been incurred in processing that require an override.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Defaults to current date and time taken from the entity attribute ‘to be released by’</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Approved with Override</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>pControl business rules move the state from ‘Pending Approval’ to ‘Approved with Override’ if one or more exceptions were incurred in processing that require an override.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Defaults to current date and time taken from the entity attribute ‘to be released by’</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Recalculating</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>For distribution calculations when a user transitions to Pending Approval, pControl checks that the Distribution Declared Control record value equals the value in the Distribution Declared Tables.</p>
+                        <p>If the validation fails pControl will further transition the state to ‘Recalculating’ – this state displays for a very short period as it then transitions to ‘Unapproved Recalculated’.</p>
+                        <p>When this occurs the values in the pControl Distribution Declared table are updated and the values will agree to the Control record.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Waiting for Dep Prices</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>State can be manually transitioned if ‘wait for dependent prices’ is managed manually (e.g. not configured within pControl).</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>pControl business rules will transition to this state and will wait for dependent prices to reach an approved state (i.e. If entity is configured to wait for dependent prices).</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Defaults to current date and time taken from the entity attribute ‘to be released by’</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Pending Unapprove</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>The state used to indicate that a control record is ready to be unapproved.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Unapproved</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>pControl business rules move the state from ‘Pending Unapprove’ to ‘Unapproved’.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Defaults to current date and time taken from the entity attribute ‘to be released by’</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                        <p>Released</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                        <p>The state used to indicate that this control record has been ‘released’.</p>
+                        <p>The process ends once this state is reached if the release is inside the ‘price to be released by’ time frame.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Released in Error</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>A user with the right to transition to ‘Released in Error’ will do this to indicate that the control record was released in error and needs to be re-run.</p>
+                        <p>Control records in this state must have the process re-run from processing status.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Mandatory</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Released Outside SLA</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>pControl business rules move the state to ‘Released Outside SLA’ if the release time is outside that which is configured on the entity as ‘price to be released by.’</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Taken from entity attribute ‘price to be released by’</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Pending Acknowledgement</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>pControl business rules move the state to ‘Pending Acknowledgement’ if the environment in configured to include acknowledgement processing.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Released in Error</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>This state is used to signify that a control record has been released however it needs to be re-run.</p>
+                        <p>From a status stream perspective, this state is an end state however from a business perspective, it is only an interim state where a released record must transition to if re-run is required. The process must be re-executed when control records are in this state.</p>
+                        <p>Note:  The behaviour on re-run is determined by the configuration of the ‘Mark as Approved on re-run’ default attribute on the Company entity.<MadCap:conditionalText MadCap:conditions="Note To Selfs.ScreenOnly">  For further detail please refer to section 6.5 Default Processing Attributes.</MadCap:conditionalText></p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                        <p>Released with Override</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                        <p>This state is used to signify that a control record has been ‘released’ however the release was on a control record which was ‘Approved with Override’.</p>
+                        <p>The process ends once this state is reached if the release is inside the ‘price to be released by’ time frame.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Released in Error</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>A user with the right to transition to ‘Released in Error’ will do this to indicate that the control record was released in error and needs to be re-run.</p>
+                        <p>Control records in this state can have the process re-run from processing status.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Mandatory</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Released outside SLA</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>pControl business rules move the state to ‘Released Outside SLA’ if the release time is outside that which is designated on the entity as ‘price to be released by.’</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Taken from entity attribute ‘price to be released by’</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Pending Acknowledgement</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>pControl business rules move the state to ‘Pending Acknowledgement’ if the environment in configured to include acknowledgement processing.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                        <p>Released outside SLA</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                        <p>This state is used to signify that a control record has been ‘released’ or ‘released with Override’ however the release was completed outside the time specified on the  entity attribute ‘price to be released by’.</p>
+                        <p>The process ends once this state is reached.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Released in Error</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>A user with the correct security access will transition to ‘Released in Error’ to indicate that the control record was released in error and needs to be re-run.</p>
+                        <p>Control records in this state can have the process re-run from processing status.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Mandatory</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Pending Acknowledgement</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>pControl business rules move the state to ‘Pending Acknowledgement’ if the environment in configured to include acknowledgement processing.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                        <p>Pending Acknowledgement</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                        <p>If the entity has been configured to wait for external acknowledgement then this state will be entered after the control record has been released to signify that external acknowledgement is expected</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Acknowledged</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>If configured for manual acknowledgement then this transition will be made by the user via the ‘Fund Sign Off’ view when acknowledgement has been received from a third party that they have received the control record</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>If configured for automated acknowledgement then this transition will occur on receipt of acknowledgement by an external system into the U190 import worktable.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Not Acknowledged</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>If configured for manual acknowledgement then this transition will be made by the user via the ‘Fund Sign Off' view when a ‘not acknowledged’ status has been received from a third party that they have not received the control record.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>If configured for automated acknowledgement then this transition will occur on receipt of a 'not acknowledged' by an external system into the U190 import worktable.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Released in Error</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>A user with the correct security access will transition to ‘Released in Error’ to indicate that the control record was released in error and needs to be re-run.</p>
+                        <p>Control records in this state can have the process re-run from processing status.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Mandatory</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Acknowledged</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>This state indicates that external acknowledgement has been successfully received</p>
+                        <p>The process will end in this state if the entity has been set to wait for external acknowledgement</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Released in Error</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>A user with the correct security access will transition to ‘Released in Error’ to indicate that the control record was released in error and needs to be re-un.</p>
+                        <p>Control records in this state can have the process re-run from processing status.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Mandatory</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Not Acknowledged</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>This state indicates that external acknowledgement has NOT been successfully received.</p>
+                        <p>The process will end in this state if the entity has been set to wait for external acknowledgement.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Released in Error</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>A user with the correct security access will transition to ‘Released in Error’ will do this to indicate that the control record was released in error and needs to be re-run.</p>
+                        <p>Control records in this state can have the process re-run from processing status.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Mandatory</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Recalculating</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>For distribution processing only:</p>
+                        <p>This state indicates that pControl is recalculating (as the distribution declared control record value failed validation against the value in the Distribution Declared Table).</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Unapproved Recalculated</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>For distribution processing only:</p>
+                        <p>When a user transitions a control record from ‘Unapproved’ to ‘Pending Approval’ - pControl checks that the Distribution Declared Control Record Value equals the value in the Distribution Declared Tables and if it does not it transitions the state to ‘Recalculating’ – the ‘Recalculating’ state displays for a very short period as it transitions very quickly to ‘Unapproved Recalculated’.</p>
+                        <p>When this occurs the values in the pControl Distribution Declared table are updated and the values will agree to the Control record.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                        <p>Unapproved Recalculated</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                        <p>For distribution processing only:</p>
+                        <p>This state indicates that pControl has ‘recalculated’ the values in the Distribution Declared table.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Pending Approval</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>For distribution Processing only:</p>
+                        <p>An alternate user (with the correct level of security access) transitions the control record to ‘Pending Approval’ to signify that the recalculated value has been approved.</p>
+                        <p><i>Note: pControl will again undertake the same validation as occurs when the control record is transitioned from Unapproved to Pending Approval and either under take the follow-on transition to Approved or Recalculating.</i>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Run again</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>User with the correct security access will transition to run again when they want to run processing again for the control record.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                        <p>Waiting for Dep&#160;Prices</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                        <p>This state indicates that the entity is waiting for approved processes from investors or waiting on dependent approved processes (as configured in the entity attributes) before approval will proceed.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Approved</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>A user with the correct security access will transition to ‘Approved’ to indicate that the dependent prices have been received.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Optional</p>
+                        <p>Default to Current Date / Time or user defined date time</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Rownolines" MadCap:pattern="11">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Rownolines">
+                        <p>Approved with Override</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Rownolines">
+                        <p>A user with the correct security access will transition to ‘Approved with Override’ to indicate that the dependent prices have been received.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Rownolines">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Rownolines">
+                        <p>Optional</p>
+                        <p>Default to Current Date / Time or user defined date time</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyA-Regular-Rownolines">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

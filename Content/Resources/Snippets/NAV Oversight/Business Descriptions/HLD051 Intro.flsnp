@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Will fail the test if the security price movement is out of tolerance (%) with the associated benchmark movement.</p>
+        <p>Benchmarks are associated to securities using a standard mapping table (L235 – Security Price Association) in pControl and can be associated at the security level or at any level of the asset category tree.</p>
+        <p>This is a validation that calculates a difference between two values and tests that % difference against the tolerances set for the validation.</p>
+    </body>
+</html>

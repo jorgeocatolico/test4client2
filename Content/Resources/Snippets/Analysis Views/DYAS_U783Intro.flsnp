@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>The DYAS records are exported to the <b class="BufferandFunctionBold">U783: Distribution Yield Analysis</b> worktable when the process is run on a distribution day and the <b class="BufferandFunctionBold">[EX093] Export Distribution Yield Attribution</b> function is selected on the process template. Records display in the worktable in the order they appear in the DYAS view. Existing records in the table are replaced when processes are re-run.</body>
+</html>

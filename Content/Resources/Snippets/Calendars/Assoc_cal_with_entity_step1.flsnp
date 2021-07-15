@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Open a processing entity. Navigate to the process type, and pricing calendar attributes:</p>
+        <div class="note_label">Note</div>
+        <div class="note_content_in_list">In this example, 'Oversight' is the process type on an Oversight Class entity.</div>
+        <p>&#160;</p>
+        <p class="zoom4Detail">
+            <img src="CAL_Attribonentity.png" />
+        </p>
+    </body>
+</html>

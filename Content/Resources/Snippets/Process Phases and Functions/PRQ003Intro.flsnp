@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>[PRQ003] - Non-business Day prerequisite will check if current effective date is a business day per the non-business day pre-requisite calendar. Validations requiring the current effective date to be a business day, and it is a non-business day, the validations will be prevented from running.</body>
+</html>

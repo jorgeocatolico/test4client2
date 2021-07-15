@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Investment Summary </h1>
+        <p>The Investment Summary displays one summary record  for each plan for each day that  has been processed.  The initial process is generated with a batch id of 1. If the process is requested subsequent times for the same entity on a , the batch id is incremented by one.  Results are shown separately, i.e. each one has a separate batch number. One summary record summarises all proposed transactions for a particular plan and effective date. These are displayed in the third panel of this view.</p>
+        <h2 class="_orange">Understanding the Investment Summary  </h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Investment Summary panel</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The fields of this panel vary, depending on the data view selected.  The coloured bar above the Investment Summary panel indicates the total number of summary records in each state of the <MadCap:glossaryTerm glossTerm="Glossary.Term20">'Master Proposed Transaction status stream</MadCap:glossaryTerm>. Selecting one of these coloured sections, will filter the summary records displayed. Selecting an individual summary record in this panel will display the corresponding classifications and proposed transactions in the following two panels.</p>
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/Portfolio Management Images/PM_InvestmentSummaryPanel.png" alt="" title="" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Modifying Investment Summary Records</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To transition a record</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Investment Summary rows travel along  <MadCap:glossaryTerm glossTerm="Glossary.Term20">status streams</MadCap:glossaryTerm>, or life cycles. Most transitions between states are completed automatically by pControl. When certain states are reached, such as 'Exception', it is possible to manually transition the record to the next state.</p>
+                <p>One or many Investment Summary records can be selected for simultaneous transition provided they are in the same state and are being transitioned to the same state.</p>
+                <p>&#160;</p>
+                <p>To transition Investment Summary rows:</p>
+                <ol value="2" class="stepList" start="1">
+                    <li class="stepList"> Select the required row or select the check boxes if there are multiple records to select. </li>
+                    <li>
+                        <p> Right click on one of the highlighted rows, and the available transitions will be displayed.</p>
+                        <p class="zoom4Detail">
+                            <img src="../../../Resources/Images/Portfolio Management Images/PM_TransitionInvSumRows.png" alt="" title="" class="greyborder" />
+                        </p>
+                    </li>
+                    <li>Select the required state from the list of available options. All of the selected rows will be updated.</li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:snippetBlock src="../../../Resources/Snippets/Portfolio Management/PM_AddViewDeleteAttachments.flsnp" />
+        <MadCap:snippetBlock src="../../../Resources/Snippets/Portfolio Management/PM_ViewDownloadDeleteAttachment.flsnp" />
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p><i>Note: This category code won't be displayed on any of the source data records. It is only used by the ERM, when taking the distribution rate, calculating the expected value, and then writing to the P606, and NAV&#160;Movement Analysis view.</i>
+        </p>
+    </body>
+</html>

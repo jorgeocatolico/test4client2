@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Determines whether the Cash CPU value will be loaded by the process and will wait if the price has not been approved. This is used to calculate the Ex-Div prices in [UPC045] - Calculate Ex-Div NAV, Buy and Sell prices.</p>
+    </body>
+</html>

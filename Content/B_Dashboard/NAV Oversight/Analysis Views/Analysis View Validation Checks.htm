@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Validation Checks</h1>
+        <p>In addition to the analysis views displaying the breakdown, or movement in a NAV&#160;value, or movement between classes, they are also created so that further validation checks can be performed on the values within the analysis reports, to determine if the values calculated are within, or outside of tolerances.</p>
+        <p>When validation checks are performed, pControl performs a calculation. The output of this calculation is compared to <b class="BufferandFunctionBold">L200: Tolerance</b> values to determine if the result is acceptable, (within tolerance), or an exception is to be raised, i.e. tolerance has been breached.</p>
+        <h2 class="_orange">Turning on validation checks</h2>
+        <p>
+            <MadCap:snippetText src="../../../Resources/Snippets/Analysis Views/Analysis_TurnOnValidationCheck.flsnp" /> For further information on setting up validations, refer to <MadCap:xref href="../../../AA_Library/Entities/Validation Entities.htm">Validation Entities.</MadCap:xref></p>
+        <p class="zoom4Detail">
+            <img src="../../../Resources/Images/NAV Oversight Images/AnalysisViewValidations.png" />
+        </p>
+        <h2 class="_orange"> Validation Check Example</h2>
+        <div class="example_label">Example</div>
+        <div class="example_content">
+            <p>The example shows, the [CAT012] validation check has raised an L3 Exception against the FUNDUP_AMAS_01_POOL entity as the impact value, is greater than the tolerance value set in the L200: Tolerance worktable.</p>
+            <p>The impact value is calculated by:</p>
+            <p>
+                <MadCap:equation>$\small ABS \left(Unit\ Price\ Movement\ (UPR)\right )\ -\ Unit\ Price\ Movement\ breakdown\ (UPM)$</MadCap:equation>
+            </p>
+            <p>and the tolerance value is set as 25.00bp for an L3 Exception.</p>
+            <p>The description section of the analysis views page provides detail on the tolerance value at entity level as well as the unit price movement value (UPR_AMAS) and the balance sheet movement value (UPM_AMAS). </p>
+            <p class="zoom4Detail">
+                <img src="../../../Resources/Images/NAV Oversight Images/AMA_CAT012.png">
+                </img>
+            </p>
+            <p>The L200: Tolerance worktable shows the tolerance values that trigger each severity status. </p>
+            <p>
+                <img src="../../../Resources/Images/NAV Oversight Images/AMAS_CAT012AMASview2.png" class="greyborder">
+                </img>
+            </p>
+            <p>&#160;</p>
+        </div>
+        <p>&#160;</p>
+    </body>
+</html>

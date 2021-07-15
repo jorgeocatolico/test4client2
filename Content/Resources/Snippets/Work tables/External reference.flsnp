@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>A unique reference number for each Cash Allocation or Rebalancing process run. The external reference field is used to identify the batch run that initiates Cash Allocation for a whole structure and has its process ID passed in so that all processes that were started by the same batch process can be tracked.</p>
+    </body>
+</html>

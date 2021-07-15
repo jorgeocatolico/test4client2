@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>&#160;</h1>
+        <h1><a name="1"></a>Pricing Process Explained</h1>
+        <p>&#160;</p>
+        <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                        <p>Reference</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>1</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>NAV
+ Oversight data including purchase and sale transactions, cash movements, unit
+ and investment holdings, and  general
+ ledger data are obtained from a variety of external sources. This data is fed
+ into pControl automatically. (In some circumstances, data is manually entered
+ into pControl).</p>
+                        <p style="font-style: italic;">Note: The ‘Data Manager’ product may be used
+ to detect the arrival of new data files and process these into pControl, or
+ other automation tools may be used.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>2</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>NAV
+ Oversight data is loaded into various worktables for storage and basic
+ validation, (i.e. ensuring date fields are populated with valid dates, Index
+ close field contains numeric values, valid pControl entity codes are used
+ etc)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>3</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The NAV
+ Oversight process is initiated, either manually or automatically.</p>
+                        <p>Data from
+ the various worktables is used as the inputs to the process. Various functions
+ are executed during the processing phases, depending upon the configuration
+ (i.e. selection of functions) on the process template. </p>
+                        <p><i>Note/s:
+ Reference numbers 4-15 are the processing phases of the NAV Oversight
+ process.</i>
+                        </p>
+                        <p>Coloured icons shown next to a function code,
+ indicates a separate entity exists containing further detail of the
+ validation check including business descriptions and formula.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>4</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Versioning
+ phase determines whether multiple versions of the data are allowed or not,
+ depending upon the configuration of the process functions. If versioning is
+ not allowed, subsequent processing will overwrite the data from the first
+ processing run. Other versioning functions can also be selected.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>5<a name="5"></a></p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Initialisation
+ phase checks if the process has been run previously. If not, the process will
+ run in ‘initialisation’ mode, meaning any functions which require ‘previous
+ day’s data’ will not be performed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>6</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The
+ ‘Validity checks’ phase performs checks to ensure it is valid to run NAV
+ Oversight processing for this entity on this effective date. This may include
+ checking if today is a business day or weekend; Checking if Expected Pricing
+ has already been run today.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>7</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The data
+ load phase selects data from specified worktables based on the functions
+ selected on the processing template, for use in the Expected Pricing process
+ and calculations. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>8</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p><a name="8"></a>Pre Calc
+ validations are checks performed on the data loaded during ‘data load phase’.
+ In this example the functions (checks) selected include HLD003, TXN001,
+ ACC001, VA011. Each of these function codes refer to a separate validation
+ entity which contains both a business description and formula of the check performed.</p>
+                        <p><i>Note: The four checks shown in diagram are
+ only a small selection of the checks available for selection on the process
+ template.</i>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>9</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The
+ calculation of assets including GAV calculations or component adjustments are
+ performed in the ‘Calculate Assets’ phase. The exact calculations performed
+ depend on the functions selected on the process template.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>10</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The
+ calculation of liabilities such as fees and taxes is performed during the
+ ‘Calculate liabilities’ phase. In this example, Fees Provision, Tax Provision
+ and Performance Fees will be calculated.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>11</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p><a name="11"></a>The
+ calculation of the valuation or prices is performed during the ‘Calculate
+ Valuations / Prices phase including NAV and GAV prices, (i.e NAV / units and
+ GAV / units).</p>
+                        <p><i>Note: The four functions shown in diagram are
+ only a small selection of the functions available on the process template.</i>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>12</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Post Calc
+ validations are checks performed on the data produced in the ‘Calculate
+ Valuations / Prices’ phase. The output of some of these calculations
+ including CAT001 and CAT002 are displayed on the NMA report. </p>
+                        <p>The VAxxx
+ functions are special function codes which must be selected (check boxes
+ ticked in the process template) in order for the relevant Analysis report to
+ be produced.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>13</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The NMA,
+ OMAS and CPAS reports are produced during the ‘Post Calc Validation’ phase when
+ the relevant functions are selected. This will be displayed in one of the
+ tabs in the second panel of the Price Control Summary view, and the NMA
+ report is also available in the U780 worktable.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>14</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>During the
+ ‘Data Exports’ phase, the outputs of the Expected Pricing processes are
+ distributed to various worktables depending on the function codes selected on
+ the process template.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>15</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The NAV
+ Oversight process can be configured to be automatically approved and the
+ control record ‘released’, which will trigger subsequent dependent processes.
+ Alternatively, the process be configured to be automatically approved only,
+ which will require manual release of the control record.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>16</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>When Expected
+ Pricing processing has been completed successfully other pControl processes, which
+ are dependent on the outputs of the Expected Pricing process, can commence.
+ These processes may be initiated manually, or automatically such as through
+ the approval phase, chained processing, or STP methods.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                        <p>17</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                        <p>The Analysis reports produced in step 13 can be reviewed, manually to determine if the movement is in line with expectations.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

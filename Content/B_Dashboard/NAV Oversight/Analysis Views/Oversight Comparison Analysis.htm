@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="MG Staff Only.ScreenOnly">
+    <head>
+    </head>
+    <body>
+        <h1>Oversight Comparison Analysis</h1>
+        <p><span style="background-color: #ff4500;" MadCap:conditions="Note To Selfs.ScreenOnly">No longer OMAS but "Expected NAV&#160;Compare" - waiting for clarification on what exactly has been changed i.e. only the tab? or does it include the category tree name etc too?</span>
+        </p>
+        <p>The Oversight Comparison Analysis (OMAS) report is generated from the Daily Pricing process. pControl will then use the pricing data from the daily and expected pricing processes to populate the corresponding categories within the OMAS report.</p>
+        <p>The OMAS takes the results from the NMA for the daily and expected prices and, for each price type, shows the movements in the unit price components as well as the movement in the price and a comparison against the entity’s key benchmark. A comparison is then performed between the actual and expected prices, for each category that makes up that price.</p>
+        <p>The OMAS view is accessible from the All Prices view in pControl. It is only available for Daily-priced entities. An example is shown in the figure below:</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images/NAV Oversight Images/NO_OMAS_PricingActualEntity.png" />
+        </p>
+        <p>The Daily Pricing process will populate the OMAS if the <b class="BufferandFunctionBold">[VA700] Generate Oversight Movement Attribution</b> attribute is selected on the Daily Pricing process template.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Oversight Comparison Analysis (OMAS) Specification</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The Oversight Comparison Analysis view is divided into a hierarchy of categories, similar to the NAV Movement Analysis report. The data and calculations that are used to populate each of the categories or category types on the report are detailed in the table in this link <a href="OMAS Specification Table.htm">OMAS Specification Details</a>.</p>
+                <p>Column definitions are also provided.</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Tolerance Value (bp) - this is the value that was breached by the validation performed on this category (if applicable)</li>
+                    <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Tolerance Level – this is the level of breach from the validation performed on this category (if applicable)</li>
+                    <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Summary Tolerance Level – this is the maximum breach that occurred for all validations</li>
+                    <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Summary Exception Count -  this is the total number of validation breaches (Warnings and above) that were raised by the process.</li>
+                </ul>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>U350: Classification Hierarchy</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <MadCap:snippetBlock src="../../../Resources/Snippets/NAV Oversight/NO_U350 Classification Hierarchy.flsnp" />
+            </MadCap:dropDownBody>
+            <p>&#160;</p>
+        </MadCap:dropDown>
+    </body>
+</html>

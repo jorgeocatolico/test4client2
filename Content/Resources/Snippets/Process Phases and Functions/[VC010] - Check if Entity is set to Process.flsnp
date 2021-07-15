@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../TableStyles/MG_TableStyle02TableinaTable_No header.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table style="mc-table-style: url('../../TableStyles/MG_TableStyle02TableinaTable_No header.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle02TableinaTable_No_header" cellspacing="18">
+            <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+            <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                        <p>Business Description</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                        <p>This check tests whether a fund is configured to be included in processing. </p>
+                        <p>This check is useful where 'bulk processing' is used to run a process for several funds simultaneously, as a way to include or exclude certain funds from that process.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                        <p>Processing Detail</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                        <p>If the 'Include in Processing' checkbox is:</p>
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Selected, the check passes, and processing continues.</li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Not selected, the check fails, and processing stops. The status message will show,  ‘&lt;entitycode&gt; is not set to Process’. The approval state of the price record will be transitioned to 'Unable to Process'.</li>
+                        </ul>
+                        <p>If the 'Exclude from Bulk Submit and STP processing' check box is selected for a specified process type, that process type will not be initiated when <MadCap:xref href="../../../C_Process/Straight Through Processing (STP).htm">Straight-through Processing (STP)</MadCap:xref> or Bulk Submit processes are initiated. The only way to  start this process type, will be manually, via <MadCap:xref href="../../../C_Process/Request Processing.htm">Request Processing.</MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                        <p>Entity Data Attributes Used</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Include in Processing - If this check box is selected, the check passes, and processing continues - this includes processes submitted manually, or automatically via <MadCap:xref href="../../../C_Process/Straight Through Processing (STP).htm">Straight-through Processing (STP)</MadCap:xref> (STP) or Bulk Submit</li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Exclude from Bulk Submit - If check box is selected, this process will not be run when any Straight through Processing (STP) or Bulk Submit processing is run. Selecting this check box, is a way to exclude a single process, when this fund belongs to a group, for which bulk processing is being run.</li>
+                        </ul>
+                        <ul class="FirstLevelBlueBullet">
+                            <img src="../../Images/Process Phases and Functions/VC010onPricingEntity.png" alt="" title="" />
+                            <br />
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                        <p>Interdependencies</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                        <p>Prerequisite Functions</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-090em_font">
+                        <p>Outputs</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyA-Column1-090em_font">
+                        <p>Process status messages report the status of this check</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Note To Selfs.ScreenOnly" style="mc-master-page: url('..\..\..\Resources\MasterPages\WorktableTopics.flmsp');">
+    <head>
+        <link href="../../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>U780: NAV Movement Analysis</h1>
+        <p>Holds the NAV Movement Analysis and Oversight Comparison Analysis report data for a price record. The output from the NMA and OMAS reports are also written to the U780: NAV Movement Analysis export worktable.</p>
+        <p>
+            <img src="../../../Resources/Images/Work tables/U780 example.png" />
+        </p>
+        <p>The standard export buffers are used by the pricing process to store or export all values that may be required for follow-on reporting, analysis or processing purposes. The information stored in export buffers cannot be updated by a user and represents a permanent record of calculated values or values that were used in a process.</p>
+        <p>The export buffers that are populated by a pricing process will be determined by the configuration of the process template Data Export processing phase. For NAV Oversight, the ‘Export NAV Movement Analysis’ attribute on the process template should be selected if data needs to be written to U780: NAV Movement Analysis.</p>
+        <div class="note_label">Note</div>
+        <div class="note_content">
+            <ul class="FirstLevelBlueBullet">
+                <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">This worktable must be populated with a Classification code prior to populating the U496</li>
+                <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">When data is loaded to this worktable</li>
+                <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">&#160;</li>
+                <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">&#160;</li>
+            </ul>
+        </div>
+        <h2>&#160;
+			</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>U780: NAV Movement Analysis - Worktable Fields and Descriptions</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>(insert fields from Nigel's spreadsheet here)</p>
+                <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                    </col>
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                    </col>
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                    </col>
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                    </col>
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                    </col>
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                    </col>
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Column</p>
+                                <p>Position</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Field Name</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Data </p>
+                                <p>Type</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Maximum</p>
+                                <p>Length</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Description</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Mandatory</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	1	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	pControl id	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Integer	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	8	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <MadCap:snippetText src="../../../Resources/Snippets/Work tables/pControl Id.flsnp" />	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	M	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	2	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	pControl code	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Text	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	25	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <MadCap:snippetText src="../../../Resources/Snippets/Work tables/Entity Code.flsnp" />	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	3	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Effective date	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Text	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	8	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <MadCap:snippetText src="../../../Resources/Snippets/Work tables/Effective Date.flsnp" />	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	4	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Price run type	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Text	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	50	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <MadCap:snippetText src="../../../Resources/Snippets/Work tables/Price Run Type.flsnp" />	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	5	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Run id	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Text	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	3	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <MadCap:snippetText src="../../../Resources/Snippets/Work tables/Run Id.flsnp" />	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	6	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Category code	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Text	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	50	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	&#160;	<MadCap:snippetText src="../../../Resources/Snippets/Work tables/Category Code.flsnp" /></td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	7	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Category code padded	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Text	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	100	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	8	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Category name	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Text	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	50	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	9	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Sort order	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Text	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	255	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <MadCap:snippetText src="../../../Resources/Snippets/Work tables/Sort order.flsnp" />	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	10	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Mvt comment	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Text	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	1024	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	11	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Comparison	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Decimal	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	13	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	12	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Comparison difference	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Decimal	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	13	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	13	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Fx contribution	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Decimal	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	13	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>
+                                    <MadCap:snippetText src="../../../Resources/Snippets/Work tables/Fx contribution.flsnp" />
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	14	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Note	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Text	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	255	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <MadCap:snippetText src="../../../Resources/Snippets/Work tables/Notes.flsnp" />	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	15	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Previous value	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Decimal	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	13	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	16	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Summary exception count	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Integer	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	4	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <MadCap:snippetBlock src="../../../Resources/Snippets/Work tables/Summary exception count.flsnp" />
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	17	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Summary exception level	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Integer	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	4	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <MadCap:snippetBlock src="../../../Resources/Snippets/Work tables/Summary exception level.flsnp" />
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	18	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Tolerance level	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Integer	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	4	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <MadCap:snippetText src="../../../Resources/Snippets/Work tables/Tolerance level.flsnp" />	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	19	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Tolerance value	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Decimal	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	13	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <MadCap:snippetText src="../../../Resources/Snippets/Work tables/Tol value.flsnp" />	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	20	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Total contribution	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Decimal	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	13	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	21	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Value amount	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Decimal	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	13	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	22	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Value difference	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Decimal	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	13	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	23	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	P status	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Text	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	1	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <MadCap:snippetText src="../../../Resources/Snippets/Work tables/P Status.flsnp" />	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	24	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	P description	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Text	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	255	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <MadCap:snippetText src="../../../Resources/Snippets/Work tables/p description.flsnp" />	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	25	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Last updated by	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Text	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	50	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <MadCap:snippetText src="../../../Resources/Snippets/Work tables/Last Updated By.flsnp" />	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	26	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Last updated date	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Text	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	17	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	&#160;	<MadCap:snippetText src="../../../Resources/Snippets/Work tables/Last Updated Date.flsnp" /></td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	27	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Integrity value	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Text	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	27	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	&#160;	<MadCap:snippetText src="../../../Resources/Snippets/Work tables/Integrity Value.flsnp" /></td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	28	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Tree code	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Text	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	25	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">	29	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">	Per unit impact	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">	Decimal	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">	13	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">	&#160;	</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">	&#160;	</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Sample worktable data</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Processes that use this worktable</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Standard Import Process</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Standard Export Process</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Validations</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Validation Conditions</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

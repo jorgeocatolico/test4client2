@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Product Master</h1>
+        <p>The Product Master worktable is a framework that enables the creation, maintenance, export and dissemination of product master data. This data can include information related investment firms, investment strategies and investment vehicles. The table allows for maintenance and aggregation of product master data as it relates to a firm's investment strategies, investment managers and related investable products that are maintained in pControl. The worktable has dual authorisation enabled so that modifications to the underlying data are correctly managed. </p>
+        <p>The Product Master worktable definition is maintained via the L080: Product Master, currently managed via the pControl System Administration module. Within pControl web, it is possible to add, delete and save investment strategies; as well as transitioning the record through the approval status stream. Additionally, within the worktable definition, product master fields can be defined to have editor type Worktable Tree Combo. Fields that have this editor type definition are maintain via the L081: Editor Options worktable in pControl web. </p>
+        <h2 class="_orange">Product Master Worktable</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Maintaining the Product Master worktable in System Administration</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>It is possible to modify the product master worktable via the pControl System Administration module by selecting Maintain &gt; Dataviews, and finding the Product Master worktable in the options available. Once highlighted, select &lt;Modify&gt; to open the Data View window. Changes, such as making fields mandatory and optional, can be made that will be reflected in pControl Web, Data &gt;&#160;Product Master.</p>
+                <p MadCap:conditions="Note To Selfs.ScreenOnly">PR-5564 Will require a new image also which has the Four eyes check box. Check functionality and paragraph below.</p>
+                <p MadCap:conditions="Note To Selfs.ScreenOnly"> It is possible to modify the product master worktable via the pControl System Administration module by selecting Maintain &gt; Dataviews, and finding the Product Master worktable in the options available. Once highlighted, select &lt;Modify&gt; to open the Data View window. Select the Four-Eyes option to the right. </p>
+                <p class="zoom4Detail">
+                    <img src="../../Resources/Images/Work tables/ProdM_DataView.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Modifying Product Master Records in pControl Web</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Linking a product master record to an entity</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Each record in Product Master requires to be linked to an Investment Strategy entity in the library tree.</p>
+                <p>To create a new entity within the library tree:</p>
+                <ol class="stepList">
+                    <li class="stepList">Select the required location in the library tree, right click and select 'Add'.</li>
+                    <li class="stepList">
+                        <p>Select a template group and Investment Strategy as the template type from the drop down menus. </p>
+                        <p>
+                            <img src="../../Resources/Images/Data Menu Images/PMaster_AddEntity.png" />
+                        </p>
+                    </li>
+                    <li>Select &lt;Continue&gt; to continue creating the entity, or &lt;Cancel&gt; to exit without saving.</li>
+                    <li>
+                        <p>If continuing, a blank entity will open. </p>
+                        <p>Enter the Investment Strategy Code that will be used for the product master record. This will link the record with the entity.</p>
+                        <p>
+                            <img src="../../Resources/Images/Data Menu Images/PMaster_NewEntity.png" class="greyborder" />
+                        </p>
+                    </li>
+                    <li>Select &lt;Save&gt; to save the new entity; or &lt;Cancel&gt; to exit without saving.</li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To add, delete and save a record</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="zoom4Detail">
+                    <img src="../../Resources/Images/Work tables/ProdM_AddStrategy.png" />
+                </p>
+                <p>When a record has been edited and saved, the change displays in red font while the record is pending approval. Once authorised, the original record is accessible using the red expand icon <img src="../../Resources/Images/Work tables/ProdM_redexpandicon.png" />. Only the data that has been edited will be displayed in the second row. In the example below, the rows show that MG_BALANCED has been changed to MG_GROWTH. The full original record can be accessed via the ellipsis on the second row.</p>
+                <p class="zoom4Detail">
+                    <img src="../../Resources/Images/Work tables/ProdM_EditedRowExample.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Using the Properties view</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Access a record's Properties window by selecting the ellipsis. All fields of the record can be edited by selecting the appropriate tab: Properties, Focus Tier and GICS Sector. The worktable leverages an editor type named Worktable Tree combo. This editor allows for smart filtering for multiple fields. For example, in the GICS sector tab, it is possible to select a sector at level 1, level 2 attributes become available and are subject to the level 1 choice. This is repeated through five levels. </p>
+                <p class="zoom4Detail">
+                    <img src="../../Resources/Images/Work tables/ProdM_PropertiesAdd.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Validating records</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>When saving records, the validate function will check against settings stipulated in the System Administration set up. The following example shows Warnings displayed when a duplicate investment strategy code is used and where a mandatory field does not hold any data. </p>
+                <p>Selecting &lt;Validate&gt; will check all records that are currently in the 'In Edit' state. The validation process is triggered on selecting &lt;Save&gt; also.</p>
+                <p>To save and validate only one record, open the Properties view via the ellipsis and select &lt;Save&gt;.</p>
+                <p class="zoom4Detail">
+                    <img src="../../Resources/Images/Work tables/ProdM_ValidateWarning.png" />
+                </p>
+                <p>&#160;</p>
+                <p class="zoom4Detail">
+                    <img src="../../Resources/Images/Work tables/ProdM_ValidateSuccess.png" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Using dual authorisation on product master records</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>When dual authorisation functionality is activated, records can be added, amended and deleted and a second person's authorisation will be required before the record can be transitioned to the approved state. Records with pending changes awaiting the second person's authorisation are highlighted in the worktable. </p>
+                <p>&#160;</p>
+                <p class="zoom4Detail">
+                    <img src="../../Resources/Images/Work tables/ProdM_DualAuth.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Pending Changes on Product Master and Worktable Records </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Records with pending changes can be viewed in the Pending Changes Dashboard which is accessible via  Dashboard &gt; Pending Changes Dashboard menu navigation. Further information is included under <MadCap:xref href="../../B_Dashboard/Pending Changes Dashboard/Pending Changes Dashboard.htm">Pending Changes Dashboard</MadCap:xref>. </p>
+                <p>Product Master records in a pending change state can be transitioned to the appropriate state in the status stream using the dual authorisation menu on the ellipsis, subject to security access. The authoriser or reviewer can also view additional details of the pending changes in the properties view by selecting the ellipsis. </p>
+                <p>
+                    <img src="../../Resources/Images/Work tables/ProdM_DualAuth.png" class="greyborder" />
+                </p>
+                <p>The properties view highlights the changes have been made in blue text, and the pending changes panel provides the ability to view original and proposed values and the ability to transition the record to a new state.</p>
+                <p MadCap:conditions="MG Staff Only.ScreenOnly" class="zoom4Detail">
+                    <img src="../../Resources/Images/Work tables/W_DualAuth2.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To search for a record </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The Product Master view displays a maximum of 2000 records and has a context sensitive filter menu available to find one or multiple records. The menu can be accessed by the &lt;More&gt; option on the primary filter. Records can be filtered by name, i.e. entity name or investment strategy code, or filtered by investment firm or asset class. </p>
+                <p>
+                    <img src="../../Resources/Images/Data Menu Images/PMaster_SearchEntity.png" class="greyborder" />
+                </p>
+                <p>Alternatively, the record can be found by searching for the entity on the primary filter as each product master record is linked to an entity. Select the &lt;All Entities&gt; drop down menu and type the name of the entity (also the Investment Strategy Code). </p>
+                <div class="tip_label">Tip </div>
+                <div class="tip_content">
+                    <p>A collection can be created to house a number of product master records. See <MadCap:xref href="../../AA_Library/Collections.htm">Collections</MadCap:xref> for further information. </p>
+                </div>
+                <p>&#160;</p>
+                <p class="zoom4Detail">
+                    <img src="../../Resources/Images/Data Menu Images/PMaster_SearchInvStCode.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+    </body>
+</html>

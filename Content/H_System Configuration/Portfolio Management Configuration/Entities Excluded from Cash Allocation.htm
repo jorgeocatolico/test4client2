@@ -1,0 +1,1706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Note To Selfs.ScreenOnly">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Entities Excluded from Cash Allocation</h1>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Portfolio Management/PM_CAintro.flsnp" />
+        <p class="zoom4Detail">
+            <img src="../../Resources/Images/Cash Allocation Images/PM_ExcludeAssetandTGWeb.png" />
+        </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Refactoring target weight calculations</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Refactoring occurs when an excluded asset that has a non-zero weight, has its weight assigned to the other assets within the target group, and its weight set to zero. These refactored target weights are then used in the cash allocation process so that no cash flow is assigned to the excluded assets.</p>
+                <p>The following terms are used in the example below.</p>
+                <p>
+                    <MadCap:equation>$TW_i\ =\ Target\ Weight\ for\ Asset\ i
+\\ 
+rTW_i\ =\ Refactored\ Target\ Weight\ for\ Asset\ i
+\\
+eTW_G\ =\ The\ Sum\ of\ the\ Excluded\ Assets\ Target\ Weights\ for\ the\ Group
+\\
+nTW_G\ =\ The\ Sum\ of\ the\ Non-Excluded\ Assets\ Target\ Weights\ for\ the\ Group
+$</MadCap:equation>
+                </p>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>When an asset is refactored, its tolerances and bounds will be adjusted by the same proportions. An example is provided under <MadCap:xref href="#RefactoringTolerances">Refactoring Tolerances and Bounds</MadCap:xref> below.</p>
+                </div>
+                <div class="example_label">Example</div>
+                <div class="example_content">
+                    <p>The calculation to refactor the target weight is:</p>
+                    <p>
+                        <MadCap:equation>$\small rTW_i\ =\ TW_i\ \times \left (1\ +\ 
+
+\normalsize 
+\frac{eTW_G}{nTW_G}  \right )$</MadCap:equation>
+                    </p>
+                    <p>Asset 4 has a weight of 18.3% to be assigned to the other assets within the target group. Asset 4's target weight will become zero and all remaining assets within the group will have their weights refactored using the above calculation. </p>
+                    <p>Therefore, Asset 1's refactored target weight becomes 47.18%.</p>
+                    <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <thead>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Asset</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Target Weight</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Start Value</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Excluded Y/N</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Refactored Target Weight</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Target Weight (Group)</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Excluded Asset (Group)</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>End Value</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>End Weight</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                    <p>Order</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Asset 1</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>25.90%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>242,834.79</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">
+                                    <p>N</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>47.18%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>100.00%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>335,710</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>350,567</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>32.78%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>117,731.84</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Asset 2</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>0.00%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>67,861.12</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>0.00%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">335,710</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>-</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>0.00%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>-67,861.12</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Asset 3</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>9.00%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>77,696.71</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>16.39%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">335,710</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>125,293</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>11.39%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>47,596.71</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Asset 4</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>18.30%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>151,175.24</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">Y</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>0.00%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">335,710</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>151,175</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>13.74%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>-</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Asset 5</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>20.00%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>15,762.19</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>36.43%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">335,710</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>278,430</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>25.31%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>262,667.64</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Asset 6</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>0.00%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>260,135.08</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>0.00%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">335,710</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>-</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>0.00%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>-260,135.08</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Asset 7</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>26.80%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>184,534.86</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">Y</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.00%</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">335,710</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>184,535</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>16.78%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>-</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Liquidity</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>0.00%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>100,000.00</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.00%</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">335,710</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>-</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>0.00%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>-100,000.00</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                    <p>Total</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                    <p>100.00%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                    <p>1,100,000.00</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: center;">&#160;</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                    <p>100.00%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                    <p>&#160;</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">&#160;</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                    <p>1,100,000</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                    <p>100.00%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1" style="text-align: right;">
+                                    <p>-</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>&#160;</p>
+                </div>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>The Sum of the Non-Excluded Assets Target Weights for the Group, <MadCap:equation>$nTW_G$</MadCap:equation>, could not be zero. However, it would still be possible to continue with the calculation if there was no target group. Examples of calculations where there is no target group are provided below.</p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="RefactoringTolerances"></a>Refactoring tolerances and bounds</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>When an asset is refactored, its tolerances and bounds can be adjusted by the same proportions using the 'Accept/Reject Refactored Tolerances and Bounds' function on the Cash Allocation process template.</p>
+                <p class="zoom4Detail">
+                    <img src="../../Resources/Images/Portfolio Management Images/PM_CAProcessTemplateAcceptRejectALP.png" />
+                </p>
+                <p>When this function is selected on the process template, the cash allocation process will create a wait event and a decision must be taken to accept or reject the refactored tolerances and bounds. </p>
+                <ul class="FirstLevelBlueBullet">
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the proposed tolerances and bounds are accepted, the proposed orders will be generated using the refactored target weight, tolerances and bounds. There will be no future prompts to accept or reject as long as the attribute is selected.</li>
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the proposed tolerances and bounds are rejected, however the proposed orders will be generated using the refactored target weight, and the original tolerances and bounds. On subsequent cash allocation processes, the message will reappear.</li>
+                </ul>
+                <p>If the function is not selected, the orders will be generated using the refactored target weight and the original tolerances and bounds. No warning or prompt will be displayed.</p>
+                <div class="example_label">Example</div>
+                <div class="example_content">
+                    <p>MG Plan holds 4 assets, each with a target weight of 25% and tolerances and bounds as shown in the table below. </p>
+                    <p>If Asset 1 is excluded, the refactored target weights of the remaining assets are 33%. Accepting to refactor the tolerances and bounds will result in the following changes:</p>
+                    <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');border-top-left-radius: 6px;border-top-right-radius: 6px;border-bottom-right-radius: 6px;border-bottom-left-radius: 6px;border-left-style: solid;border-left-width: 1px;border-left-color: #697a84;border-right-style: solid;border-right-width: 1px;border-right-color: #697a84;border-top-style: solid;border-top-width: 1px;border-top-color: #697a84;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #697a84;margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Columncentred" MadCap:pattern="15" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Columncentred" MadCap:pattern="15" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Columncentred" MadCap:pattern="15" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Columncentred" MadCap:pattern="15" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Columncentred" MadCap:pattern="15" />
+                        <thead>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>MG Plan</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Columncentred-Header1">
+                                    <p>Target Weight</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Columncentred-Header1">
+                                    <p>Lower Bound</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Columncentred-Header1">
+                                    <p>Lower Tolerance</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Columncentred-Header1">
+                                    <p>Upper Tolerance</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadD-Columncentred-Header1">
+                                    <p>Upper Bound</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Asset 1</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>25%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>10%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>5%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>5%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Columncentred-Row1">
+                                    <p>35%</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Asset 2</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>25%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>10%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>5%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>5%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Columncentred-Row1">
+                                    <p>35%</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Asset 3</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>25%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>10%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>5%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>5%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Columncentred-Row1">
+                                    <p>35%</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Asset 4</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>25%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>10%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>5%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>5%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Columncentred-Row1">
+                                    <p>35%</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Sub_Heading" MadCap:pattern="18">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Sub_Heading" colspan="6" style="border-right-style: solid;border-right-width: 1px;border-right-color: #697a84;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #697a84;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;">
+                                    <p>When Asset 1 is excluded </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Sub_Heading" MadCap:pattern="18">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Sub_Heading" style="color: #ffffff;border-right-style: solid;border-right-width: 1px;border-right-color: #697a84;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #697a84;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;">&#160;</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Sub_Heading" style="color: #ffffff;border-right-style: solid;border-right-width: 1px;border-right-color: #697a84;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #697a84;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;">
+                                    <p>Refactored Target Weight</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Sub_Heading" style="color: #ffffff;border-right-style: solid;border-right-width: 1px;border-right-color: #697a84;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #697a84;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;">
+                                    <p>Refactored Lower Bound</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Sub_Heading" style="color: #ffffff;border-right-style: solid;border-right-width: 1px;border-right-color: #697a84;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #697a84;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;">
+                                    <p>Refactored Lower Tolerance</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Sub_Heading" style="color: #ffffff;border-right-style: solid;border-right-width: 1px;border-right-color: #697a84;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #697a84;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;">
+                                    <p>Refactored Upper Tolerance</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Columncentred-Sub_Heading" style="color: #ffffff;border-right-style: solid;border-right-width: 1px;border-right-color: #697a84;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #697a84;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;">
+                                    <p>Refactored Upper Bound</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Asset 2</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>33%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>13%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>7%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>7%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Columncentred-Row1">
+                                    <p>46%</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Asset 3</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>33%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>13%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>7%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                    <p>7%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Columncentred-Row1">
+                                    <p>46%</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                    <p>Asset 4</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Columncentred-Row1">
+                                    <p>33%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Columncentred-Row1">
+                                    <p>13%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Columncentred-Row1">
+                                    <p>7%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Columncentred-Row1">
+                                    <p>7%</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyA-Columncentred-Row1">
+                                    <p>46%</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Rebalancing calculations</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The refactored target weights, described above, are used in the rebalancing formula. The calculation for the rebalanced value of an asset is:</p>
+                <p>
+                    <MadCap:equation>$rVAL_i\ =\ 
+\left ( VAL\ \times \ TW_G\ -\  EXC_G \right )
+
+\times \
+\large  
+\frac{rTW_i}{TW_G}$</MadCap:equation>
+                </p>
+                <p>Where:</p>
+                <p>
+                    <MadCap:equation>$TW_i\ =\ Target\ Weight\ for\ Asset\ i
+\\ 
+rTW_i\ =\ Refactored\ Target\ Weight\ for\ Asset\ i
+\\
+eTW_G\ =\ The\ Sum\ of\ the\ Excluded\ Assets\ Target\ Weights\ for\ the\ Group
+\\
+nTW_G\ =\ The\ Sum\ of\ the\ Non-Excluded\ Assets\ Target\ Weights\ for\ the\ Group
+\\
+rVAL_i\ =\ The\ Rebalanced\ Value\ of\ Asset\ i
+\\
+VAL\ =\ The\ total\ value\ of\ the\ plan\ i.e.\ the\ sum\ of\ the\ value\ of\ all\ assets
+\\
+TW_G\ =\ The\ Sum\ of\ the\ Assets\ Refactored\ Target\ Weights\ for\ the\ group
+\\
+EXC_G\ =\ The\ Sum\ of\ Value\ of\ the\ Excluded\ Assets\ for\ the\ group
+$</MadCap:equation>
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>No excluded assets and no groups</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Where there are no excluded assets, there is no requirement to form a target group.</p>
+                <p>
+                    <MadCap:equation>$rVAL_i\ =\ (VAL\ \times TW_i)$</MadCap:equation>
+                </p>
+                <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" style="width: 117px;" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" style="width: 94px;" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Asset</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Target Weight</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Start Value</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Excluded Y/N</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Refactored Target Weight</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Target Weight (Group)</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Excluded Asset (Group)</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>End Value</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>End Weight</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Order</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 1</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>25.90%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>242,834.79</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">
+                                <p>N</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>25.90%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>100.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">-</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>284,900</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>25.90%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                <p>42,065.21</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 2</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>67,861.12</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">-</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>-</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                <p>-67,861.12</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 3</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>9.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>77,696.71</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>9.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">-</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>99,000</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>9.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                <p>21,303.29</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 4</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>18.30%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>151,175.24</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>18.30%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">-</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>201,300</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>18.30%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                <p>50124.76</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 5</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>20.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>15,762.19</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>20.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">-</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>220,000</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>20.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                <p>204,237.81</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 6</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>260,135.08</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">-</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>-</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                <p>-260,135.08</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 7</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>26.80%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>184,534.86</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>26.80%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">-</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>294,800</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>26.80%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                <p>110,265.14</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Liquidity</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>100,000.00</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">-</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>-</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                <p>-100,000.00</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Total</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>100.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>1,100,000.00</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: center;">-</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>100.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">100.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">-</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>1,100,000</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>100.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1" style="text-align: right;">
+                                <p>-</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Excluded assets that have a zero weight and no target group</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Where there are excluded assets with a zero weight but no target group, an adjustment to the calculation is required to cater for the excluded asset.</p>
+                <p>
+                    <MadCap:equation>$rVAL_i\ =\ (VAL\ -\ EXC)\times TW_i$</MadCap:equation>
+                </p>
+                <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" style="width: 117px;" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" style="width: 97px;" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Asset</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Target Weight</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Start Value</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Excluded Y/N</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Refactored Target Weight</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Target Weight (Group)</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Excluded Asset (Group)</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>End Value</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>End Weight</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Order</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 1</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>25.90%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>242,834.79</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">
+                                <p>N</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>25.90%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>100.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>327,996.12</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>199,949</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>18.18%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                <p>-42,885.81</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 2</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>67,861.12</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">Y</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">327,996.12</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>67,861</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>6.17%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                <p>-</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 3</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>9.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>77,696.71</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>9.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">327,996.12</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>69,480</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>6.32%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                <p>-8,216.37</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 4</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>18.30%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>151,175.24</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>18.30%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">327,996.12</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>141,277</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>12.84%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                <p>-9,898.55</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 5</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>20.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>15,762.19</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>20.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">327,996.12</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>154,401</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>14.04%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                <p>138,638.57</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 6</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>260,135.08</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">Y</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">327,996.12</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>260,135</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>23.65%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                <p>-</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 7</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>26.80%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>184,534.86</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>26.80%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">327,996.12</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>206,897</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>18.81%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                <p>22,362.16</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Liquidity</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>100,000.00</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">327,996.12</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>-</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                <p>-100,000.00</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Total</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>100.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>1,100,000.00</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: center;">-</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>100.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">&#160;</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>-</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>1,100,000</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>100.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1" style="text-align: right;">
+                                <p>-</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Non-zero excluded assets and no target group</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The sum of the excluded and non-excluded must be 100%, therefore:</p>
+                <p>
+                    <MadCap:equation>$rVAL_i\ =\ \left ( VAL\ -\ EXC \right )\ \times\ 
+
+
+\frac{TW_i }{\left ( 1-eTW \right )}$</MadCap:equation>
+                </p>
+                <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" style="width: 117px;" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" style="width: 97px;" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Asset</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Target Weight</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Start Value</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Excluded Y/N</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Refactored Target Weight</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Target Weight (Group)</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Excluded Asset (Group)</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>End Value</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>End Weight</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Order</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 1</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>25.90%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>242,834.79</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">
+                                <p>N</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>47.18%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>100.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">663.706</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">205,829</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">18.71%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-37,005.89</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 2</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>67,861.12</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">Y</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">663.706</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">67,861</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">6.17%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 3</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>9.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>77,696.71</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>16.39%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">663.706</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">71,524</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">6.50%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-6,173.15</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 4</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>18.30%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>151,175.24</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">Y</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">663.706</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">151,175</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">13.74%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 5</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>20.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>15,762.19</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>36.43%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">663.706</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">158,941</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">14.45%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">143,179.04</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 6</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>260,135.08</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">Y</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">663.706</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">260,135</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">23.65%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 7</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>26.80%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>184,534.86</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">Y</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">663.706</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">184,535</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">16.78%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Liquidity</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>100,000.00</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">100.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">663.706</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>-</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                <p>-100,000.00</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Total</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>100.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>1,100,000.00</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: center;">-</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>100.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">-</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>-</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>1,100,000</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>100.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1" style="text-align: right;">
+                                <p>-</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    <br />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Non-zero excluded assets weights refactored to group</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This accounts for excluded assets with non-zero weights and non-zero asset balances and is calculated by first applying the 're-factored weight calculation' followed by the standard rebalance formula. Where a group exists, the weight is proportioned with the group and if a group does not exist, the weight is proportioned across all assets not in a group.</p>
+                <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" style="width: 117px;" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" style="width: 97px;" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Asset</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Target Weight</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Start Value</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Excluded Y/N</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Refactored Target Weight</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Target Weight (Group)</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Excluded Asset (Group)</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>End Value</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>End Weight</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Order</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 1</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>25.90%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>242,834.79</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">
+                                <p>N</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>25.90%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>25.90%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">67,861</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">217,039</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">19.73%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-25,795.91</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 2</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>67,861.12</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">Y</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">25.90%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">67,861</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">67,861</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">6.17%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 3</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>9.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>77,696.71</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>9.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">54.10%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">&#160;</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">99,000</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">9.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">21,303.29</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 4</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>18.30%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>151,175.24</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>18.30%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">54.10%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">-</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">201,300</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">18.30%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">50,124.76</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 5</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>20.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>15,762.19</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>20.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">20.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">260,135</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">-40,135</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">-3.65%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-55,897.27</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 6</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>260,135.08</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">Y</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">20.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">260,135</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">260,135</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">23.65%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset 7</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>26.80%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>184,534.86</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">26.80%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">54.10%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">-</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">294,800</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">26.80%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">110,265.14</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Liquidity</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>100,000.00</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">N</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.00%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">54.10%</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">-</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>-</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                <p>0.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                <p>-100,000.00</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Total</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>100.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>1,100,000.00</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: center;">-</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>100.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">-</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>-</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>1,100,000</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                <p>100.00%</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1" style="text-align: right;">
+                                <p>-</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The return of the asset in the entity from the prior valuation point.</p>
+        <p>
+            <MadCap:equation>$\frac{\left (Current\ value\ of\ Asset\ in\ Portfolio\ -\ Previous\ value\ of\ Asset\ in\ Portfolio\ -\ Transaction\ value  \right )}{Previous\ value\ of\ Asset\ in\ Portfolio\ }$</MadCap:equation>
+        </p>
+    </body>
+</html>

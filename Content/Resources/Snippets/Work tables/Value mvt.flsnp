@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The difference in the market price of the asset, in the entity's base currency, calculated as:</p>
+        <p>
+            <MadCap:equation>$ Val\ Cur\ Base\ -\ Value\ Prev\ Base $</MadCap:equation>
+        </p>
+    </body>
+</html>

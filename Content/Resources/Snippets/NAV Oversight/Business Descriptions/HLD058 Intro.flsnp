@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Will fail the test if the current weight of the asset in the entity is greater than the current weight of the asset in the key benchmark when compared against a specified tolerance.</p>
+    </body>
+</html>

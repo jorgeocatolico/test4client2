@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The date and time the account movement was created in pControl. This date can be useful when performing queries i.e. to look for back dates based on the effective date and referencing the entry date. </p>
+        <p style="font-style: italic;">Note: More than one financial event may be attached to a transaction.</p>
+    </body>
+</html>

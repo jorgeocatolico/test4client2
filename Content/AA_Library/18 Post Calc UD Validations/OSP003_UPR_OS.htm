@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Note To Selfs.ScreenOnly">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>OSP003_UPR_OS</h1>
+        <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1" colspan="2">
+                        <p style="font-weight: normal;">Process Template Option (UDV): OSP003 - Validate Unit Price for OMAS (CAT_UPR_OS_UDV)</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Business Description</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <MadCap:snippetBlock src="../../Resources/Snippets/Process Phases and Functions/OSP_003_UPR_OS.flsnp" />
+                        <p>This validation checks that the movement in the value of the unit price category is within tolerance.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">Processing Detail</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                        <p>
+                            <MadCap:equation class="VerticalAlignment">$\small Absolute$</MadCap:equation>
+                            <MadCap:equation>$\left [ \frac{\left ( Actual\ Price\ -\ Expected\ Price \right ) }{Actual\ Price} \right ] &gt;$</MadCap:equation>
+                            <MadCap:equation class="VerticalAlignment">$\small tolerance$</MadCap:equation>
+                        </p>
+                        <MadCap:snippetBlock src="../../Resources/Snippets/Process Phases and Functions/UDV_NoteBox.flsnp" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

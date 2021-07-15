@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Calculate Fees</h1>
+        <p>The calculation of fee provisions for an entity is a key function of the pricing process and the pControl unit pricing product provides a very flexible and highly configurable fee calculation framework. An entity can have as many fees as required calculated for it, and the following sections explain how to configure fee entities in pControl and how to associate them to the entity so that fee provisions are calculated during a pricing process.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Configuring Fee Entities</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>A ‘fee’ entity is created in the process tree and the attributes held on a fee entity define what type of fee it is and what calculations will take place when it is calculated for an entity.</p>
+                <div class="note_label">Note </div>
+                <div class="note_content">
+                    <p> See Processing Volume I User Guide  and System Administration User Guide  for more information on the creation and maintenance of entities in pControl.</p>
+                </div>
+                <p>&#160;</p>
+                <p>The following shows an administration fee that is calculated based on a percentage of the current day GAV of an entity.</p>
+                <p>
+                    <img src="../../Resources/Images/NAV Oversight Images/NO_Feetype.png" />
+                </p>
+                <p>The key attributes used for the configuration of fee entities are:</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">fee type</li>
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">fee method</li>
+                    <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">base value.</li>
+                </ul>
+                <p>The frequency that the fee is applied, and the rates to apply are held on the entity itself unless the fee represents a sliding scale.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Fee Type</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The fee type defines whether the fee being calculated is a fee (i.e. admin, custody, and management) or a performance fee.</p>
+                <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Fee Type</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Fee</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Selected for all fees that are
+ not performance fees (i.e. admin, management, custody).  </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Performance Fee</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>Selected where the fee being
+ calculated is a performance fee.  This specifies that a performance
+ fee is to be calculated which means that the additional attributes under the performance
+ fee tab are used </p>
+                                <p><i>Note: For further details on performance fee calculations see section
+  </i>
+                                    <MadCap:conditionalText MadCap:conditions="Note To Selfs.ScreenOnly"><i>4.8.1.5  [LC035]
+ Calculate Performance Fees</i>
+                                    </MadCap:conditionalText><i>.</i>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Fee Method</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The fee method defines how a fee will be calculated.  The fee methods available include:</p>
+                <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Fee Method</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Percentage</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The fee is calculated as a
+ percentage of the base value.  The fee
+ percentage is held on the entity along with the frequency that it is applied.</p>
+                                <p>The calculation is as follows:</p>
+                                <p>(bp amount from the ‘Rate(bp)’
+ field * Base Value * (number of days since last price / days in the frequency))</p>
+                                <p>For example, a bp rate of 120
+ applied annually on the Current Day GAV where the number of days since the
+ last price is 3, the number of days in the year is 365 and the Current Day
+ GAV is currently 15,000,000 would result in
+  
+  15,000,000 * 0.012 * (3/365)  - with
+ the resulting amount being the fee to provide for on the processing day</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Flat Fee</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>A flat fee amount is used to
+ calculate the fee using the frequency of the fee that is held on the entity.</p>
+                                <p>The calculation is as follows:
+  </p>
+                                <p>(Flat Fee $ amount from the ‘Flat
+ Fee $’ field * (number of days since last price / days in the frequency))</p>
+                                <p>For example, a flat fee of
+ $1,100 applied annually where the number of days since the last price is 1
+ and the number of days in the year is 365 would result in
+  
+  1000 * (1/365)  - with the resulting
+ amount being the fee to provide for on the processing day</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Flat Fee and Percentage</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>A flat fee is used to
+ calculate the fee plus a percentage of the base value specified – a
+ combination of flat fee and percentage methods.</p>
+                                <p>In this case, the flat fee is
+ calculated and then the relevant percent based amount and both are summed to
+ provide the provision for the day to accrue.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Sliding Scale Absolute</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Sliding scale fee rates are
+ used to determine the percentage rate to apply to the base value, i.e.,
+ whichever scale band the base values falls into, that rate is used along with
+ the frequency held on the entity.</p>
+                                <p>The calculation would be as
+ follows: </p>
+                                <p>(bp amount from the
+ appropriate band on the sliding scale table on the pricing entity * base value
+ * (number of days since last price / days in the frequency))</p>
+                                <p>For example, if the current day
+ GAV was $53,000 and using the sliding scale table below with the number of
+ days since the last price being 2 and the number of days in the year being
+ 365, the fee would be calculated as; 53,000 * 0.0030 * (2/365) with the
+ resulting amount being the fee to provide for on the processing day.</p>
+                                <p style="text-align: center;">
+                                    <img src="../../Resources/Images/NAV Oversight Images/NO_SlidingScaleAbsolute.png" />
+                                </p>
+                                <p>&#160;</p>
+                                <p>Alternatively, there is an
+ attribute ‘Rate represents flat monetary amount’ which if selected will mean
+ that the ‘Rate’ column represents a ‘flat monetary amount’ rather than a
+ basis point figure.  As a comparison,
+ if the current day GAV was $53,000 and using the
+ sliding scale table below with the number of days since the last price being
+ 2 and the number of days in the year is 365, this would result in the fee
+ being calculated as 
+  53,000 * 2,300 * (2/365) with the resulting amount being the fee to provide
+ for on the processing day.</p>
+                                <p style="text-align: center;">
+                                    <img src="../../Resources/Images/NAV Oversight Images/NO_SlidingScaleAbsoluteFeeScale.png" />
+                                </p>
+                                <p><i>Note: Sliding scale fee details are defined on a ‘Fee Scale’ entity
+ which is attached to the entity via the ‘Fee Details’ attribute table.</i>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Sliding Scale Cumulative</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The sliding scale fee rates held
+ on the pricing entity are used with each band’s rate applied against a
+ portion of the base value up to the band in which the base value sits</p>
+                                <p>The calculation is as follows:
+  </p>
+                                <p>(bp amount from each band on
+ the sliding scale table on the pricing entity * max amount-min amount) until base
+ value &lt; max amount 
+  
+  and then (bp amount from band * base amount – min amount) 
+  
+  * (number of days since last price / days in the frequency)</p>
+                                <p>&#160;</p>
+                                <p>For example, if the GAV was
+ 60,000 and using the following sliding scale table:</p>
+                                <p style="text-align: center;">
+                                    <img src="../../Resources/Images/NAV Oversight Images/NO_SlidingScaleCumulative.png" />
+                                </p>
+                                <p>With the number of days since the last price being 2 and the
+ number of days in the year is 365, this would result in
+  
+  ((20 * 50,000) + (10000 * 30)) * (2/365)  with the resulting amount being the fee to provide for on the
+ processing day.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Flat Fee and Sliding Scale Absolute</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>A flat fee is used to
+ calculate the fee plus a percentage of the base value specified using the
+ sliding scale absolute method and the sliding scale specified – a combination
+ of flat fee and sliding scale absolute methods.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Flat Fee and Sliding Scale Cumulative</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>A flat fee is used to
+ calculate the fee plus a percentage of the base value specified using the
+ sliding scale cumulative method and the sliding scale specified – a
+ combination of flat fee and sliding scale cumulative methods.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Return Value From Function</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>The business rule held in the
+ ‘Rule to be used to generate fee value’ attribute will be used to generate a fee
+ value.  This provides flexibility in
+ creating new fee methods to meet specific client requirements.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Base Value</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The base value defines the value that will be used in the calculation of a fee. The base value alternatives include:</p>
+                <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Base Value</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Average GAV</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The calculated average GAV of
+ the entity since the last lock-in period will be used as the base value </p>
+                                <p style="font-style: italic;">Note: this option is only valid when the fee type is ‘Performance
+ Fees’.  Performance fees are configured
+ using attributes on a separate tab of the ‘Fee Type’ entity.  </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Cashflow Since Last Pricing Point</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The value of any cashflows
+ received since the prior pricing point or processing day (as retrieved from
+ the unitised cashflow worktable) will be used as the base value.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Current Day GAV</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The Gross Asset Value
+ calculated for the entity by the pricing process will be used as the base
+ value.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Current Day GAV – Bid / Offer</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The Gross Asset Value
+ calculated for the entity by the pricing process when load bid/offer
+ validations has been selected will be used as the base value.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Current Day GAV – Bid / Offer (Clean Market Value)</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The Gross Asset Value
+ calculated for the entity by the pricing process when load bid/offer
+ validations and clean market value (for transaction cost and price component adjustments)
+ have been selected will be used as the base value.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Current Day GAV less Prior Fees</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>GAV
+ minus ‘Total Accrued Fee Provision’ before today (i.e. sum of all fees
+ accruals included in today’s total fee provision).</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Current Day GAV less Prior Tax</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The Gross Asset Value
+ calculated for the entity by the pricing process minus the tax provision from
+ the previous pricing point will be used as the base value.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Individual Investment Holding Value</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The value of the individual
+ investment holding (for the investment entity as specified on the pricing
+ entity) will be used as the base value.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Pre-Performance NAV</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The calculated pre-performance
+ NAV value will be used as the base value.  </p>
+                                <p><i>Note: this option is only valid when the fee type is ‘Performance
+ Fees’.  Performance fees are configured
+ using attributes on a separate tab of the ‘Fee Type’ entity.</i><![CDATA[  ]]></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Prior Period GAV</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The Gross Asset Value from the
+ prior pricing point or processing day for the entity will be used as the base
+ value</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Prior Period GAV including cashflows since</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The Gross Asset Value from the
+ prior pricing point or processing day for the entity plus any cashflows
+ received since that point (as retrieved from the unitised cashflow worktable)
+ will be used as the base value</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Prior Period </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The Net Asset Value from the prior
+ pricing point or processing day for the entity will be used as the base value</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Prior Period 
+  incl. cashflows since</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The Net Asset Value from the
+ prior pricing point or processing day for the entity plus any cashflows
+ received since that point (Cashflows as loaded in function [DL100] from the
+ U109: Cashflows unitised worktable, pControl or both) will be used as the base
+ value</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Prior Period Pre-performance NAV including cashflows
+ since</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The calculated prior period
+ pre-performance NAV including cashflows since value will be used as the base
+ value </p>
+                                <p><i>Note: This option is only valid when the fee method is set to ‘Performance
+ Fee’.</i>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Return value from Function</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The business rule held in the
+ ‘Rule to be used to generate base value’ attribute will be used to generate a
+ value to be used as the base value. This provides flexibility in creating new
+ base values for fees easily to meet specific client requirements.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Total Investment Holding Value</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The total of the investment
+ holdings calculated for the entity by the pricing process will be used as the
+ base value.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Capital Value Pre-Expense</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The pre-expense NAV minus the
+ pre-expense income will be used as the base value.</p>
+                                <p><i>Note: The pre-expense NAV = GAV minus opening liabilities balances.</i>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Income / Expense Account Movement</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>The movement in account
+ balance between current and last pricing day will be used as the base value.</p>
+                                <p><i>Note: This base value is typically used in calculating fees for NAV
+ Oversight entities. </i>
+                                    <MadCap:conditionalText MadCap:conditions="Note To Selfs.ScreenOnly">See   <i></i><span style="font-style: italic;">NAV Oversight User Guide </span>for further
+ information.</MadCap:conditionalText>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Additional attributes used in ‘Fee Type’ entity Configuration</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Attribute</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Transactions Types</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Transaction types on the fee
+ entity will be used to accrue the fee that has been calculated along with any
+ sales tax and sales tax refund that might have been calculated in addition,
+ based on the attributes held against the entity. It is the transaction types which
+ define the pControl internal accounts that will have their balances updated
+ when the fee is accrued.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Non-Annualised?</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>If this attribute is selected,
+ the fee will be calculated and not annualised, i.e., it will ignore the
+ frequency of the fee set against the entity and calculate the fee provision
+ without any ‘annualisation’. This is the equivalent of setting the fee to
+ have a daily frequency at all times.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Fee reversal journal required for next valuation
+ point</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>If selected, once the fee
+ journal is created, a reversal journal entry will also be created reversing
+ the current accrual for the next valuation point.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Round fee amount before accruing</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>If selected, fee values will
+ be rounded before multiplying by the number of days to accrue. If not
+ selected, the unrounded amount will be used when multiplying by the number of
+ days to accrue.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Notes</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>Free format text that allows a
+ business description to be added to the Fee Type.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Configuring Entities to Calculate Fees</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>A pricing entity can be configured to calculate any number of fee provisions during the pricing process. A fee is attached to an entity by associating a fee entity in the fee details attribute table as shown below. Any number of fees can be attached or associated to an entity via this table.</p>
+                <div class="note_label" MadCap:conditions="Note To Selfs.ScreenOnly">Note</div>
+                <div class="note_content" MadCap:conditions="Note To Selfs.ScreenOnly">
+                    <p MadCap:conditions="Note To Selfs.ScreenOnly"> Calculate Fees functions and their associated entity attributes are covered in detail in the following sections.</p>
+                </div>
+                <p>
+                    <img src="../../Resources/Images/Unit Pricing Images/UP_AssociatingFeestoEntity.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The number of days to offset the settlement of cash after the trade date. For example, if redemptions have a 2 day offset, the cash for redemptions will be settled 2 days after the trade date. This is reflected in the order's Financial Events. </p>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>Pending Changes Dashboard</h1>
+        <MadCap:snippetBlock src="../../Resources/Snippets/MG Staff Only content/1. MG Staff - top of page warning.flsnp" MadCap:conditions="MG Staff Only.ScreenOnly" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <p>The Pending Changes Dashboard enables the quick review and navigation to events or objects that are pending authorisation. When dual authorisation functionality is activated, records that are added, amended or deleted, require a second person's authorisation before the record can be transitioned to a new state, for example, 'Ready to Authorise', or 'Authorised'. </p>
+        <p>The Pending Changes Dashboard provides a summary view of these events awaiting action and therefore directs the approver's attention to events with changes that require review. The Pending Changes Dashboard is configured in the System Administration module.</p>
+        <h2 class="_orange">Understanding the Pending Changes Dashboard</h2>
+        <MadCap:dropDown xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Dashboard Controls</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The top panel of the dashboard displays a summary of the number of items that need review. In the example below, on the left hand side, there is one entity that requires review and on the right hand side, seven product master records with pending changes. Pending changes can also be categorised by SLA time or by transition state, i.e. ready to authorise. </p>
+                <p class="zoom4Detail">
+                    <img src="../../Resources/Images/Pending Changes/PC_PendingChangesDashboardState.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Product Master Worktable Example</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList">
+                    <li class="stepList">
+                        <p>Make a change to the MG_BALANCEDFUND record in the Product Master, changing the Strategy Format from Private to Public. The change in record is visible in red text. </p>
+                        <p class="zoom4Detail">
+                            <img src="../../Resources/Images/Data Menu Images/PMaster_RecordEdit.png" class="greyborder" />
+                        </p>
+                    </li>
+                    <li class="stepList">
+                        <p>Once the record is saved, the authorisation status is updated and the original record viewable by selecting the expand/collapse icon.</p>
+                        <p>Transition the record using the ellipsis.</p>
+                        <p class="zoom4Detail">
+                            <img src="../../Resources/Images/Data Menu Images/PMaster_pendingchangeview.png" class="greyborder" />
+                        </p>
+                    </li>
+                    <li class="stepList">
+                        <p>The second user, or approver, will be able to see the  change that is ready on the Pending Changes Dashboard. From here, the approver can select &lt;Review&gt; to navigate to the record in the Product Master worktable, where a transition can be made. </p>
+                        <p>Selecting a section of the donut, for example the green highlighted 'Ready to Authorise' section, navigates to the Product Master worktable where all 'Ready to Authorise' records with pending changes will be listed.</p>
+                        <p class="zoom4Detail">
+                            <img src="../../Resources/Images/NAV Oversight Images/PendingChangesDashboard.png" class="greyborder" />
+                        </p>
+                    </li>
+                    <li class="stepList">Once the approver has transitioned the record to the next stage, the record will be removed from the Pending Changes Dashboard.</li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Entities Example </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <MadCap:snippetBlock src="../../Resources/Snippets/All/EntitiesPendingChanges.flsnp" />
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Worktables example</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <MadCap:snippetBlock src="../../Resources/Snippets/Work tables/DualAuthonWorktables.flsnp" />
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:snippetBlock src="../../Resources/Snippets/MG Staff Only content/2. MG Staff -start of MG staff content.flsnp" MadCap:conditions="MG Staff Only.ScreenOnly" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <MadCap:dropDown xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="MG Staff Only.ScreenOnly">Date Offsets</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p MadCap:conditions="MG Staff Only.ScreenOnly"> pControl Dashboard Configuration has been enhanced to support additional features to be used in pControl Web. Specifically, a dashboard can now be configured with date offsets and entity active types.</p>
+                <p MadCap:conditions="MG Staff Only.ScreenOnly">Date offsets allow the user to specify a large date offset both backwards and forwards in time. This means that a dashboard can display a large range of time based data, while primary date filters are still in the context of the current date. Entity type filtering also allows a dashboard to show data for Active entities, Inactive entities or both. This functionality will allow dashboards to be configured in such a way as to provide the maximum value to users, without having to change the date ranges and filters within pControl Web. An example configuration that is suggested to capture an Attention Status Monitor range of data would be:</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li MadCap:conditions="MG Staff Only.ScreenOnly" class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">From Date Offset: From Date - 365</li>
+                    <li MadCap:conditions="MG Staff Only.ScreenOnly" class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">To Date Offset: Now +31</li>
+                    <li MadCap:conditions="MG Staff Only.ScreenOnly" class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Active Status: All</li>
+                </ul>
+                <p MadCap:conditions="MG Staff Only.ScreenOnly" class="zoom4Detail">
+                    <img src="../../Resources/Images/Pending Changes/PendingChangesDateOffsetinSwing.png" />
+                </p>
+                <MadCap:snippetBlock src="../../Resources/Snippets/MG Staff Only content/3. MG Staff -end of MG staff content.flsnp" MadCap:conditions="MG Staff Only.ScreenOnly" />
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

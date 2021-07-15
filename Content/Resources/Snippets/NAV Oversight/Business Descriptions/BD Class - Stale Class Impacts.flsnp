@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This return methodology uses the last known Fee Impact, and stales this value for use in the class' expected price calculation.</p>
+        <p>This return methodology uses the return of the pool associated to the class, and applies this return to the Class, to calculate the class' expected price.</p>
+    </body>
+</html>

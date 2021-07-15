@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="MG Staff Only.ScreenOnly">
+    <head>
+        <link href="../../../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>ERM016: Holdings - Forward Rate Interpolation</h1>
+        <MadCap:snippetBlock src="../../../../Resources/Snippets/MG Staff Only content/1. MG Staff - top of page warning.flsnp" />
+        <p>Forward Exchange Contracts, also known as Currency Forwards or FX Forwards are an agreement between two parties to exchange two designated currencies at a specific time in the future.  Non-Deliverable Forward or NDFs are cash settled forward contracts meaning the notional amounts of the currencies in the contract are not exchanged on settlement, but rather the profit and loss on the transaction is exchanged in a designated settlement currency.  NDFs are commonly used for hedging or for trading in illiquid or restricted currency markets.</p>
+        <p>FX Forwards and NDF rates are published for standard periods such as 1 month, 2 months, etc. or 30 days, 60 days, 90 days, etc. However, Forwards, and NDFs can be traded to settle on any date. Therefore, if a price is needed for an “odd date” between the standard periods, the price is interpolated. Interpolation is a way to determine the value of the forward, using spot or forward rates to estimate the future value of that holding.</p>
+        <p>The Expected Return Methodology for Holdings - Forward Rate Interpolation reprices each leg of the Forward FX or NDF holding during the Expected Pricing/Backup NAV process, based on current day forward exchange rates, and future dated rates using linear interpolation.</p>
+        <div class="note_label">Note</div>
+        <div class="note_content_short_width">
+            <p>Linear Interpolation is also referred to as Straight Line Interpolation.</p>
+        </div>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1" colspan="2">Expected Return Methodology Calculation: ERM016: Holdings - Forward Rate Interpolation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Business Description</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The calculation will reprice each leg of the Forward FX security based on current day forward exchange rates using linear interpolation. </p>
+                        <p>The difference in value from prior day will then be divided by the pool's last known good Net NAV to calculate the return. The day over day return of each holding will be summed, and used for the Holding Constituent return in the Expected NAV Calculation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Component</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Holdings</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Allowable Category Codes</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">FWD</li>
+                        </ul>
+                        <MadCap:snippetBlock src="../../../../Resources/Snippets/NAV Oversight/ERM Content/NO_CategoryCode_HOLDINGS.flsnp" />
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Prerequisite Functions</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[DL030] - Load Investment Holdings</li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[DL116] - Check FX Rates Present</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Methodology Attributes</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">nil</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Entity Attributes</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p><u>FX Rate Type</u>
+                        </p>
+                        <p>
+The value selected in this drop down field is used to obtain current day internal exchange rates for this FX rate type.</p>
+                        <p>
+                            <img src="../../../../Resources/Images/NAV Oversight Images/NO_FX_Rate_Type_attb_web.png" alt="" title="" class="MaxWidth75Percent" />
+                        </p>
+                        <p>&#160;</p>
+                        <p><u>Check FX Rates Present</u>
+                        </p>
+                        <p>The following two attributes are optional, however they are highly recommended, if ERM016 is being used. </p>
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If selected, the process will check if current day FX rates have been loaded and validated. If FX rates are not available at the time the process is run, the process will wait until such time as the rates are loaded.</li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If not selected, and current day FX rates have not been loaded at the time the process is run, the process will still run without the current day FX rates, meaning stale rates will be used.<span style="background-color: #00ff00;"> (Is this correct re stale rates?)</span></li>
+                        </ul>
+                        <p>
+                            <img src="../../../../Resources/Images/NAV Oversight Images/NO_DL116_attb.png" alt="" title="" />
+                        </p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Prerequisite Process</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Write_FX_Rates process must be run for the same effective date as the Expected or Backup NAV process is to be run. This is to ensure the cross rates are created within pControl and available for use by these formulas.</p>
+                        <p style="font-style: italic;">Note: FX cross rates are viewable in pControl via Data &gt; FX Rates menu.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Data Requirements</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p><b class="BufferandFunctionBold">U100: Investment Holdings worktable:</b>
+                        </p>
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Asset Code</li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Base Currency Code</li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Local Currency Code</li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Maturity Date</li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Units</li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Pricing Factor</li>
+                        </ul>
+                        <p>&#160;</p>
+                        <p><b class="BufferandFunctionBold">U180: Security Details</b>
+                        </p>
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Maturity date (only used if U100.Maturity Date is not populated)</li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">NDF&#160;Fixing Date</li>
+                        </ul>
+                        <p>&#160;</p>
+                        <p><b class="BufferandFunctionBold">FX Spot Rates:</b>
+                        </p>
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Currency Code</li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Exchange Rate Mid</li>
+                        </ul>
+                        <p>&#160;</p>
+                        <p><b class="BufferandFunctionBold">FX Forward Rates:</b>
+                        </p>
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Currency Code</li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Forward Rate Near (Closest Forward Rate Period ≤ Days to Settlement)</li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Forward Rate Far (Closest Forward Rate Period ≥ Days to Settlement)</li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Days in Period Near (Days in Period for Forward Rate Near)</li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Days in Period Far (Days in Period for Forward Rate Far)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Processing Requirements</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p><u>Calculated values</u>
+                        </p>
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Days to Settlement = Maturity Date - Effective Date</li>
+                        </ul>
+                        <p style="text-decoration: underline;">Interpolation</p>
+                        <p>For each Holding with the category code of FWD: </p>
+                        <ol>
+                            <li>If Local Currency = Base Currency of the Holding, then price = 1</li>
+                            <li>If Maturity date is null, the price is staled, i.e. price = A03.price_local_cur</li>
+                            <li>If NDF Fixing Date is null, price is staled, proceed to step 5, else move to step 4</li>
+                            <li>If NDF Fixing Date <MadCap:equation>$\small \leq$</MadCap:equation> Effective Date, the Price = Spot Rate with the effective date = NDF Fixing Date, else proceed to step 5</li>
+                            <li>If  Days to Settlement &lt; 3, then price = Spot Rate. The effective date is equal to the Last Known NAV date, else proceed to step 6</li>
+                            <li>Get the FX Forward rate for the Base:Local currency for the Maturity date.</li>
+                        </ol>
+                        <p style="text-indent: 18px;">
+                            <MadCap:equation>$\small Holding\ Price\ =\ Forward\ Rate\ Near\ + \left ( Forward\ Rate\ Far\ - Forward\ Rate\ Near\ \right )\ \times 
+
+\normalsize
+\left [ \frac{\left ( Days\ to\ Settlement\ - Days\ in\ Period\ Near \right )}
+{\left ( Days\ in\ Period\ Far\ - Days\ in\ Period\ Near \right )} \right ]$</MadCap:equation>
+                        </p>
+                        <p>Where</p>
+                        <p style="margin-left: 18px;">
+                            <MadCap:equation>$\small If\ the\ Days\ to\ Settlement\ =\ Days\ in\ Period\ Near,\ then\ Price\ =\ Forward\ Rate\ Near$</MadCap:equation>
+                        </p>
+                        <p style="margin-left: 18px;">
+                            <MadCap:equation>$\small If\ the\ Days\ to\ Settlement\ =\ Days\ in\ Period\ Far,\ then\ Price\ =\ Forward\ Rate\ Far$</MadCap:equation>
+                        </p>
+                        <p>&#160;</p>
+                        <p style="font-style: italic;">Note: the interpolation calculation uses calendar days with no non-working days, meaning weekend or holiday calendars are not required for the calculation.</p>
+                        <p style="font-style: italic;">&#160;</p>
+                        <p style="background-color: #00ff00;">Is the following correct?</p>
+                        <p>
+                            <MadCap:equation>$\small Local\ Expected\ Market\ Value\ =\ (Prior\ Actual\ U100.Units\ \times Calculated\ Interpolated\ Rate\ \times Prior\ Actual\ U100.Pricing\ Factor$</MadCap:equation>
+                        </p>
+                        <div class="example_label">Example</div>
+                        <div class="example_content">
+                            <p><u>39 Day Rate</u>
+                            </p>
+                            <p>A 39 day FX&#160;Forward falls between the 1 month and 2 month standard periods. .  Linear interpolation assumes the interest rates increase or decrease steadily from the 1-month rate to the 2-month rate.  The increase from 30 days to 39 days will be a 9/31 portion of the increase from 30 days to 61 days.</p>
+                            <p style="margin-left: 18px;">1 month rate (30 days) = 8.0</p>
+                            <p style="margin-left: 18px;">2 month rate (61 days) = 8.5</p>
+                            <p>
+                                <MadCap:equation>$\small Holding\ Price\ =\ Forward\ Rate\ Near\ + \left ( Forward\ Rate\ Far\ - Forward\ Rate\ Near\ \right )\ x\ 
+
+\normalsize
+\left [ \frac{\left ( Days\ to\ Settlement\ - Days\ in\ Period\ Near \right )}
+{\left ( Days\ in\ Period\ Far\ - Days\ in\ Period\ Near \right )} \right ]$</MadCap:equation>
+                            </p>
+                            <p style="margin-left: 18px;">Holding Price for 39 day rate = 8.0 + (8.5 - 8.0) x [9/31]</p>
+                            <p style="margin-left: 18px;">Holding Price for 39-day rate = 8.14516</p>
+                        </div>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1" MadCap:conditions="MG Staff Only.ScreenOnly">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                        <p>Outputs</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                        <MadCap:snippetBlock src="../../../../Resources/Snippets/MG Staff Only content/2. MG Staff -start of MG staff content.flsnp" />
+                        <p>A03: Holding Validation</p>
+                        <p>For each holding:</p>
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">A03: Local Cur Price = Calculated Interpolated Rate</li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"><span style="background-color: #00ff00;">A03: Value Cur Local = Local Expected Market Value (Prior Actual U100 Units * Calculated Interpolated Rate * Prior Actual U100 Pricing Factor)</span>
+                            </li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">A03: Clean MV Local Cur = Local Expected Market Value</li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">A03: FX Rate Cur = Current Day Internal exchange rate for Local/Base currency pair (set to prior day value if FX Rate not found)</li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">A03: Value Cur = Expected Market Value (per calculation in P606 below)</li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">A03: Clean MV Cur = Expected Market Value</li>
+                        </ul>
+                        <p><b class="BufferandFunctionBold"> P606: Constituent Structure</b> </p>
+                        <p>For each holding:</p>
+                        <ul class="FirstLevelBlueBullet">
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">pControl Code</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Effective Date</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Price run Type</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">run ID</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Constituent Type = "Holding"</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Category Code = A03: Category Code</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Asset Code = A03: Asset Code</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">market Price = Calculated Interpolated Rate</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Units = A03: Prev Adj Clean MV</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"><span style="background-color: #00ff00;">Expected Value = Units/Market Price (For a forward holding, the units represent the value in local currency to be bought or sold at maturity date)</span>
+                            </li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Value Difference = Expected Value - Previous Value</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Expected Return = Value Difference / Previous Value</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">MV&#160;Impact - Value Difference / Last Good NAV</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Expected Return Methodology = Description of Expected Return Methodology</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Comment = Settlement Date = DD-Mmm-YYYY&#160;(Maturity Date of the Forward holding)</li>
+                        </ul>
+                        <MadCap:snippetBlock src="../../../../Resources/Snippets/MG Staff Only content/3. MG Staff -end of MG staff content.flsnp" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

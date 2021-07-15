@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../TableStyles/MG_TableStyle02TableinaTable.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <p>The primary filter contains the selection criteria for selecting data to be displayed on the dashboard, and all web screens.</p>
+        <p>
+            <img src="../../Images/Process Dashboard Images/PrimaryFilter.bmp" />
+        </p>
+        <table style="mc-table-style: url('../../TableStyles/MG_TableStyle02TableinaTable.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle02TableinaTable" cellspacing="0">
+            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                        <p>
+                            <img src="../../Images/Process Dashboard Images/PrimaryFilter_settings.bmp" alt="" title="" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                        <p>The settings drop down can be used to filter active / inactive or all entities.</p>
+                        <p>By default, only active entities are included in the search.</p>
+                        <p>&#160;</p>
+                        <p>By default, any search for an entity will return both the entity searched for, and all child entities. To restrict the search to only the entity named in the primary filter, deselect the 'show children' checkbox.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                        <p><a href="../../Images/Process Dashboard Images/PrimaryFilter_Entity.bmp"><img src="../../Images/Process Dashboard Images/PrimaryFilter_Entity.bmp" alt="" title="" /></a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                        <p>The Primary Filter can be used to filter dashboard and web screens by:</p>
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">An entity.</li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">A collection of entities - The drop down list underneath collections will show all available static and dynamic collection groups.</li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Template Type - The drop down list underneath Templates will show all available template types, e.g. 'Oversight Pool' or 'Oversight Class'. The next field can then be used to display all available entities of the selected template type.</li>
+                        </ul>
+                        <div class="note_label">Note:</div>
+                        <div class="note_content">
+                            <p>Collections are configured in the Processing Module, and are then viewable within this drop down list. For further details, refer to <MadCap:xref href="../../../AA_Library/Collections.htm">Collections</MadCap:xref></p>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                        <p>Entity field (code or description)</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                        <p>This field is used to enter the code or description of the entity or collection to be filtered by.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                        <p>Date Range</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                        <p>The date range selected here is used to filter the data displayed in the dashboard and all web screens. </p>
+                        <p>In most environments, all web screens are limited to displaying 8 days of data.</p>
+                        <div class="note_label">Note:</div>
+                        <div class="note_content">
+                            <p>Some environments the 'From Date' and 'To Date' will default to the previous date, or to a specified offset period, e.g. T-3. Offset periods are configured in the 'Page Defaults' lookups within System Administration.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                        <p>
+                            <img src="../../Images/Process Dashboard Images/PrimaryFilter_greenSearch.bmp" alt="" title="" />
+                        </p>
+                        <p>
+                            <img src="../../Images/Process Dashboard Images/PrimaryFilter_redSearch.bmp.props.bmp" alt="" title="" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                        <p>The Search button is being used for two purposes:</p>
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">To start the search</li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">To display the status of the search</li>Green indicates the data displayed on the dashboard or web page reflects the selection criteria of the primary filter. <br />Red search button indicates the data displayed does not correspond to the primary filter criteria, i.e. something in the filter fields has been changed, and the search button has not yet been selected, or the web page has been accessed by filtering, e.g. selecting a purple section of the dashboard to drill into the data.</ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>An Entity Set defines a subset of entities from the Library Tree. User access to view entities is maintained with Web Admin, by granting  access to User Roles to view Entity Set/s.</p>
+    </body>
+</html>

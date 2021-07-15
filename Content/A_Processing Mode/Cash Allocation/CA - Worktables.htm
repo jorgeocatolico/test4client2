@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>CA - Worktables</h1>
+        <h2 class="_orange">In Processing Mode</h2>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/All/Worktable.flsnp" />
+        </p>
+        <p>&#160;</p>
+        <p>The main worktables referenced by Cash Allocation are listed below.</p>
+        <p>&#160;</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Import Worktables</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Import worktables are used by the process to capture any data required during the cash allocation for an entity on a given processing day. Data is typically loaded into these worktables automatically using pControl Data Manager. Alternatively, data can be manually entered into these worktables through processing mode. </p>
+                <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Import Worktable</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>U101: External Prices</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Holds any prices that have been imported to pControl from another system / location.</p>
+                                <p>This worktable is used when pControl is not being used for the calculation of unit prices. The prices are an input into proposed order calculations.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>U108: Units on Issue</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Holds the units on issue of an entity.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>U110: Cashflows and Orders</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Holds details of cashflows from external registries or transfer agencies, or direct investments from investors. This data is used by the ‘Create Cashflow’ phase of processing or the ‘Create Registry Orders’ general process for the creation of registry orders which simulate the cashflow into the top-level or receiving funds.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">U305: Cash Allocation - Liquidity Adjustments</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Holds adjustments that need to be made to the liquidity balance of an entity over a specified time period. Usually updated manually. Data for this buffer can be loaded from an external source automatically if required.<MadCap:conditionalText MadCap:conditions="Note To Selfs.ScreenOnly"><span style="background-color: #00ff00;">Link to Load Liquidity Adjustments - in Templates</span></MadCap:conditionalText></td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">U306: Cash Allocation Liabilities</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Holds liability values of an entity for a specific date. Three different types of liability can be loaded into this worktable; close of business (CoB), intra-day, and manual adjustment. <MadCap:conditionalText MadCap:conditions="Note To Selfs.ScreenOnly" style="background-color: #00ff00;">Link to Load COB / Intra-Day / Manual Adjustment Liabilities - in templates</MadCap:conditionalText></td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">U498: Investment Parameter Update</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">Holds the allocation criteria, (target weights, tolerances and bounds) used by the Cash Allocation process to calculate how much cash to allocate to underlying assets. <MadCap:conditionalText MadCap:conditions="Note To Selfs.ScreenOnly"><span style="background-color: #00ff00;">Link to Loading Allocation Parameters ALPs - in template</span>s</MadCap:conditionalText></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Static Worktables</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Static worktables are used to hold data that does not change on a regular basis such as mappings and tolerances set for particular calculations.</p>
+                <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Static Worktable</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>L250: Transaction Flow Configuration </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Records configuration relating to transaction types. Each transaction type can be configured for auto confirmation, auto cash settlement after approval, auto cash settlement after confirmation, and for the recording of a cash settle date offset. </p>
+                                <p>
+                                    <MadCap:conditionalText MadCap:conditions="Note To Selfs.ScreenOnly" style="background-color: #00ff00;">Link to 5.6 what happens at the completion of the cash allocation process</MadCap:conditionalText>
+                                </p>
+                                <p>The transaction types that are to be grouped must first be specified in the static data worktable, L250: Transaction Flow Configuration and selecting the 'Group in Cash Allocation' column.</p>
+                                <p>
+                                    <MadCap:conditionalText MadCap:conditions="Note To Selfs.ScreenOnly" style="background-color: #00ff00;">Link to Calculate Proposed orders (template)</MadCap:conditionalText>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>L260: Cash Allocation - Default Option Mappings </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>Maintains the relationships between a 'Default Option' entity and the set of investment entities. <MadCap:conditionalText MadCap:conditions="Note To Selfs.ScreenOnly" style="background-color: #00ff00;">Appendix E - Default/ Balancing Options</MadCap:conditionalText></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>pControl Worktables</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>pControl worktables are usually read-only worktables used to hold the results of processing before being used in follow on processing, or for reporting within pControl.</p>
+                <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>pControl Worktable</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>P500: Order Ids</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Offset orders for the ‘default options’ are summed for each asset class, and one real order is created. This order is stored in this worktable. </p>
+                                <p>
+                                    <MadCap:conditionalText MadCap:conditions="Note To Selfs.ScreenOnly" style="background-color: #00ff00;">For further info on P500 refer to UOM&#160;User Guide</MadCap:conditionalText>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>P510: Message Interface  </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>Used to monitor messages (i.e. relating to orders placed, approved, confirmed etc.).</p>
+                                <p>This worktable represents both inbound and outbound messages, however, these are mutually exclusive, e.g. one row is required for inbound and one for outbound message types. Two status streams are used to display the inbound and outbound messages in the attention status monitor (ASM).</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Export Worktables</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Export worktables are read-only worktables used to hold the results of processing. These worktables facilitate the export of any information that may be required for analysis or reporting outside of pControl. </p>
+                <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>pControl Worktable</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>U510: Transaction Export</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>Used to record the details of transactions generated (i.e. orders generated from cash allocation processing). This buffer may be used to extract transaction details for ongoing processing (outside of pControl). </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Indicates the version of the order currently being processed can be utilised where amend/cancel requests are received electronically. This field defaults to 0 if order is manually created in pControl.</p>
+    </body>
+</html>

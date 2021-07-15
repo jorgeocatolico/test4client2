@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To save a record and initiate dual authorisation following add, edit or delete action</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList">
+                    <li class="stepList">Add, edit or delete a record as required.</li>
+                    <li class="stepList">Select the ellipsis, and mark the record as 'In Progress' or 'Ready to Authorise'. </li>
+                    <li class="stepList">Select <span class="ButtonArrows">Save</span> to save changes. </li>
+                </ol>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>When selecting <span class="ButtonArrows">Save</span> to save changes, all records that have been edited will be saved. If an alternate user has made changes at the same time, the second pending change is not saved and a message displayed to indicate that there is an existing pending change.</p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

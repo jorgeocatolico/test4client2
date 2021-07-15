@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Indicates the order the ALPs are displayed in the table view. ALPs will be displayed with the lowest sort order at the top and the highest at the bottom.</body>
+</html>

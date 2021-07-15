@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>
+            <MadCap:snippetText src="../Work tables/U350Intro.flsnp" />
+        </p>
+        <p>Prior to use within the Oversight environment, the category hierarchy must be defined to allow the movement in assets (crossholdings), liabilities and units to be categorised according to internal classifications.</p>
+        <p>A number of standard categories have been defined in the <b class="BufferandFunctionBold">U350: Classification Hierarchy</b> worktable for use in the NMA, OMAS, CPAS, AMAS and DYAS reports. The categories used for oversight reporting, have the same name, and can be identified with ‘_OS’ suffix. Categories for CPAS reporting can be identified with '_CP' suffix, and categories for the AMAS&#160;report can be identified with _AMAS suffix. </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../Images/NAV Oversight Images/NO_U350.png" alt="" title="" class="greyborder" />
+        </p>
+        <p>Changes can be made to some categories within the U350: Classification Hierarchy. At the completion of altering this worktable, the ‘Category Hierarchy’ process must be run before the changes will be reflected in the respective analysis view.</p>
+        <p>To view the standard product category hierarchy for each analysis view, as supplied at the time of implementation, refer to the relevant category hierarchy below:</p>
+        <ul class="FirstLevelBlueBullet">
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../B_Dashboard/NAV Oversight/Analysis Views/Category Hierarchy for NMA.htm">Category Hierarchy for NMA</MadCap:xref>
+            </li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../B_Dashboard/NAV Oversight/Analysis Views/Category Hierarchy for OMAS.htm">Category Hierarchy for OMAS</MadCap:xref>
+            </li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../B_Dashboard/NAV Oversight/Analysis Views/Category Hierarchy for Share Class Impacts.htm">Category Hierarchy for CPAS</MadCap:xref>
+            </li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../B_Dashboard/NAV Oversight/Analysis Views/Category Hierarchy for AMAS.htm">Category Hierarchy for AMAS</MadCap:xref>
+            </li>
+            <li MadCap:conditions="Note To Selfs.ScreenOnly" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../B_Dashboard/NAV Oversight/Analysis Views/Category Hierarchy for DYAS.htm">Category Hierarchy for DYAS</MadCap:xref>
+            </li>
+        </ul>
+    </body>
+</html>

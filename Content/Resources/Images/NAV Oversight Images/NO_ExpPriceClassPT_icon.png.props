@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fileProperties>
+    <ImageOverlay Profile="C:\Users\cxp\Documents\My Profiles\MyProfile.capro" ProfileHash="48a8431eb0c4d928a2e10e3988d9ee1c0e27d86e">
+        <OriginalImage Type="Image" ShapeTimeSpan="10000" AutoAdjust="true" EnableGrayScaleFormat="false" ExportFormat="png" DPI="96" medium_print_ExportFormat="png" medium_tablet_ExportFormat="png" medium_mobile_ExportFormat="png" ImageScaleFactor="1.250" ComputedWidth="22" ComputedHeight="22" Format="png">iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAASdEVYdFNvZnR3YXJlAEdyZWVuc2hvdF5VCAUAAAFnSURBVDhPpZS7SgNREIZ9CV9ACy+IKBqIIIFooYIgincMptBYqIGgRQpFXHwEFQloJaI2FmIRC7ETwdYX2Uuym0048g/Mcs6e3Q2S4uPMzO58nBmW7Wq1WqLZbArf94lGo0F4nidc1yXq9bqo1WqE4ziEbdvCsizCNE1Bou70RUcoovzDbyT8svHZG0mkaKPyI8YL95TjDIumSlsU4zz76I8XsYQFYRFOCHDOny7Hi/qWrikGSTcCiNuKEDPciCYGeeYw316EXYVFGEneS7aYixfJrFx+UR27AIhPqgPBrQDvK1GE2tHbaNBUeh6jmiwCmmj95lsRpfJ7WtPI5oGS795O6qIZo6qIUOOdAB5DFi2cL+oiLFoWZcuvVMdeMCLi7atpRdwzV9ZFIL3/pMhmjffgGcaQJROFneCZJgLDuTtlX1xnSfExJYZWi0pPpIgZXKuIzPFLkOMTCAuYRNF/CESd/9hM8QcXRzb3rR+rrgAAAABJRU5ErkJggg==</OriginalImage>
+        <Variables />
+        <Shapes />
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

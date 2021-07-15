@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="105" MadCap:lastWidth="1493">
+    <body>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <img src="../../Images/User Permissions Images/UPs_SaveAndExit.png" style="width: 91px;height: 31px;" /> to complete the user role creation, and exit the wizard, or</li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <img src="../../Images/User Permissions Images/UPs_DiscardChangesAndExit.png" style="width: 166px;height: 32px;" /> to exit without saving changes</li>
+        </ul>
+    </body>
+</html>

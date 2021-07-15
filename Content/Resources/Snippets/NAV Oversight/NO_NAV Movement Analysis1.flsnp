@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The NAV Movement Analysis (NMA or VMAS) report is generated as a part of both the Expected and Daily Pricing processes. pControl will use the pricing data from the expected or daily pricing process to populate specific categories within the NMA report.</p>
+    </body>
+</html>

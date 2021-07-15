@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>NAV Movement Analysis  </h1>
+        <MadCap:snippetBlock src="../../../Resources/Snippets/NAV Oversight/NO_NAV Movement Analysis1.flsnp" />
+        <p>
+            <img src="../../../Resources/Images/NAV Oversight Images/NO_NMAoverview.png" style="width: 85%;height: 85%;" />
+        </p>
+        <p>
+            <MadCap:snippetText src="../../../Resources/Snippets/NAV Oversight/NO_NAV Movement Analysis2.flsnp" />
+        </p>
+        <h2 class="_orange">The NAV&#160;Movement Analysis view </h2>
+        <p>The NAV Movement Analysis view is accessible via the navigation described in <MadCap:xref href="Analysis Views.htm">Analysis Views</MadCap:xref> from the <MadCap:xref href="../../../C_Process/Exceptions.htm">Exceptions </MadCap:xref>screen, or via the <MadCap:xref href="../../../C_Process/Fund Sign Off.htm#Fund">Fund Overview</MadCap:xref> ellipsis on the <MadCap:xref href="../../../C_Process/Fund Sign Off.htm">Fund Sign Off</MadCap:xref> screen.</p>
+        <p class="zoom4Detail">
+            <img src="../../../Resources/Images/NAV Oversight Images/NO_NMA_report2.png" class="ReduceButtonSize_800px" />
+        </p>
+        <h2 class="_orange">Worktables</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>A01: Product Validation</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Presents a summary of the validation and calculation results for the fund, such as the calculated GAV, and movement from the previous pricing point. It also contains a summary level statuses for the validations performed.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>A02: Product Detail Validation</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Holds the results of all  validation checks, i.e those that have passed their validation check, (status = 'OK') as well as those that have failed their validation check, (status = 'Exception', or other severity level).</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>A13: Category Validation</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Holds the summary results of category validations and calculations.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>A14: Category Detail Validation</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Holds the detailed results for all validations run on an entity's categories.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>U350: Category Hierarchy</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/U350CatHierIntro.flsnp" />
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Functions</h2>
+        <p>The NMA can be generated as part of an Actual pricing or Oversight pricing process, by selecting the following function on the process template:</p>
+        <ul class="FirstLevelBlueBullet">
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[VA500] - Generate Pricing Movement Analysis Data</li>This function takes the pricing data either from the <b class="BufferandFunctionBold">U101: External Prices</b> or <b class="BufferandFunctionBold">U141: Unit Prices worktable </b>for inclusion in the analysis view.<br /></ul>
+        <ul class="FirstLevelBlueBullet">
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../AA_Library/Entities/NAV Process Phases and Functions.htm#VA150">[VA150] - Generate Asset Level Movement Analysis Data </MadCap:xref>
+            </li>This function will include the valuation data from the <b class="BufferandFunctionBold">U100: Investment Holdings</b> worktable, used in the NAV process, for inclusion in the analysis view. This data is used to explain the movement, and impact of investment asset categories, (Equities, Fixed Interest etc), cash positions and transactions, (if applicable) on the price.<br /></ul>
+        <p>Where Expected Pricing is run, the following function can be selected, and the 'Expected Pricing Movement' analysis view will be generated, and displayed within the 'NAV Movement' tab:</p>
+        <ul class="FirstLevelBlueBullet">
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[VA800] - Generate Expected Pricing Movement Analysis Data</li>
+        </ul>
+        <h2 class="_orange">Calculations</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>NAV Movement Analysis Report Specification</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The <a href="NMA Specification Table.htm">NMA report specification</a> details the data, calculations and categories used, as well as column definitions.</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">FX Contribution (bp) – this is the amount of the impact that can be attributed to the movement in FX Rates for the values present in the specific category (the FX contribution is included in the Total contribution so this is the amount of the total contribution due to FX Rate changes) </li>
+                </ul>
+                <p class="noteInDiv">The specific calculation used for the FX Impact is as follows:</p>
+                <p class="noteInDiv">
+                    <MadCap:equation>$\small FX\ Contribution = \large \frac{\left ( Value\ Previous\ (local))\ \times\  Current\ FX\ Rate \right )\ -\ \left ( Value\ Previous\ (local) )\ \times\  Previous\ FX\ Rate \right )}{Previous\ NAV}$</MadCap:equation>
+                </p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Category Tolerance Level – this is the level of breach from the validation performed on this category (if applicable)</li>
+                    <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Category Tolerance Value – this is the value that was breached by the validation performed on this category (if applicable)</li>
+                    <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Summary Tolerance Level – this is the maximum breach that occurred for all Holdings and Transactions in the specific category (only valid for categories under AST)</li>
+                    <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Summary Exception Count – this is the total number of validation breaches (Warnings and above) that were raised by the process for all Holdings and Transactions in the specific category (only valid for categories under AST).</li>
+                </ul>
+                <div class="note_label">Note </div>
+                <div class="note_content">
+                    <p>Not all categories are populated for NAV Oversight where non-security- level data is used to value the portfolio or entity. </p>
+                </div>
+                <p>The NAV Movement Analysis View is divided into a hierarchy of categories, similar to the other analysis views. The data and calculations that are used to populate each of the categories or category types on the report are detailed in the table in this link <a href="NMA Specification Table.htm">NMA Analysis Report Specification.</a></p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

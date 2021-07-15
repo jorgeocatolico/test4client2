@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Reallocation of Value</h1>
+        <p>Usually, the value of an entity is calculated by summing all the investment holdings of that entity. However, in some cases, certain investment holdings may need to be included in the value of a <i>different</i> entity to the one that actually holds the investment. </p>
+        <p>Reallocation may be required for:</p>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Strategic or tactical asset allocation reasons</li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Derivatives held in an overlay portfolio</li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Profit / loss from hedging which is held in a hedging portfolio</li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Any isolated asset value held in a special portfolio.</li>
+        </ul>
+        <h2 class="_orange">Understanding Reallocation of Value</h2>
+        <p>Investment Holdings can be reallocated to one or more entities, as long as those entities are all within the same plan. The reallocation details are recorded in the L290: Effective Exposure Reallocation worktable, and the U310: Exposure Reallocation Source worktable. When  processing is run, the values of the assets listed in these worktables are transferred from one entity to another.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Reallocation of Value example</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <div class="example_label">Example</div>
+                <div class="example_content">
+                    <p>
+                        <img src="../../Resources/Images/Portfolio Management Images/PM_ReallocationofValue1.png" />
+                    </p>
+                    <p>&#160;</p>
+                    <p>In this example, <b>ABC Account</b> has 11 portfolio entities. The <b>Non-US Equity</b> entity has investment holdings in Emerging Markets, TBCAM, SSGA World Ex US, Acadian Managed Volatility Equity, SSGA S&amp;P 500 Index Fund and DFA Intl Small Company. </p>
+                    <p>The Portfolio Manager decides to reallocate the value of the SSGA&#160;World Ex US shares from the Non-US Equity entity to the Global Equity entity. As reallocation is not a transfer of ownership, the Global Low Volatility entity will never hold the title to the SSGA World Ex US.</p>
+                    <div class="note_label">Note </div>
+                    <div class="note_content">
+                        <p>Reallocation is not a transfer of ownership. The title of the asset remains with the 'Source' entity, as listed in the L290: Effective Exposure Reallocation worktable.</p>
+                    </div>
+                    <p>&#160;</p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Processing Mode</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Configuring reallocation of value</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The above example of reallocation of value would be configured in the following worktables:</p>
+                <p>&#160;</p>
+                <table cellspacing="0" class="TableStyle-MG_TableStyle01Grey" style="border-top-left-radius: 6px;border-top-right-radius: 6px;border-bottom-right-radius: 6px;border-bottom-left-radius: 6px;border-left-style: solid;border-left-width: 1px;border-left-color: #697a84;border-right-style: solid;border-right-width: 1px;border-right-color: #697a84;border-top-style: solid;border-top-width: 1px;border-top-color: #697a84;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #697a84;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th colspan="9" class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1" style="font-size: 1em;">L290: Effective Exposure Reallocation</th>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="font-size: 1em;font-weight: normal;">
+                                <p style="margin-top: 0;margin-bottom: 0;">pControl </p>
+                                <p style="margin-top: 0;margin-bottom: 0;">Code</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="font-size: 1em;font-weight: normal;">
+                                <p style="margin-top: 0;margin-bottom: 0;">Effective</p>
+                                <p style="margin-top: 0;margin-bottom: 0;">date</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="font-size: 1em;font-weight: normal;">
+                                <p style="margin-top: 0;margin-bottom: 0;">Source pControl</p>
+                                <p style="margin-top: 0;margin-bottom: 0;">Code</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="font-size: 1em;font-weight: normal;">
+                                <p style="margin-top: 0;margin-bottom: 0;">Active </p>
+                                <p style="margin-top: 0; margin-bottom: 0;">ID</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="font-size: 1em;font-weight: normal;">
+                                <p>Asset</p>
+                                <p>Code</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="font-size: 1em;font-weight: normal;">
+                                <p>Asset Description</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="font-size: 1em;font-weight: normal;">Value type</th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="font-size: 1em;font-weight: normal;">Destination from pControl Code</th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1" style="font-size: 1em;font-weight: normal;">Destination to pControl Code</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="font-size: 0.9em;">ABC_Non US&#160;Equity</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="font-size: 0.9em;">1 Jan 18</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="font-size: 0.9em;">ABC_Non US&#160;Equity</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="font-size: 0.9em;">Y</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="font-size: 0.9em;">
+                                <p>SSGAWEX</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="font-size: 0.9em;">
+                                <p>SSGA World Ex US</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="font-size: 0.9em;">Offset</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="font-size: 0.9em;">ABC_Non US&#160;Equity</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1" style="font-size: 0.9em;">ABC_GLOBAL LOW VOLATILITY</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+                <table cellspacing="0" class="TableStyle-MG_TableStyle01Grey" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" style="width: 70px;" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th colspan="7" class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1" style="font-size: m;">U310: Exposure Reallocation Source</th>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="font-size: m;font-weight: normal;">
+                                <p style="margin-top: 0;margin-bottom: 0;">pControl </p>
+                                <p style="margin-top: 0;margin-bottom: 0;">Code</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="font-size: m;font-weight: normal;">
+                                <p style="margin-top: 0;margin-bottom: 0;">Effective</p>
+                                <p style="margin-top: 0;margin-bottom: 0;">date</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="font-size: m;font-weight: normal;">
+                                <p style="margin-top: 0;margin-bottom: 0;">Asset</p>
+                                <p style="margin-top: 0;margin-bottom: 0;">Code</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="font-size: m;font-weight: normal;">
+                                <p style="margin-top: 0;margin-bottom: 0;">Asset</p>
+                                <p style="margin-top: 0;margin-bottom: 0;">Description</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="font-size: m;font-weight: normal;">Market Value</th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="font-size: m;font-weight: normal;">Effective Exposure Offset</th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1" style="font-size: m;font-weight: normal;">Effective Exposure</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="font-size: 0.9em;">ABC_Non US&#160;Equity</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="font-size: 0.9em;">16 Oct 18</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="font-size: 0.9em;">SSGAWEX</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="font-size: 0.9em;">SSGA World Ex US</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="font-size: 0.9em;">210,000</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="font-size: 0.9em;">200,000</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1" style="font-size: 0.9em;">410,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

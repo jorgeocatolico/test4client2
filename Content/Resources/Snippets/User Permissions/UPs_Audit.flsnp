@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <div class="note_label">Note</div>
+        <div class="note_content">
+            <p>All changes made in Web System Administration are audited and saved. For example, where a user updates a function within a functional group, or changes dataview permissions, these changes will be audited. Currently there is no screen to view this audit information within pControl, the data can only be extracted from the database.</p>
+        </div>
+        <p>&#160;</p>
+    </body>
+</html>

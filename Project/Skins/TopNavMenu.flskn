@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CatapultSkin
+  Version="2"
+  SkinType="Component"
+  Comment="HTML5 Menu skin"
+  ComponentType="Menu"
+  EnableResponsiveOutput="True">
+  <Stylesheet>
+    <Styles>
+      <Style
+        Name="Menu">
+        <Properties>
+          <Property
+            Name="FontSize">11pt</Property>
+          <Property
+            Name="BackgroundImage">none</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Menu Item">
+        <Classes>
+          <StyleClass
+            Name="1st Level">
+            <Properties>
+              <Property
+                Name="BackgroundImage">none</Property>
+            </Properties>
+          </StyleClass>
+        </Classes>
+      </Style>
+    </Styles>
+  </Stylesheet>
+  <Strings />
+</CatapultSkin>

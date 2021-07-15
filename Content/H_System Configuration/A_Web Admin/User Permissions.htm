@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>User Permissions</h1>
+        <p>Configuring user access is completed in the pControl Web Administration application, also known as 'User Permissions' and 'Web Admin'. Configuration includes both setting up new user ids, and assigning  access/enabling function to different areas of the pControl web application. </p>
+        <p>Split into the four tabs, the Web Admin module uses a wizard approach to configuring functionality scope, user roles, user maintenance and entity sets. </p>
+        <p>The ability to access and view or edit permissions is subject to an individual's security access settings i.e. the user will be restricted within pControl Web Admin to only see the tabs that they have been granted access to. Access is configured via the <MadCap:xref href="User Maintenance.htm">User Maintenance</MadCap:xref> tab.</p>
+        <p>
+            <img src="../../Resources/Images/User Permissions Images/UPs_3tabs.png" class="greyborder" />
+        </p>
+        <h3>
+            <MadCap:xref href="Functionality Scope.htm">Functionality Scope</MadCap:xref>
+        </h3>
+        <MadCap:snippetBlock src="../../Resources/Snippets/User Permissions/UPs_Functional Scope.flsnp" />
+        <h3>
+            <MadCap:xref href="User Roles.htm">User Roles</MadCap:xref>
+        </h3>
+        <MadCap:snippetBlock src="../../Resources/Snippets/User Permissions/UPs_User Roles.flsnp" />
+        <h3>
+            <MadCap:xref href="User Maintenance.htm">User Maintenance</MadCap:xref>
+        </h3>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/User Permissions/UserMaintenanceDefinition.flsnp" />
+        </p>
+        <h3 MadCap:conditions="MG Staff Only.ScreenOnly">
+            <MadCap:xref href="Entity Sets.htm">Entity Sets </MadCap:xref>
+        </h3>
+        <p MadCap:conditions="MG Staff Only.ScreenOnly">
+            <MadCap:snippetText src="../../Resources/Snippets/Library/EntitySetsIntro.flsnp" />
+        </p>
+        <div class="note_label">Note</div>
+        <div class="note_content">
+            <p>Only users with security rights to maintain the functions within Web Admin will be able to view and edit permissions. </p>
+        </div>
+        <p>&#160;</p>
+        <h2 class="_orange"><a name="Import"></a>Import and Export Function </h2>
+        <p>Using row selection, it is possible to import and export functionality scope groups, user groups and entity sets. </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Exporting files</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The following example demonstrates how to select and export two functionality scopes. The same process applies to user groups and entity sets.</p>
+                <ul class="stepList">
+                    <li>
+                        <p>Select one or more item rows for export. </p>
+                        <p>
+                            <img src="../../Resources/Images/User Permissions Images/UP_ExportFunctionScope.png" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Select <span class="ButtonArrows">Export</span> and select from the options to export a single file, or to multiple files i.e. one per object. The files will be exported in Java Script Object Notation (JSON) to the download directory specified in the user's browser settings. </p>
+                    </li>
+                </ul>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Importing files </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The following example demonstrates how to import a functionality scope into pControl Web Admin module. The same process and configuration screen applies to importing user roles and entity sets.</p>
+                <ul class="stepList" start="1">
+                    <li>
+                        <p>Select <span class="ButtonArrows">Import</span> and the import configuration view will open.</p>
+                        <p>&#160;</p>
+                    </li>
+                    <li>
+                        <p>Start the import process with <img src="../../Resources/Images/User Permissions Images/UPs_ImportFile.png" /> and choose the relevant file to upload.</p>
+                    </li>
+                    <li>
+                        <p>It is possible to check the items within each file and any changes that will be uploaded. pControl will validate each file selected for upload.</p>
+                        <p>&#160;</p>
+                        <p class="zoom4Detail">
+                            <img src="../../Resources/Images/User Permissions Images/UPs_ImportFunctionScope.png" />
+                        </p>
+                    </li>
+                    <li>Select <span class="ButtonArrows">Validate</span> to check the file and <span class="ButtonArrows">Close</span> to end the process. </li>
+                </ul>
+                <p>The file will not load to pControl in the following instances:</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the file has been modified outside of pControl, the file cannot be loaded. Each export includes a checksum validation. If the checksum fails during import, the file cannot be loaded. The file will return a fatal response that restricts the file from load, shown below. </li>
+                    <img src="../../Resources/Images/User Permissions Images/UPs_FatalError.png" />
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the file is not of the expected type, the file will be validated with a fatal response. For example, it is not possible to select <span class="ButtonArrows">Import</span> from the Functionality Scope page and load an Entity Set.&#160;</li>
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If there are no differences between the current file being loaded and what is stored in pControl, the file will not be loaded. pControl will only allow files to be loaded that have differences and are not fatal errors, i.e. checksum or file type failures.</li>
+                </ul>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

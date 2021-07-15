@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>When the dual authorisation functionality is activated, records can be added, amended and deleted and a second person's authorisation will be required before the record can be transitioned to another state. Plans with pending changes have a pending change card for each change made. The pending changes require the second person's authorisation are highlighted as shown in the example below. </p>
+    </body>
+</html>

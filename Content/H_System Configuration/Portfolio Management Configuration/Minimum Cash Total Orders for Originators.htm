@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Note To Selfs.ScreenOnly">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Minimum Cash Total Orders for Originators</h1>
+        <p>The Minimum Cash Total Orders functions in both Cash Allocation and Rebalancing processes allow a minimum order to be applied for an originator entity from a compliance check carried out pre-approval to identify whether or not the minimum is met. Where the minimum is met, the transactions will be processed. This function ensures that all orders over multiple assets total more than the Minimum Total Order for the Originator. The value of the minimum total order is the greater of the two attributes 'Minimum Total Orders ($) and Minimum Total Orders (% of investment holdings).</p>
+        <p>Where the minimum is not met, the orders will be moved to an exception state. It is possible to override or reject the proposed orders.</p>
+        <p class="zoom4Detail">
+            <img src="../../Resources/Images/Cash Allocation Images/PCA_MinimumCashOrders.png" />
+        </p>
+        <p>&#160;</p>
+        <div class="example_label">Examples</div>
+        <div class="example_content">
+            <h3>Example to demonstrate where proposed orders are more than the minimum total value order ($)</h3>
+            <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                <tbody>
+                    <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                            <p>Cash at Bank</p>
+                            <p>Cashflows today</p>
+                            <p>Total Cashflow</p>
+                        </td>
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                            <p>$250,000</p>
+                            <p>$10,000</p>
+                            <p> $260,000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                            <p>Minimum Cash Balance </p>
+                        </td>
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                            <p>$1,500,000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                            <p>Over/under cash</p>
+                        </td>
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                            <p>$260,000-$1,500,000 = -$1,240,000 (redemption)</p>
+                            <p><i>Note: This total is made up of two redemption orders or -100,000 from Fund A and 1,140,000 from Fund B.</i>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                            <p>Minimum Originator Orders</p>
+                        </td>
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                            <p>$200,000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                            <p>Test over/under cash with Minimum Order</p>
+                        </td>
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                            <p>abs(-1,240,000)&gt;abs(200,000) = TRUE</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1" colspan="2">
+                            <p>Therefore, orders can be placed for a redemption of $1,240,000 </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Example where proposed orders do not meet the minimum originator order ($) and an exception is raised </h3>
+            <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                <tbody>
+                    <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                            <p>Cash at Bank</p>
+                            <p>Cashflows today</p>
+                            <p>Total Cashflow</p>
+                        </td>
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                            <p>$1,495,000</p>
+                            <p>$10,000</p>
+                            <p> $1,505,000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                            <p>Minimum Cash Balance </p>
+                        </td>
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                            <p>$1,500,000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                            <p>Over/under cash</p>
+                        </td>
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                            <p>$1,505,000-$1,500,000 = -$5,000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                            <p>Minimum Originator Orders</p>
+                        </td>
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                            <p>$200,000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                            <p>Test over/under cash with Minimum Order</p>
+                        </td>
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                            <p>abs(5,000)&gt;abs(200,000) = FALSE</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1" colspan="2">
+                            <p>Therefore, the minimum originator order is not met and an exception is raised.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Example where minimum originator order is not met and an exception is raised</h3>
+            <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                <tbody>
+                    <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                            <p>Cash at Bank</p>
+                            <p>Cashflows today</p>
+                            <p>Total Cashflow</p>
+                        </td>
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                            <p>$1,495,000</p>
+                            <p>-$10,000</p>
+                            <p> $1,485,000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                            <p>Minimum Cash Balance </p>
+                        </td>
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                            <p>$1,500,000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                            <p>Over/under cash</p>
+                        </td>
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                            <p>$1,485,000-$1,500,000 = -$15,000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                            <p>Minimum Originator Orders</p>
+                        </td>
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                            <p>$200,000.00</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                            <p>Test over/under cash with Minimum Order</p>
+                        </td>
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                            <p>abs(-15,000)&gt;abs(200,000) = FALSE</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1" colspan="2">
+                            <p>Therefore, the minimum originator order is not met and an exception is raised.</p>
+                            <p>Note that despite being under the cash minimum of $1,500,000.00, a redemption is NOT&#160;raised for the minimum cash order.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Example where minimum originator order is not met and an exception is raised</h3>
+            <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                <tbody>
+                    <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                            <p>Rebalancing Application</p>
+                            <p>Rebalancing Redemption</p>
+                            <p>Total Cashflow</p>
+                        </td>
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                            <p>$1,595,000</p>
+                            <p>-$100,000</p>
+                            <p> $595,000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                            <p>Minimum Originator Orders</p>
+                        </td>
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                            <p>$600,000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                            <p>Test over/under cash with Minimum Order</p>
+                        </td>
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                            <p>abs(595,000)&gt;abs(600,000) = FALSE</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                        <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1" colspan="2">
+                            <p>Therefore, the minimum originator order is not met and an exception is raised.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>The value of the minimum total order is the greater of the two attributes 'Minimum Total Order ($) and Minimum Total Orders (%).</p>
+        </div>
+        <div class="note_label">Note</div>
+        <div class="note_content">
+            <p>Where using the 'Minimum Total Orders (%)' attribute, the value is determined by multiplying the percentage value by the investment holdings value. </p>
+        </div>
+        <p>&#160;</p>
+    </body>
+</html>

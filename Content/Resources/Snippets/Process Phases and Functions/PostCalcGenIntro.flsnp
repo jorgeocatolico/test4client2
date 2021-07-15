@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>The Post-Calculation General Validations processing phase contains a number of functions that are used to validate the prices and rates that have been struck for the entity. This includes checking the movements in those prices and rates against market benchmarks and the movements in underlying investments.</body>
+</html>

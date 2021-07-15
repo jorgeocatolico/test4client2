@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The three digit ISO&#160;currency code that applies to the settlement. </p>
+        <p>Note: Currencies are configured as entities in pControl. The currency code is used as the entity code.</p>
+    </body>
+</html>

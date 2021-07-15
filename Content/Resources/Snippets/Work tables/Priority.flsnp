@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Used by the ‘Reallocate Spare Cash’ function in the calculation phase where the ’Spare Cash / Rounding’ method is configured on the entity as ‘Allocation Priority’.
+1 is the highest priority, so the proposed order details for the asset listed as no 1 priority is retrieved, and spare cash is added to this proposed order to create a new proposed order (original plus spare cash).</p>
+    </body>
+</html>

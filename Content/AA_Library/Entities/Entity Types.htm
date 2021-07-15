@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Entity Types</h1>
+        <p>Different entities are used for different purposes. Some can have processes performed, others, such as process templates, company entities, and company default entities are used to support processing.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Collections</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <MadCap:snippetText src="../../Resources/Snippets/Library/LY_Collections.flsnp" />
+                </p>
+                <p>Collections are created and maintained in Processing Mode and further information is included in <MadCap:xref href="../Collections.htm">Collections</MadCap:xref>.</p>
+                <p>In web mode, collections are included in the drop-down entity menu for the dashboards, as shown below. </p>
+                <p>
+                    <img src="../../Resources/Images/Library Images/LY_Coll_Web.png" class="greyborder" />
+                </p>
+                <p>Once a collection is selected, the entities that are assigned to that collection are listed in the entities drop-down to the right. </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Company entities</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The 'Company' entity is a unique entity in pControl, as it is at the highest level in the library tree, and it is used to house all other entities. No processes are run directly against company entities. This entity must be created within pControl System Administration, before any underlying entities can be created. </p>
+                <p>Company entities contain a 'Company Default' attribute which is a link to another entity on the library tree. This is where default attribute configuration is set. If any entities underneath the company entity in the library tree do not have these attributes set as part of their configuration, they will inherit the attribute configuration from the 'Company default' entity.</p>
+                <p>
+                    <img src="../../Resources/Images/Library Images/LY_DefaultCompanyEntity.png" class="greyborder" />
+                </p>
+                <p>There are various tabs on the default company entity, these tabs are named according to the specific process the attributes relate to. Attributes for each specific process are explained within the respective dashboard.</p>
+                <p>The common attributes of the 'Default Processing Entity' include the following: </p>
+                <p>
+                    <img src="../../Resources/Images/Library Images/LY_DefaultProcessingAttributes.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Processing Entities</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>'Processing entity' refers to any entity which can have a pControl process run against it, including those listed below. </p>
+                <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');border-top-left-radius: 6px;border-top-right-radius: 6px;border-bottom-right-radius: 6px;border-bottom-left-radius: 6px;border-left-style: solid;border-left-width: 1px;border-left-color: #697a84;border-right-style: solid;border-right-width: 1px;border-right-color: #697a84;border-top-style: solid;border-top-width: 1px;border-top-color: #697a84;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #697a84;margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Entity Type</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Benchmark</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>A benchmark entity is used to represent a market benchmark or a composite benchmark that is used in pControl mainly for indexed valuation; price validation or CPU validation purposes.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Class</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>A class entity is used to represent a class of units in a multi-class vehicle where a class may typically only have one investment into a pool which it shares with other unit classes.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Currency</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Currency entities are used to hold FX rate information. Valuation 1 can be run on a currency entity to validate FX rates / calculate and store cross rates.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>External Product</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>An external product entity is used to represent an external unitised product where the unit price, distribution categories, CPU rates (and values) etc. are notified by the product.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Pool</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>A pool entity is used to represent a pool of assets which are shared by many classes of units. Pool entities can strike notional prices, distribution rate etc. which are then used by the unit classes ‘investing’ into it to calculate their own prices, distribution values etc.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Portfolio</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>A portfolio entity is used to represent a portfolio of assets in pControl where the value of the fund, income items etc. are typically received from an external investment management system or third party provider.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">Unitised Product</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>A product entity is used to represent a standard unitised vehicle or fund in pControl on which processing may be run (e.g. Unit Pricing, Distribution Calculation etc.).</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>The process types (Unit Pricing, Distributions, Cash Allocation) available to a particular entity are listed down the left hand side of an entity as shown below:</p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot><a name="EntityScreen"></a>To view the processes attached to an entity</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <ol class="stepList">
+                            <li>Select the entity on the library tree. </li>
+                            <li>
+                                <p>The processes associated with the entity will display on the left, as shown, and the attributes will display to the right. </p>
+                                <p>
+                                    <img src="../../Resources/Images/Library Images/LY_EntityAttributes.png" alt="" title="" />
+                                </p>
+                            </li>
+                            <li>To view the phases and attributes of a process, select the arrow next to the process name i.e. Cash Allocation.</li>
+                        </ol>
+                        <p>&#160;</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+    </body>
+</html>

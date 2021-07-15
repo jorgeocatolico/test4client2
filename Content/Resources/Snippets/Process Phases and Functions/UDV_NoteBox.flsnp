@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p><i>Note: This validation has been implemented as a User-Defined Validation (UDV). UDVs perform in the same way as other validations and they do not require access to the </i><MadCap:variable name="General.ProductName" style="font-style: italic;" /><i> rules configuration module. They are incorporated into the oversight, actual and daily pricing processes through inclusion in the process template.</i>
+        </p>
+    </body>
+</html>

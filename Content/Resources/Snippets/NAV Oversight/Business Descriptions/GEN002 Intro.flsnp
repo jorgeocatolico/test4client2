@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The validation allows the comparison of two specific values for an entity which are retrieved from the field/worktable combinations specified. The comparison can be a straight $ difference between the values or a % difference which will be tested against the tolerance specified.  
+This test can ensure the consistency of data delivered for an entity where certain values delivered across different import worktables are known to be the same. </p>
+        <p> 
+Validations for this test are configured in the static worktable L330: Generic Data Element Variance Validations. </p>
+        <p> Tolerances are configured in the L200: Tolerances worktable.
+</p>
+    </body>
+</html>

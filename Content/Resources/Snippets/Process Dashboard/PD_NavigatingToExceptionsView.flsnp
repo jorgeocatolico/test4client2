@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Navigating to the Exceptions view</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>There are multiple routes to navigate to the <MadCap:xref href="../../../C_Process/Exceptions.htm">Exceptions</MadCap:xref> view; those driven from the dashboard will navigate to a filtered set of exception records according to selections on the primary filter. </p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="BlueBulletLessIndentation" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Via the main menu: Process &gt; Exceptions.</li>
+                    <li class="BlueBulletLessIndentation" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Via the Analytics Bar - which will display Exceptions remaining and exceptions by SLA state.</li>
+                    <li class="BlueBulletLessIndentation" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Via the Exceptions Overview widget which displays the exceptions by state.</li>
+                    <li class="BlueBulletLessIndentation" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Via the SLA Monitor which displays the exceptions by SLA.</li>
+                    <li class="BlueBulletLessIndentation" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Via the Exceptions Validated donut on the Fund Overview component which displays the exceptions validated by category.</li>
+                    <li class="BlueBulletLessIndentation" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Via the Process Summary which displays the exceptions by price run type.</li>
+                </ul>
+                <p>&#160;</p>
+                <p>&#160;</p>
+                <ol class="stepList">
+                    <li>
+                        <p>Select any of the sections highlighted to navigate to the Exceptions view. </p>
+                        <p class="zoom4Detail">
+                            <img src="../../Images/NAV Oversight Images/NavigatingtoExceptions.png" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>The Exceptions view opens.</p>
+                        <p class="zoom4Detail">
+                            <img src="../../Images/Library Images/PD_ExceptionsViewScreen.png" class="greyborder" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Records can be transitioned from the Exceptions View by selecting the ellipsis. Transition options displayed will be subject to access permissions that are set up in System Administration.</p>
+                        <p>
+                            <img src="../../Images/Process Dashboard Images/TransitionExceptions.png" class="greyborder" />
+                        </p>
+                    </li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

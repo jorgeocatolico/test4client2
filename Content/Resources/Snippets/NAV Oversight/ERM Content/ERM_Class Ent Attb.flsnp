@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <MadCap:snippetBlock src="ERM_Class_linked_pool Attb.flsnp" />
+        <ul class="FirstLevelBlueBullet">
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"><b>Calendar</b>
+            </li>
+            <p>The calendar linked to the class entity and linked pool entity must have the same valid working days, so as to ensure whenever the class process is to be run, the pool's process will also be run. They can both use the same calendar to ensure this happens.</p>
+        </ul>
+        <ul class="FirstLevelBlueBullet">
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"><b>Currency</b>
+            </li>
+            <p>Both the pool and class need to have their base currency specified (Common &gt; Base Currency) so as to determine which FX rates are to be used.</p>
+        </ul>
+    </body>
+</html>

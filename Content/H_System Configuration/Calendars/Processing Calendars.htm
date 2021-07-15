@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Processing Calendars</h1>
+        <p>'Processing Calendars' are used to define valid processing days. They are then combined with a 'holiday calendar' on a  'Calendar Schedule' to restrict the number of valid processing days.</p>
+        <div class="note_label">Note</div>
+        <div class="note_content_short_width">
+            <p>It is not possible to associate a processing calendar directly with a fund entity. The processing calendar must first be associated with a <MadCap:xref href="Calendar Schedules.htm">Calendar Schedules</MadCap:xref> entity, and then the calendar schedule entity is <a href="Calendar Schedules.htm#Associate_a_Calendar_Schedule_Entity_with_a_pControl_processing_entity">associated</a> to the fund.</p>
+        </div>
+        <p>&#160;</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Add a Processing Calendar</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList">
+                    <li class="stepList">Select the plus icon <img src="../../Resources/Images/Calendars/Cal_plus_icon.png" />, or <img src="../../Resources/Images/Calendars/Cal_add_import_icon.png" /></li>
+                    <li>
+                        <p>Enter a unique code and description for the processing calendar:</p>
+                        <p>
+                            <img src="../../Resources/Images/Calendars/Cal_code_and_descript.png" />
+                        </p>
+                        <p>Or select the folder icon in the bottom left hand corner, and <MadCap:expanding><MadCap:expandingHead>select the xml file...</MadCap:expandingHead><MadCap:expandingBody>Select the xml file from the network location it was saved to, and select &lt;Open&gt;<br />The code and description fields will be automatically populated , and the xml file name will appear next to the folder icon.</MadCap:expandingBody></MadCap:expanding></p>
+                        <div class="note_label">Note </div>
+                        <div class="note_content_in_list">For details on exporting a calendar as an xml file, refer to <MadCap:xref href="#Download">Download a Processing Calendar (as an xml file)</MadCap:xref> </div>
+                    </li>
+                    <li>Select &lt;Save&gt; to save the changes and create the calendar; Or &lt;Cancel&gt; to exit without saving the changes.</li>
+                </ol>
+                <p>The processing calendar will now be created (if &lt;Save&gt; was selected above); Calendar days and dates can now be specified. Refer to '<MadCap:xref href="#Edit_processing_calendar">Edit a Processing Calendar</MadCap:xref>' for further details.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Copy a Processing Calendar</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList">
+                    <li class="stepList">Select the <img src="../../Resources/Images/Calendars/Cal_copy_icon.png" />   icon </li>
+                    <li>
+                        <p>The 'Copy Processing Calendar' window will open, showing the source calendar being copied at the top.</p>
+                        <p>Enter a new code and description for the calendar</p>
+                        <p>
+                            <img src="../../Resources/Images/Calendars/Cal_copy_calendar_name.png" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Select &lt;Save&gt; to save the new calendar; Or &lt;Cancel&gt; to close the window without saving.</p>
+                        <p>Note: If a new calendar is saved, complete the steps under '<MadCap:xref href="#Edit_processing_calendar">Edit a Processing Calendar</MadCap:xref>'.</p>
+                    </li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="Edit_processing_calendar"></a>Edit a Processing Calendar</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList" start="1">
+                    <li class="stepList">
+                        <p>Select either the edit icon,<img src="../../Resources/Images/User Permissions Images/UPs_EditIcon.png" /> to change the calendar code or description.</p>
+                        <p>Or</p>
+                        <p>Select the cog icon,<img src="../../Resources/Images/Portfolio Management Images/PM_SettingsIcon.png" alt="" title="" />to edit details of the calendar.</p>
+                        <p>The calendar detail will be displayed on the right hand side of the screen:</p>
+                        <p>
+                            <img src="../../Resources/Images/Calendars/Cal_processing_calendar.png" class="greyborder" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Set the working week days by ensuring the toggle next to week days is turned on, and weekends is turned off (if required).</p>
+                        <p>
+                            <img src="../../Resources/Images/Calendars/Cal_working_days.png" class="greyborder" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Select the <img src="../../Resources/Images/Calendars/PM_editicon.png" />in the calendar details box</p>
+                        <p>
+                            <img src="../../Resources/Images/Calendars/Cal_edit_frequency.png" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Edit the calendar configuration as required. </p>
+                        <p>
+                            <img src="../../Resources/Images/Calendars/Cal_edit_config.png" />
+                        </p>
+                        <p>&#160;</p>
+                        <MadCap:snippetBlock src="../../Resources/Snippets/Calendars/Calendar_Roll_Freq.flsnp" />
+                    </li>
+                    <li>Select &lt;Save&gt; to save the changes in the configuration window;  Or &lt;Cancel&gt; to exit without saving the changes.</li>
+                    <li>
+                        <p>Select &lt;Save&gt; to save the Processing Calendar; Or &lt;Cancel&gt; to exit without saving.</p>
+                        <MadCap:snippetBlock src="../../Resources/Snippets/All/Save_includes_validate.flsnp" />
+                    </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Delete a Processing Calendar</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <MadCap:snippetBlock src="../../Resources/Snippets/Calendars/Delete a Calendar.flsnp" />
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="Download"></a>Download a Processing Calendar (as an xml file)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList">
+                    <li class="stepList">Select the <img src="../../Resources/Images/Calendars/Cal_download.png" />   icon. </li>
+                    <li>
+                        <p>The Processing calendar will automatically be downloaded as an xml file, and will appear in the bottom left hand corner of the web browser:</p>
+                        <p>
+                            <img src="../../Resources/Images/Calendars/Cal_xml_download.png" class="greyborder" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Use the arrow icon to either open the xml file, or view the file in Windows Explorer. This file can be used to create a new calendar in another environment with the same name.</p>
+                    </li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+    </body>
+</html>

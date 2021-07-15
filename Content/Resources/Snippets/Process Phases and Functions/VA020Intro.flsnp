@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>This attribute is used where [VA010] - Versioning Method is set to 'Source from Worktable'. The worktable selected in this attribute is used to determine the run id of the process, and the control record.</body>
+</html>

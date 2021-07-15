@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>A unique code that represents a ‘node’ of the classification structure. This code may be used in multiple classifications but must be unique within a classification structure.</p>
+    </body>
+</html>

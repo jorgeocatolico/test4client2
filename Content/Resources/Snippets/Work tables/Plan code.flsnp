@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>A grouping code for multiple sets of  classification allocation parameter. This is the same code used as the highest level originator (i.e. the plan) in the Investment ALP data load.  (Multiple sets as a plan can have multiple classifications).</p>
+    </body>
+</html>

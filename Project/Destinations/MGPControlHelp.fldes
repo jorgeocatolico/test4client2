@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CatapultDestination
+  Version="1"
+  Comment="This is my publish destination"
+  Host=""
+  User="MyAccountId"
+  Password=""
+  Directory="C:\Users\cxp\Documents\My Projects\Project pControl Help v0.1\Output\cxp\Online Output\HTML5 - Jen and Carmel"
+  Port=""
+  ViewUrl=""
+  Type="file"
+  ChangedOnly="true"
+  ProviderType="Perforce"
+  Database="file://depot/"
+  DatabaseRoot="a-syd-v-pfc-h01:1666"></CatapultDestination>

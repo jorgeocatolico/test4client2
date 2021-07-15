@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="111" MadCap:lastWidth="970">
+    <head>
+    </head>
+    <body>
+        <div class="warning_label">Warning</div>
+        <div class="warning_content">
+            <p>Once confirmed, deleted records cannot be recovered.</p>
+        </div>
+    </body>
+</html>

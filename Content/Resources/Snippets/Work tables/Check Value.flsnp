@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>The value calculated by the process for the individual validation check in the format specified on the validation check entity. E.g bp value, $ value or % value.</p>
+    </body>
+</html>

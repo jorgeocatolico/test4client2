@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Free format field that must be populated if the commission fields are populated. Captures the details of the commissions applied.</p>
+        <p>
+            <i>Note: Commission details can be incorporated into trade capture and placement process if required. Where commission details are required, an additional node would be added after Depository Details.</i>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle02TableinaTable.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Data Views</h1>
+        <p>Data views allow the view of an entity, web page, or a worktable to be changed so as to hide certain fields, or change the order of fields. They can also be used to specify mandatory fields, or add additional security over specified fields by enforcing 'dual authorisation'.</p>
+        <p>Data Views are configured in System Administration, for use in processing mode, and pControl web. Each data view must be permissioned to a user group for use within Processing mode, or a 'Functional Role' for use within the web.</p>
+        <div class="note_label">Note</div>
+        <div class="note_content_short_width">
+            <p>A data view is required for most web screens, excluding the main dashboard.</p>
+        </div>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Create a Data View</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList">
+                    <li>
+                        <p>Select Maintain &gt; Data Views</p>
+                        <p>This will allow you to select the type of data view to be created or modified. The data view is based on the underlying data model associated with the data that is to be displayed.</p>
+                        <p>
+                            <p>Select the data view type from the drop down list at the top.</p>
+                            <ul class="FirstLevelBlueBullet">
+                                <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Template / Template - for maintaining entity templates</li>
+                                <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Worktable / Worktable - for defining the layout of a worktable</li>
+                                <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Exception Events / Exception Events - for exceptions or override events</li>
+                                <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Fund Signoff / Fund Signoff - for NAV price records, and the output of other processes which are displayed on the Fund Signoff view.</li>
+                            </ul>
+                            <div class="note_label">Note</div>
+                            <div class="note_content">
+                                <p>When creating a new data view, there must  be a data model already present. </p>
+                                <p>For templates and worktables, the 'Qualifier' column will show the template name or worktable name as per the underlying data model.</p>
+                                <p class="zoom4Detail">
+                                    <img src="../../Resources/Images/User Permissions Images/Data Views/DV_MaintainDV_Template.bmp" alt="" title="" />
+                                </p>
+                                <p class="zoom4Detail">
+                                    <img src="../../Resources/Images/User Permissions Images/Data Views/DV_MaintainDV_WorkTable.bmp" alt="" title="" />
+                                </p>
+                                <MadCap:dropDown>
+                                    <MadCap:dropDownHead>
+                                        <MadCap:dropDownHotspot>To find the relevant Qualifier Name</MadCap:dropDownHotspot>
+                                    </MadCap:dropDownHead>
+                                    <MadCap:dropDownBody>
+                                        <p>Within System Administration, select:</p>
+                                        <ul class="FirstLevelBlueBullet">
+                                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Templates, and find the required template name for entities:</li>
+                                            <img src="../../Resources/Images/User Permissions Images/Data Views/DV_TemplateType.bmp" alt="" title="">
+                                            </img>
+                                            <br>
+                                            </br>
+                                        </ul>
+                                        <p>or</p>
+                                        <ul class="FirstLevelBlueBullet">
+                                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Maintain &gt; Worktable Definitions to find the Code of the required worktable, (left column)</li>
+                                            <img src="../../Resources/Images/User Permissions Images/Data Views/DV_Worktable_Names.bmp" alt="" title="" />
+                                            <br />
+                                        </ul>
+                                    </MadCap:dropDownBody>
+                                </MadCap:dropDown>
+                            </div>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Select  <img src="../../Resources/Images/User Permissions Images/Data Views/DV_New.bmp" alt="" title="" /> to create a new data view. </p>
+                        <p>Or select an existing data view, and then select:</p>
+                        <ul>
+                            <li> <img src="../../Resources/Images/User Permissions Images/Data Views/DV_Modify.bmp" alt="" title="" /> to alter that data view. (Go to step 4)</li>
+                            <li> <img src="../../Resources/Images/User Permissions Images/Data Views/DV_Copy.bmp" alt="" title="" /> to create a copy of an existing data view, which can be altered. (Go to step 4)</li>
+                        </ul>
+                        <p>&#160;</p>
+                    </li>
+                    <li>
+                        <p>Select the required qualifier, e.g. PR_Contact.</p>
+                        <p>Select <img src="../../Resources/Images/User Permissions Images/Data Views/DV_OK.bmp" alt="" title="" /></p>
+                    </li>
+                    <li>
+                        <p>Enter a 'View Name' and 'Description'</p>
+                        <p>Set other attributes as required (see below for a full list of applicable attributes)</p>
+                        <p class="zoom4Detail">
+                            <img src="../../Resources/Images/User Permissions Images/Data Views/DV_NewDataView.bmp" alt="" title="" />
+                        </p>
+                        <MadCap:dropDown>
+                            <MadCap:dropDownHead>
+                                <MadCap:dropDownHotspot>Data View attributes</MadCap:dropDownHotspot>
+                            </MadCap:dropDownHead>
+                            <MadCap:dropDownBody>
+                                <table class="TableStyle-MG_TableStyle02TableinaTable" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable.css');margin-left: 0;margin-right: auto;">
+                                    <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                    <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                    <thead>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                                            <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">
+                                                <p>Attribute</p>
+                                            </th>
+                                            <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1">
+                                                <p>Description</p>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>View Name</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>Unique code for the data view. </p>
+                                                <p>&#160;</p>
+                                                <p style="font-style: italic;">Note: this is not editable once the data view is saved.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>View Description</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>A description of the data view. This text is displayed in Web Admin when assigning a data view to a functional role.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font" MadCap:conditions="">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>View Model Description</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>This is an optional field. Value is not displayed anywhere.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Application (Rich Client)</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>This is an optional field. If selected, the data view will be visible in pControl processing mode.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Web (Thin Client)</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>This is an optional field. If selected, the data view will be visible in the pControl web.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Make New Fields visible by Default</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>If selected, any new attributes added to the underlying entity template, (PR_Contact in this example) will automatically be added to this data view.</p>
+                                                <p>This check box is generally not selected on "Summary" data views.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Default View</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>This will be selected if this view is the nominated default view for this data view type. Where several data views are configured for a data view type, the 'default' one will be used when that view is displayed. The user may then select another data view from a dropdown list on the screen, if available.</p>
+                                                <p>&#160;</p>
+                                                <p>A data view is configured as the 'default' on the previous ‘Maintain Data views’ selection screen. Once a data view is made the default, the only way to change it is to make a different data view the default.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" colspan="2">
+                                                <p><b>Fields Tab</b>
+                                                </p>
+                                                <p>The Fields tab shows all fields in the data model for the selected data view type. The fields in the model can only be modified within the data model. However, the fields may be formatted for display in the ‘Details’ section below.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Identifier</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>An identifier for the field name</p>
+                                                <p><i>Note: for an entity template this is the attribute token name, for a pControl worktable, this is the model identifier. This will not change.</i>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Name</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>The field description as will be displayed on the entity</p>
+                                                <p><i>Note: label from properties dialogue for an entity template or table header for a worktable.</i>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Hidden</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>If selected, this field will not be visible in the data view.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Column Width</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>The width of the column in pixels in the tabular data view.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Editable</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>If selected, then this field will be editable in the screen.</p>
+                                                <p><i>Note: The Functional Role must also be given 'edit' access in Web Admin for users to be able to edit values in this field using this data view.</i>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Mandatory</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>If selected, this field must contain a value when creating or editing entities or worktables with this data view.</p>
+                                                <p>&#160;</p>
+                                                <p style="font-style: italic;">Notes:</p>
+                                                <p style="font-style: italic;">1. A field which is specified as mandatory through the template configuration cannot have this mandatory requirement removed through a data view (i.e. if a field / attribute has been selected as Mandatory in the data view, pControl will NOT allow ‘Hidden’ function to be selected for this field). </p>
+                                                <p style="font-style: italic;">A field which has not been specified as mandatory in the template can be specified as mandatory in the data view e.g. security can be increased through the data view but not decreased.</p>
+                                                <p style="font-style: italic;">2. A field which has not been specified as editable cannot be specified as Mandatory in the data view.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Four Eyes</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>If selected, this field will have four-eyes authorisation applied in the data view, meaning any values entered by one user and saved, must be reviewed and approved by a different user.</p>
+                                                <p>&#160;</p>
+                                                <p><i>Note: If independent authorisation has been selected as a function on the entity template, the data view will default to four-eyes for all attributes of the entity. In this case four-eyes cannot be removed from any of the attributes of the data view however dual-key can be selected. This selection will automatically deselect four-eyes as dual-key is considered to be a higher level of security than four-eyes.</i>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Dual-Key</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>If selected, this field will have dual-key authorisation applied in the data view, meaning any values entered by one user and saved, must be re-keyed by a different user to be approved.</p>
+                                                <p>&#160;</p>
+                                                <p style="font-style: italic;">Note: If independent authorisation has been selected as a function on the entity template, the data view will default to dual key for all attributes of the entity.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Filterable</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>Enables the filtering of values within this field.</p>
+                                                <p>&#160;</p>
+                                                <p style="font-style: italic;"><i>Notes: This functionality only applies to the web application.</i>
+                                                </p>
+                                                <p style="font-style: italic;">When a worktable with filtering configured is first viewed, the data will not be filtered, until the user selects values to filter by.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Editing Format Mask</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>Indicates the mask format for the data value e.g. #0.00 or ##0.0000.</p>
+                                                <p>&#160;</p>
+                                                <p style="font-style: italic;">Note: This field is only relevant when the field is marked as ‘editable’.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">Groupable</td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>This column is only applicable to data views over the 'Exceptions' view in Web mode. If selected, the field can be included in the list of 'groupable fields' so as to group exceptions by the values in this field.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" colspan="2">
+                                                <p colspan="2">&#160;</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" colspan="2">
+                                                <p style="font-weight: bold;">Details</p>
+                                                <p style="font-weight: normal;font-style: italic;">Note: These fields are populated and editable when a field is selected in the top half of the view.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Name</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>As Above</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Field Type</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>The data type for this attribute, (e.g. boolean, whole number) as defined on attribute set up in template maintenance.</p>
+                                                <p>This value is not editable.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Tooltip</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>The tooltip that will be displayed for the attribute, upon hovering over that attribute.</p>
+                                                <p><i>Note: This allows tailoring of tooltips to the user who will access the data view.</i>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Column Width</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>As above</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Sortable</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>Enables the sort function on the fields in the table.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Filterable</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>As above.</p>
+                                                <p>&#160;</p>
+                                                <p><i>Note: The fields selected as 'Filterable' will be available in pControl web as "Quick Filters" as shown below.</i>
+                                                </p>
+                                                <p>&#160;</p>
+                                                <p>
+                                                    <img src="../../Resources/Images/User Permissions Images/Data Views/DV_filter_QuickFilter.bmp" alt="" title="" />
+                                                </p>
+                                                <p>&#160;</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Groupable</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>This check box is only applicable to data views over the 'Exceptions' view in Web mode. If selected, the field can be included in the list of 'groupable fields' so as to group exceptions by the values in the selected field</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Primary Status Stream</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>It is possible to set a primary status stream on a work table. If this check box is selcted, then a status bar will appear at the top of the screen which can be used to filter the worktable data by clicking on the relevant status that you are interested in.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" colspan="2">
+                                                <p>Display</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Hidden</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>As above</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Display Format Mask</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>A drop down list of available display options to indicate how the data is displayed, E.g. numeric fields can be configured to display with a specified number of decimal places; Entity code fields can be configured to display in the web, with entity code only, or code and description.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Style</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>This attribute is used to format the data in the selected field, in conjunction with the display format mask.</p>
+                                                <p>&#160;</p>
+                                                <p>Values include:</p>
+                                                <ul class="FirstLevelBlueBullet" style="font-size: 0.9em;">
+                                                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Boolean (icon) - displays a 'tick' icon if the value is true</li>
+                                                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Trend (Large) - the value is shown in a red box, if value is negative; or green box is value is positive</li>
+                                                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Trend (Small) - the value is shown in a smaller red box if value is negative; or a smaller green box if value is positive.</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" colspan="2">
+                                                <p>Font</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Style</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>A list of optional style formatting options that can be applied to the values within the selected field. The purpose of these formatting options is to emphasise key data to the user, and direct attention to where it is required.</p>
+                                                <p>E.g. If 'Italics' selected, all values in this field across all entities using this data view will be displayed in italic font.</p>
+                                                <p>&#160;</p>
+                                                <p>Values include: Bold, Italic, or Bold and Italic.</p>
+                                                <p>&#160;</p>
+                                                <p style="font-style: italic;">Note: Currently, these formatting options only apply in web mode, on the entity maintenance screen, in read only view. However these format options will be made available for future screen development.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Size</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>A list of optional font sizes, which can be applied to the values within the selected field.</p>
+                                                <p>&#160;</p>
+                                                <p style="font-style: italic;">Note: Currently, these formatting options only apply in web mode, on the entity maintenance screen, in read only view. However these format options will be made available for future screen development..</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" colspan="2">
+                                                <p>Editing</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Editable </p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>As above</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Editing Format Mask</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>As above</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" colspan="2">
+                                                <p>Totalling</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Enabled</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>If selected it will be possible to total (sum) the values in this field. This is only applicable where data is viewed in a worktable in Processing mode, (not web), and only applicable to numeric fields. For example, </p>
+                                                <p> Totalling could be applied to allocation parameters where the target weight would be summed to 100%. Totalling would not apply to values such as postcodes.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Totalling Format</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>A dropdown list of formats for displaying numeric values, i.e. to indicate how many decimal places to display, and whether values are displayed with symbols such as $, %, bps etc.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" colspan="2">
+                                                <p colspan="2">&#160;</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" colspan="2"><b>Form Layout Tab</b>
+                                                <p>Form layout allows the data to be grouped or displayed in rows, through the use of 'pages' and 'groups'</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Preview</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>Used to view how the entity will appear on screen.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Delete</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>Select the 'X' to delete a page or a group from the form layout.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Page</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>Drag the page icon into the work area to create a new page on your form layout.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Group</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>Drag the group icon into the work area to create a new group on your form layout.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" colspan="2">
+                                                <p>Form Layout Work Area</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Description</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>A description of the page / group / field in the form layout</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Group Position</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>The position of the group on the page (e.g. left, right, span)</p>
+                                                <p><i>Note: Span will position the group in the middle of the page.</i>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Field Position</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>The position of the field on the page (e.g. left, right, span)</p>
+                                                <p><i>Note: Span will position the field in the middle of the page.</i>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" colspan="2">
+                                                <p>When the cursor is on a group / page / field in the form layout work area, the details of the group / page or field are shown to the right of the work area. </p>
+                                                <p>Additional fields will also be available for selection – these are described in the following table:</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" colspan="2">
+                                                <p>Group</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Name</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>Group Name can be modified in this field</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Position</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>Group Position (left, right, span as above)</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Border</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>Empty - no border will exist on the group and ‘Group Name’ will not be shown.</p>
+                                                <p>Titled - a border will surround the group and the border will contain the ‘Group Name’.</p>
+                                                <p>Etched - a border will surround the group however the ‘Group Name’ will not be shown.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" colspan="2">
+                                                <p>Page</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">Name</td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>Page name can be modified in this field</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" colspan="2">
+                                                <p>Field</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Preferred Width</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>This field is enabled when the selected field is of type DECIMAL, TABLE, TEXT, TEXT_AREA, WHOLE, INTEGER or LONG</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Preferred Height</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>This field is enabled when the selected field is of type TABLE or TEXT_AREA, and only applies to Processing mode.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" colspan="2">
+                                                <p colspan="2">&#160;</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" colspan="2">
+                                                <p colspan="2"><b>Table Display Tab</b>
+                                                </p>
+                                                <p>Table Display displays the data in tabular format</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" colspan="2">
+                                                <p>Table Column Order</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Column Identifier</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>Database field name</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Column Name</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>The database field description</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Up</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>Move the field up in the table column order. Multiple fields can be moved together using Ctrl to highlight multiple fields</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Down</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>Move the field down in the column order. Multiple fields can be moved together using Ctrl to highlight multiple fields</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" colspan="2">
+                                                <p>Filtering </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">Filter</td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>Allows the data to be filtered before displaying.</p>
+                                                <p>Select the Filter button, to enter the filter criteria to be applied to the data.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" colspan="2">
+                                                <p>Totalling</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>User Customisable</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>User customisable is relevant to pControl tables. If this is ticked it allows the user to set the total and subtotal columns to appear.
+Note: Not currently available on all data views.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Grand Totalling enabled</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>Select this field if a total (for columns specified with ‘Totalling Enabled’ on the fields tab) is to be displayed in bold at the bottom of the screen.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Selected Totalling Enabled</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>Select this field if the total (for columns specified with ‘Totalling Enabled’ on the fields tab) for ‘selected’ rows in the table is to be displayed at the bottom of the screen</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font">
+                                                <p>Sort by</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font">
+                                                <p>Used to apply a default sort criteria to the fields.</p>
+                                                <p><i>Note: Up to four levels of sort ordering can be applied, in either ascending or descending order of each field.</i>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>&#160;</p>
+                            </MadCap:dropDownBody>
+                        </MadCap:dropDown>
+                    </li>
+                    <li>
+                        <p>Select <img src="../../Resources/Images/User Permissions Images/Data Views/DV_OK.bmp" alt="" title="" /> to save the data view, </p>
+                        <p>or</p>
+                        <p> <img src="../../Resources/Images/User Permissions Images/Data Views/DV_Cancel.bmp" alt="" title="" /> to exit without saving changes.</p>
+                    </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Apply access permissions to data views</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList" start="1">
+                    <li class="stepList">Select the edit icon <img src="../../Resources/Images/User Permissions Images/UPs_EditIcon.png" />next to the 'Role Name' you wish to apply data view permissions to. </li>
+                    <li class="stepList">
+                        <p>On the 'Web Views' tab, ensure 'Data' and 'Library' are selected in the first panel.</p>
+                        <p>
+                            <img src="../../Resources/Images/User Permissions Images/Data Views/DV_WebViews_tab.bmp" alt="" title="" />
+                        </p>
+                    </li>
+                    <li class="stepList">
+                        <p>Whilst still on the 'Web Views' tab, scroll across to the 'Data' and 'Library' columns at the right hand side.</p>
+                        <ul>
+                            <li>If applying permission to a worktable data view, scroll down through the 'Data' column, and select the check box next to the worktable name.</li>
+                            <li>If applying permission to an entity data view, scroll down through the 'Library' column and select the check box next to the entity name.</li>
+                        </ul>
+                        <p> <i>Note: This refers to the pControl worktable name, or entity name, not the name of the data view.</i><img src="../../Resources/Images/User Permissions Images/UPs_WebViews_DataLibraryColumns.bmp" /></p>
+                    </li>
+                    <li>Select <img src="../../Resources/Images/User Permissions Images/UPs_Continue.png" /></li>
+                    <li>
+                        <p>From the 'Data Views' tab, select the data model from the drop down menu, e.g. Worktable, Template, ExceptionEvent, FundSignoff etc</p>
+                        <p>
+                            <img src="../../Resources/Images/User Permissions Images/UPs_DataViewsPermissions.bmp" alt="" title="" class="zoom4Detail" />
+                        </p>
+                        <div class="note_label">Note</div>
+                        <div class="note_content">
+                            <p>The above worktable has four data views configured. The third one, labelled, "Default"&#160;is configured as the 'default' data view within System Admin, and will be the one initially displayed over the <b class="BufferandFunctionBold">U200: Asset Transactions</b> worktable when the worktable is first opened.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Select the check boxes in the 'View Enable' / 'Add Enable' / 'Modify Enable' / 'Delete Enable' columns, to apply access to the selected data view.</p>
+                        <p>Deselecting a check box will remove that access type.</p>
+                        <p>For 'read-only' access, only the 'View Enable' checkbox should be selected.</p>
+                        <p style="font-style: italic;">Note: The names displayed in the 'Data View Code' and 'Data View Description' columns refers to the data view name configured in System Admin.</p>
+                    </li>
+                    <li>
+                        <p>Select <img src="../../Resources/Images/User Permissions Images/UPs_SaveAndExit.png" /></p>
+                    </li>
+                    <li>Repeat steps 1-7 for any other Functional Roles requiring access to the data views.</li>
+                </ol>
+                <p>&#160;</p>
+                <p>Users in the 'Fund Accountant' functional scope group will now have access to these data views within pControl Web:</p>
+                <p>
+                    <img src="../../Resources/Images/User Permissions Images/UPs_DataViews_Worktables.bmp" alt="" title="" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

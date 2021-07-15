@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The <b class="BufferandFunctionBold">L315: Account Code Mapping</b> worktable assists in the mapping of account balances from the <b class="BufferandFunctionBold">U104:&#160;General Ledger</b>. It specifically maps the account codes and account groups.</p>
+        <p><b class="BufferandFunctionBold">L315: Account Code Mapping</b> worktable also allows for account groups to be excluded in account code mapping records.</p>
+    </body>
+</html>

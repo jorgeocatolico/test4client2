@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="MG Staff Only.ScreenOnly">
+    <head>
+        <link href="../../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>DYAS Specification Tables</h1>
+        <p>
+            <MadCap:snippetText src="../../../Resources/Snippets/All/NewContentforReview.flsnp" />
+        </p>
+        <p>The specification tables below provide the calculations by category code for the DYAS view. </p>
+        <p>Refer to <MadCap:xref href="Category Hierarchy for DYAS.htm">Category Hierarchy for DYAS</MadCap:xref> for details on hierarchy. </p>
+        <h1 class="_orange">Calculations</h1>
+        <h2>YPR_DYAS - Yield </h2>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" style="width: 112px;" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1" colspan="2">&#160; <b>Yield</b></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="font-weight: bold;font-size: 1em;">
+                        <p>Category Code</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="font-weight: bold;font-size: 1em;">
+                        <p>YPR_DYAS</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p><b>Value Previous</b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$Prev\ $</MadCap:equation>
+                        </p>
+                        <p>Prior day as determined by Distribution Yield Calendar.</p>
+                        <p>Displayed as a percentage.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>&#160;</p>
+                        <p><b>If 'Daily Forward' distribution:</b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$Prev\  (NDI\_DYAS)\ \times 
+
+\large
+\left [  
+\frac
+
+
+{Days\ in\ Year}
+
+{\left ( Prev\ (PUOI\_DYAS)\times
+
+
+Prev\ (UPR\_DYAS) \times Forward\ Days \right )}
+\right ]$</MadCap:equation>
+                        </p>
+                        <p>Where:</p>
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/DYAS_Daysinyearpriorday.flsnp" />
+                        <p>And Forward Days can be calculated as: </p>
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/DYAS_ForwardDaysValuePrevious.flsnp" />
+                        <p>&#160;</p>
+                        <p><b>If 'Daily Backward' distribution:</b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$Prev\  (NDI\_DYAS)\ 
+
+
+\times 
+\large
+\left [ 
+\frac{Days\ in\ Year}{\left (Prev\ (PUOI\_DYAS) 
+
+\times
+Prev\ (UPR\_DYAS) \times Backward\ Days \right )} \right ]$</MadCap:equation>
+                        </p>
+                        <p>Where:</p>
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/DYAS_Daysinyearpriorday.flsnp" />
+                        <p>And:</p>
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/DYAS_BackwardDaysPrevious.flsnp" />
+                        <p>&#160;</p>
+                        <p><b>If 'Monthly' distribution:</b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$Prev\  (NDI\_DYAS)\ \times 
+
+\left [  
+\large
+\frac{12}
+
+
+{\left (  Prev\ (PUOI\_DYAS) 
+
+\times
+ Prev\ (UPR\_DYAS)\right )} \right ]$</MadCap:equation>
+                        </p>
+                        <p>&#160;</p>
+                        <p><b>If 'Quarterly' distribution:</b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$Prev\  (NDI\_DYAS)\ \times 
+\large
+\left [  
+\frac{4}{\left (  Prev\ (PUOI\_DYAS) 
+
+\times
+ Prev\ (UPR\_DYAS)\right )}\right ]$</MadCap:equation>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Value Current</p>
+                        <p>
+                            <MadCap:equation>$Curr$</MadCap:equation>
+                        </p>
+                        <p>Displayed as a percentage.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>&#160;</p>
+                        <p> <b>If 'Daily Forward' distribution:</b></p>
+                        <p>
+                            <MadCap:equation>$Curr\  (NDI\_DYAS)\ 
+
+\times 
+\large
+\left [ 
+
+\frac{Days\ in\ Year}{\left (Curr\ (PUOI\_DYAS) 
+
+\times
+ Curr\ (UPR\_DYAS) 
+
+\times Forward\ Days \right )} \right ]$</MadCap:equation>
+                        </p>
+                        <p>Where:</p>
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/DYAS_DaysinyearCurrent.flsnp" />
+                        <p>And:</p>
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/DYAS_ForwardDaysCurrent.flsnp" />
+                        <p>&#160;</p>
+                        <p style="font-weight: bold;">If 'Daily Backward' distribution:</p>
+                        <p>
+                            <MadCap:equation>$Curr\  (NDI\_DYAS)\ \times 
+
+\left [  \large
+\frac{Days\ in\ Year}
+
+{\left (Curr\ (PUOI\_DYAS) 
+
+\times
+ Curr\ (UPR\_DYAS) \times Backward\ Days \right )}\right ]$</MadCap:equation>
+                        </p>
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/DYAS_Daysinyearpriorday.flsnp" />
+                        <p>And: </p>
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/DYAS_BackwardDaysCurrent.flsnp" />
+                        <p>&#160;</p>
+                        <p><b>If 'Monthly' distribution:</b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$Curr\  (NDI\_DYAS)\ \times 
+\large
+\left [
+\frac{12}{\left (Curr\ (PUOI\_DYAS) 
+
+
+\times
+ Curr\ (UPR\_DYAS)\right )} \right ] $</MadCap:equation>
+                        </p>
+                        <p>&#160;</p>
+                        <p><b>If 'Quarterly' distribution:</b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$Curr\  (NDI\_DYAS)\ \times 
+\large
+\left [
+\frac{4}{\left (Curr\ (PUOI\_DYAS) 
+
+
+\times
+ Curr\ (UPR\_DYAS)\right )} \right ] $</MadCap:equation>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Value Difference</p>
+                        <p>
+                            <MadCap:equation>$Vdiff$</MadCap:equation>
+                        </p>
+                        <p>Displayed as a percentage.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <MadCap:equation>$Curr\ -\ Prev$</MadCap:equation>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Constant Yield Impact</p>
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>
+                            <MadCap:equation>$\small Constant\ Yield\ Impact\ (NDI\_DYAS)\ + Constant\ Yield\ Impact\ (PUOI\_DYAS)\ +\ Constant\ Yield\ Impact\ (UPR\_DYAS)\ $</MadCap:equation>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Interaction Yield Impact</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>
+                            <MadCap:equation>$\small Interaction\ Yield\ Impact\ (NDI\_DYAS)\ + Interaction\ Yield\ Impact\ (PUOI\_DYAS)\ +\ Interaction\ Yield\ Impact\ (UPR\_DYAS)\ $</MadCap:equation>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Yield Impact</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>
+                            <MadCap:equation>$\small Constant\ Yield\ Impact\ + Interaction\ Yield\ Impact$</MadCap:equation>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>CPU/Millrate</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Tolerance Value</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/DYAS_TOLVAL.flsnp" />
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                        <p>Tolerance Level</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/DYAS_TOLLEV.flsnp" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h2>UPR_DYAS- NAV Price</h2>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" style="width: 112px;" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1" colspan="2">&#160; <b>NAV Price</b>&#160; </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="font-weight: bold;font-size: 1em;">
+                        <p>Category Code</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="font-weight: bold;font-size: 1em;">
+                        <p>UPR_DYAS</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Value Previous</p>
+                        <p>
+                            <MadCap:equation>$Prev\ $</MadCap:equation>
+                        </p>
+                        <p>Prior day as determined by Distribution Yield Calendar</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Previous NAV Price</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Value Current</p>
+                        <p>
+                            <MadCap:equation>$Curr$</MadCap:equation>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">NAV&#160;Price</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Value Difference</p>
+                        <p>
+                            <MadCap:equation>$Vdiff$</MadCap:equation>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1"> <MadCap:equation>$Curr\ -\ Prev$</MadCap:equation></td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Constant Yield Impact</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>&#160;</p>
+                        <p><b>If 'Daily Forward' or 'Daily Backward' distribution: </b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$\left  [  \large
+\frac{1}{Curr\ (UPR\_DYAS)}\ 
+
+-\ \frac{1}{Prev\ (UPR\_DYAS)}
+
+\right ] \times\  
+
+Prev\ (NDI\_DYAS)\ 
+
+\times 
+
+\left [  \large
+\frac
+
+
+{Days\ in\ Year}
+
+{
+\left (  
+
+Prev\ (PUOI\_DYAS)\ \times Period\ Days\right )  }
+\right ]$</MadCap:equation>
+                        </p>
+                        <p>Where:</p>
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/DYAS_DaysinyearCurrent.flsnp" />
+                        <p>And:</p>
+                        <p>
+                            <MadCap:snippetText src="../../../Resources/Snippets/Analysis Views/DYAS_PeriodDays.flsnp" />
+                        </p>
+                        <p>&#160;</p>
+                        <p><b>If 'Monthly' distribution:</b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$\left [  \large
+\frac{1}{Curr\ (UPR\_DYAS)}\ 
+
+-\ \frac{1}{Prev\ (UPR\_DYAS)}
+
+\right ] \times\  
+
+Prev\ (NDI\_DYAS)\ 
+
+\times 
+\large
+\left [  
+\frac
+
+
+{12}
+
+{
+
+
+Prev\ (PUOI\_DYAS)   }
+\right ]$</MadCap:equation>
+                        </p>
+                        <p>&#160;</p>
+                        <p><b>If 'Quarterly' distribution:</b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$\left [  \large
+\frac{1}{Curr\ (UPR\_DYAS)}\ 
+
+-\ \frac{1}{Prev\ (UPR\_DYAS)}
+
+\right ] \times\  
+
+Prev\ (NDI\_DYAS)\ 
+
+\times 
+\large
+\left [  
+\frac
+
+
+{4}
+
+{
+
+
+Prev\ (PUOI\_DYAS)   }
+\right ]$</MadCap:equation>
+                        </p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Interaction Yield Impact</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p><b>If 'Daily Forward' or 'Daily Backward' distribution: </b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$\left [  
+\frac{1}{Curr\ (PUOI\_DYAS)}\ 
+
+-\ \frac{1}{Prev\ (PUOI\_DYAS)}
+
+\right ] \times\  
+
+ \left [  
+\frac{1}{Curr\ (UPR\_DYAS)}\ 
+
+-\ \frac{1}{Prev\ (UPR\_DYAS)}
+
+\right ]
+
+\times 
+
+\left [ 
+
+\frac{Prev\ (NDI\_DYAS \times Days\ in\ year) }{Period\ days}
+
+
+
+\right ]$</MadCap:equation>
+                        </p>
+                        <p>Where:</p>
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/DYAS_DaysinyearCurrent.flsnp" />
+                        <p>And:</p>
+                        <p>
+                            <MadCap:snippetText src="../../../Resources/Snippets/Analysis Views/DYAS_PeriodDays.flsnp" />
+                        </p>
+                        <p>&#160;</p>
+                        <p><b>If 'Monthly' distribution:</b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$\left [  
+\frac{1}{Curr\ (PUOI\_DYAS)}\ 
+
+-\ \frac{1}{Prev\ (PUOI\_DYAS)}
+
+\right ] \times\  
+
+ \left [  
+\frac{1}{Curr\ (UPR\_DYAS)}\ 
+
+-\ \frac{1}{Prev\ (UPR\_DYAS)}
+
+\right ]
+
+\times 
+\small
+\left [ 
+
+Prev\ (NDI\_DYAS)\  \times 12 
+
+
+\right ]$</MadCap:equation>
+                        </p>
+                        <p>&#160;</p>
+                        <p><b>If 'Quarterly' distribution:</b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$\left [  
+\frac{1}{Curr\ (PUOI\_DYAS)}\ 
+
+-\ \frac{1}{Prev\ (PUOI\_DYAS)}
+
+\right ] \times\  
+
+ \left [  
+\frac{1}{Curr\ (UPR\_DYAS)}\ 
+
+-\ \frac{1}{Prev\ (UPR\_DYAS)}
+
+\right ]
+
+\times 
+\small
+\left [ 
+
+Prev\ (NDI\_DYAS)\  \times\ 4
+
+
+\right ]$</MadCap:equation>
+                        </p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Yield Impact</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>
+                            <MadCap:equation>$\small Constant\ Yield\ Impact\ +\ Interaction\ Yield\ Impact$</MadCap:equation>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>CPU/Millrate</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Tolerance Value</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/DYAS_TOLVAL.flsnp" />
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                        <p>Tolerance Level</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/DYAS_TOLLEV.flsnp" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h2>PUOI_DYAS - Shares Outstanding</h2>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" style="width: 112px;" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" style="width: 561px;" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1" style="font-weight: bold;" colspan="2">Shares Outstanding</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="font-weight: bold;font-size: 1em;">
+                        <p>Category Code</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="font-weight: bold;font-size: 1em;">
+                        <p>PUOI_DYAS</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Value Previous</p>
+                        <p>
+                            <MadCap:equation>$Prev\ $</MadCap:equation>
+                        </p>
+                        <p>Prior day as determined by Distribution Yield Calendar</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Previous day confirmed paid units from the U108: Units on Issue worktable.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Value Current</p>
+                        <p>
+                            <MadCap:equation>$Curr$</MadCap:equation>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Confirmed paid units from the U108: Units on Issue worktable.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Value Difference</p>
+                        <p>
+                            <MadCap:equation>$Vdiff$</MadCap:equation>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>
+                            <MadCap:equation>$Curr\ -\ Prev$</MadCap:equation>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Constant Yield Impact</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>&#160;</p>
+                        <p><b>If 'Daily Forward' or 'Daily Backward' distribution: </b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$\left [  
+\frac{1}{Curr\ (PUOI\_DYAS)}\ 
+
+-\ \frac{1}{Prev\ (PUOI\_DYAS)}
+
+\right ] \times\  
+\small 
+Prev\ (NDI\_DYAS)\ 
+ 
+\times 
+\normalsize
+\left [  
+\frac
+
+
+{Days\ in\ Year}
+
+{\left ( 
+
+
+Prev\ (UPR\_DYAS) \times Period\ Days \right )}
+\right ]$</MadCap:equation>
+                        </p>
+                        <p>Where:</p>
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/DYAS_DaysinyearCurrent.flsnp">
+                        </MadCap:snippetBlock>
+                        <p>And:</p>
+                        <p>
+                            <MadCap:snippetText src="../../../Resources/Snippets/Analysis Views/DYAS_PeriodDays.flsnp">
+                            </MadCap:snippetText>
+                        </p>
+                        <p>&#160;</p>
+                        <p><b>If 'Monthly' distribution:</b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$\normalsize \left [  
+\frac{1}{Curr\ (PUOI\_DYAS)}\ 
+
+-\ \frac{1}{Prev\ (PUOI\_DYAS)}
+
+\right ] \times\  
+\small
+Prev\ (NDI\_DYAS)\ 
+ 
+\times 
+\normalsize
+\left [  
+\frac
+
+
+{12}
+
+{
+
+
+Prev\ (UPR\_DYAS)  }
+\right ]$</MadCap:equation>
+                        </p>
+                        <p>&#160;</p>
+                        <p><b>If 'Quarterly' distribution:</b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$\left [   
+\frac{1}{Curr\ (PUOI\_DYAS)}\ 
+
+-\ \frac{1}{Prev\ (PUOI\_DYAS)}
+
+\right ] \times\  
+\small
+Prev\ (NDI\_DYAS)\ 
+ \normalsize 
+\times 
+
+\left [  
+\frac
+
+
+{4}
+
+{
+
+
+Prev\ (UPR\_DYAS)  }
+\right ]$</MadCap:equation>
+                        </p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Interaction Yield Impact</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>&#160;</p>
+                        <p><b>If 'Daily Forward' or 'Daily Backward' distribution: </b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$  \left [  
+\frac{1}{Curr\ (PUOI\_DYAS)}\ 
+
+-\ \frac{1}{Prev\ (PUOI\_DYAS)}
+
+\right ] \times\  
+ 
+ \left [  
+\frac{1}{Curr\ (NDI\_DYAS)}\ 
+
+-\ \frac{1}{Prev\ (NDI\_DYAS)}
+
+\right ]
+
+\times 
+ 
+\left [ 
+
+\frac{Prev\ (UPR\_DYAS) \times Days\ in\ year) }{Period\ days}
+
+
+
+\right ]$</MadCap:equation>
+                        </p>
+                        <p>Where:</p>
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/DYAS_DaysinyearCurrent.flsnp">
+                        </MadCap:snippetBlock>
+                        <p>And:</p>
+                        <p>
+                            <MadCap:snippetText src="../../../Resources/Snippets/Analysis Views/DYAS_PeriodDays.flsnp">
+                            </MadCap:snippetText>
+                        </p>
+                        <p>&#160;</p>
+                        <p><b>If 'Monthly' distribution:</b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$ \left [  
+\frac{1}{Curr\ (PUOI\_DYAS)}\ 
+
+-\ \frac{1}{Prev\ (PUOI\_DYAS)}
+
+\right ] \times\  
+
+ \left [  
+\frac{1}{Curr\ (NDI\_DYAS)}\ 
+
+-\ \frac{1}{Prev\ (NDI\_DYAS)}
+
+\right ]
+
+\times 
+\small
+\left [ 
+Prev\ (UPR\_DYAS)\  \times\  12  
+
+
+\right ]$</MadCap:equation>
+                        </p>
+                        <p>&#160;</p>
+                        <p><b>If 'Quarterly' distribution:</b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$ \left [  
+\frac{1}{Curr\ (PUOI\_DYAS)}\ 
+
+-\ \frac{1}{Prev\ (PUOI\_DYAS)}
+
+\right ] \times\  
+
+ \left [  
+\frac{1}{Curr\ (NDI\_DYAS)}\ 
+
+-\ \frac{1}{Prev\ (NDI\_DYAS)}
+
+\right ]
+
+\times 
+
+\left [ 
+\small
+Prev\ (UPR\_DYAS)\  \times\  4  
+
+
+\right ]$</MadCap:equation>
+                        </p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Yield Impact</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>
+                            <MadCap:equation>$\small Constant\ Yield\ Impact\ +\ Interaction\ Yield\ Impact$</MadCap:equation>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>CPU/Millrate</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Tolerance Value</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/DYAS_TOLVAL.flsnp" />
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                        <p>Tolerance Level</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/DYAS_TOLLEV.flsnp" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h2>NDI_DYAS - Net Distributed Income and child categories</h2>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" style="width: 112px;" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" style="width: 819px;" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1" colspan="2">
+                        <p> <b>Categories of accounts</b></p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="font-size: 1em;font-weight: bold;">
+                        <p>Category Codes</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="font-size: 1em;font-weight: bold;">
+                        <p>Child categories of NDI_DYAS:</p>
+                        <p>DI_DYAS and children: </p>
+                        <p>LTI_DYAS, STI_DYAS, AMORD_DYAS, AMORP_DYAS, MISCI_DYAS, DIV_DYAS, DG_DYAS</p>
+                        <p>DE_DYAS and children:</p>
+                        <p>FEES_DYAS, TAX_DYAS, TAXR_DYAS</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Value Previous</p>
+                        <p>
+                            <MadCap:equation>$Prev\ $</MadCap:equation>
+                        </p>
+                        <p>Prior day as determined by Distribution Yield Calendar</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Prior day balance for the sum of the accounts assigned to the category.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Value Current</p>
+                        <p>
+                            <MadCap:equation>$Curr$</MadCap:equation>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Current day balance for the sum of the accounts assigned to the category.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Value Difference</p>
+                        <p>
+                            <MadCap:equation>$Vdiff$</MadCap:equation>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>
+                            <MadCap:equation>$Curr\ -\ Prev$</MadCap:equation>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Constant Yield Impact</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>&#160;</p>
+                        <p><b>If 'Daily Forward' or 'Daily Backward' distribution: </b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$Vdiff  \times 
+\large
+\left [  
+\frac{Days\ in\ Year} 
+
+
+{\left ( Prev\ (PUOI\_DYAS) 
+
+\times
+
+Prev\ (UPR\_DYAS)
+
+\times
+
+Period\ Days\right )} \right ]$</MadCap:equation>
+                        </p>
+                        <p>Where:</p>
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/DYAS_DaysinyearCurrent.flsnp">
+                        </MadCap:snippetBlock>
+                        <p>And:</p>
+                        <p>
+                            <MadCap:snippetText src="../../../Resources/Snippets/Analysis Views/DYAS_PeriodDays.flsnp">
+                            </MadCap:snippetText>
+                        </p>
+                        <p>&#160;</p>
+                        <p><b>If 'Monthly' distribution:</b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$Vdiff  \times 
+\large
+\left [ 
+\frac{12}  
+
+{
+\left ( 
+Prev\ (PUOI\_DYAS) 
+\times
+Prev\ (UPR\_DYAS)
+ \right ) } \right ]$</MadCap:equation>
+                        </p>
+                        <p>&#160;</p>
+                        <p><b>If 'Quarterly' distribution:</b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$Vdiff  \times 
+\Large
+\left [ 
+\frac{4}  
+
+{
+\left ( 
+Prev\ (PUOI\_DYAS) 
+\times
+Prev\ (UPR\_DYAS)
+ \right ) } \right ]$</MadCap:equation>
+                        </p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Interaction Yield Impact</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>&#160;</p>
+                        <p><b>If 'Daily Forward' or 'Daily Backward' distribution: </b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$\left [  \large
+\frac{1}{Curr\ (UPR\_DYAS)}\ 
+
+-\ \frac{1}{Prev\ (UPR\_DYAS)}
+
+\right ] \times\  
+
+Vdiff\ 
+
+\times 
+\large
+\left [  
+\frac
+
+
+{Days\ in\ year}
+
+{
+
+\left (  
+Curr\ (PUOI\_DYAS)\ \times \ Period\ days \right )  }
+\right ]$</MadCap:equation>
+                        </p>
+                        <p>Where:</p>
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/DYAS_DaysinyearCurrent.flsnp">
+                        </MadCap:snippetBlock>
+                        <p>And:</p>
+                        <p>
+                            <MadCap:snippetText src="../../../Resources/Snippets/Analysis Views/DYAS_PeriodDays.flsnp">
+                            </MadCap:snippetText>
+                        </p>
+                        <p>&#160;</p>
+                        <p><b>If 'Monthly' distribution:</b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$\left [  \large
+\frac{1}{Curr\ (UPR\_DYAS)}\ 
+
+-\ \frac{1}{Prev\ (UPR\_DYAS)}
+
+\right ] \times\  
+
+Vdiff\ 
+
+\times 
+\large
+\left [  
+\frac
+
+
+{12}
+
+{
+
+
+Curr\ (PUOI\_DYAS)   }
+\right ]$</MadCap:equation>
+                        </p>
+                        <p>&#160;</p>
+                        <p><b>If 'Quarterly' distribution:</b>
+                        </p>
+                        <p>
+                            <MadCap:equation>$\left [  \large
+\frac{1}{Curr\ (UPR\_DYAS)}\ 
+
+-\ \frac{1}{Prev\ (UPR\_DYAS)}
+
+\right ] \times\  
+
+Vdiff\ 
+
+\times 
+\large
+\left [  
+\frac
+
+
+{4}
+
+{
+
+
+Curr\ (PUOI\_DYAS)   }
+\right ]$</MadCap:equation>
+                        </p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Yield Impact</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>
+                            <MadCap:equation>$\small Constant\ Yield\ Impact\ +\ Interaction\ Yield\ Impact$</MadCap:equation>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>CPU/ Millrate</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>
+                            <MadCap:equation>$ \frac{Curr}{Curr(PUOI\_DYAS)}$</MadCap:equation>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Tolerance Value</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/DYAS_TOLVAL.flsnp" />
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                        <p>Tolerance Level</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/DYAS_TOLLEV.flsnp" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

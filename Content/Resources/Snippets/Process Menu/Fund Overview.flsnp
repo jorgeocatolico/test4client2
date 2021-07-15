@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Fund Overview </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The Fund Overview component displays a high level summary of the Expected and Oversight pricing processes and their completion status. </p>
+                <p class="zoom4Detail">
+                    <img src="../../Images/NAV Oversight Images/FundOverviewPanel.png" />
+                </p>
+                <p>The Fund Overview dashboard provides the ability to navigate to a filtered list of funds requiring attention, for example, selecting the  'Waiting' funds section  in the Fund Sign Off donut, will navigate to the 114 funds currently in a 'Waiting' state on the <MadCap:xref href="../../../C_Process/Fund Sign Off.htm">Fund Sign Off</MadCap:xref> view. The Expected Prices Calculated, NAV Pack Data Loaded and Funds Signed Off all navigate to the Fund Sign Off view. </p>
+                <p>Selecting  records on the Exceptions Validated donut will navigate to the <MadCap:xref href="../../../C_Process/Exceptions.htm">Exceptions</MadCap:xref> view.</p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Note To Selfs.ScreenOnly">
+    <head>
+    </head>
+    <body>
+        <h1>Processing Cashflows Individually</h1>
+        <p>pControl provides the ability to process cashflows individually when running CAR via the 'External ID' Orders Criteria allocation method. This method requires an external ID on all U110 cashflows (as detailed in <MadCap:xref href="Linking Proposed Orders on Interfund Structures using External ID.htm">Linking Proposed Orders on Interfund Structures using External ID</MadCap:xref>) and the cash is processed in ascending order of the External IDs. </p>
+        <p class="zoom4Detail">
+            <img src="../../Resources/Images/Cash Allocation Images/PM_ExternalCashFlows.png" />
+        </p>
+        <p>When External ID&#160;is selected, the U110: Cashflows and Orders worktable records for the same entity and same effective date are processed individually within the same CAR run as follows:</p>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load Allocation Parameters.</li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load Investment Holdings.</li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load Liquidity Account Balances.</li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Calculate Proposed Orders for first cash flow.</li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Where cash allocation method is "Towards Target", Investment holdings will need to be recalculated or reloaded. </li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The CAR process will loop through and calculate proposed orders for the next cash flow, until complete.</li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">A set of proposed orders for each cash flow (External ID)&#160;will be created within the single CAR run.</li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">There will only be one master record per entity per CAR Run Date.</li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">External ID will be associated with every proposed order for the entire interfund structure.</li>
+        </ul>
+        <div class="note_label">Note</div>
+        <div class="note_content">
+            <p>The CAR process will always run for the entire interfund structure in a top down manner, regardless of which entities are receiving cash.</p>
+        </div>
+        <p>&#160;</p>
+    </body>
+</html>

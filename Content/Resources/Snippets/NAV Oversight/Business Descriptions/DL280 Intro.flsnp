@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>If this function is selected, and ‘Dependent Price Run Types’ have been specified on the entity attributes, this function will load these dependent price run types for the same effective date as the pricing run.  If the price run types are not in an ‘Approved’ state, the control record ‘Load Data’ status stream enters a wait state.</p>
+    </body>
+</html>

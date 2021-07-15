@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Rows within the Classification panel have a 'row type' of 'Holding', 'Aggregate', or 'Derived'. </p>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Holding rows display the pControl entity's Cash Allocation values, i.e. the same values as displayed in the panel below the Classification panel. In the example below, the rows in the red box, for the Emerging Markets and Global Equity entities have a row type of 'Holding'. These same entities and same asset values are also displayed in the Proposed Transactions panel.</li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Aggregate rows are the sum of the Holding Rows listed directly beneath. The 'Australian Shares - Plus (CM_ASHPlus1)' row in the Classifications panel displays a value of 228,262,227 which is the sum of the three Holding rows directly beneath it. </li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The value in a Derived row is calculated using a formula, which is listed in the Component Fields of the U496: Classification Allocations Parameters worktable. This formula is usually the addition or subtraction of other entities asset values, and will also be shown in the 'Derived Details' field of the Classification panel.</li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">All rows have an arrow icon next to them to show they can be expanded / collapsed, and to indicate where they are the total of all children rows. </li>&#160;&#160;</ul>
+        <p class="zoom4Detail">
+            <img src="../../Images/Portfolio Management Images/PM_AggregatedHoldingExample.png" alt="" title="" />
+        </p>
+    </body>
+</html>

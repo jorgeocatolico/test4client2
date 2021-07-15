@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>If daily forward distribution on Value Previous: </p>
+        <p>
+            <MadCap:equation>$ Forward\ days\ =\ number\ of\ days\ until\ next\ business\ day\ from\ the\ prior\ day$</MadCap:equation>
+        </p>
+        <p>For example, if prior day = Friday, then Forward Days = 3. </p>
+        <p>If Wednesday is a bank holiday and the prior day = Tuesday, Forward Days = 2.</p>
+        <p>If prior day = Monday, and Tuesday is the next business day, then Forward Days = 1.</p>
+    </body>
+</html>

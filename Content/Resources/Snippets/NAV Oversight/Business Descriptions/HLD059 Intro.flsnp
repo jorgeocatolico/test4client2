@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Will fail the test if the over/under impact of the asset within the entity when compared to the key benchmark is greater than the specified tolerance.</body>
+</html>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>pControl processes are organised into processing phases which are executed in sequence. There are a number of activities performed in each phase, and the specific activities performed for an individual entity (portfolio, currency, benchmark etc.) are determined by the configuration of an associated process template. When processing is initiated in pControl a 'Control Record' is created. This control record may be a price, rate, index, tax expense calculation, distribution calculation etc. As the control record progresses through the processing phases there are many 'paths' that processing can take, depending on the population of attributes, the data used in processing etc. The 'paths' are represented by 'Status Streams'. </p>
+    </body>
+</html>

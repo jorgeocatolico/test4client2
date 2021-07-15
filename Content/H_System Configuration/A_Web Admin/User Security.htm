@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1034" MadCap:lastWidth="1180">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>User Security</h1>
+        <p>&#160;</p>
+        <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="width: 100%;mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                        <p>Description</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                        <p>Value</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                        <p>Notes</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Minimum password length</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>4</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Minimum length for a valid user password. Recommended value is &gt;6. The value cannot be set to zero or blank.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Maximum password length</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>5</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Maximum length for a valid user password. The value cannot be set to zero or blank.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Attempts before account is locked</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>3</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Number of incorrect login attempts allowed before account is locked. The account locked toggle will be selected for the user in the user maintenance dialogue box if number of incorrect login attempts has been reached. </p>
+                        <p>Another user with administration rights is required to 'unlock' the account by clicking on the locked toggle and activating it to green.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Days before password expires</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>30</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The number of days a password is valid for. This excludes the first day the user password was changed or int he case of a new user when the account was first created. After the password has expired the user is forced to change it when they next log in using the expired password. The user cannot access the system without changing the password. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Old passwords to compare</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>2</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Number of prior passwords to be stored to check that the user does not reuse a prior password. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Needs alpha and numerics</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>YES</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Whether password must consist of both alpha and numeric characters. Valid values are YES and NO. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Days after password expiry before account becomes inactive</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>0</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Number of days after password expiry before account becomes inactive.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Minimum number of alpha characters</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>2</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Minimum number of alpha characters that the password must contain.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Minimum number of special characters</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>0</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Minimum number of special characters (e.g. %, #, etc) the password must contain. Special characters include all characters that are not alpha-numeric.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Mandatory upper and lower case mix</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>YES</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Whether the password must contain a mix of upper and lower case letters. Valid values are YES and NO.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Check consecutive identical characters in password</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>3</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The value indicates the number of identical characters NOT allowed for a valid password. </p>
+                        <p>A value of '3' indicates that the password is not allowed to have three or more identical characters. These can be any type - alpha, numeric or special.</p>
+                        <p style="font-style: italic;">Note: a value of '1' is allowed to be entered but this logically holds no meaning and is equivalent to having the functionality disabled or setting the value to zero. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Check user id&#160;in password</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>NO</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Indicates whether a valid password is allowed to contain the user id character string. This includes the user id character string in reverse order. </p>
+                        <p>as an example, if the user id was equal to 'pControl' then this character string would not be permitted in the password; neither would lortnoCp (the reverse of pControl).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Check user name in password</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>YES</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Indicates whether a valid password is allowed to contain the user name character string in the password. If the user name string is made of 'words' separated by special characters e.g. spaces, apostrophes, underscore etc then each word is checked in the password. For example, if the user name equals 'Jean-Claude Van Hauser' then each of the strings, 'Jean', 'Claude', 'Van' and 'Hauser' would not be allowed in the password.</p>
+                        <p>Valid values are YES&#160;and NO.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                        <p>Current password encryption algorithm</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                        <p>HmacSHA1</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                        <p>Algorithm used to encrypt the password when created. For valid values used in pControl, please refer to pControl User Guide - Advanced Installation. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

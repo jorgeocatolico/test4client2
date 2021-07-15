@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Backup NAV, sometimes referred to as 'Contingent NAV' is the name given to the process used to generate a NAV&#160;price if a service provider were to experience an outage, and be unable to produce NAV&#160;prices for one or more days. Backup NAV follows the same <a href="../../../B_Dashboard/NAV Oversight/Pricing Process/Pricing Process.htm">pricing process</a>, and uses the same <a href="../../../B_Dashboard/NAV Oversight/Configuring NAV Oversight/Expected Pricing.htm">pricing methodologies</a> and formulas as those used in Expected Pricing. To start the Backup NAV calculations, it is necessary to declare the outage as described in <MadCap:xref href="../../../B_Dashboard/NAV Oversight/Backup NAV/Starting the Process.htm">Starting the Process</MadCap:xref>.</p>
+        <p>Each oversight entity (fund) will have an associated service provider, i.e. the outsourced company providing the NAV prices. A declared outage means the prices affected by the outage will be calculated in pControl and the users affected will be notified by the red frames within the dashboard and the red Outages button.</p>
+        <p>The Exceptions Overview component is replaced with the Backup NAV widget which displays the percentage of prices being calculated by Backup NAV. Once all the prices have been calculated, the dashboard will return to normal. </p>
+        <p class="zoom4Detail">
+            <img src="../../Images/NAV Oversight Images/NAV_OutagesScreen.png" alt="" title="" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

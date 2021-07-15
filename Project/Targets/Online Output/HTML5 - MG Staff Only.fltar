@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="MadCap HTML5 Target"
+  Type="WebHelp2"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MoveOutputContentToRoot="false"
+  SkinComponents=""
+  EnableResponsiveOutput="true"
+  MasterPage="/Content/Resources/MasterPages/OtherTopics.flmsp"
+  ResultsPerPage="10"
+  Skin="/Project/Skins/HTML5 - Top Navigation MG Staff Only.flskn"
+  ConditionTagExpression="exclude[&quot;Note To Selfs.PrintOnly&quot; or &quot;Note To Selfs.ScreenOnly&quot;] "
+  DefaultUrl="/Content/Home.htm"
+  GetLatestBeforeCompile="false"
+  PartialWordSearch="true"
+  SearchBarSkin="/Project/Skins/HomeSearchBar MG Staff Only.flskn">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="true" />
+  <Variables>
+    <Variable
+      Name="General/CompanyName">Milestone Group</Variable>
+    <Variable
+      Name="General/PhoneNumber">+61 2 8224 2600</Variable>
+    <Variable
+      Name="General/ProductName">pControl</Variable>
+    <Variable
+      Name="General/StreetAddress">Level 20, 9 Castlereagh St</Variable>
+    <Variable
+      Name="General/CityStateZip">Sydney, 2000, Australia</Variable>
+  </Variables>
+</CatapultTarget>

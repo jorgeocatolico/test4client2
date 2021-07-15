@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <h2 class="indropdown">Auto Refresh</h2>
+        <p>
+            <MadCap:snippetText src="Process Dashboard/AutoRefresh.flsnp" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The difference between the current asset holding and the previous asset holding. Calculated as:</p>
+        <p>
+            <MadCap:equation>$\small {\left (  Hld\ Cur\  -\ Hld\ Prev \right)}$</MadCap:equation>
+        </p>
+    </body>
+</html>

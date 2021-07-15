@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>When a process is executed in pControl, the process writes a number of status messages for each <MadCap:glossaryTerm glossTerm="Glossary.Term0">phase</MadCap:glossaryTerm> of the process. These messages can be viewed via the 'Processing Status' view (Ctrl +&#160;S)&#160;in processing mode, or via the 'Process' menu item in the web.</p>
+        <p>In addition to advising the current state of a process, process status messages also detail the calculations and validations performed, including the input and output values used in those calculations. Each arrow can be selected to expand that phase of the process, and see all <MadCap:glossaryTerm glossTerm="Glossary.Term1">functions</MadCap:glossaryTerm> performed.</p>
+    </body>
+</html>

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Status Streams</h1>
+        <p MadCap:conditions="Note To Selfs.ScreenOnly">Note: some of this content exists under exceptions and fund sign off</p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/User Permissions/UP_Status Streams.flsnp" />
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Control Record - Validity Checks</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The Validity Checks phase contains functions that are used to check if it is appropriate to be running a process for an entity on a given day. </p>
+                <p>The Validity Checks processing phase is linked to the 'Process Validations' status stream. If all of the configured checks pass, the process continues to the next phase. If any of the checks fail, the process stops, and will wait for user intervention. </p>
+                <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Phase Progress</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Status Stream State (Message)</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Action</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Still running</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Validating Process</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>All checks pass</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Finished (Validated)</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Status Stream finished - Process moved to the next phase</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Any checks fail</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Unable to Process</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>Process stops and waits for user intervention</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>An exception will not be raised for failed validity checks. The processing status message will reflect 'Unable to Process' and the process will stop.</p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Control Record - Data Loads</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The data loads processing phase loads all of the data that is required to perform the processing that has been configured for the entity as defined by the process template. </p>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>The data is loaded into temporary work areas - not displayed to users - for processing by pControl rules.</p>
+                </div>
+                <p>The data loads processing phase is linked to the 'Load Data' status stream. This status stream will be updated by the process to reflect whether the data loads are being processed, have completed successfully, have resulted in an exception (Data Load Exception) or are waiting on data. </p>
+                <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Phase Progress</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Status Stream State (Message)</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Action</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Data Loads Processing</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Loading Data</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Data Loads Completed successfully</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Finished (Loaded)</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Status Stream finished - Process moved to the next phase</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Data Loads have an issue</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Data Load Exception</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Status Stream stops and waits for user intervention</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Waiting on Data</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Waiting</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>Will transition out of this state when data has arrived</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Control Record - Pre-Calculation Validations</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The Pre-Calculation Validation (PV) processing phase contains functions that are used to check that the data loaded in the data load phase is appropriate and reconciled. </p>
+                <p>The pre-calculation validation processing phase is linked to the 'Pre-Calculation Validations' status stream. This status stream will be updated by the process to reflect whether the pre-calculation validations are being processed (Pre PV&#160;running), have completed successfully (Validated), have finished with warnings (Warning) or have resulted in an exception (Pre PV Exception). </p>
+                <p>&#160;</p>
+                <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Phase Progress</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Status Stream State (Message)</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Action</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Still running</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Pre PV&#160;running</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">n/a</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">All checks pass</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Finished (Validated)</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Status stream finished - move to next phase</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Any checks fail with warnings</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Finished - Warnings (Warning)</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Status stream finished with warnings - move to next phase</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">Any checks fail with exceptions</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">Pre PV Exception</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">Exception events generated - pre calculation validations process continues to the follow on phases but the process control record will remain in an unapproved state. All exception events will have to be overridden before the control records can be approved.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Control Record - Calculation Phase</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The 'Calculation' processing phase contains rules that determine the values that are used in the calculation. The calculate phase does not have an associated status stream attached as there are no exceptions raised in this processing phase and no checks are being performed. All data should be available to the process from the prior phases.</p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Control Record - Post Calculation Validation</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The post-calculation validation processing phase contains functions that are used to validate the control records (prices, rates etc.) calculated for the entity. </p>
+                <p>The 'Post-Calculation' validation processing phase is linked to the 'Post-Calculation Validations' status stream. If all the checks pass, processing continues to the enxt phase. If any of the checks fail, an exception is raised which needs to be overridden by a user before the control record can be approved. </p>
+                <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Phase Progress</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Status Stream State (Message)</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Action</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Still running</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Post PV&#160;running</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">n/a</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">All checks pass</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Finished (Validated)</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Status stream finished - move to next phase</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Any checks fail with warnings</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Finished - Warnings (Warning)</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Status stream finished with warnings - move to next phase</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">Any checks fail with exceptions</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">Post PV Exception</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">Exception events generated - pre calculation validations process continues to the follow on phases but the process control record will remain in an unapproved state. All exception events will have to be overridden before the control records can be approved.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Control Record - Data Export Phase</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The 'Data Export' processing phase contains a number of functions that are used to export data, which has been used or calculated in processing, to the pControl export worktables. The data can then be used for analysis and reporting or exporting to external systems. The data export phase does not have an associated status stream attached as there are no exceptions raised.</p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Control Record - Approval Phase</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The control record 'Approval' function in processing is not a formal processing phase but takes place once all other phases have completed to perform any straight through processing. It is possible for example, to configure an entity to do the following once the standard processing phases have completed and a control record has been updated:</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">'Automatically Approve' the control record - if a control record has no exceptions raised on it during the pricing process, it can automatically be 'Approved' which will mean that dependent funds can continue their processing if they are waiting on this control record being 'Approved'</li>
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">'Automatically Release' the control record - if a control record has been automatically 'Approved', it can also be configured to be automatically transitioned to a 'Released' state</li>
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Once released, the control record can move into a state of 'Pending Acknowledgement'.</li>
+                </ul>
+                <p>This functionality provides a means for straight through processing whereby a control record can be generated and if there are no exceptions raised during the process, it can be 'Approved' and 'Released' automatically. Further, if there is a requirement for an external system to send through an acknowledgement / not acknowledged message on receipt of the control record, then this can also be configured. </p>
+                <p>The approval processing phase is linked to the 'Control Record - Approval' status stream. <MadCap:conditionalText MadCap:conditions="Note To Selfs.ScreenOnly">This status stream is covered in detail below.</MadCap:conditionalText> This is an important status stream from a user perspective as this status stream involves manual transitions / exceptions. </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Control Record - Approval Status Stream - Detail</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../Resources/Images/User Permissions Images/UPs_ApprovalStatusStream.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

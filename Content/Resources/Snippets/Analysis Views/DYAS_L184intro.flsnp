@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>This static worktable holds the classification of internal accounts as being cash, other asset or other liability for the loading of general ledger balances of the entity. In addition, the <b class="BufferandFunctionBold">L184: Account Category</b> worktable supports the mapping of accounts from the general ledger to the Distribution Yield Analysis view, the Account Movement Attribution view, the Share Class Impacts view and the NAV Movement Analysis view. The Account Valuation Type field in the L184: Account Category worktable enables different set up to be applied for funds in different process tree groups, companies, etc. The Account Valuation Type field is populated under <b class="BufferandFunctionBold">[DL190] Load General Ledgers</b> function on the fund entity.</body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Loads the information from the L245: Infrequently Priced Securities static worktable. Infrequently Priced Securities are used in some of the validations for stale security prices.</body>
+</html>

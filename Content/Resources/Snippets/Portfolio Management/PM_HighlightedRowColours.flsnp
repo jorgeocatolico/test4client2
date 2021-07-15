@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Highlighted row colours</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The following table shows the colour coding and function options subject to type of amendment.</p>
+                <table style="mc-table-style: url('../../TableStyles/MG_TableStyle01Grey.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Edit Type</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Row Highlight Colour</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p> Ellipsis</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Expand/ Collapse</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Added record</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="background-color: #dbe9f1;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #697a84;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #697a84;">
+                                <p>Pale Blue</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Y</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">-</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Edited record </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="background-color: #dbe9f1;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #697a84;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #697a84;">
+                                <p>Pale Blue</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Y</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Y</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Deleted record</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="background-color: #f7aaaa;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #697a84;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #697a84;">
+                                <p>Pale Pink/Red</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Y</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Y</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">Current selected record</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="background-color: #f7e9e1;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #697a84;">
+                                <p>Pale Orange</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">N/A</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">N/A</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Records can be passed to the next stage in the status stream using the  ellipsis to the left of the screen.</p>
+                <p>For records  in edit, the "new" record is displayed immediately below the existing blue record and can be viewed by selecting the Expand/Collapse icon <img src="../../Images/Portfolio Management Images/PM_DualAuthExpandCollapseIcon.png" /></p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

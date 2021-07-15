@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>The ‘Calculate Liabilities’ processing phase contains a number of functions that are used to calculate the fee, tax and any other liabilities that need to be accrued for the entity and reflected in the calculation of the Net Asset Value (NAV).</body>
+</html>

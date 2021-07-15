@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Determines the format of the message to be created with the following options:&#160;PDF, Swift15022. Additional formats can be added for an implementation (e.g. CSV, XML).</p>
+    </body>
+</html>

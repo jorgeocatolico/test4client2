@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Represents the basis for calculation of the Funds Under Management i.e. </p>
+        <p>Monthly - using the FUM as at effective date (end of period).</p>
+        <p>Average - averaging the FUM as at the start of period and end of period.</p>
+        <p>Daily - calculated based on a Daily Fund for every day in the period.</p>
+    </body>
+</html>

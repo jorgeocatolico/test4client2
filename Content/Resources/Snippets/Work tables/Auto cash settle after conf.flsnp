@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>If selected, the cash will automatically be settled when the order is confirmed (manual confirmation or automatic confirmation). Confirmation can also occur when the investment prices are received into pControl and the transactions unitised. </p>
+        <p>If both 'Auto Cash Settle After App' and 'Auto Cash Settle After Conf' are selected, or neither check boxes are selected, approval will be applied i.e. the cash will settle after the order is approved.</p>
+    </body>
+</html>

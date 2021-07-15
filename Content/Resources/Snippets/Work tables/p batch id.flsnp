@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Unique identifier of the batch load. </p>
+        <p style="font-style: italic;">Note: Some files may be split into several batches to be loaded into pControl, if the number of records in a file exceeds the value in the 'Batch Size' attribute on the take on entity.</p>
+    </body>
+</html>

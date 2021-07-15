@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <ol class="stepList">
+            <li>
+                <p>Create a new 'Run STP Processing' entity, as shown below. </p>
+                <p class="zoom4Detail">
+                    <img src="../../Images/NAV Oversight Images/MG_STP_OH.png" />
+                </p>
+            </li>
+            <li>
+                <p>Ensure the 'Resubmit' check box is selected, and other 'Schedule' attributes populated, as this will ensure the processes started by this STP entity will be initiated each day.</p>
+                <p class="zoom4Detail">
+                    <img src="../../Images/NAV Oversight Images/MG_STP_OH1.png" />
+                </p>
+                <p>&#160;</p>
+            </li>
+            <li>Select <span class="ButtonArrows">Ok</span> to save and validate the entity or <span class="ButtonArrows">Cancel</span> to exit without saving.</li>
+        </ol>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Entity attributes</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <MadCap:snippetBlock src="Proc_Run STP Processing entity attributes.flsnp" />
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <div class="note_label">Note</div>
+        <div class="note_content">
+            <p>For further details on creating new entities, refer to <MadCap:xref href="../../../AA_Library/Entities.htm">Entities</MadCap:xref>.</p>
+        </div>
+        <p>&#160;</p>
+        <p MadCap:conditions="Note To Selfs.ScreenOnly">Swing images for reference only</p>
+        <p MadCap:conditions="Note To Selfs.ScreenOnly">
+            <img src="../../Images/All/RunSTPProcessing_entity.png" MadCap:conditions="Note To Selfs.ScreenOnly">
+            </img>
+            <p class="zoom4Detail">
+                <img src="../../Images/All/RunSTPProcessing_entity_FollowOn.png" alt="" title="" class="ReduceButtonSize_850px" MadCap:conditions="Note To Selfs.ScreenOnly" />
+            </p>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Identifies the price type of the asset that has been used to value the investment holding in it. This price type will be picked up from pControl if there is a validation being performed to ensure the price on the holding record is correct.</p>
+    </body>
+</html>

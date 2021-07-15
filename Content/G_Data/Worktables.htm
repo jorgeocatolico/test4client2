@@ -1,0 +1,1659 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/MG_TableinanAccordionDropDown.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Worktables </h1>
+        <p>Data within pControl can be viewed via worktables also known as buffers. Worktables are categorised as: </p>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Import  - for holding data that has come into pControl from an external source. This data is used as an input to a process.</li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">pControl - hold the results of one process to be used as a follow on for another process, or for reporting within pControl. </li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Static - data such as mapping data, reference or lookup data.</li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Export - for holding the output of a process. These worktables are also used to facilitate the export of data outside of pControl.</li>
+        </ul>
+        <h2 class="_orange">p_Status Fields</h2>
+        <p>Most worktables in pControl contain a p_status field. The p_status value indicates the status of an individual record. pControl processes use the status value to determine whether or not to select a record for inclusion in a process.</p>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">p_status values</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>&#160;</p>
+                                    <table style="mc-table-style: url('../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle02TableinaTable_No_header" cellspacing="18">
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <thead>
+                                            <tr>
+                                                <th class="TableStyle-MG_TableStyle02TableinaTable_No_header-HeadH-Column1-" style="font-weight: normal;">p_status value</th>
+                                                <th class="TableStyle-MG_TableStyle02TableinaTable_No_header-HeadH-Column1-" style="font-weight: normal;">Status</th>
+                                                <th class="TableStyle-MG_TableStyle02TableinaTable_No_header-HeadH-Column1-" style="font-weight: normal;">
+                                                    <p><span style="color: #ffffff;">Processing where status is set</span>
+                                                    </p>
+                                                </th>
+                                                <th class="TableStyle-MG_TableStyle02TableinaTable_No_header-HeadG-Column1-" style="font-weight: normal;">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>?</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">LOAD_IN_PROGRESS</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">Take On</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>Data is in the process of being loaded. This state is used when the data take on is loading data in batches.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>A</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">ACKNOWLEDGED</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">P135: Import Register</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>There has been an issue with the load i.e. data load has been rejected. This has subsequently been manually transitioned to 'A' to reflect the fact that the issue has been acknowledged. Nothing further will happen with this record.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>B</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">BEFORE_FINAL_PROCESSING</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">Data Poller</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>This status is intended for use in the data poller as an interim state before the record is moved to a completed (C) state.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">C</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">COMPLETED</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">Hand Off</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>All processing has been 'Completed' by pControl. Processing of this record has been finalised.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">D</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">DUPLICATE</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">Take On or Enrichment and Validation</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>Duplicate detection has been undertaken (either during the data take on or during the enrichment and validation process) and the record has been identified as a duplicate. (Subject to the duplicate criteria configured).</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">E</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">EXCLUSION_FOR_REC</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">Reconciliation</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>This status marks a record as being excluded from the specific reconciliation. Used during prepare data phase. </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">F</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">FIXED</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">Various</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>Data has been processed by pControl and is now fixed (not editable). Typically used in editable worktable definitions where certain rows must be locked to prevent further processing.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">G</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">IN_PROGRESS_ERROR</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">Enrichment and Validation</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>An exception has occurred during processing. This is an interim state, where the record is awaiting user interaction.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>I</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>INSERTED</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>User Interface</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>Data has been manually keyed or ‘Inserted’ to the worktable via the pControl UI.</p>
+                                                    <p><i>Note: Should not be set to this state in rules.</i>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>J</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>LOAD_REJECTED</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Take On</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>An issue has arisen during the take on and the data load has been rejected. This is an end state and affects all records in the load.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>L</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>LOADED</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Take On</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>Data has been ‘Loaded’ successfully.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>M</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>TRIGGERED FROM POLLER</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Data Poller</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>This is used by the data polling process as an interim state to notify a downstream process.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>N</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>NEW</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>External Load</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>Data is ‘New’ and has been brought into pControl via an external system directly i.e. not a data take on. Indicates insertion complete.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>O </p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>LOAD_EXCEPTION</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Take On</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>An exception has occurred during the data load phase. This is an interim state, where the record is awaiting user interaction.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>P</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>IN_PROGRESS</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Enrichment and Validation</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>Data is in the process of being validated as part of enrichment and validation processing.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>R</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>REC_AMENDED</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Reconciliation</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>Used specifically for reconciliations (during data refresh); to reflect the amendment of the reconciliation record.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>S</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>IN_PROGRESS_VALIDATED</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Enrichment and Validation</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>Data is valid but is part of a data set that contains both valid and invalid data.</p>
+                                                    <p>This is an interim state, where the record is awaiting user interaction.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>T</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>REC_DELETED</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Reconciliation</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>Used specifically for reconciliations; to reflect the fact that the reconciliation record has been deleted.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>U</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>UPDATED</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>User Interface</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>Data has been manually modified or ‘Updated’ to the worktable via the pControl UI.</p>
+                                                    <p><i>Note: Record can be set to this state in rules if updating item.</i>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>V</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>VALIDATED</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Enrichment and Validation</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>The record has been loaded and has completed validation processing successfully.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>W</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>WAITING</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>P135: Import Register</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>Only used by the P135 worktable for take ons awaiting files or data to arrive.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>X</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>EXCLUSION</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">Enrichment and Validation</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>Data has been specifically excluded from further downstream processing.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-090em_font">
+                                                    <p>Z</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-090em_font">
+                                                    <p>ERROR</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-090em_font">Enrichment and Validation</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyA-Column1-090em_font">
+                                                    <p>Record has failed during the validation phase.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h2 class="_orange">Import Worktables</h2>
+        <p>Import worktables hold data that has come into pControl from an external source. This data is used as an input to a process.</p>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U100:_Investment_Holdings"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U100: Investment Holdings</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>
+                                        <MadCap:snippetText src="../Resources/Snippets/Work tables/U100Intro.flsnp" />
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U101:_External_Prices"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U101: External Prices</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>
+                                        <MadCap:snippetText src="../Resources/Snippets/Work tables/U101Intro.flsnp" />
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U104:_General_Ledger"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U104: General Ledger</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>
+                                        <MadCap:snippetText src="../Resources/Snippets/Work tables/U104Intro.flsnp" />
+                                    </p>
+                                    <p>The U104: General Ledger worktable contains items and values that will be loaded to pControl accounts, for example, from an external general ledger or report. The imported data is enriched to allow the journal creation process to run, which will create journals to update pControl accounts. This provides an audit trail of the imported values and any enrichments prior to creation of account movement journals in pControl.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U107:_Price_Component_Adjustments"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U107: Price Component Adjustments</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');width: 100%;margin-left: 0;margin-right: auto;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>
+                                        <MadCap:snippetText src="../Resources/Snippets/Work tables/U107Intro.flsnp" />
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U108:_Units_on_Issue"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U108: Units on Issue</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>
+                                        <MadCap:snippetText src="../Resources/Snippets/Work tables/U108Intro.flsnp" /> The U108: Units on Issue worktable holds details of the units that have been issued to unit holders of the entity.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U109:_Unitised_Cash_Flow"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U109: Unitised Cash Flow</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');width: 100%;margin-left: 0;margin-right: auto;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>
+                                        <MadCap:snippetText src="../Resources/Snippets/Work tables/U109Intro.flsnp" />
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U113:_Pending_Settlement_Transactions"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U113: Pending Settlement Transactions</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>
+                                        <MadCap:snippetText src="../Resources/Snippets/Work tables/U113Intro.flsnp" />
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U175:_Security_Prices"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U175: Security Prices</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>
+                                        <MadCap:snippetText src="../Resources/Snippets/Work tables/U175Intro.flsnp" />
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U178:_FX_Rates"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U178: FX Rates</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>
+                                        <MadCap:snippetText src="../Resources/Snippets/Work tables/U178Intro.flsnp" />
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U180:_Security_Details"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U180: Security Details</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>
+                                        <MadCap:snippetText src="../Resources/Snippets/Work tables/U180Intro.flsnp" />
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U181:_Foreign_Income_Tax"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U181: Foreign Income Tax</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>
+                                        <MadCap:snippetText src="../Resources/Snippets/Work tables/U181Intro.flsnp" />
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U200:_Asset_Transactions"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U200: Asset Transactions</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>
+                                        <MadCap:snippetText src="../Resources/Snippets/Work tables/U200Intro.flsnp" />
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U210:_Corporate_Actions"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U210: Corporate Actions</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>
+                                        <MadCap:snippetText src="../Resources/Snippets/Work tables/U210Intro.flsnp" />
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U280:_Benchmark_Value_Data"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U280: Benchmark Value Data</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>
+                                        <MadCap:snippetText src="../Resources/Snippets/Work tables/U280Intro.flsnp" />
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U305:_Cash_Allocation_-_Liquidity_Adjustments"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U305: Cash Allocation - Liquidity Adjustments</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds adjustments that need to be made to the liquidity balance of an entity over a specified time period.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U306:_Cash_Allocation_Liabilities"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U306: Cash Allocation Liabilities</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds liability values of an entity for a specific date. Three different types of liability can be loaded into this worktable; close of business (CoB), intra-day, and manual adjustment.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U310:_Exposure_Reallocation_Source"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U310: Exposure Reallocation Source </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>Holds details of the assets and their values which are to be reallocated to other entities during processing. This worktable is used by Portfolio Management. For further information on the reallocation of values, refer to <MadCap:xref href="../B_Dashboard/Portfolio Management/Reallocation of Value.htm">Reallocation of Value</MadCap:xref>.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U350:_Classification_Hierarchy"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U350: Classification Hierarchy</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <MadCap:snippetBlock src="../Resources/Snippets/Work tables/U350Intro.flsnp" style="font-size: 0.9em;" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="P135:_Import_Register"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">P135: Import Register</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p style="font-size: 0.9em;">
+                                        <MadCap:snippetText src="../Resources/Snippets/Work tables/U280Intro.flsnp" />
+                                    </p>
+                                    <p style="font-size: 0.9em;">Is used to represent and manage data originating from the table transfer process, manual entry and direct insert from an external system.</p>
+                                    <p style="font-size: 0.9em;">The Validate Data process can process multiple batches of data in parallel and can run multiple Enrich/Validate entities on each worktable.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U485:_External_Child_Assets"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U485: External Child Assets</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>Holds the code and description of the external child assets required prior to loading the U490: External Look-through. Prior to loading the U490: External Look-through data, the external child assets must first be created. The U485 worktable holds the code and description of these assets. The CA_LOAD_EXT_CHILD_ASSETS needs to be run so that the U485 details can be used to create the external child assets in pControl. </p>
+                                    <p>The external child assets once created, are stored in the allocation parameters and allocation records as a pControl id. With the mandatory fields being code and description, these are stored in a node id table, similar to how the classification sectors are stored with a unique node type.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U490:_External_Look-through"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U490: External Look-through</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>Stores the investment path details or risk factors for the direct assets of a CAR process. These are recorded as a set of external child assets and their weights within the direct asset. As the child assets do not exist in pControl, the U485: External Child Asset data load and associated process, first needs to be run in order to create these assets. This data is used by CAR for <MadCap:xref href="../B_Dashboard/Portfolio Management/Classifications/Classification Look-through.htm">Classification Look-through</MadCap:xref> when the look-through weights are externally supplied.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U495:_Classification_SectorsThe_U495:_Classification_Sector"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U495: Classification Sectors</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>The U495: Classification Sector worktable allows one or more classification structures to be created, which classifies investment data by various criteria. These structures may be the same, or can be different to the investment or interfunding relationship structures. This worktable operates in conjunction with the U496: Classification Allocation Parameters worktable.</p>
+                                    <p>Classification sectors are used by Portfolio Management to display the cash allocated by a Cash Allocation process in different formats, or by different groupings. Validation checks can  be performed on these classification sectors to ensure the proposed orders do not breach compliance rules. For example, the cash allocated to underlying entities may meet all individual allocation bounds, but collectively may exceed the total amount of money allocated a single asset sector, custodian, or other grouping.</p>
+                                    <p>For further detail about the classification sectors, refer to <MadCap:xref href="../B_Dashboard/Portfolio Management/Classifications/Classifications.htm">Classifications</MadCap:xref>, and associated data in the U496: Classification Allocation Parameters.</p>
+                                    <MadCap:dropDown>
+                                        <MadCap:dropDownHead>
+                                            <MadCap:dropDownHotspot>Configuring classifications using the U495 worktable</MadCap:dropDownHotspot>
+                                        </MadCap:dropDownHead>
+                                        <MadCap:dropDownBody>
+                                            <p style="font-style: normal;">In the following example, classification categories of <i>Currency Exposure</i>, <i>Economic Sector</i>, and <i>Fund Manager</i> have been configured in the U495: Classification Allocation Parameters worktable, and are displayed as the tab names in this panel. </p>
+                                            <p>
+                                                <img src="../Resources/Images/Portfolio Management Images/PM_ClassificationLimits.png" alt="" title="" class="greyborder" />
+                                            </p>
+                                            <p>The HKD Exposure classification is composed of the  portfolios whose base currency is HKD. This is also configured in the U495 worktable. The first row in the below image shows the parent sector code of CCY_HKD.</p>
+                                            <p>The six sector rows below that all have a common 'Parent Code' of 'CCY_HKD', indicating they are the child rows of the CCY_HKD parent. They also each have a Value Type  of 'H' (Holding), meaning the order values displayed against these portfolio entities will be the actual order values as calculated by processing.</p>
+                                            <p>
+                                                <img src="../Resources/Images/Portfolio Management Images/PM_U495_CCY_HKD_ClassSectors.png" style="width: 649px; height: 195px;" class="greyborder" />
+                                            </p>
+                                            <p style="font-style: italic;">Note: Value Type in the U495 worktable is known as <MadCap:xref href="../B_Dashboard/Portfolio Management/Classifications/Classifications.htm#Row">Row Type</MadCap:xref> in the Classification panel.</p>
+                                            <p>The order value as calculated by the Cash Allocation process for each of the above child rows are summed to the parent row for display in the Classification panel. The target weight, tolerances and bounds for this HKD&#160;Exposure classification are configured in the U496 worktable, as shown in the third row of the following image: </p>
+                                            <p>
+                                                <img src="../Resources/Images/Portfolio Management Images/PM_U496_CCY_HKD_ClassLimits.png" style="width: 892px; height: 265px;" class="greyborder" />
+                                            </p>
+                                            <p>The CCY_HKD sector is configured with a target weight of 30% of the total value of $25,525,060.355</p>
+                                            <p>The aggregated HKD value of the total cash allocated is $6,757,992.36 or 26.48% of the total value allocated. This is outside the lower Tolerance value, and hence is shown as 'Outside of Tolerance' within the Classification panel:</p>
+                                            <p>
+                                                <img src="../Resources/Images/Portfolio Management Images/PM_ClassificationLimits_HKD_OOT_1.png" alt="" title="" class="greyborder" />
+                                            </p>
+                                        </MadCap:dropDownBody>
+                                    </MadCap:dropDown>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U496:_Classification_Allocation_Parameters"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U496: Classification Allocation Parameters</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>Classification Allocation Parameters are used in conjunction with U495: Classification sectors. They define the compliance checks to be performed on proposed transactions.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U498:_Investment_Parameter_Update"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U498: Investment Parameter Update</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>Holds the allocation criteria, (target weights, tolerances and bounds) used by the Cash Allocation process to calculate how much cash to allocate to underlying assets</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h2 class="_orange">pControl Worktables</h2>
+        <p>pControl worktables are typically read-only and are used to hold the results of processes or functions, and to facilitate the export of information that may be required for follow on processing, reporting or for distribution outside of pControl. For example, the results of Valuation (formerly known as MDV) processing may be used as an input to ALV, NAV or Unit Pricing. These worktables may also be used to hold the results of one section of a process, such as validation checks. In some cases, only those validation checks that failed, (i.e. caused an exception) will be written to these worktables; Other times, depending on the selection of function codes and attributes, all validation checks, whether passed or failed will be written here. Some pControl worktables are also used as a log to record each file received into pControl, and the status of those files; or to record each file generated and distributed out of pControl.</p>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="A01:_Product_Validation"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">A01: Product Validation</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds the results of 'Product' validation checks which have breached their tolerance, and therefore an exception has been raised.</p>
+                                    <p><i>Note: Product Validation checks can be identified with a 'POV' prefix code.</i>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="A02:_Product_Validation_Detail"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">A02: Product Validation Detail </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds the results of all 'Product' validation checks, i.e those that have passed their validation check, (status = 'OK') as well as those that have failed their validation check, (status = 'Exception', or other severity level).</p>
+                                    <p>Note: Product Validation checks can be identified with a 'POV' prefix code.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="A03:_Holding_Validation"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">A03: Holding Validation</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds the summary results for an entity's holdings and validation calculations.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="A04:_Holding_Detail_Validation"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">A04: Holding Detail Validation</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds the detailed results for all validations run on an entity's holdings.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="A05:_Transaction_Validation"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">A05: Transaction Validation</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds the results of the transaction validation functions, i.e. those with 'TXN' prefixes.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="A06:_Transaction_Detail_Validation"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">A06: Transaction Detail Validation</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds the detailed results for all validations run on an entity's transactions.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop" MadCap:conditions="Note To Selfs.ScreenOnly">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">A07: Validation</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop" MadCap:conditions="Note To Selfs.ScreenOnly">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">A08: Validation Detail</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="A09:_Account_Balance_Validation"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">A09: Account Balance Validation</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds the results of account balance validation functions, i.e. those with 'ACC' prefixes. This worktable can be populated when the <MadCap:xref href="../B_Dashboard/NAV Oversight/Analysis Views/Account Movement Attribution Screen (AMAS).htm">Account Movement Attribution</MadCap:xref> report is configured.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="A10:_Account_Balance_Detail_Validation"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">A10: Account Balance Detail Validation</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds the detailed results of the account balance validation functions, i.e. those with 'ACC' prefixes.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="A11:_Capital_Flow_Validation"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">A11: Capital Flow Validation</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds the results of Capital Flow validations, i.e. those with 'PRV' prefixes.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="A12:_Capital_Flow_Detail_Validation"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">A12: Capital Flow Detail Validation</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds the results of all Capital Flow validations i.e. those that have passed their validation check, (status = 'OK') as well as those that have failed their validation check, (status = 'Exception', or other severity level).</p>
+                                    <p>Note: Capital Flow validation checks can be identified with a 'PRV' prefix code.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="A13:_Category_Validation"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">A13: Category Validation</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds the summary results of category validations and calculations.</p>
+                                    <p><i>Note: This worktable is only populated, if the </i>
+                                        <MadCap:xref href="../B_Dashboard/NAV Oversight/Analysis Views/NAV Movement Analysis.htm" style="font-style: italic;">NAV Movement Analysis  </MadCap:xref><i> report is configured. </i>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="A14:_Category_Detail_Validation&#xA;"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">A14: Category Detail Validation
+</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds the detailed results for all validations run on an entity's categories. The worktable is populated when the <MadCap:xref href="../B_Dashboard/NAV Oversight/Analysis Views/Share Price Impacts CPAS.htm">Share Class Impacts (CPAS)</MadCap:xref> report is configured. </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">A99: Validation Details </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds the details of all validation checks performed during a process. This includes both validation checks that passed successfully, as well as those that generated an exception. </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="A100:_Dynamic_Benchmark"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">A100: Dynamic Benchmark</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds the security level detail of a Dynamic Benchmark.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="A101:_Overs_and_Unders"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">A101: Overs and Unders</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds the security level comparison detail of a portfolio to a benchmark.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h2 class="_orange">Static Worktables</h2>
+        <p>pControl Export worktables are typically read only, and are used to hold the results of pControl processing. These worktables facilitate the export of any data, that may be required for analysis or reporting outside of pControl, some of which are described below.</p>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="L081:_Editor_Options"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">L081: Editor Options</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>The worktable defines the available options for selection for each worktable field, where the editor type is Worktable Tree Combo, enabling smart filtering.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="L184:_Account_Category"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">L184: Account Category</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>
+                                        <MadCap:snippetText src="../Resources/Snippets/Analysis Views/DYAS_L184intro.flsnp" />
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="L200:_Tolerances"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">L200: Tolerances</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds the tolerance values and severity levels, which are used when a validity check is breached. These values are reported in status messages, as well as against the exception itself.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="L220:_Instrument_Type_Mappings"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">L220: Instrument Type Mappings</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="L222:_Code_Mappings"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">L222: Code Mappings</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds general mappings to match external system codes used in the source data, with those used within pControl.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="L235:_Benchmark_Mappings"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">L235: Benchmark Mappings</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds a list of benchmarks associated to the asset holding of an entity. These are used by some of the <span><MadCap:xref href="../B_Dashboard/NAV Oversight/Configuring NAV Oversight/Expected Return.htm">Expected Return Calculation Methodologies</MadCap:xref></span> to calculate an expected price.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="L290:_Effective_Exposure_Reallocation"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">L290: Effective Exposure Reallocation</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Lists the assets of the plan whose value is to be transferred from one entity to another. Portfolio Management uses this worktable in conjunction with the U310: Exposure Reallocation Source to reallocate the value of the asset listed in the 'Asset Code' field to the 'Destination pControl Code entity' during the Cash Allocation process.</p>
+                                    <p><i>Note: Reallocation is not a transfer of ownership. The title of the asset remains with the 'Source' entity, as listed in the L290: Effective Exposure Reallocation worktable.</i>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="L315:_Account_Code_Mapping"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">L315: Account Code Mapping</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>The L315: Account Code Mapping worktable assists in the mapping of account balances from the U104: General Ledger. It specifically maps the account codes and account groups for the <MadCap:xref href="../B_Dashboard/NAV Oversight/Analysis Views/Analysis Views.htm">Analysis Views</MadCap:xref>. The L315: Account Code Mapping worktable also allows for account groups to be excluded in account code mapping records.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h2 class="_orange">Export Worktables</h2>
+        <p>Control Export worktables are typically read only, and are used to hold the results of pControl processing. These worktables facilitate the export of any data, that may be required for analysis or reporting outside of pControl, some of which are described below.</p>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U141:_Unit_Prices"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U141: Unit Prices</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds the unit prices that were calculated or received for an entity.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U142:_Investment_Holdings_Balances"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U142: Investment Holdings Balances</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>This worktable holds the investment holding balances that were used for a given processing day and price run type.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="P606:_Constituent_Returns"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">P606: Constituent Returns</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds the expected returns and impacts for each constituent of the ‘Expected NAV Constituents’ calculated during the NAV Oversight process. These details explain the calculation of the expected NAV. This worktable is populated when the [EX300] - Export Constituent Structure function is selected in the 'Exports' phase of a pricing process template.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="P607:_Constituent_Totals"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">P607: Constituent Totals</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds the total expected return and impact for each constituent of the ‘Expected NAV Constituents’ calculated during the NAV Oversight process.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U582:_Validation_Detail"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U582: Validation Detail</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Validation data calculated during an Expected Pricing process or Actual Pricing process, by the [EX120] function, will be exported to this worktable. This includes both validations that passed and failed.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U583:_Price_Data"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U583: Price Data</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>The key control indicators of a price record, for a given entity, price run type, and effective date are exported to this worktable, for example, Approval and Release status, users and price location.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U780:_NAV_Movement_Analysis"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U780: NAV Movement Analysis</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>Holds the NAV Movement Analysis and Oversight Comparison Analysis report data for a price record.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop" MadCap:conditions="Note To Selfs.ScreenOnly">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U781:__Movement_Analysis"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U781:  Movement Analysis</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U782:_Account_Movement_Analysis"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U782: Account Movement Analysis</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>The AMAS category records and the individual account records are exported to the U782: Account Movement Analysis worktable when the [EX092] - Export Account Movement Analysis Data   attribute is selected. Records are exported in the order they appear on the <MadCap:xref href="../B_Dashboard/NAV Oversight/Analysis Views/Account Movement Attribution Screen (AMAS).htm">Account Movement Attribution</MadCap:xref> view.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop"><a name="U783:_Distribution_Yield_Analysis"></a>
+                    <MadCap:dropDownHotspot class="AccordionDrop">U783: Distribution Yield Analysis</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>The DYAS records are exported to the U783: Distribution Yield Analysis worktable when the process is run on a distribution day and the [EX093] - Export Distribution Yield Attribution Data  function is selected on the process template. Records display in the worktable in the order they appear in the DYAS view. Existing records in the table are replaced when processes are re-run.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div class="AccordionDrop" MadCap:conditions="Note To Selfs.ScreenOnly">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">A01: Blank</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>&#160;</p>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop" MadCap:conditions="Note To Selfs.ScreenOnly">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">A02: Blank</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MG_TableinanAccordionDropDown.css');">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>&#160;</p>
+                                    <table style="mc-table-style: url('../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle02TableinaTable_No_header" cellspacing="18">
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <tbody>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-090em_font">
+                                                    <p>Business Description</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyA-Column1-090em_font">
+                                                    <p>&#160;</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+    </body>
+</html>

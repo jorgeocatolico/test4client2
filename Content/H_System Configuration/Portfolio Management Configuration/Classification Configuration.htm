@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Classification Configuration</h1>
+        <p class="buttonarrows">A Portfolio Manager may build and maintain classification structures through the Classification Configuration menu. A classification structure enables a Portfolio Manager to set allocation parameters to sectors within the structure, thus complying with tests applied to the assets. Validation checks can be performed on classification sectors to ensure the proposed orders do not breach compliance rules. For example, the cash allocated to underlying entities may meet all individual allocation bounds, but collectively may exceed the total amount of money allocated to a single asset sector, custodian or other grouping. </p>
+        <h2 class="_orange">Understanding Classification Structures</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Classification structures example</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The video clip shows how classifications can be defined and how weights and compliance ranges can be applied at various levels of the investment structure.</p>
+                <p>
+                    <object MadCap:HTML5Video="true" src="../../Resources/Multimedia/PM Introduction to Classification Structures.mp4" MadCap:Param_controls="true" MadCap:Param_muted="true" MadCap:Param_loop="true" MadCap:Param_autoplay="true" style="width: 70%;border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">
+                    </object>
+                </p>
+                <p>Classification structures are built by creating the structure itself then adding sectors. Sectors can be managed and re-ordered, and any changes made will be represented in the dashboard once validated and committed to the database; and the dashboard refreshed. Once a classification structure is built, it can be assigned to a group of plans as demonstrated below.</p>
+                <p>&#160;</p>
+                <p class="zoom4Detail">
+                    <img src="../../Resources/Images/Portfolio Management Images/PM_ClassificationStructureSlide.png" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Classification configuration screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="zoom4Detail">
+                    <img src="../../Resources/Images/Portfolio Management Images/PM_ClassificationConfigurationScreen.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="Classification_Versioning"></a>Classification structure versioning</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Classification structures are likely to change over time and to accommodate this, a revised structure will hold a new version number and effective date. As dual authorisation is active on classification structures, the structure will be active once it has been authorised. Any existing classification parameters will be brought into the new structure and their effective date updated accordingly. If dual authorisation is active on the classification parameters also, any new parameters will be placed into the 'In Progress' state and will require authorisation. </p>
+                <p>Classifications with more than one version of the same code, can be viewed using the expand and collapse icon to the left of the classification code. The classification with the most recent effective date and the highest version number will be displayed at the top. Other classifications with the same code will be sorted below in  descending order.</p>
+                <p>Where a sector is deleted in the updated classification structure and that sector was used as a denominator over multiple other classification parameters, all classification parameters that used that sector as the denominator will have the denominator removed. </p>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>Classifications are filtered by the master filter effective date criteria and therefore the filter will return all classifications with an effective date between the from and to date in the filter.</p>
+                </div>
+                <div class="example_label">Example</div>
+                <div class="example_content">
+                    <p>A Fund Manager has the following classification structure of MG  Plan 1, at Version 1, effective 1 January 2019.</p>
+                    <table class="TableStyle-MG_TableStyle01Grey" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <thead>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>&#160;</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>&#160;</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1" colspan="3">
+                                    <p>Classification ALP Effective Dates</p>
+                                </th>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Structure</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>&#160;</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>1 January 2019</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>1 April 2019</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                    <p>1 June 2019</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>MG Plan 1</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Tree Root</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>100</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>100</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>100</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>MG Australian Shares  </p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Aggregate Sector</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>60</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>70</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>80</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>MG Dollar and Sense</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Holding 1</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>&#160;</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>&#160;</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>MG Commercial Property</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Holding 2</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>&#160;</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>&#160;</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Global Equity</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Aggregate Sector</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>20</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>15</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>10</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Cash</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Holding 3</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>&#160;</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>&#160;</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">MG Transglobal Income Equity</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Aggregate Sector 3</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>40</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>30</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>20</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">MG American funds Equities</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                    <p>Holding 4</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                    <p>&#160;</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                    <p>&#160;</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1" style="text-align: right;">
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>The following changes are made, and a new version of the  classification structure is created at effective date 1 March 2019:</p>
+                    <ul class="FirstLevelBlueBullet">
+                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Remove Global Equity and its Cash holding (Aggregate Sector 2 and Holding 3) </li>
+                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Add a new holding, MG&#160;Emerging Markets (Holding 5) as a child of the aggregate sector, MG&#160;Transglobal Income Equity.</li>
+                    </ul>
+                    <table class="TableStyle-MG_TableStyle01Grey" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <thead>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>&#160;</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>&#160;</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1" colspan="4">
+                                    <p>Classification Parameter Effective Dates</p>
+                                </th>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Name</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Structure</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>1 January 2019</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>1 March 2019 </p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>1 April 2019</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                    <p>1 June 2019</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>MG&#160;Plan 1</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Tree Root</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>100</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;background-color: #c4ddb3;">
+                                    <p>100</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>100</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>100</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>MG Australian Shares  </p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p> Aggregate Sector</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>60</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;background-color: #c4ddb3;">
+                                    <p>60</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>70</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>80</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>MG Dollar and Sense</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Holding 1</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>&#160;</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;background-color: #c4ddb3;">
+                                    <p>&#160;</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>&#160;</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>MG Commercial Property</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Holding 2</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>&#160;</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;background-color: #c4ddb3;">
+                                    <p>&#160;</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>&#160;</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="background-color: #c0c0c0;">
+                                    <p>Global Equity</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="background-color: #c0c0c0;">
+                                    <p>Aggregate Sector 2</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;background-color: #c0c0c0;">&#160;</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;background-color: #c0c0c0;">&#160;</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;background-color: #c0c0c0;">&#160;</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;background-color: #c0c0c0;">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="background-color: #c0c0c0;">Cash</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="background-color: #c0c0c0;">
+                                    <p>Holding 3</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;background-color: #c0c0c0;">&#160;</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;background-color: #c0c0c0;">&#160;</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;background-color: #c0c0c0;">&#160;</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;background-color: #c0c0c0;">&#160;</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">MG Transglobal Income Equity</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Aggregate Sector 3</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>40</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;background-color: #c4ddb3;">
+                                    <p>40</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>30</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>20</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">MG American funds Equities</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Holding 4</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>&#160;</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="background-color: #c4ddb3;">
+                                    <p>&#160;</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>&#160;</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="background-color: #c4ddb3;">
+                                    <p>MG Emerging Markets</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="background-color: #c4ddb3;">
+                                    <p>Holding 5</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;background-color: #c4ddb3;">
+                                    <p>&#160;</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="background-color: #c4ddb3;">
+                                    <p>&#160;</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;background-color: #c4ddb3;">
+                                    <p>&#160;</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1" style="text-align: right;background-color: #c4ddb3;">
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>The classification parameters set effective 1 January 2019 will remain unchanged and a new set of classification parameters, effective 1 March 2019 is created and becomes version 2. The values from Version 1 (effective 1 January 2019) are carried forward.</p>
+                    <p>The classification tree code, tree description, version number and effective date are captured as fields in the U575: Classification Export worktable. </p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Modifying Classification Structures</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To add a new classification structure</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList">
+                    <li class="stepList">Select Configuration &gt; Classification Configuration from the top navigation menu. </li>
+                    <li class="stepList">
+                        <p>Select <span class="ButtonArrows">Add</span>.</p>
+                        <p>
+                            <img src="../../Resources/Images/NAV Oversight Images/ClassConfig_Add.png" class="greyborder" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Enter the classification code, name and effective date. If the classification code and name already exist, a second (or follow on) version of the structure will be created. </p>
+                        <p>
+                            <img src="../../Resources/Images/NAV Oversight Images/ClassConfig_Add1.png" class="greyborder" />
+                        </p>
+                    </li>
+                    <li>Select <span class="ButtonArrows">Save</span> to save changes or <span class="ButtonArrows">Cancel</span> to exit without saving changes.</li>
+                    <li>Once saved, the record will appear in the table and will be 'In Progress'.</li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To add a new sector</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList">
+                    <li class="stepList">
+                        <p>Select <span class="ButtonArrows">Sectors</span> from the drop-down menu at the top of the page, followed by <span class="ButtonArrows">Add</span>. </p>
+                        <p>
+                            <img src="../../Resources/Images/Portfolio Management Images/searchsectors1.png" class="greyborder" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Enter the sector code and name. If the code already exists, a warning will be displayed and a new code will be required. The sector type selected will become the default sector type when the sector is added to a classification structure. The sector type can be changed in the classification structure, if required. The code and type of sector are required fields.</p>
+                        <p>
+                            <img src="../../Resources/Images/NAV Oversight Images/PM_CreateSector.png" class="greyborder" />
+                        </p>
+                    </li>
+                    <li>Select <span class="ButtonArrows">Save</span> to save changes or <span class="ButtonArrows">Cancel</span> to exit without saving changes.</li>
+                    <li>The list of sectors will update to include the new sector.</li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To add a sector to a classification structure</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList">
+                    <li class="stepList">
+                        <p>Search for the required classification structure and select the ellipsis followed by <span class="ButtonArrows">View</span>. </p>
+                        <p> <img src="../../Resources/Images/Portfolio Management Images/ClassConfig_EllipsisView.png" class="greyborder" /></p>
+                    </li>
+                    <li>
+                        <p>Use the search field to find the sector. Select the required sector and drag and drop into the second panel..</p>
+                        <div class="note_label">Note</div>
+                        <div class="note_content_in_list">
+                            <p>Adding a sector without a parent code means the sector will default as a child of the overarching classification structure.</p>
+                        </div>
+                    </li>
+                    <li>It is possible to re-order within the classification tree structure by drag and drop. The classification structure will update to reflect any changes, including moving any children. To change a sector from a parent to a child, drag and drop the sector to the right slightly.</li>
+                    <li>For each sector, identify the type by selecting from the drop-down menu. </li>
+                    <p>
+                        <img src="../../Resources/Images/NAV Oversight Images/PM_Sector holding type.png" class="greyborder" />
+                    </p>
+                    <MadCap:dropDown>
+                        <MadCap:dropDownHead>
+                            <MadCap:dropDownHotspot>Row type</MadCap:dropDownHotspot>
+                        </MadCap:dropDownHead>
+                        <MadCap:dropDownBody>
+                            <p>&#160;</p>
+                            <MadCap:snippetBlock src="../../Resources/Snippets/Portfolio Management/PM_Row type.flsnp" />
+                            <p>&#160;</p>
+                            <div class="note_label">Note</div>
+                            <div class="note_content_in_list">
+                                <p>When "aggregate" is selected, the sector must have at least one child sector. A warning will display and the classification structure will not validate until at least one child sector is added. </p>
+                                <p>Where necessary, an aggregate can be created without holdings by overriding the warnings. This is described further in <MadCap:xref href="../../B_Dashboard/Portfolio Management/Classifications/Classifications.htm#ManagingExceptionsonSectors">Managing Exceptions on Sectors without Holdings</MadCap:xref>.</p>
+                                <p>
+                                    <img src="../../Resources/Images/NAV Oversight Images/PM_SectorWarning.png" class="greyborder" />
+                                </p>
+                            </div>
+                            <p>&#160;</p>
+                        </MadCap:dropDownBody>
+                    </MadCap:dropDown>
+                    <li>Select <span class="ButtonArrows">Save</span> to save changes pending authorisation, or <span class="ButtonArrows">Cancel</span> to exit without saving.</li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To copy and create a new version of an existing classification structure </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <p>It is possible to copy a classification structure and create a new tree, or create a new version of an existing tree. </p>
+            <MadCap:dropDownBody>
+                <ol class="stepList" start="1">
+                    <li>In the search field, search for the classification structure or scroll through the list of classifications, as appropriate.</li>
+                    <li>
+                        <p>Select the check box of the classification that requires to be copied. Select <span class="ButtonArrows">Copy</span>. To create a new tree, set the code, description and effective date. To create a new version of the existing tree, change the effective date and leave the code and description unchanged. </p>
+                        <div class="note_label">Note</div>
+                        <div class="note_content">
+                            <p>It is possible to create a new version at the same effective date as the existing tree, if modifications are required as at the original date.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Select <span class="ButtonArrows">Save</span> to save changes pending authorisation, or <span class="ButtonArrows">Cancel</span> to exit without saving changes. </p>
+                    </li>
+                    <li>
+                        <p>The new version of the classification structure will open. If the structure is a new tree (with new code, description and effective date), the structure will display as v1. If the structure is a later version, it will display as v2 (or higher). </p>
+                        <p>Make the required changes to the structure.</p>
+                        <p class="zoom4Detail">
+                            <img src="../../Resources/Images/Portfolio Mgt Images/Classconfigcopystructure1.png" />
+                        </p>
+                        <p>Where editing v2 or higher, there is an option <span class="ButtonArrows">Compare to Latest</span> to open the comparison view. The comparison view shows the differences between the new tree and the prior version. </p>
+                        <div class="note_label">Note</div>
+                        <div class="note_content">
+                            <p>If this is version 1 of a tree, the comparison view will not be available.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>se the Pending Changes panel to review changes that have been made. The panel displays and colour codes all edits that have been made. </p>
+                        <p>
+                            <img src="../../Resources/Images/CAR and PM Process Phases/PM_ClassnConfig_DualAuth1.png" class="greyborder" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Select &lt;Save&gt; to commit the changes to the database.</p>
+                    </li>
+                    <li>Select the appropriate transition status, i.e. Ready to Authorise from the Pending Changes panel. </li>
+                    <li>Select <span class="ButtonArrows">Cancel</span> to exit the structure builder screen.</li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To delete sectors from a classification structure </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Sectors can be removed from the classification structure using  delete icon,  but can only be deleted in the following instances:</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If it is a first version of a classification structure and it is <i>before</i> the structure has been saved. The delete icon will become inactive once a structure has been saved. </li>
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the classification is a new version of an existing classification and has not yet been saved, as shown below. </li>
+                </ul>
+                <p>
+                    <img src="../../Resources/Images/Portfolio Mgt Images/classconfigdeletesectors.png" />
+                </p>
+                <p>When a classification structure is rejected by the alternate user, the entire structure will be removed and pControl will revert the classification structure to the previous version.</p>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>Deleting sectors may impact classification parameters as any classification parameter that uses the sector as the denominator will have the denominator removed. An example is provided under <MadCap:xref href="#Classification_Versioning">Classification structure versioning</MadCap:xref>.</p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Accessing the audit history for a classification structure</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <div class="example_label">Example</div>
+                <div class="example_content">
+                    <p>The Portfolio Manager creates a new classification structure with the title "MG&#160;Domestic Property" on the 6 August 2019. </p>
+                    <p class="zoom4Detail">
+                        <img src="../../Resources/Images/Portfolio Mgt Images/classconfigv2.png" />
+                    </p>
+                    <p>Audit history can be viewed in Processing Mode by selecting Audit &gt; Classification Structure. </p>
+                    <p>
+                        <img src="../../Resources/Images/Portfolio Mgt Images/classconfigaudithistoryswing.png" class="greyborder" />
+                    </p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Understanding Classification Structure with Dual Authorisation</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To authorise a classification structure </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Use the drop-down in the Pending Changes panel and select the appropriate state. Once authorised, the classification structure is saved as the new version as at the classification structure effective date.</p>
+                <p>
+                    <img src="../../Resources/Images/CAR and PM Process Phases/PM_ClassnConfig_DualAuth.png" class="greyborder" />
+                </p>
+                <p>Alternatively, it is possible to transition the record without viewing details of changes made by selecting the appropriate  state from the ellipsis menu, as shown below. </p>
+                <p>
+                    <img src="../../Resources/Images/Portfolio Management Images/PM_ClassConfig_DualAuthEllipsis.png" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To view classification structure pending changes on the ASM</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>It is possible to view all structures that have pending changes by navigating to the Attention Status Monitor (ASM), in processing mode. </p>
+                <ol class="stepList" start="1">
+                    <li class="stepList">Select the highest entity in the process tree.</li>
+                    <li class="stepList">From the Processing menu, select Attention Status Monitor.</li>
+                    <li class="stepList">
+                        <p>Select a dashboard containing the Dual Authorisation status stream.</p>
+                        <p class="zoom4Detail">
+                            <img src="../../Resources/Images/Portfolio Management Images/PM_ASMwithPendingChanges.png" />
+                        </p>
+                    </li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+    </body>
+</html>

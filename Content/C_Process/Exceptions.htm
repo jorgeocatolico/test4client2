@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="External for Perforce.ScreenOnly,NAV Oversight.ScreenOnly">
+    <head>
+        <link href="../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Exceptions </h1>
+        <p>pControl facilitates exception processing. The SLA&#160;Monitor can be configured in System Administration to alert users to processes which require intervention and indicate time frames for turnaround on such exceptions. The SLA Monitor is driven by the configured status stream described below.</p>
+        <p>The exceptions view is designed to display all exceptions generated as a result of a breach of validation tolerance. By default, exceptions are displayed under their configured states, however this, along with other display criteria can be changed.</p>
+        <div class="note_label">Note</div>
+        <div class="note_content">
+            <p>If accessing the exceptions page via the SLA Monitor, the exceptions list may already be filtered.</p>
+        </div>
+        <h2 class="_orange">Understanding Exceptions</h2>
+        <p>When a process encounters an exception, it will initially be listed in the 'Not Validated' state on the exceptions dashboard. From there, it can be transitioned to a different state on the status stream. Exceptions with the same criteria, e.g. breach of the same validation check for the same asset, or exceptions assigned to the same team for review can be collectively reviewed and cleared simultaneously, or assigned to a different team for further review. Once the checking process for all exceptions related to a control record has been completed, pControl will transition all exceptions to ‘Checked’, which will allow the control record to continue along its status stream life cycle. </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Exceptions Status Streams</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>A status stream is a predefined flow of states and transitions. The Exceptions Status Stream, (also known as the 'Override Event' status stream in System Administration), is used to manage the life cycle of an exception related to a control record. </p>
+                <p>Further detail is provided in <MadCap:xref href="Exceptions Status Stream.htm">Exceptions Status Stream states and transitions</MadCap:xref>.</p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:snippetBlock src="../Resources/Snippets/Process Dashboard/PD_NavigatingToExceptionsView.flsnp" />
+        <MadCap:snippetBlock src="../Resources/Snippets/Process Menu/ExceptionsView.flsnp" />
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Filtering Exceptions by Status, Severity and Asset Code</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Before filtering, all exceptions are loaded and all exception events can be viewed by scrolling, without a limit on the number of rows. </p>
+                <p>Selecting the &lt;More&gt; filter options on the primary filter provides the option to choose which exception events to display in the panel below and using the &lt;Group By&gt; options, manages how the events are grouped. Filtering by Severity, for example, means that transitioning exceptions can be prioritised accordingly. Filtering by status accelerates the ability to complete multiple transitions at the same time.</p>
+                <p>
+                    <img src="../Resources/Images/Exceptions Images/ExceptionsFilterbyStatusSeverity.png" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Tolerance Framework</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The tolerance framework is a key part of the overall process configuration in pControl and is used to establish and maintain the tolerances that will be used by all validations for all entities. The tolerance framework is configurable, allowing tolerances to be maintained right down to the entity level and also for groups of entities or for all entities in pControl. </p>
+                <p>Tolerances can be set at different levels for the same validation so that different levels of exception are raised depending on the severity of a breach. The severity level of these items is seen in the status messages as well as the exception event. Only certain tolerance levels will result in a breach thus causing an exception to be generated. This is shown in the table below by the 'Create Exception Event (Y/N)' column. </p>
+                <p>The different tolerance levels that can be set for a validation are as follows:</p>
+                <table class="TableStyle-MG_TableStyle01Grey" style="mc-table-style: url('../Resources/TableStyles/MG_TableStyle01Grey.css'); margin-left: 0; margin-right: auto;" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Tolerance Status</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="text-align: center;">
+                                <p>Create Exception Event</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>OK</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">
+                                <p>N</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Presents an ‘OK’ message but no exception event and this message will not prevent a control record from being approved.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Warning</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">
+                                <p>N</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Presents a ‘Warning’ message but no exception event such that this message will not prevent a control record from being approved.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Alert</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">
+                                <p>Y</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Presents an ‘Alert’ message and creates an exception event such that the control record cannot be approved until this issue is resolved, i.e., the exception event is cleared or data changed and the process re-run.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Critical</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">Y</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Presents a ‘Critical’ message and creates an exception event and the control record cannot be approved until this issue is resolved, i.e., the exception event is cleared or data changed and the process re-run.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>DC Error</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">Y</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Presents a ‘DC Error’ (Data Consistency Error) and creates an exception event such that the control record cannot be approved until this issue is resolved i.e., the exception event is cleared or data changed and the process re-run.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Exception</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">Y</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Presents an ‘Exception’ message and creates an exception event such that the control record cannot be approved until this issue is resolved, i.e., the exception event is cleared or data changed and the process re-run.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>L2 Exception</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: center;">Y</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Presents a ‘L2 Exception’ message and creates an exception event such that the control record cannot be approved until this issue is resolved, i.e., the exception event is cleared however a user with L2 security access must then transition the status stream to Pending Approval or data changed and the process re-run.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>L3 Exception</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: center;">Y</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>Presents a ‘L3 Exception’ message and creates an exception event such that the control record cannot be approved until this issue is resolved, i.e., the exception event is cleared however a user with L3 security access must then transition the status stream to ‘Pending Approval’ or data changed and the process re-run.</p>
+                                <p style="font-style: italic;">Note: If a combination of L2 and L3 Exception messages is presented the exceptions can be cleared however both L2 and L3 users will be required to transition the status stream (e.g. transition by a user with L2 security access with further transition by a user with L3 security access).</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>The tolerances are also managed in a hierarchy such that if a specific entity is not listed in the tolerance table, it will look for an entry for any parent entity of the entity in the library tree. If there is no parent entity of the entity in the table, it will use the DEFAULT tolerance for the validation. </p>
+                <p>In this way, the hierarchy that is used to search for the relevant tolerance to use for a specific entity validation is as follows:</p>
+                <p><b>Entity</b> - has the specific entity being processed been set up in the ‘Entity Code’ column of the <b class="BufferandFunctionBold">L200: Tolerances</b> worktable against this validation entity? If so, use it, otherwise move on.</p>
+                <p><b>Direct Parent Entity of Entity</b> – has the direct parent entity (in the library tree) of the specific entity being processed been set up in the ‘Entity Code’ column of the <b class="BufferandFunctionBold">L200: Tolerances</b> worktable against this validation entity? If so, use it, otherwise move on.</p>
+                <p><b>Next Level Parent Entity of Entity</b> (up library tree to Company Entity level) - has the next level parent entity (in the library tree) of the specific entity being processed been set up in the ‘Entity Code’ column of the <b class="BufferandFunctionBold">L200: Tolerances</b> worktable against this validation entity? If so, use it, otherwise move on.</p>
+                <p><b>DEFAULT</b> – if none of the three scenarios exist, use the default tolerance settings for the validation entity.</p>
+                <div class="example_label">Example</div>
+                <div class="example_content">
+                    <p>The entries in the POV010_PRICE_MVMT_BMARK table can be interpreted as follows. </p>
+                    <p>
+                        <img src="../Resources/Images/Process Dashboard Images/L200.png" alt="" title="" />
+                    </p>
+                    <p>This is the same logical sequence that would be used when running validations against an entity:</p>
+                    <ol>
+                        <li>Entity - if the entity on which the validation is being run is BALANCED_FUND, then the first two rows of the L200 will be used, If the check value of ACC004 validation check,</li>
+                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Deviates from the tolerance by less than 50 basis points the validation passes.</li>
+                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Deviates from the tolerance by 50 basis points or more, and less than 500 basis points,  an ‘L2 Exception’ is issued.</li>
+                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Deviates from the tolerance by more than 500 basis points, an 'L3 Exception' is issued.</li>
+                        <li>Parent Entity of Entity – if the entity being processed is located underneath  BALANCED_FUND in the library tree, (i.e. is a child of  BALANCED_FUND), than the above tolerance values will be used to compare the results of ACC004 validation check.</li>
+                        <li>DEFAULT - if the entity being processed is not  BALANCED_FUND and it does not have  BALANCED_FUND as a parent at any level of the library tree, then the tolerances with 'Entity Code' = 'DEFAULT' will be used to compare the results of ACC004 validation check. The tolerances will be interpreted as follows:</li>
+                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the result of the validation check</li>
+                        <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">deviates by less than 50 basis points, the validation passes.</li>
+                        <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">deviates by more than 50 bp and less than 100 bp, an 'Exception' is raised.</li>
+                        <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">deviates by more than 100 bp and less than 200 bp, a 'L2 Exception' is raised.</li>
+                        <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">deviates by more than 200 bp, a 'L3 Exception' is raised.</li>
+                    </ol>
+                </div>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Validations and Tolerance Configuration</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Different validations require different tolerance configuration. Some of the different validations and their tolerance configurations are explained below. </p>
+                <table class="TableStyle-MG_TableStyle01Grey" style="mc-table-style: url('../Resources/TableStyles/MG_TableStyle01Grey.css'); margin-left: 0; margin-right: auto;" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Tolerance Type</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>L200: Tolerance</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The L200 tolerance values are used for comparison, and also generates the message (and exceptions depending on the level of tolerance status) displayed when a tolerance is breached.</p>
+                                <p>i.e. [BMK004_MVT_PCT] where the validation tests the movement in a benchmark from the previous daily valuation point against a specified tolerance.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>L200: Message Only</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>No numeric values used for comparison, i.e. a true / false check, and the L200 Tolerance status generates the message (and exceptions depending on the level of tolerance status) displayed when check fails.</p>
+                                <p>i.e. [HLD001] Zero Cost Check which will fail the test if the cost (local or base) of the holding is zero.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>No tolerance required</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>No tolerance is required in the L200, as the rules capture all requirements, i.e.<MadCap:xref href="../AA_Library/Entities/NAV Process Phases and Functions.htm#VC010">[VC010] - Check if Entity is Set to Process  </MadCap:xref> </p>
+                                <p>If the ‘Include in Processing’ attribute is not selected the test fails and processing stops with the control record moved to ‘Unable to Price’.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>No tolerance required (Value Add)</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>No tolerance is required as it is not a true ‘validation’ but a ‘value add’ calculation / function i.e. VA011: Generate Dynamic Benchmark.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Using the Exceptions Functionality</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Transitioning or Clearing Exceptions</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Exceptions are transitioned by selecting the ellipsis followed by the state to transition to. An individual or group of exceptions with the status of 'Proposed Validated' indicates that the analysis of the exception is complete and is ready for authorisation by the second user. Where no authorisation is required, the individual or group of exceptions can be transitioned straight to 'Validated'.</p>
+                <p>Further information relating to an exception event can be accessed via <MadCap:xref href="#Using">Analysis Views</MadCap:xref> and <MadCap:xref href="#Using2">Fund Focus Views.</MadCap:xref> </p>
+                <h3 style="font-size: 1em;">To transition to a new state or clear the exception: </h3>
+                <ol class="stepList">
+                    <li>
+                        <p>Select the ellipsis and choose the transition state from the options available i.e. Carried Forward Analysis, Pending Data Remediation or Proposed Validated.</p>
+                        <p>
+                            <img src="../Resources/Images/Exceptions Images/TransitionException.png" class="greyborder" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>In some instances, a comment will be required before the transition can be completed. </p>
+                        <p>&#160;</p>
+                        <p>
+                            <img src="../Resources/Images/Exceptions Images/TransitionExceptionCommentBox.png" class="greyborder" />
+                        </p>
+                    </li>
+                </ol>
+                <ol class="stepList" MadCap:continue="true">
+                    <li>If saved, the exception state will update accordingly. </li>
+                </ol>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>The state transitions are driven by the Override Event status stream which is defined in System Administration. </p>
+                </div>
+                <p>If the selected transition state means the record is directed to another user, the second user can review the changes made and if they agree, can transition the exception to 'Proposed Validated'. If they disagree, the exception can be moved to 'Carried Forward Analysis' or 'Pending Remediation'. However only users with the highest level of user access can make this transition. </p>
+                <p>Once all exceptions related to a control record are in a ‘Validated’ state, the control record will automatically progress to the next state on the control record approval status stream.</p>
+                <p>If all exceptions related to a control record are cleared and they reach the ‘checked’ state, it is not possible for the exception to be transitioned back to any of the earlier states in the status stream. Therefore, if an exception reaches the ‘checked’ state, in error, i.e. the first user and alternate user both made a mistake, the process will need to be re-run so as to recreate the exceptions.</p>
+                <p>When transitioning multiple records, selecting the ellipsis will only display the available states common to all records selected. If there are no common options available, a message will indicate this. If several exceptions are transitioned simultaneously, they will all have the same bulk id reference number. </p>
+                <div class="note_label">Note </div>
+                <div class="note_content">
+                    <p>If an exception is caused by an error in the underlying data, and new data needs to be loaded and the process will need to be re-run in order to generate a process without exceptions.</p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Recurring Exceptions and Using the History Function</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Recurring exceptions can be reviewed via the  <MadCap:xref href="#Using">Analysis Views</MadCap:xref>. The History tab provides details of all exceptions for the selected asset and what action was taken each time. If there are a  number of exception events which are similar, it is an opportunity to review whether or not tolerance levels should be adjusted and subsequently the number of the exception events requiring intervention will be reduced. </p>
+                <ol class="stepList" start="1">
+                    <li>For the exception event, select the ellipsis, followed by Analysis.</li>
+                    <li>
+                        <p>Select the &lt;History&gt; tab to view the count of how often the exception has occurred in the last week. There is also an option to view the count for the Last Month.</p>
+                        <p class="zoom4Detail">
+                            <img src="../Resources/Images/Exceptions Images/HistoryScreen.png" />
+                        </p>
+                    </li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Investigating Exceptions Example</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The following example shows how an exception may be investigated and transitioned using the Analysis and Fund Focus views.</p>
+                <div class="example_label">Example</div>
+                <div class="example_content">
+                    <p>The investigation of the exception for Global Growth Fund, with a change of -134.03 basis points.</p>
+                    <p>Via the Exceptions view, the analyst is able to establish key information from the row hover. In this example, there is an L3 Exception that has been raised as the equities holding has breached the CAT002 validation tolerance. Hovering on the row shows the tolerance value for the CAT002 check is 100.00bp. Tolerances can be reviewed  in the L200: Tolerances worktable. </p>
+                    <p class="zoom4Detail">
+                        <img src="../Resources/Images/Exceptions Images/Example1.png" />
+                    </p>
+                    <p>Accessing the Analysis view by selecting the ellipsis, offers further information relating to the holding, including whether there is a history of exceptions related to this fund; and the number of validation breaches for this validation so far today, etc. </p>
+                    <p>The NAV Movement tab on the Analysis view, shown below, explains the movements in the cash and asset components of the price as well as the movement in the price and a comparison against the entity's benchmark. The [CAT002] - UP Category Impact Validation is intended to check that the impact of the movement in each constituent part of the price is within an expected tolerance. </p>
+                    <p class="zoom4Detail">
+                        <img src="../Resources/Images/Exceptions Images/Example2.png" />
+                    </p>
+                    <p>It is possible to navigate to the relevant worktables for further information. In this example, selecting the Category Validations will open the A14: Category Detail Validation worktable. </p>
+                    <p>
+                        <p class="zoom4Detail">
+                            <img src="../Resources/Images/Exceptions Images/Example4.png" />
+                        </p>
+                    </p>
+                    <p>Once the analyst has completed the investigation of the exception, it is possible for the analyst to transition the record to another user, typically the manager, to review changes made and if the manager is in agreement, the manager may transition the exception to 'Proposed Validated'. If the manager does not agree, the exception can be moved to 'Carried Forward Analysis' or 'Pending Remediation', while the manager carries out an investigation of their own. The Fund Focus view is available for managers to help oversee the fund. The screen below shows an example of the Fund Focus view.</p>
+                    <p>From the Exceptions view, select the ellipsis to open the funds focus view. The manager can carry out the investigation and when appropriate, can transition the record from this view without returning to the exceptions page.</p>
+                    <p class="zoom4Detail">
+                        <img src="../Resources/Images/Exceptions Images/Example5.png" />
+                    </p>
+                    <p>&#160;</p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange"><a name="Using_Analysis_View"></a>Using the Analysis Views</h2>
+        <p>From the exceptions dashboard it is possible to navigate to the Analysis and Fund Focus screens, both of which provide further information to assist in the decision making process. </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Navigating to the Analysis screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Use the ellipsis to access the Analysis view</p>
+                <p>
+                    <img src="../Resources/Images/Exceptions Images/FundAssetIcons.png" alt="" title="" />
+                </p>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>Where there are multiple exceptions selected, the Analysis view will only apply to the exception event from which it has been selected from.</p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Asset Level Validation</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The Asset Level Validation displays all validations that have been performed for the selected asset or account, for example, Holding Validation, Transaction Validation or Account Validation. </p>
+                <p class="zoom4Detail">
+                    <img src="../Resources/Images/Exceptions Images/AssetLevelValidationSlidewithTabs.png" />
+                </p>
+                <p>The charts show the movement in holdings, price, value for example, and indicates what has changed which has contributed to the exception event. </p>
+                <p class="zoom4Detail">
+                    <img src="../Resources/Images/Exceptions Images/AssetLevelValidationAnalysis2.png" />
+                </p>
+                <table style="mc-table-style: url('../Resources/TableStyles/MG_TableStyle01Grey.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1" colspan="2">
+                                <p>Detail Tabs available on the Asset Level Validation Analysis View</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Business</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Details on the asset holding including price, weight in fund, asset return.</p>
+                                <p>Lists any exceptions related to the holding.</p>
+                                <p>Provides an indication of the movement between today and yesterday.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Transactions</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The A05: Transaction Validation worktable lists of transactions performed during the selected date. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Security Prices</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The U175: Security Prices worktable lists of asset prices for all assets held by one or many funds. </p>
+                                <p>Typically sourced from a source independent to the TPA.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Security Master</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The U180: Security Master worktable holds static data related to the assets held by one or many funds. Data is used by some of the expected pricing formulas.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Validations</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Displays any other validations that have been performed on the same asset for this fund for the current run only.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Related Funds</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Other funds that have encountered this exception for this asset.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Validation History</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>All occurrences of this validation for the same criteria.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Fund Level Validation </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The Fund Level Validation displays all validations that have been performed for the selected fund, for example a Product Validation or Category Validation. </p>
+                <p class="zoom4Detail">
+                    <img src="../Resources/Images/Exceptions Images/FundLevelValidationAnalysis.png" style="width: 760px;height: 450px;" />
+                </p>
+                <p>&#160;</p>
+                <table style="mc-table-style: url('../Resources/TableStyles/MG_TableStyle01Grey.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1" colspan="2">
+                                <p>Detail Tabs available on the Asset Level Validation Analysis View</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Business</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Details on the asset holding including price, weight in fund, asset return.</p>
+                                <p>Lists any exceptions related to the holding.</p>
+                                <p>Provides an indication of the movement between today and yesterday.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>NAV Movement</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Provides a breakdown of the NAV by category i.e. EQ, FI, Cash.</p>
+                                <p>Comparison of the breakdown vs previous pricing point.</p>
+                                <p>Also referred to as VMAS.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Account Movement</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Displays NAV components based on GL account values. </p>
+                                <p>Includes benchmark values, unit prices and NAV values. </p>
+                                <p>Also referred to as AMAS.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Share Class Impacts</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Class comparison analysis that provides a view across classes within the same fund. </p>
+                                <p>Also referred to as CPAS.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Oversight Movement</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Oversight movement analysis provides a comparison of expected vs oversight price records and components of those pricing processes. </p>
+                                <p>Also referred to as OMAS.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Distribution Yield</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Provides a breakdown of the components of the distribution and compares the value with the prior distribution.</p>
+                                <p>Also referred to as DYAS.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Related Funds</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Other funds that have encountered this exception for this asset.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Validation History</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>All occurrences of this validation on the current date for this fund and asset.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>History </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>All exceptions that have occurred for this fund and price run type over the past week and month.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+            <p>
+                <MadCap:snippetBlock src="../Resources/Images/NAV Oversight Images/AnalysisViewsIntroWeb.flsnp" />
+            </p>
+        </MadCap:dropDown>
+        <h2 class="_orange"><a name="Using_Fund_Focus"></a>Using the Fund Focus View</h2>
+        <p>From the exceptions dashboard, it is possible to navigate to the Analysis and Fund Focus screens, both of which provide further information to assist in the decision making process.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Navigating to the Fund Focus screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Use the ellipsis to access the Fund Focus view.</p>
+                <p>
+                    <MadCap:snippetText src="../Resources/Snippets/Process Dashboard/PD_Analysis and Fund Focus Ellipsis.flsnp" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Fund Focus</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The Fund Focus screen displays information similar to the All Prices screen in Processing Mode. Accessing Fund Focus via the ellipsis provides information on that fund including price movements and any other exceptions that have occurred.</p>
+                <p class="zoom4Detail">
+                    <img src="../Resources/Images/Exceptions Images/FundFocusScreen.png" />
+                </p>
+                <p>&#160;</p>
+                <p>Information included in the summary bar across the top of the Fund Focus screen.</p>
+                <table style="mc-table-style: url('../Resources/TableStyles/MG_TableStyle01Grey.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Field</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Entity Code</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The pControl code of the entity.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Approval Status</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The current status of the control record in the 'Control Record - Approval' Status Stream.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Effective Date</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The date that the price is to be used for i.e. is effective for.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Price Run Type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The type of record (price or valuation point) this represents, e.g. daily pricing.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Run id</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The run id (or version id) for the selected control record. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Currency</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The currency of the control record - this is always the base currency of the entity.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Control Record Values</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>The control record values shown will depend on the processing that has been run for that entity i.e. if MDV is run on a benchmark, the control records will show an index value, if MDV is run on a currency, the control record will display an FX rate, and if unit pricing is run on an entity, the control record will display the various price types calculated (NAV, Buy, Sell and GAV).</p>
+                                <p>The calculations that are completed for a particular entity are configured through the selection of functions on the process template.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+    </body>
+</html>

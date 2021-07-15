@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Indicates the category of the asset, eg. OS (Ordinary Common Stock), DS (Cash Deposit), FI (Fixed Income). Each of these categories must be present in the L220: Instrument Type Mapping static work table.</p>
+        <p>If the entity's assets can be grouped into categories, then the category code for each asset can be defined here. The asset categories can then be reported in the <MadCap:xref href="../../../B_Dashboard/NAV Oversight/Analysis Views/NAV Movement Analysis.htm">NAV Movement Analysis  </MadCap:xref> report.</p>
+    </body>
+</html>

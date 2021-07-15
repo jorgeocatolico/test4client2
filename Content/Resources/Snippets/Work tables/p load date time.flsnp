@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Timestamp applied to record on data load. Used for record selection, filtering and diagnostic purposes. The format is CCYYMMDDhhmmssnnn e.g. 26 August 2014 at 25 min past 11pm is stored as 20140826232500000.</p>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>SLA Monitor</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The SLA Monitor is a visual display of either exceptions or funds prices that are overdue, approaching  or within the SLA. The SLA is a view of the status of the process in relation to the current time; the SLA shows the number of exceptions or funds according to time due. The SLA&#160;Monitor is not date dependent, i.e. exceptions displayed are all outstanding exceptions, not just those that occurred within the date range on the primary filter, however the data is shown for the entities or groups selected. </p>
+                <p>There are two tabs on the SLA Monitor. The Exceptions tab, typically used to determine a priority order of exceptions that require clearing, by specifying the number of exceptions in time buckets in relation to the current time. The Exceptions tab is underpinned by the <MadCap:xref href="../../C_Process/Exceptions Status Stream.htm">Exceptions Status Stream states and transitions</MadCap:xref>.The Funds tab shows the prices or NAVs that are on the price <MadCap:xref href="../../C_Process/Approval Status Stream.htm">Approval Status Stream</MadCap:xref> that require attention in relation to the current time.</p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>SLA Monitor - Exceptions tab</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>Uncleared exceptions and any exceptions that are overdue to be cleared, approaching SLA or within SLA are shown on the SLA monitor. Exceptions are shown for the entities or groups selected in the primary filter.</p>
+                        <div class="note_label">Note</div>
+                        <div class="note_content">
+                            <p>The SLA Monitor is not date dependent, i.e. exceptions displayed on the SLA Monitor are all outstanding exceptions, not just those that occurred within the date range on the primary filter.</p>
+                        </div>
+                        <p>&#160;</p>
+                        <p class="zoom4Detail">
+                            <img src="../Images/Library Images/PD_LandingPage.png" />
+                        </p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>SLA Monitor - Funds tab</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>Funds whose NAV&#160;or prices are yet to be released are shown on the chart that also indicates if the NAV or price is overdue to be released, approaching SLA or within SLA. Data is shown for the entities or groups selected in the primary filter.</p>
+                        <div class="note_label">Note</div>
+                        <div class="note_content">
+                            <p>The SLA Monitor is not date dependent, i.e. exceptions displayed on the SLA Monitor are all outstanding exceptions, not just those that occurred within the date range on the primary filter.</p>
+                        </div>
+                        <p>&#160;</p>
+                        <p class="zoom4Detail">
+                            <img src="../Images/Exceptions Images/SLA_FundsTab.png" />
+                        </p>
+                        <p>&#160;</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Classification Parameters</h1>
+        <p>Classifications  enable the display of proposed investments via different classifications, such as, but not limited to: asset class, or economic sector groupings, custodian or country of origin. Classification Parameters, sometimes referred to as 'CALP', are validation checks which can  be performed against these user defined classifications to ensure compliance with various defined limits, or business rules. For example, International Equities could have a classification parameter to ensure its weight within the plan is between 20% to 30% of the total plan value; or its weight within all international sectors is between 70% to 80%. </p>
+        <p>Classification parameters are considered a 'set' as all the parameters are stored for the same start date, unlike Investment parameters. Where changes are made to one or more parameters within the same set, the changes will invoke one pending change rather than individual pending changes.</p>
+        <p>Up to five Classification Parameters can be configured for each Classification set. The validation checks are performed against the classification plan during the 'Approval' phase of the <a href="../../B_Dashboard/Portfolio Management/Portfolio Management.htm">Cash Allocation Process</a>. Classification values which are outside of the tolerance / bound will be indicated via hard or soft warnings. </p>
+        <h2 class="_orange">Classification Parameters</h2>
+        <p>Adding classification parameters to a classification plan is the last step in <MadCap:xref href="Portfolio Management Configuration.htm#SettingUpPlanandClassifications">Setting up a Plan and Classifications</MadCap:xref> and can be accessed via the menu navigation: Configuration &gt; Classification Parameters.</p>
+        <p class="zoom4Detail">
+            <img src="../../Resources/Images/Portfolio Management Images/PM_ClassParamSets01.png" />
+        </p>
+        <div class="note_label">Note</div>
+        <div class="note_content">
+            <p>Only users with the appropriate security permissions will be able to view, edit or authorise classification parameters.</p>
+        </div>
+        <br />
+        <h2 class="_orange">Tolerances and bounds</h2>
+        <p>If the value of an asset or sector moves outside of the limits, the order may not be able to be approved, depending on whether a 'hard' or 'soft' warning is detected. There are two limits defined within pControl, 'tolerances' and 'bounds': </p>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Tolerances are the percentage movements away from a target where the portfolio is considered outside tolerance. </li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Bounds are absolute upper and lower limit where the portfolio is considered out of bounds.</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/Portfolio Management Images/PM_Class_Limits_scale.png" />
+        </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Classification breaches</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>When compliance checks are run and there is a classification sector breach, any proposed orders that are related to that classification sector are moved to an exception state. These proposed orders are filtered to the top of the Proposed Transactions panel. </p>
+                <p>For aggregate and derived sectors, all proposed orders (i.e. the children) that belong to the sector are transitioned to the relevant hard or soft exception state.</p>
+                <p>For proposed orders that have a soft investment compliance breach and a hard classification sector breach, then the proposed order transitions to a hard exception. </p>
+                <p>For proposed orders that have a hard investment compliance breach and a soft classification sector breach, then the proposed order transitions to a hard exception. </p>
+                <p>For proposed orders that have various hard or soft sector breaches, then the proposed orders transition to hard exceptions. </p>
+                <p>All proposed orders that have been transitioned to an exception state, the processing notes are updated with all sector breaches. </p>
+                <h2 class="indropdown">Mid-level originator breaches</h2>
+                <p>Mid-level originators do not generate orders, therefore any investment or classification breaches that take place will instigate an exception on any of its children and the mid-level originator will remain in its 'Not Calculated' state. Like other breaches, the processing notes will be updated with details of the sector or investment that breached. </p>
+                <h2 class="indropdown">Liquidity and exposure assets</h2>
+                <p>Liquidity and exposure assets also do not generate orders and are directly transitioned to approve. To prevent all proposed orders from being transitioned to the approval state, it is necessary that other assets are transitioned to an exception. </p>
+                <p>For a batch of proposed orders (for the same plan, date and CAR process), if there are classification compliance breaches which relate to liquidity or exposure assets, then the following sets out how to identify which assets are to be transitioned in place of the liquidity and exposure assets.</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"><b>Other asset will be transitioned to an exception state</b> - in the case where at least one proposed order will be transitioned to an exception state, then there is no need to identify any other assets to transition in place of the liquidity or exposure assets (assuming there is at least one proposed order exception that does not relate to a liquidity or exposure asset).</li>
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"><b>Transition a sibling asset</b> - in the case where no other proposed order will be transitioned to an exception state then the siblings of the liquidity or exposure orders will be transitioned to an exception state in place of the liquidity or exposure assets. Sibling assets are assets who have the same parent aggregate sector as the related liquidity or exposure sector. If all siblings are  liquidity or exposure assets then this is taken as if there are no siblings).</li>
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"><b>Transition of all assets</b> - in the case where no other proposed order will be transitioned to an exception state and no siblings of the liquidity or exposure assets exist then all order will be transitioned to an exception state in place of the liquidity or exposure assets.</li>
+                </ul>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Modifying Classification Parameters</h2>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/Portfolio Management/PM_DualAuthIntro.flsnp" /> Pending changes are considered as a set and therefore require only one transition to the next state. When classification parameters are authorised, they are included  in that version of the classification structure. When classification parameters are rejected, they are excluded in the classification parameters that are versioned. </p>
+        <p>For example, a Portfolio Analyst makes changes to the Schroders USD Equities Fund's lower tolerance and bound; and increases the upper tolerance and bound of the BlackRock USD Equities Fund. The changes are made  in the table itself and all edits have a corresponding pending change card. Once validated and saved, the transition menu will become available and the changes can be assigned for review. </p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/All/Tip - Using the tab key.flsnp" />
+        <p> </p>
+        <p class="zoom4Detail">
+            <img src="../../Resources/Images/Portfolio Management Images/CALP_edit01.png" />
+        </p>
+        <p>Where any parameters fall outside of the validations, a hard or soft warning will display in the Validations panel. It is still possible to undo the change after saving by selecting the trash can on the pending change panel.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Validations panel  </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Records can be validated at any time by selecting &lt;Validate&gt;. When changes are made and the change breaches validation, a warning will display as shown below. In some instances, it may be possible to override the warning, however this will be dependent on permissions and configuration set out in <MadCap:xref href="../../AA_Library/Entities/CAR Process Phases and Functions.htm#ComplianceChecks">Compliance Checks</MadCap:xref>. </p>
+                <p>Selecting the validation in the panel, will highlight the corresponding value in the table that the validation is referring to.</p>
+                <p>
+                    <img src="../../Resources/Images/Portfolio Management Images/PM_ClassParamSets4.png" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Non-editable fields based on row type</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Classification parameters have different editability of fields based on the row types, aggregate, derived and holding. The following table shows the fields that are not editable for each row type.</p>
+                <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');border-top-left-radius: 6px;border-top-right-radius: 6px;border-bottom-right-radius: 6px;border-bottom-left-radius: 6px;border-left-style: solid;border-left-width: 1px;border-left-color: #697a84;border-right-style: solid;border-right-width: 1px;border-right-color: #697a84;border-top-style: solid;border-top-width: 1px;border-top-color: #697a84;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #697a84;margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Row type</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Aggregate</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Derived</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Holding</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Non-editable fields</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Component 1</p>
+                                <p>Component 2</p>
+                                <p>Component 3</p>
+                                <p>Component 4</p>
+                                <p>Component 5</p>
+                                <p>ComponentSign5</p>
+                                <p>ComponentSign4</p>
+                                <p>ComponentSign3</p>
+                                <p>ComponentSign2</p>
+                                <p>ComponentSign1</p>
+                                <p>Originator</p>
+                                <p>Classification</p>
+                                <p>Plan Entity</p>
+                                <p>is Default</p>
+                                <p>Asset</p>
+                                <p>Sector</p>
+                                <p>Sector Type </p>
+                                <p>Effective Date</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>is Default</p>
+                                <p>Originator</p>
+                                <p>Asset</p>
+                                <p>Classification</p>
+                                <p>Sector</p>
+                                <p>Sector Type</p>
+                                <p>Plan Entity</p>
+                                <p>Effective Date</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>Component 1</p>
+                                <p>Component 2</p>
+                                <p>Component 3</p>
+                                <p>Component 4</p>
+                                <p>Component 5</p>
+                                <p>ComponentSign5</p>
+                                <p>ComponentSign4</p>
+                                <p>ComponentSign3</p>
+                                <p>ComponentSign2</p>
+                                <p>ComponentSign1</p>
+                                <p>Classification </p>
+                                <p>Plan Entity</p>
+                                <p>is Default</p>
+                                <p>Sector</p>
+                                <p>Sector Type</p>
+                                <p>Effective Date</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Authorising Classification Parameters </h2>
+        <p>The Portfolio Manager, the reviewer, is able to view the list of changes made in the Pending Changes panel and can navigate through each of the changes either by selecting the cards themselves, or by   selecting the pending change arrows at the top of the pending change panel. </p>
+        <p>
+            <img src="../../Resources/Images/Portfolio Management Images/PendingChangeArrows.png" /> </p>
+        <p>Each change will display in the table and will be highlighted when selected on the pending change panel. The pending changes are treated as a set therefore they require only one transition to the next state on the status stream. Once reviewed, the Portfolio Manager can select the appropriate transition, for example, 'Requires Modification' or 'Authorised'.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Show original values</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If &lt;Show original values&gt; is selected, the table will include the rows showing only the values that have been edited. </p>
+                <p>
+                    <img src="../../Resources/Images/Portfolio Management Images/PM_ClassParamSets3.png" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Transitioning in the Classification Plans view</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The Portfolio Manager may also use the ellipsis on the classification plan to transition the pending changes but will not be able to view the detail of the changes except where a Classification Set is to be deleted, as shown below. </p>
+                <p class="zoom4Detail">
+                    <img src="../../Resources/Images/Portfolio Management Images/PM_ClassParamSets5.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Reviewing the  Changes on the Pending Changes Dashboard </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The Portfolio Manager is able to view  changes to Classification Parameters via the Pending Changes Dashboard. Changes are due by SLA time and by state, i.e. Ready to Authorise. </p>
+                <p>
+                    <img src="../../Resources/Images/Portfolio Management Images/PM_ClassnParamsPendingChangesDash.png" class="greyborder" />
+                </p>
+                <p>Selecting &lt;Review&gt; navigates to the Classification Parameters record where the Portfolio Manager can review  the pending changes. Once the pending change workflow has been completed, i.e. approved, rejected, the record will no longer appear on the Pending Changes Dashboard. </p>
+                <p class="zoom4Detail">
+                    <img src="../../Resources/Images/Portfolio Management Images/PM_ClassnParamsPendingChangesDash1.png" class="greyborder" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Accessing audit history of Classification Parameters</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The audit history for Classification Parameters is available through Processing Mode via Audit &gt; Classification Parameters. Details will display as shown below. </p>
+                <p class="zoom4Detail">
+                    <img src="../../Resources/Images/Portfolio Management Images/PM_AuditHistoryClassificationParameter.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

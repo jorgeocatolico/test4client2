@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../TableStyles/MG_TableStyle02TableinaTable_No header.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table style="mc-table-style: url('../../TableStyles/MG_TableStyle02TableinaTable_No header.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle02TableinaTable_No_header" cellspacing="18">
+            <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+            <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                        <p>Business Description</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                        <p>[DL030] loads the investment holdings data from either the <b class="BufferandFunctionBold">U100: Investment Holdings</b> worktable, or from pControl balances, or both. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                        <p>Processing Detail</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                        <p>If this function is selected on the process template, the investment holdings data will be loaded. </p>
+                        <p>The data attributes on the fund specify whether holdings will be loaded from pControl's internal balances, from an external source, (<b class="BufferandFunctionBold">U100: Investment Holdings</b> worktable), or both.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">Entity Data Attributes Used</td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load Investment Holdings</li>
+                            <img src="../../Images/Process Phases and Functions/DL030_attb.bmp" alt="" title="" />
+                            <br />
+                        </ul>
+                        <table style="width: 100%;mc-table-style: url('../../TableStyles/MG_TableStyle02TableinaTable_No header.css');" class="TableStyle-MG_TableStyle02TableinaTable_No_header" cellspacing="18">
+                            <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" style="width: 135px;" />
+                            <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                            <tbody>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                        <p>Data Load Price Run Type</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                        <p>The 'Data Load Price Run Type' value selected here is used to select data rows with the corresponding 'Price Run Type'</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                        <p>Load Investment Holding Balances from </p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                        <p>This attribute determines whether the data will be loaded from pControl balances, an External Source, (<b class="BufferandFunctionBold">U100: Investment Holdings</b> worktable), or both.</p>
+                                        <p>Where balances are loaded from 'both', duplicate holdings will be overwritten, and the pControl balance will be used over the external value.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                        <p>Mandatory</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                        <p>If selected, and the <b>U100: Investment Holdings</b> worktable does not contain the required data at the time a process is run, the process will enter a 'wait' state, until the required data is received.</p>
+                                        <p style="font-style: italic;">Note: This attribute is only applicable if 'Load Investment Holdings Balances from' is set to 'External'.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                        <p>Revalue Investment Holdings From</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                        <p> If selected, the external general ledger data will be used to revalue pControl's General Ledger balances.</p>
+                                        <p style="font-style: italic;">Note: This attribute is only applicable if 'Load Investment Holdings Balances from' is set to 'Both'.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                        <p>Load Cash Balances as Holding</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                        <p>The internal account balance of the Default Cash Account will be loaded as a holding and the internal instrument type and category of this holding will be set as per the Common attributes on the Entity which define the cash account category code and instrument group/type</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">Load using Value Date</td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                        <p>This attribute indicates if the investment holdings data is to be loaded based on the specified Value Date.  The Value Date to use is set in the Value Date Calculation Method attribute </p>
+                                        <p style="font-style: italic;">
+Note:  Load Bid / Offer Valuations relates to bid / offer pricing (unit pricing) i.e. is not relevant to ALV.
+</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">Load Bid / Offer Valuations</td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">This attribute is applicable where investment holdings are being loaded either from pControl, from external source or both.   If this attribute is selected, true NAV, Buy Price, Sell Price and Actuarial Price valuations will be loaded.</td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font" MadCap:conditions="Note To Selfs.ScreenOnly">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                        <p>Account View Mark to Market Interfunds</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                        <p>no definition</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-090em_font">
+                                        <p>Valuation Price Types</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyA-Column1-090em_font">This table is used to specify different price types to be used for the valuation of specific assets. This table is only used when a price type different to the default ones as defined on the assets ‘Daily Pricing’ tab is required.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                        <p>Interdependencies</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                        <p>Prerequisite Functions</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-090em_font">
+                        <p>Outputs</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyA-Column1-090em_font">
+                        <p>Process status messages report the status of this function</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

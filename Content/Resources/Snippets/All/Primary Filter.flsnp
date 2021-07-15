@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../TableStyles/MG_TableStyle02TableinaTable.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table style="width: auto;mc-table-style: url('../../TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">Filter Field</th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Entity Field</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p style="padding-top: 0px;line-height: normal;">The first three drop down fields define the entity filters to be applied. The value selected in the first field determines the values displayed in the second field. </p>
+                        <table class="TableStyle-MG_TableStyle02TableinaTable" cellspacing="0" style="mc-table-style: url('../../TableStyles/MG_TableStyle02TableinaTable.css');">
+                            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" style="width: 98px;" />
+                            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" style="width: 441px;" />
+                            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                            <thead>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">First Field Selection</th>
+                                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">Second Field Selection</th>
+                                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1">Entity Field</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                        <p>Master</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                        <p>&#160;</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                        <p style="line-height: normal;">A list of entities the current user has access to, and an option for 'All Entities'</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                        <p>Collections</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                        <p style="line-height: normal;">Drop down list of collection names (static and dynamic) to which the current user has access to.</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                        <p style="line-height: normal;">A list of entities which belong to the selected collection, and the current user has access to.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                        <p>Template</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                        <p style="line-height: normal;">Drop down list of templates the current user has access to. (i.e. those templates included in the user's master (processing) tree)</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                        <p style="line-height: normal;">A list of entities created using the template selected, and to which the current user has access to.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                        <p>Active Entities</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                        <p>&#160;</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                        <p style="line-height: normal;">A list of active entities the current user has access to, and an option for 'All Entities'</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font">
+                                        <p style="line-height: normal;">Inactive Entities</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font">
+                                        <p>&#160;</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font">
+                                        <p style="line-height: normal;">A list of inactive entities the current user has access to, and an option for 'All Entities'</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Date Type</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p style="line-height: normal;">The Date Type field contains a list of date types applicable to the current web page. Therefore, the drop down filter may not contain all of the following values:</p>
+                        <table class="TableStyle-MG_TableStyle02TableinaTable" cellspacing="0" style="mc-table-style: url('../../TableStyles/MG_TableStyle02TableinaTable.css');">
+                            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                            <thead>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">Date Type</th>
+                                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                        <p>Processing Date</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                        <p style="line-height: normal;">The date a process is run to take effect for, e.g. a process may be physically run (run date) on 2nd May, to calculate the NAV for effective date (processing date) 1st May.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                        <p>Run Date</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                        <p style="line-height: normal;">The date on which the process is performed in pControl.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                        <p>Effective Date</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                        <p style="line-height: normal;">For a stock financial event or an accounting financial event, the date that the transaction (i.e. order or income / expense) is contracted which is equivalent to the trade date for purchase and sales or accrual date for income and expenses.</p>
+                                        <p style="line-height: normal;">The effective date for financial event created on cash settlement is the date updated by the user (or rules) on the deadline field for the transition to cash settled.</p>
+                                        <p style="line-height: normal;">For cash financial events, the value date, i.e., the date the cash is paid or received is the effective date.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                        <p>Accounting Date</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                        <p style="line-height: normal;">This is only populated for an accounting financial event. If an accounting month end close has occurred on or after the effective date, the accounting date will be the actual date following the latest accounting month end close.</p>
+                                        <p style="line-height: normal;">For example: A subscription trade received on 30 July, will have an effective date of 30 July. The purchase price for this trade is received and updated in pControl on 2 Aug. As July month end has been ‘closed’. This trade will have an ‘accounting date’ of 1 Aug, as this is the actual date following the latest accounting month end close.</p>
+                                        <p style="line-height: normal;">Transactions received after the accounting month end close will be included in August accounting.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                        <p>Tax Date</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                        <p style="line-height: normal;">Tax date is the same as accounting date, in that tax date will be the same as the effective date, unless the tax period closes on or after the effective date, in which case the tax date will be the actual date (i.e. not business day) following the latest tax books close).</p>
+                                        <p style="line-height: normal;"><i>Note: similar to an accounting close date a tax close can be re-opened and re-closed with the requisite security controls.</i>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font">
+                                        <p>Cash Settled Date</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font">
+                                        <p style="line-height: normal;">The date cash is paid or received for a financial event.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Date Range</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p style="line-height: normal;">This option relates to the allocation of a specified date range. The values of this drop down menu include:</p>
+                        <ul class="FirstLevelBlueBullet">
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Today</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Yesterday</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Tomorrow</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Last 7 days</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Next 7 days</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Week to Date</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Month to Date</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Prior Financial Year</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Current Financial Year.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>From Date</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p style="line-height: normal;">Any valid calendar date can be entered in this field.  Field to be displayed in dd-mmm-YYYY format to ensure day and month is unambiguous.</p>
+                        <p style="line-height: normal;">Selecting the drop down menu on this field will open a calendar where the required date can be selected.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>To Date</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Any valid calendar date can be entered in this field.  Field to be displayed in dd-mmm-YYYY format to ensure day and month is unambiguous.</p>
+                        <p style="line-height: normal;">Selecting the drop down menu on this field will open a calendar where the required date can be selected.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                        <p>Status Stream Bar</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                        <p>The coloured status stream bar, shows a summarised count of all records in each of the states of the 'Primary status stream'. One status stream can be configured as the 'Primary Status Stream' for a dashboard (Price Control Summary) in System Administration mode.</p>
+                        <p>Selecting one of the states displayed will filter the table below to only display records in the selected state.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <br />
+        </p>
+    </body>
+</html>

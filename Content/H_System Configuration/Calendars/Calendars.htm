@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Calendars</h1>
+        <p>Calendar data is required to define valid processing days, and ensure pControl processes do not run on non working days, e.g., weekends and public holidays.</p>
+        <p>Funds may be priced on a daily, weekly, or monthly basis; Distributions are usually processed less frequently, and globally clients may work to a calendar representing that particular country's public holidays. By having multiple calendars available, pControl can determine which dates are valid processing days for a certain entity and process type.</p>
+        <p>Calendars can be defined in pControl web via the configuration menu, and are then associated to an entity via the calendar attributes as shown below.</p>
+        <p class="zoom4Detail">
+            <img src="../../Resources/Images/Calendars/Cal_Entity_calndr_attrb.png" alt="" title="" />
+        </p>
+        <div class="note_label">Note</div>
+        <div class="note_content">
+            <p>Only one of the above calendar attributes will be populated for each process on an entity, (i.e. not all 3).</p>
+        </div>
+        <p>&#160;</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Associating a calendar with an entity</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList">
+                    <li class="stepList">
+                        <MadCap:snippetBlock src="../../Resources/Snippets/Calendars/Assoc_cal_with_entity_step1.flsnp" />
+                    </li>
+                    <li>
+                        <p>Use the drop down menu in <b>either</b> the 'Calendar' or 'Calendar Schedule Entity' field to select a calendar type or calendar schedule entity respectively; Or select the 'Use Alternate Calendar Source' field.</p>
+                        <div class="note_label">Note </div>
+                        <div class="note_content_in_list">For details on creating these calendar types, refer to <MadCap:xref href="Processing Calendars.htm">Processing Calendars</MadCap:xref> or <MadCap:xref href="Calendar Schedules.htm">Calendar Schedules</MadCap:xref>.</div>
+                    </li>
+                    <li>Select &lt;Save&gt; to save the changes; or &lt;Cancel&gt; to exit without saving the changes.</li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Three digit ISO currency code.</p>
+        <p><i>Note: Currencies are configured as entities in pControl. The currency code is used as the entity code.</i>
+        </p>
+    </body>
+</html>

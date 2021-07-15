@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Configuring NAV Oversight</h1>
+        <p>Before running a NAV Oversight process in pControl, configuration must be completed. This task includes:</p>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Determination of the correct process template for  Oversight entities</li>
+            <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Configuration of Oversight Pool, Oversight Class or Pricing  entities</li>
+            <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Population of data requirements of NAV Oversight processing i.e. worktable data</li>
+            <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The use of the ‘Category Hierarchy’ i.e. the mapping of price components to Categories</li>
+            <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Configuration of the relevant validation entities</li>
+            <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Setting tolerances for the validations.</li>
+        </ul>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>NAV Oversight Process Entities</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>NAV&#160;Oversight can be run on Oversight Pool, Oversight Class or NAV Oversight entities. There are also several other entity types used to support the processes as listed in the table below.</p>
+                <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Columncentred" MadCap:pattern="15" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Columncentred-Header1"> Icon</th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">Entity Type</th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                <p>
+                                    <img src="../../../Resources/Images/NAV Oversight Images/NO_EPMicon.png" />
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Expected Pricing Methodology</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>This entity houses one or more 'Expected Return Calculation Methodology' entities which are used to calculate the expected NAV for a given set of categories. The sum of all calculated categories gives the expected NAV.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                <img src="../../../Resources/Images/NAV Oversight Images/NO_ERMicon.png" />
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Expected Return Calculation Methodology</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>An entity in the Processing mode associated to a rules file in the Configuration mode housing the calculation formula. This entity contains a list of category types which the formula can be applied to.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                <img src="../../../Resources/Images/NAV Oversight Images/NO_OSClassicon.png" />
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Oversight Class</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Oversight Class entities are used to represent the class (fund / portfolio) that an external service provider is providing NAV services for, and therefore oversight pricing processes must be run for to verify the NAV values.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                                <img src="../../../Resources/Images/NAV Oversight Images/NO_OSPoolicon.png" />
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Oversight Pool</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Oversight Pool entities are used to represent the pool of assets that an external service provider is providing NAV services for, and therefore oversight pricing processes must be run for to verify the NAV values.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Columncentred-Row1">
+                                <img src="../../../Resources/Images/NAV Oversight Images/NO_OSServiceProvIcon.png" />
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">Oversight Service Provider</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>This entity  represents the external company providing NAV services. If this external company has an outage, and pControl has to go into Backup NAV mode, the 'outage declaration' is made via this entity.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>The values and settings of an entity’s attributes, in conjunction with selection of functions on the process template, will affect the behaviour and results of a NAV Oversight process. </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Configuration of Entities</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Configuration of entities refers to the selection  of function check boxes on a process template to turn those functions on; and then associating the process template to an entity; populating drop down boxes, or other attributes on the entity to support those process functions. When a process is run, only the selected functions will be performed. </p>
+                <p>A list of the most common functions used in the NAV&#160;Oversight process, are included on the <MadCap:xref href="../Pricing Process/Pricing Process.htm">Pricing Process</MadCap:xref> page. For further detail on each of these functions, refer to the Unit Pricing or Asset Level Validation user guides.</p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Worktable Data</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <MadCap:snippetText src="../../../Resources/Snippets/All/Worktable.flsnp" />The main worktables referenced by the NAV&#160;Oversight process are listed below:</p>
+                <h2 class="indropdown">Import Worktables</h2>
+                <MadCap:snippetBlock src="../../../Resources/Snippets/Work tables/Import Worktables.flsnp" />
+                <h2 class="indropdown">Static Worktables</h2>
+                <p>Static worktables are used to hold static information such as mapping data.</p>
+                <MadCap:snippetBlock src="../../../Resources/Snippets/Work tables/StaticWorktables.flsnp" />
+                <h2 class="indropdown">Export Worktables</h2>
+                <p>Export worktables hold the end results of processed data. Data in these worktables can be exported from pControl, or can be used in follow on processing, for reporting, or distribution.</p>
+                <MadCap:snippetBlock src="../../../Resources/Snippets/Work tables/ExportWorktables.flsnp" />
+                <h2 class="indropdown">pControl Worktables</h2>
+                <p>pControl worktables are used to hold the results of processing as required for follow on processing or reporting within pControl, or for distribution outside of pControl. These worktables usually can't be manually updated via the user interface.</p>
+                <MadCap:snippetBlock src="../../../Resources/Snippets/Work tables/pControlWorktables.flsnp" />
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Category Hierarchies</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/U350CatHierIntro.flsnp" />
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Validation Entities</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The 'Pre-Calc Validation' phase, and 'Post-Calc Validation' phases of the Expected Pricing and Actual Pricing processes contain a number of validation checks that can be performed on data coming into the process, or the results of a process. Each validation check is represented as a single check box on the process template, and is linked to a corresponding entity with the same function code, as shown below. </p>
+                <p>Information on types of validation entities, the entity attributes and an example are provided under <MadCap:xref href="../../../AA_Library/Entities/Validation Entities.htm">Validation Entities.</MadCap:xref></p>
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/NAV Oversight Images/NO_Validfunctioncode2.bmp" />
+                </p>
+                <p>Most Validation entities will already be configured in the Processing module, at the time of implementation. Additional validation entities can be configured if required.</p>
+                <p style="font-style: italic;">&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Validation Checks for Analysis Views </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>When validation checks on analysis views are performed, pControl performs a calculation. The output of this calculation is compared to teh tolerance values listed in the <b class="BufferandFunctionBold"> L200: Tolerances</b>  to determine if the value calculated is acceptable, or the severity of the breach of validation check.</p>
+                <p>Further information on each of the validation checks for analysis views are included in the <MadCap:xref href="../Analysis Views/Analysis View Validation Checks.htm">Validation Checks</MadCap:xref> section.</p>
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/NAV Oversight Images/AnalysisViewValidations.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

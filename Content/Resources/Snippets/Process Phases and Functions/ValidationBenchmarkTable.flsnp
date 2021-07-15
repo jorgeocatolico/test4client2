@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../TableStyles/MG_TableStyle02TableinaTable.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table class="TableStyle-MG_TableStyle02TableinaTable" cellspacing="0" style="mc-table-style: url('../../TableStyles/MG_TableStyle02TableinaTable.css');margin-left: 0;margin-right: auto;">
+            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">
+                        <p>Attribute</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                        <p>Benchmark</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                        <p>The benchmark, whose value will be used in the calculation.</p>
+                        <p>
+                            <i>Note: The benchmark/s listed here must be configured as a benchmark entity within pControl, and the benchmark's value must be available at the time this check is run.</i>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                        <p>Comparison Period</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                        <p>The comparison period to be used for the validation (i.e. Prior Pricing Point, Month to date etc.)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                        <p>L200 Validation Filter</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                        <p>If there are multiple tolerances defined in the<b class="BufferandFunctionBold"> L200: Tolerances</b> table for a particular validation, they can be assigned to a particular benchmark in the table by utilising the L200 Validation Filter. </p>
+                        <p>E.g. If a validation check uses different benchmarks for domestic equity funds compared to international equity funds, different tolerances can be configured for these benchmark types as shown below. The same text used in the Validation Filter below is then used in the validation filter above.</p>
+                        <p>
+                            <img src="../../Images/NAV Oversight Images/L200_ValidationFilter_example.bmp" alt="" title="" />
+                        </p>
+                        <p>
+                            <i>Note: This example uses POV010 validation check, however other validation codes can be selected in the first column.</i>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                        <p>Fixed Adj. (bps)</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                        <p>The Benchmark value for the comparison period may be adjusted by the Fixed Adjustment basis point amount specified here using the following formula: </p>
+                        <p>
+                            <MadCap:equation>$\small Adjusted\ Benchmark\ =\ Benchmark\ Value\ (bp)\ +\ Fixed Adj.$</MadCap:equation>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">Fee / Tax Adj</td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                        <p>The Benchmark value for the comparison period can be adjusted through the inclusion of Fees and/or Tax calculated in the pricing process. Options include:</p>
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                                <b>Net of Fees</b>:</li>
+                            <MadCap:equation>$\small Fee\ Rate\ (Actual\ daily\ fees\ rate)\ =\ 
+\normalsize \frac{\frac{\left (\normalsize Total\ Fees\ Provision\ +\ Total\ Performance\ Fees\ Provision\  \right )}
+{GAV}}
+{\normalsize Days\ Since\ last\ price}$</MadCap:equation>
+                            <br />
+                            <MadCap:equation>$\small Fee\ Adjustment\ Rate(bp)\ =\ Fee\ Rate\ \times Days\ in\ Period\ \times 10,000$</MadCap:equation>
+                            <br />
+                        </ul>
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                                <b>Net of Tax</b>:</li>Where pControl’s Tax Expense module is used to calculate tax, the effective rate calculated by pControl, and stored as an external balance is used in the calculation. If not, the tax rate as specified on the entity ‘Calculate Tax provision’ attribute (/100) will be used for the calculation.<br /><MadCap:equation>$\small Tax\ Adjustment\ Rate(bps)\ =\ Tax\ Rate\ \times 10,000$</MadCap:equation><br /></ul>
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                                <b>Net of Fees and Tax</b>:</li>The benchmark is adjusted by the above Tax Rate first, and then by the above fee rate.<br />Where pControl’s Tax Expense module is used to calculate tax, the effective rate calculated by pControl, and stored as an external balance is used in the calculation. If not, the tax rate as specified on the entity ‘Calculate Tax provision’ attribute (/100) will be used for the calculation.<br /><MadCap:equation>$\small Fee\ and\ Tax\ Adjustment\ Rate\ =\ \normalsize \frac{\left ( Total\ Benchmark\ Movement \times Tax\ Rate \right )+\ \left (1\ -\ Tax\ Rate\ \times Fee\ Rate  \right )}
+{Total\ Benchmark\ Movement\ \times 10,000}$</MadCap:equation><br /><MadCap:equation>$\small Total\ (adjusted)\ Benchmark\ Movement\ =\ Unadjusted\ Key\ Benchmark\ Movement\ - Fee\ and\ Tax\ Adjustment\ Rate$</MadCap:equation><br /><MadCap:equation>$\small Recalculate\ using\ days\ in\ period\ (based\ on\ the\ ‘Comparison\ period’\ column\ specified\ above)$</MadCap:equation><br /><MadCap:equation>$\small Validation\ Benchmark\ =\ Total\ (adjusted)\ benchmark\ movement\ \times \frac{Tax\ Rate\ +\ ((1\ -\ Tax\ Rate\) \times Fee\ Rate\ \times Days\ in\ Period)}
+
+{Total\ benchmark\ movement\ \times 10,000}$</MadCap:equation><br /></ul>
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                                <b>No Adjustment / Blank</b>:</li>Benchmark is not adjusted</ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font">Key Benchmark</td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font">
+                        <p>The 'Key Benchmark' check box can only be selected for one benchmark listed in this table. This may also be referred to as the 'Primary benchmark'</p>
+                        <p>For validation checks or calculations where only the benchmark is used, e.g. Index price calculation, the 'Key Benchmark's' values will be used.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

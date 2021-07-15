@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Expected Pricing</title>
+    </head>
+    <body>
+        <h1><a name="Expected_Pricing"></a>Expected Pricing Methodology</h1>
+        <p>The NAV price comprises several categories of assets and expenses. Each category of the NAV can be calculated differently, using different Expected Return Methodologies. These methodologies are then applied to their respective categories using the Expected Pricing Methodology entity.</p>
+        <p>For example, the NAV for an Index Tracking Fund might comprise four categories:</p>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Investment Assets (AST)</li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Fixed Interest Accrual Assets (FIAI)</li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Fees (FEE) </li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Transactions (TXN).</li>
+        </ul>
+        <p>Each of these categories are calculated differently, and then summed to determine the overall expected NAV. One Expected Pricing Methodology entity could be configured with these four category calculations, so as to be used for expected pricing for all Index Tracking funds.</p>
+        <p>To configure the Expected Pricing Methodology entity, as shown below, select a category and Expected Return Methodologies from each of the drop down fields.</p>
+        <p>
+            <img src="../../../Resources/Images/NAV Oversight Images/NO_EPMentity.png" alt="" title="" />
+        </p>
+        <div class="note_label">Note</div>
+        <div class="note_content">
+            <p>pControl will process each category in the order listed in the table below, however this will not alter the outcome of the overall NAV, i.e. each category will be calculated separately, and then summed to produce a total NAV.</p>
+        </div>
+        <p>&#160;</p>
+        <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1" colspan="2">&#160; Expected Pricing Methodology Table</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>
+                            <img src="../../../Resources/Images/NAV Oversight Images/NO_BinIcon.png" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Delete table row.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Category</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>A list of asset category values for which the calculation is to be performed. The categories displayed here are the same categories used in the <MadCap:xref href="../Analysis Views/Analysis Views.htm">Analysis Views</MadCap:xref>.
+The category selected here, must also be one of the ‘selected’ categories on the corresponding ‘Expected Return Methodology’ entities. E.g. ‘AST’ is one of the asset categories shown below. It is also one of the selected categories on the corresponding ‘Holdings - Security Repricing’ entity.
+</p>
+                        <p>
+                            <img src="../../../Resources/Images/NAV Oversight Images/NO_EXP_GeneralTab.png" alt="" title="" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">Expected Return Methodology</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                        <p>A drop down list of ‘Expected Return Methodology’ entities that have been configured to calculate a NAV component.
+</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Income Tab</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Income for non working days such as weekends and public holidays, when expected pricing is not run needs to be estimated, and this is done via the use of a ‘stale’ income value, i.e. either Friday’s value is re-used as the ‘stale value’ on Saturday and Sundays, or Monday’s value could be re-used as the ‘stale value’ on Saturday and Sundays.</p>
+                <p>&#160;</p>
+                <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">Income Stale Attribute</th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Policy for accruing non work days</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>A drop down list of options for accruing income over non
+ working days such as weekends and public holidays, when expected pricing
+ would not be run.</p>
+                                <p>Drop down values include:</p>
+                                <ul class="FirstLevelBlueBullet">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">After
+ non-working period</li>
+                                </ul>
+                                <p style="margin-left: 1cm;">  On the first working day after non working
+ periods, the Expected Pricing process will estimate the income for Monday,
+ and apply this value for both Saturday and Sunday as the ‘stale value’.
+ Therefore, when Expected Pricing is run on Monday, the income amount will
+ represent Saturday, Sunday and Monday inclusive. </p>
+                                <ul class="FirstLevelBlueBullet">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"> Before
+ non-working period</li>
+                                </ul>
+                                <p style="margin-left: 1cm;">
+  On the last working day before a non working
+ period, the Expected Pricing process will calculate the income for the
+ current day and apply it to the non working period as a stale value. E.g. On
+ Fridays, income will be calculated for Friday, and the same value (which is
+ now stale) will be used for Saturday and Sunday. Therefore the income value
+ will represent 3 days.</p>
+                                <ul class="FirstLevelBlueBullet">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Split evenly before and after</li>
+                                </ul>
+                                <p style="margin-left: 1cm;">2 days will be accrued on a Friday and 2 days on a Monday. Friday's accrual is for Friday and Saturday, and Monday's accrual is for Sunday and Monday, i.e. the non-working days are split between Friday and Monday.</p>
+                                <p><i>Note: Working days / Non working days are defined on the
+ calendar associated with the oversight entity. </i>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Expense Tab</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Expenses for non working days such as weekends and public holidays, when expected pricing is not run, needs to be estimated, and this is done via the use of a ‘stale’ expense value, i.e. either Friday’s value is re-used as the ‘stale value’ on Saturday and Sundays, or Monday’s value could be re-used as the ‘stale value’ on Saturday and Sundays.</p>
+                <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Expense Stale Attribute</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Policy for accruing non work days</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>A drop down list of options for accruing expense over non
+ working days such as weekends and public holidays, when expected pricing
+ would not be run.</p>
+                                <p>Drop down values include:</p>
+                                <ul class="FirstLevelBlueBullet">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">After
+ non-working period</li>
+                                </ul>
+                                <p style="margin-left: 1cm;">  On the first working day after non working
+ periods, the Expected Pricing process will estimate the expense for Monday,
+ and apply this value for both Saturday and Sunday as the ‘stale value’.
+ Therefore, when Expected Pricing is run on Monday, the expense amount will
+ represent Saturday, Sunday and Monday inclusive. </p>
+                                <ul class="FirstLevelBlueBullet">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"> Before
+ non-working period</li>
+                                </ul>
+                                <p style="margin-left: 1cm;">
+  On the last working day before a non working
+ period, the Expected Pricing process will calculate the expense for the
+ current day and apply it to the non working period as a stale value. E.g. On
+ Fridays, expense will be calculated for Friday, and the same value (which is
+ now stale) will be used for Saturday and Sunday. Therefore the expense value
+ will represent 3 days.</p>
+                                <ul class="FirstLevelBlueBullet">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"> Before
+ non-working period</li>
+                                </ul>
+                                <p style="margin-left: 1cm;">The expected pricing process will calculate the expense as 2 days  on a Friday and 2 days on a Monday. Friday's expense is for Friday and Saturday, and Monday's expense is for Sunday and Monday, i.e. the non-working days are split between Friday and Monday.</p>
+                                <p><i>Note: Working days / Non working days are defined on the
+ calendar associated with the oversight entity. </i>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>&#160;</h2>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Holdings Tab</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../../Resources/Images/NAV Oversight Images/NO_EPMentityHoldingsTab.png" alt="" title="" />
+                </p>
+                <p>The Security Repricing attributes are used when calculating the holdings component of an Expected NAV for an entity. An entity's holdings will be revalued using the current day price from the <b class="BufferandFunctionBold">U175: Security Prices</b> worktable. The security price run type selected in this attribute, is matched to the same security price run type on the U175 worktable to obtain the correct price. </p>
+                <p>Where fair value functionality is required, the fair value attribute must be selected, and the Fair Value entity selected, in order to specify which values should be retrieved from the <b class="BufferandFunctionBold">U107: Price Component Adjustments</b> worktable. For further details, refer to <MadCap:xref href="ERM Calculations/ERM Calculations.htm#ERM003">[ERM003] Holdings - Security Repricing </MadCap:xref></p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Associating the ‘Expecting Pricing Methodology’ entity to an Oversight entity</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Once the Expected Pricing Methodology entity is configured, it can be associated to the oversight entity via the Expected Pricing Methodology attribute under the Expected Pricing tab.</p>
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/NAV Oversight Images/NO_EPMonPoolentity.png" />
+                </p>
+                <p MadCap:conditions="Note To Selfs.ScreenOnly">
+                    <img src="../../../Resources/Images/NAV Oversight Images/NO_EPM_Attribute.png" alt="" title="" />
+                </p>
+                <p>This attribute is used during the Calculations phase of the Expected Pricing process. There are several different Expected Pricing Methodologies, which are explained in the <MadCap:xref href="Expected Return.htm">Expected Return Calculation Methodology</MadCap:xref> section.</p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Expected Return Calculation Methodology entity</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The Expected Return Calculation Methodology entity is associated to a rules file, where the formula for the calculation is stored. The formulas cannot be seen, however the details of each formula,  are detailed in <MadCap:xref href="Expected Return.htm">Expected Return Calculation Methodology</MadCap:xref> section.</p>
+                <p>
+                    <img src="../../../Resources/Images/NAV Oversight Images/NO_ERMentity.png" alt="" title="" />
+                </p>
+                <MadCap:snippetBlock src="../../../Resources/Snippets/NAV Oversight/NO_RulesTable.flsnp" />
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+    </body>
+</html>

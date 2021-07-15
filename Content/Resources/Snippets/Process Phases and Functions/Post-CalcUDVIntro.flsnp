@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Post Calculation User Defined Validations, or UDVs are they are also referred to, are available to be selected under the Post-Calc User Defined Validations tab on the process template as shown below. Some validations are delivered in pControl as User Defined validations because they generally require some configuration to be used by an organisation; in this way, they are left as UDVs to enable the configuration of the business rules involved to be performed easily. </body>
+</html>

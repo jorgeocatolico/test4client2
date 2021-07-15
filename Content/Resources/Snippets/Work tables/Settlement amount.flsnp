@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Can be a manually populated value where trade is a cash based order via settlement currency. pControl will calculate Trade Amount or Settlement Amount using the FX rate, Units and Unit Price if trade is a cash based order else Trade Amount and Settlement Amount is calculated from Units, Unit Price and FX Rate for unit based order. Where order is a full redemption, Units, Cash amount and Trade amount are calculated by pControl.</p>
+    </body>
+</html>

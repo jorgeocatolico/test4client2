@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Refer to the P125: Import Definitions worktable for the required column order of import files.</p>
+        <ol class="stepList">
+            <li>Select the entity listed above in the 'Standard Import Process' section</li>
+            <li>
+                <p>Navigate to the P125: Import Definitions worktable</p>
+                <p>Data &gt; Static &gt; P125: Import Definitions </p>
+            </li>
+            <li>Sort the worktable by 'External Field'. </li>
+            <li>Export the rows from this worktable to a csv file using the <img src="../../Images/NAV Oversight Images/NO_CPAS_PrintIcon.png" /> icon.</li>
+            <li>
+                <p>Open the csv file saved in the previous step. Select the populated fields in the column labelled 'Internal Field'.</p>
+                <div class="note_label">Note</div>
+                <div class="note_content_in_list">Do not select the whole column, or select the words 'Internal Field', only those cells that are populated with field names.</div>
+            </li>
+            <li>
+                <p>Open a new csv file, right click in cell A1, and select Paste Special &gt; Transpose</p>
+                <p>The field names will now appear as column headings </p>
+                <div class="note_label">Note</div>
+                <div class="note_content_in_list">Some import definitions may be missing a numeric column id, e.g, the U100 does not have a field 001, or 025. These fields are intentionally left blank, and must be left blank on the import file.</div>
+            </li>
+        </ol>
+    </body>
+</html>

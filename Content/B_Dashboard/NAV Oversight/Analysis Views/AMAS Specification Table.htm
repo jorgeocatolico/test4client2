@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>AMAS Specification Table</h1>
+        <p>Standard categories are driven by balances from the <b class="BufferandFunctionBold">U104: General Ledger</b> with calculations specified in the table below. </p>
+        <p>Categories not populated by the U104: General ledger will be populated as follows:</p>
+        <h3>Indices (IND_AMAS)</h3>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">IND1_AMAS and IND2_AMAS will be populated with values of Key Benchmark and Dynamic Benchmark respectively, as defined on the entity. </li>
+        </ul>
+        <h3>Unit Price (UPR_AMAS)</h3>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Populated with the NAV Price from the <b class="BufferandFunctionBold">U101: External Prices</b> worktable.</li>
+        </ul>
+        <h3>Net Asset Value (NAV_AMAS)</h3>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Populated with the Net Asset Value from <b class="BufferandFunctionBold">A01: Product Validation</b> workable.</li>
+        </ul>
+        <h3>All other categories</h3>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                        <p>Account Movement Analysis Report Specification</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                        <p>For all categories except where specified in exceptions column</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                        <p>Exceptions</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Value Previous </p>
+                        <p>
+                            <MadCap:equation>$Prev$</MadCap:equation>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Prior day balance for the sum of accounts assigned to this category.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>UNEXP_AMAS: populated from the A09: Account Balance Previous for all accounts that do not have an A09 Category Code on current day but did not have an AMAS category code on prior day A09. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p style="font-size: 10pt;">Value
+ Current </p>
+                        <p style="font-size: 10pt;">
+                            <MadCap:equation>$Curr$</MadCap:equation>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Current day balance for the sum of accounts assigned to this category.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>UNEXP_AMAS:</p>
+                        <p>
+                            <MadCap:equation>$Unexplained\ Values\ =\ Fund\ NAV\ -\ \sum constituent\ NAV\ accounts$</MadCap:equation>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p style="font-size: 10pt;">Value
+ Difference </p>
+                        <p style="font-size: 10pt;">
+                            <MadCap:equation>$Vdiff$</MadCap:equation>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>
+                            <MadCap:equation style="font-size: 8pt;">$\Large Curr\ - Prev$</MadCap:equation>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p style="font-size: 10pt;">Total
+ Impact (bp)</p>
+                        <p style="font-size: 10pt;">
+                            <MadCap:equation>$Total$</MadCap:equation>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>
+                            <MadCap:equation style="font-size: 9pt;">$\Large \frac{Vdiff}{Prev}$</MadCap:equation>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>
+                            <MadCap:equation style="font-size: 9pt;">$\Large \frac{Vdiff}{Previous\ NAV\ of\ categories\ of\ accounts}$</MadCap:equation>
+                        </p>
+                        <p style="font-style: italic;">Where categories of accounts are those categories that sit as children of UPM_AMAS</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Per Unit Impact</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>
+                            <MadCap:equation style="font-size: 9pt;">$\Large \frac{Vdiff}{Units\ on\ Issue}$</MadCap:equation>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Tolerance Value</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Where CAT011 has been performed on the category, the tolerance value is populated with the CAT011 tolerance value from the L200: Tolerance worktable.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Where CAT011 has not been performed, this field will left blank.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Tolerance Level</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Where CAT011 has been performed on the category, the tolerance level generated by the validation, for example, Exception. </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Where CAT011 has not been performed, this field will be set to 'Not Checked'.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Summary Tolerance Level</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Highest tolerance breach from all of the validations performed.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                        <p>Summary Exception Count</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                        <p>Number of validation breaches from validations that have been performed.</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

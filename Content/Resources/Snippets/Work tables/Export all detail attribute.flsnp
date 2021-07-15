@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Validation checks that 'pass', i.e. do not breach tolerance, and do not raise an exception, may also be written to this worktable, if the 'Export All Detail Output' attribute is selected on the processing entity.</p>
+        <p>
+            <img src="../../Images/Work tables/pControl/A02 - Export All Detail Attribute.png" />
+        </p>
+    </body>
+</html>

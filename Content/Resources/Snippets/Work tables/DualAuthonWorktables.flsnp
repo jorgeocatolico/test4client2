@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The following example shows the Tolerance Value on the [CAT012] validation check requiring authorisation from a second party before being changed from 10.00 to 8.00.</p>
+        <ol class="stepList" start="1">
+            <li>
+                <p>Navigate to the appropriate worktable. Open the ellipsis menu and select &lt;Properties&gt;.</p>
+            </li>
+            <li>
+                <p>Make the required changes. </p>
+                <p>The attribute that has been edited will be highlighted in blue. The changes with dual authorisation will display in the pending changes panel on the right hand side. To display all changes including those that do not require dual authorisation, select the &lt;Show all&gt; toggle.</p>
+                <p class="zoom4Detail">
+                    <img src="../../Images/Work tables/W_WorktablesDualAuth1.png" />
+                </p>
+            </li>
+            <li>
+                <p>Transition the record to the appropriate state in the status stream, i.e. 'Ready to Authorise' by selecting from the dual authorisation drop-down menu.</p>
+            </li>
+            <p class="stepList">
+                <div class="note_label">Note</div>
+                <div class="note_content_in_list">
+                    <p>Where multiple edits are made to the same record, and at least one of the edits falls under dual authorisation; none of the changes will take effect until the worktable item has been transitioned or saved.</p>
+                </div>
+            </p>
+        </ol>
+        <ol class="stepList" start="1">
+            <li>
+                <p>The second user, or approver, will now be able to view the record with the pending change on the Pending Changes dashboard. From here, the approver can select &lt;Review&gt; to navigate to the worktable, where the transition can be made.</p>
+            </li>
+            <li>
+                <p>The second user will see all changes that have been made on that record, including those that do not require dual authorisation, in the Pending Changes panel on the right side of the view.</p>
+                <p class="zoom4Detail">
+                    <img src="../../Images/Work tables/W_WorktablesDualAuth3.png" />
+                </p>
+            </li>
+            <li>Transition the record to the appropriate state in the status stream, i.e. 'Ready to Authorise' by selecting from the dual authorisation drop-down menu.</li>
+        </ol>
+        <p>&#160;</p>
+    </body>
+</html>

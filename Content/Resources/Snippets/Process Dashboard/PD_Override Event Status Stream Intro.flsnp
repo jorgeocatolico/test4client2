@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../TableStyles/MG_TableStyle01Grey_9pt.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <p>A status stream is a predefined flow of states and transitions. The Exceptions Status Stream, also known as the 'Override Event' status stream in System Administration, is used to manage the life cycle of an exception related to a control record (price record). If control records such as unit prices, distribution records, or Valuation 1 records encounter an exception/s during their processing, they will be in the ‘Exceptions in Pricing’ state on the Control Record Approval status stream. The exceptions will then initiate the Override Event status stream, commencing in the ‘Not validated’ state. This will also cause the exceptions to appear on the ‘Exceptions’ view, where users can review, investigate and override exceptions to progress them along this status stream, or, the exception may be auto cleared, if 'auto clearance' is used.</p>
+        <p>Once all exceptions for a given fund reach the ‘Validated’ state they will exit this status stream, and re-join 'Control Record Approval' status stream at one of following overridden states:</p>
+        <ul class="FirstLevelBlueBullet">
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Overridden</li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Overridden with L2 Exceptions</li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Overridden with L3 Exceptions</li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Overridden with L2 and L3 Exceptions</li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Run in Error</li>
+        </ul>
+        <p class="zoom4Detail">
+            <img src="../../Images/Exceptions Images/OverrideEventStatusStream_AutoClear.bmp" alt="" title="" class="zoom4Detail" />
+        </p>
+        <p>These states are described in detail below.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Exceptions Status Stream States and Transitions</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The following table describes the states and transitions available within the Exceptions status stream.</p>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>This status stream is also known as the 'Override Events' status stream within System Administration mode.</p>
+                </div>
+                <p>&#160;</p>
+                <table style="mc-table-style: url('../../TableStyles/MG_TableStyle01Grey_9pt.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle01Grey_9pt" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" style="width: 64px;" />
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" style="width: 80px;" />
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1" style="font-size: 0.9em;">
+                                <p>State</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1" style="font-size: 0.9em;">
+                                <p>State Description</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1" style="font-size: 0.9em;">
+                                <p>Transitions</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1" style="font-size: 0.9em;">
+                                <p>Manual Processing</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1" style="font-size: 0.9em;">
+                                <p>pControl </p>
+                                <p>Processing</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1" style="font-size: 0.9em;">
+                                <p>Date / Time on transitions</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadD-Regular-Header1" style="font-size: 0.9em;">
+                                <p>Comment required on transition</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="5">
+                                <p>Not Validated</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="5">
+                                <p>The start state for the Exception Status Stream.</p>
+                                <p>When an exception on the control record is generated, it will automatically be in a ‘Not Validated’ state within this status stream.</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>In Analysis</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>When a user commences investigation, they will transition the record into this state to advise they are undertaking the analysis on this exception.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Proposed Validated</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>When a user has completed their analysis of the exception, they will transition it to ‘Proposed Validated’ to indicate their analysis is complete, and the process can continue.</p>
+                                <p style="font-style: italic;">Note: This transition is only available for pControl implementations configured this way. </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Validated</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>This is the default configuration. The exception will be reviewed, and then transitioned to ‘Validated’.</p>
+                                <p>An exception with a status of ‘Validated’ will only remain on the Exceptions dashboard if there are other exceptions for the same control record on the dashboard awaiting user review.</p>
+                                <p>Where there is just one exception with a status of ‘Validated’ or all exceptions have been ‘validated’ pControl will then continue the progression of the control record along the status stream.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1" MadCap:conditions="">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Proposed Auto Cleared</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Transition completed by pControl when auto clearance criteria is met, however the attribute configured has specified transition to 'Proposed Auto Cleared' so that further user review can be completed.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Inherited from the previous state</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>NA</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1" MadCap:conditions="">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Auto Cleared</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Transition completed by pControl when all auto clearance criteria are met</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>NA</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>NA</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                                <p>In Analysis</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                                <p>Investigation has commenced on this exception. The status stream has been manually transitioned into this state to indicate someone is working on it.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Proposed Validated</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>When a user has completed their analysis of the exception, they will transition it to ‘Proposed Validated’ to indicate their analysis is complete, and the process can continue.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Data Remediation</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>An exception is transitioned into this state in cases where a known data issue is the cause of the exception. The data will be corrected in a later process run.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Carried Forward Analysis</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Only the highest level access user has authorisation to transition an exception into this state.</p>
+                                <p>Exceptions are transitioned to this state to indicate they will be investigated in a future process run on the same effective date.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Proposed Validated</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Analysis of the exception is complete and the team member transitions to ‘Proposed Validated to indicate their analysis is complete, and the process can continue.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Validated</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>A different user to the first user who has the required security authorisation level as defined on this transition in the status stream has undertaken further checks of the exception, and transitioned it to ‘Validated’ once completed.</p>
+                                <p>Note: For further detail of Authorisation Levels, or user group access for a given status stream transition refer to pControl User Guide – System Administration.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Validated</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>An exception has been investigated, and validated.</p>
+                                <p>Once all exceptions that relate to a control record are in this state, pControl rules will alert the control record approval status stream, and processing will continue.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>To be Checked</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>This transition is completed by rules when the control record is in one of the overridden states.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>Carried Forward Analysis</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>Exceptions are moved into this state when an error is identified which can’t be resolved immediately. The issue may be carried forward to later processing on the same day, and will need to be resolved by the final processing run of the day so as to allow the control record to transition along its status stream.</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Proposed Validated</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>When a user has completed their analysis of the exception, they will transition it to ‘Proposed Validated’ to indicate their analysis is complete, and the process can continue.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>In Analysis</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Where a user decides they can analyse the exception within this current processing run, they will transition it back to this state, to undertake the analysis.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Data Remediation</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>An exception is transitioned into this state in cases where a known data issue is the cause of the exception.</p>
+                                <p>‘Pending Data Remediation’ can be an end state, where the data cannot be rectified in the current processing run, but will be corrected in a later processing run.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>In Analysis</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>When an incorrect transition was made to ‘Pending Data Remediation’, the user will transition the exception back to ‘In Analysis’ so it can be reviewed and validated.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>To be checked</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>The exception status stream will be transitioned to this state when the control record is in one of the Overridden states.</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Checked</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>This transition is completed by rules when the control record reaches an Approved with Override state. (On the Control Record Approval Status Stream)</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Mandatory</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Deleted</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>When a control record, on the ‘Control Record Approval Status Stream’ is transitioned to ‘Run in Error’, rules will automatically update the record on the ‘Exceptions Status Stream’ to ‘Deleted’.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Checked</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>The exception status stream will be transitioned to this state when the control record reaches an ‘Approved with Override’ state.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Completed</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>This transition is completed by rules when the control record reaches a Released with Override state.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Price Release Date/Time</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Completed</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>The record on the ‘Override Event’ status stream will be transitioned to this state when the control record reaches a ‘Released with Override’ state.</p>
+                                <p>This is an end state for the Override Event status stream.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1" MadCap:conditions="">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>Proposed Auto Cleared</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>Exceptions in this state have had pControl's auto clearance rules run against them, and the lowest configured state for transitioning auto cleared exceptions is 'Proposed Auto Cleared'. These exceptions will then be manually reviewed.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Auto Clearance Rejected</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Where manual review is required, the user will review the exception, and supporting data. If not satisfied the exception can be cleared, they will transition the state to 'Auto Clearance rejected'. </p>
+                                <p><i>Note: They may plan to reload the data and rerun the process.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Inherited from the previous state</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Mandatory</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1" MadCap:conditions="">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Row1">
+                                <p>Auto Cleared Reviewed</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Row1">
+                                <p>Where manual review is required, the user will review the exception, and supporting data. When satisfied the exception can be cleared, they will manually transition it to this state.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyA-Regular-Row1">
+                                <p>Mandatory</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

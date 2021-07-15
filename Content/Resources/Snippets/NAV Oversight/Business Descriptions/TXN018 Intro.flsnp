@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Will fail the test if the transaction price is not equal (% tolerance) to the local market price of the holding.
+</p>
+        <p>This validation is intended to check each transaction record to ensure that the price of the asset used on the transaction record is similar to that delivered on the associated holding record.
+</p>
+        <p>
+This is a validation that calculates a difference between two values and tests that % difference against the tolerances set for the validation.
+</p>
+    </body>
+</html>

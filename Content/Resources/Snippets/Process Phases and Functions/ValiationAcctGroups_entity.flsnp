@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <ul class="FirstLevelBlueBullet">
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The Validation Account Group selected in the above entity, must be configured with the following values prior to running this check.</li>
+            <img src="../../Images/Process Phases and Functions/Validation_Acct_Groups_entity.bmp" alt="" title="" />
+            <br /><i>Note: The 'Account Group' listed above also need to be listed in the<b class="BufferandFunctionBold"> L315: Account Code Mapping</b> worktable, with the corresponding accounts which belong to each group, which will be different for each client.</i>
+        </ul>
+    </body>
+</html>

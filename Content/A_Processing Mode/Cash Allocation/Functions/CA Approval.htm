@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Cash Allocation Approval</title>
+        <link href="../../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>CA - Approval Functions</h1>
+        <h2 class="_orange">In the Processing Module</h2>
+        <p>
+            <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_Approval_1.png" />.</p>
+        <h3 class="_orange">Cash Allocation Functions</h3>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Run Compliance Rules</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                    </col>
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                    </col>
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Processing Phase</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Approval Validations</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Description</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>This function permits the execution of specified compliance rules on all proposed orders before they are approved. The rules are executed in the order listed in the table.</p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If a proposed order fails these checks, it is put into a state of ‘Exception’.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If a proposed order passes the compliance rules then it is written as a proposed order and;</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">automatically approved if that option has been configured or;</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">will wait to be transitioned to approved by the users</li>
+                                </ul>
+                                <p>Each compliance rule passes back a true (pass) or false (fail) value and if any of the compliance rules fail, the proposed order will be written with an ‘Exception’ status.</p>
+                                <p>The ‘Processing Notes’ field on the proposed order will record details of the compliance rules that have failed so the users can understand why and take action.</p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_RunComplianceRules_1.png" />
+                                </p>
+                                <p>There are four courses of action available when faced with a proposed order in an Exception state:</p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Override the Exception –transition the proposed order state to ‘Overridden’, and enter a comment explaining why the compliance rules were overridden. Then transition the proposed order to an ‘Approved’ state which triggers an actual order to be created. The override comments will be displayed in the ‘Processing Notes’ field.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Cancel the Proposed Order - transition the proposed order to ‘Pending Cancel’ which cancels the proposed orders with no actual orders created. This is a similar end result to cancelling the process manually. Pending cancel will end the cash allocation process without firing the completion EDNs and therefore will not trigger interfund processes. The cash allocation process can then be re-run at certain level of the interfund.</li>
+                                </ul>
+                                <p>Note: If any of the proposed orders are set to Pending Cancel, all proposed orders will be transition to Cancelled, and the Master proposed order is transition to Not Started.</p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Reject the Proposed Order –transition the proposed order to ‘Pending Rejection’ which rejects the proposed orders with no actual orders created however this will mark the cash allocation processed as completed and trigger the next level of cash allocation process to start.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Run Again –transition the process to ‘Run Again’ after amending the proposed order (user) amount (via ‘Maintain Proposed Orders’ screen) and re-run compliance rules. This will force the compliance rules to be re-executed and a new result generated which could be another exception if they fail, or an approved proposed order if they pass.</li>
+                                </ul>
+                                <p>The ‘Comment’ entered by the user is recorded in the process notes field on the proposed order along with the reasons that the compliance rules failed.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Function type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Process Template</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Entity data attributes used</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Compliance Rules – this attribute table lists the compliance rules that need to be executed by this entity if the ‘Run Compliance Rules’ function is selected on the process template</p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_RunComplianceRules_2.png" /><![CDATA[
+]]></p>
+                                <p>In this table, there are three fields to be populated:</p>
+                                <ul>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Rule Code – The Cash Allocation ‘Product’ compliance rules include:</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Ensure all proposed orders are Approved or Rejected</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Check confirmation date is a valid trade date</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Check if any external assets have missed cut off</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Check interfunding trading</li>
+                                </ul>
+                                <p>The entity attributes used are dependent on the specific compliance rule. The compliance rules are detailed in the sections below.</p>
+                                <ul>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Comment – This is a free text field, the comment populated will appear in the Value field of the processing status.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Apply Rule To – ‘Entity’ or ‘Proposed Order’ can be selected based on the individual compliance rules selected</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Entity – Selected when compliance rules are related to entity attributes</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Proposed Order – Selected when compliance rules apply to the actual proposed orders</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Tolerance type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>No tolerance required</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Pre-requisite functions</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Proposed Orders</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Outputs</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>Approved, Rejected or Exception Proposed Orders</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Ensure all proposed orders are Approved or Rejected</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                            </col>
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                            </col>
+                            <thead>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                        <p>Processing Phase</p>
+                                    </th>
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                        <p>Approval Validations</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Description</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>This function ensures that all proposed orders are either ‘Approved’ or ‘Rejected’ i.e. treated the same way. This is to ensure that a user does not reject one proposed order and approve another proposed order from within the same cash allocation /rebalance process.</p>
+                                        <ul class="TableListBullets">
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If any proposed orders have been transitioned to a state of ‘Pending Rejection’ and there are proposed orders present in a state of ‘Pending Approval’, ‘Override’ of ‘Approved’ or;</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If any proposed order have been transitioned to a state of ‘Pending Approval’ or ‘Override’ and there are proposed orders present in a state of ‘Pending Rejection’ or ‘Rejected’;</li>
+                                        </ul>
+                                        <p>All proposed orders will be transitioned to a state of ‘Exception’.</p>
+                                        <p>
+                                            <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_RunComplianceRules_3.png" />
+                                        </p>
+                                        <p><i>Note: This compliance rule will be an Entity level compliance rule, i.e. users must select ‘Entity’ in the ‘Apply Rule to’ field.</i>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Function type</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>Process Template – Run Compliance Rules.
+</p>
+                                        <p>
+                                            <MadCap:conditionalText MadCap:conditions="Note To Selfs.ScreenOnly">Note: Please refer to section 4.3.7.1 Run Compliance Rules for further details.</MadCap:conditionalText><![CDATA[
+]]></p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Tolerance type</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>No tolerance required</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Pre-requisite functions</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Proposed orders</td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                        <p>Outputs</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">Approved, Rejected or Exception Proposed Orders</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>&#160;</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Check confirmation date is a valid trade date</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                            </col>
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                            </col>
+                            <thead>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                        <p>Processing Phase</p>
+                                    </th>
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                        <p>Approval Validations</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Description</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>When cash allocation is run, each proposed order calculates an ‘Estimated Confirmation Date’ based on the ‘Start Date’ and ‘Trading Frequency’ attributes configured in the ‘Dealing Details – Subscription / Redemption’ tab under the Order Mgmt’ of the underlying asset that the entity is invested in.</p>
+                                        <p>When users have been granted the access to override the ‘Estimated Confirmation Date’ in the ‘Confirmation Date’ field on the proposed orders, the ‘Estimated Proceeds Date’ will also be updated accordingly.</p>
+                                        <p><i MadCap:conditions="Note To Selfs.ScreenOnly">Note: For details regarding override ‘Estimated Confirmation Date’, please refer to Section 5.2.2.2 Maintain Proposed (&amp; Master) Orders.</i>
+                                        </p>
+                                        <p>This function will validate whether the ‘Confirmation Date’ is a valid trade date based on the configuration in the ‘Start Date’ and ‘Trading Frequency’ attributes.</p>
+                                        <ul class="TableListBullets">
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If any proposed order has been transitioned to a state of ‘Pending Approval’ or ‘Override’ and the ‘Confirmation Date’ is not a valid trading date, then the proposed orders will be transitioned to a state of ‘Exception’. pControl will display an ‘Exception’ status with ‘Confirmation Date is not a valid business day’ message.</li>
+                                        </ul>
+                                        <p>
+                                            <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_RunComplianceRules_4.png" />
+                                        </p>
+                                        <ul class="TableListBullets">
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If any proposed order has been transitioned to a state of ‘Pending Approval’ or ‘Override’ and the ‘Confirmation Date’ is a valid trading date, then the proposed orders will be transitioned to a state of ‘Approved’. pControl will display an OK status with ‘Completed Compliance Rules’ message and the process will continue.</li>
+                                        </ul>
+                                        <p>
+                                            <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_RunComplianceRules_5.png" />
+                                        </p>
+                                        <p><i>Note: This compliance rule will be a Proposed Order level compliance rule, i.e. users must select ‘Proposed Order’ in the ‘Apply Rule to’ field.</i>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Function type</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>Process Template – Run Compliance Rules.</p>
+                                        <p MadCap:conditions="Note To Selfs.ScreenOnly"><span style="background-color: #00ff00;">Insert link here to Run Compliance Rules dropdown</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Tolerance type</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>No tolerance required</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Pre-requisite functions</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>Proposed orders</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                        <p>Outputs</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                        <p>Approved, Rejected or Exception Proposed Orders</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>&#160;</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Check if any external assets have missed cut-off</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                            </col>
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                            </col>
+                            <thead>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                        <p>Processing Phase</p>
+                                    </th>
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                        <p>Approval Validations </p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Description</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>This function checks if any external assets the entity may potentially invest in down the allocation structure have missed their cut-off time for the effective date of the process. The external entity attribute used for cut off time is referred to the ‘Notice Period Cut-Off time’ on Order Mgmt tab under ‘Dealing Details – Subscription / Redemption’. </p>
+                                        <p>
+                                            <MadCap:conditionalText MadCap:conditions="Note To Selfs.ScreenOnly">Please refer to section 4.2.3 Specific Cash Allocation/ Rebalancing Attributes for further details</MadCap:conditionalText>.</p>
+                                        <p>When the proposed orders have been created, pControl will check the current time against the cut-off time configured in the ‘Notice Period Cut-Off time’ attribute</p>
+                                        <ul class="TableListBullets">
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the current processing time &gt; notice period cut-off time on any external entities, the proposed order has missed the cut-off time. pControl will display an ‘Exception’ status with ‘Failed External Asset Cut-off Check’ message and the offending proposed order will have an ‘Exception’ state.</li>
+                                        </ul>
+                                        <p>
+                                            <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_RunComplianceRules_6.png" />
+                                        </p>
+                                        <ul class="TableListBullets">
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the current processing time &lt; notice period cut-off time on any external entities, the proposed orders have not missed the cut-off time. pControl will display an OK status with ‘Completed Compliance Rules’ message and process will continue.</li>
+                                        </ul>
+                                        <p><i>Note: This compliance rule will be an entity level compliance rule, i.e. users must select ‘Entity’ in the ‘Apply Rule to’ field.</i>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Function type</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>Process Template – Run Compliance Rules.</p>
+                                        <p MadCap:conditions="Note To Selfs.ScreenOnly"><span style="background-color: #00ff00;">Insert link here to Run Compliance Rules dropdown</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Tolerance type</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>None</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Pre-requisite functions</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>Proposed Orders</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                        <p>Outputs</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                        <p>Approved, Rejected or Exception Proposed Orders</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>&#160;</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Check Interfund Trading</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                            </col>
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                            </col>
+                            <thead>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                        <p>Processing Phase</p>
+                                    </th>
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                        <p>Approval Validations </p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Description</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>This function checks whether the asset on each proposed order, will ultimately invest into an external product that has been marked as being in a ‘special event’.</p>
+                                        <p>The positive liquidity allocation parameters are used to determine which type of assets the entity would invest into.</p>
+                                        <p>Special events include:</p>
+                                        <ul class="TableListBullets">
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">‘Inactive’</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">‘In liquidation’</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">‘Closed to new investment’</li>
+                                        </ul>
+                                        <p>If any of the above are true then the compliance rule will fail and an exception will be raised on the proposed order. The exception will need to be overridden to allow the cash allocation process to continue for the entity.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Function type</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>Process Template – Run Compliance Rules.</p>
+                                        <p MadCap:conditions="Note To Selfs.ScreenOnly"><span style="background-color: #00ff00;">Insert link here to Run Compliance Rules dropdown</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Entity data attributes used</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>If the entity will ultimately invest into external products with any of the following special events selected on the external product entities, the compliance rule will fail and an exception will be raised on the proposed orders.
+</p>
+                                        <ul class="TableListBullets">
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Active – If not selected, this indicates the external product entity is inactive and therefore no trading will be allowed. The proposed order will be transitioned to ‘Exception’ state.
+</li>
+                                        </ul>
+                                        <p>
+                                            <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_RunComplianceRules_7.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_RunComplianceRules_8.png" />
+                                        </p>
+                                        <ul class="TableListBullets">
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">In Liquidation – If selected, the external product entity is considered to be in liquidation and therefore will not accept any purchase orders (transactions). The proposed order will be transitioned to ‘Exception’ state.</li>
+                                        </ul>
+                                        <p>
+                                            <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_RunComplianceRules_9.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_RunComplianceRules_10.png" />
+                                        </p>
+                                        <ul class="TableListBullets">
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Closed to new investment – If selected, the external product entity will not accept any orders created from the new investors as there is no existing holding. The proposed order will be transitioned to ‘Exception’ state.</li>
+                                        </ul>
+                                        <p>
+                                            <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_RunComplianceRules_11.png" />
+                                        </p>
+                                        <p>However the newly created orders will be accepted from investors where there is a pre-existing interfund relationship with the external products.</p>
+                                        <p>
+                                            <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_RunComplianceRules_12.png" />
+                                        </p>
+                                        <p>Note: The interfund trading compliance rules above can be applied either to Entity or Proposed Order, i.e. users can select either ‘Entity’ or ‘Proposed Order’ in the ‘Apply Rule to’ field.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Tolerance type</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>No tolerance required</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Pre-requisite functions</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>Calculate proposed orders</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                        <p>Outputs</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                        <p>Proposed orders validated for special events.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>&#160;</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Check for Significant Cashflow</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                    </col>
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                    </col>
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Processing Phase</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Approval Validations</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Description</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>This function ensures that users are made aware of any significant cashflows during the cash allocation process so they can determine if a dilution levy is applicable. The check is selected on the process template:</p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_CheckforSignificantCashflow_1.png" />
+                                </p>
+                                <p>When selected, pControl will check if any proposed order amount of an asset as a percentage to the External NAV of that asset is greater than a specified percentage (Significant Cashflow Tolerance %), a warning will be issued with the message of ‘Breach Significant Cashflow Check for Asset XYZ’ in the processing status.</p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_CheckforSignificantCashflow_2.png" />
+                                </p>
+                                <p>During manual approval of the proposed orders or when the proposed orders have been configured as ‘Auto Approved’ state, the proposed orders will be automatically transitioned to ‘Proposed Order Breach’ state indicating a significant cashflow breach and will appear on the ASM until the order is manually transitioned to one of the acknowledged states.</p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_CheckforSignificantCashflow_3.png" />
+                                </p>
+                                <p MadCap:conditions="Note To Selfs.ScreenOnly" style="background-color: #00ff00;">Notes: For further details regarding proposed order breach status stream, please refer to section 5.3.3 Proposed Order Breach Status Stream</p>
+                                <p>The proposed order amount used in the calculation is the sum of proposed orders by asset (excluding Pending Rejected or Rejected states) i.e. All proposed orders in a state of ‘Pending Approval’ or ‘Override’.</p>
+                                <p>The acknowledged states include:</p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Acknowledged With Dilution Levy</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Acknowledged Without Dilution Levy</li>
+                                </ul>
+                                <p>Once the proposed orders have been acknowledged, they will be removed from the ASM.</p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_CheckforSignificantCashflow_4.png" />
+                                </p>
+                                <p><i>Note/s: This compliance rule is run as part of the Cash Allocation process but is primarily for the purpose of identifying significant cashflows for Unit Pricing purposes. ‘Ack without / with dilution levy’ is linked to the function [PRV120] – Check for Dilution Levy Acknowledgement in Unit Pricing process template.</i>
+                                </p>
+                                <p style="font-style: italic;">The unit pricing process will raise exceptions if there are any significant cashflow proposed orders that have not been acknowledged.</p>
+                                <p>This compliance rule utilises the value populated in the U070: External NAV buffer (recorded as an external balance). The validation is dependent on the loading of this value.</p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">pControl Code in this buffer = the proposed order asset code</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Effective Date = maximum effective date present for this asset &lt;= the current effective date</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">	External Nav = the Nav amount</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Function type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Process Template</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Entity data attributes used</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_CheckforSignificantCashflow_5.png" />
+                                <p><b class="BufferandFunctionBold">Significant Cashflow Tolerance (%)</b> – This attribute defines the tolerance level if exceeded will constitute a ‘Significant Cashflow’.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Tolerance type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Tolerance defined in entity attributes see ‘Entity data attributes used’.</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Pre-requisite functions</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">U070: External NAV buffer where external NAV value of the assets of the proposed orders are loaded to pControl.
+Calculate Proposed Orders
+</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Outputs</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">Proposed orders identified for significant cashflow.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Dual Authorisation Required for Amount/Unit Amendments</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                    </col>
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular">
+                    </col>
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Processing Phase</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Process End</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Description</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>This function adds the dual authorisation (i.e. four-eyes) check to the unapproved proposed orders where the cash amount – ‘Prop Order (user)’ or the unit – ‘Unit Prop Order (user)’ field has been amended by the users and second person’s authorisation will be required prior transition the proposed orders to Approved state.</p>
+                                <p>When this function is selected, pControl Rules will run and determine whether the proposed orders have been amended:</p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the proposed orders have been amended – pControl Rules will transition these orders to Dual Authorisation and require a 2nd person to transition to the Approved state.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the proposed orders have not been amended – pControl Rules will transition to the Approved state.</li>
+                                </ul>
+                                <p>When this function is not selected on the processing template and users have amended the proposed orders, pControl Rules will not transition these amended proposed order to Dual Authorisation.</p>
+                                <p>If the units in field ‘Unit Prop Order (user)’ have been amended, the ‘Is Unit Based’ field must also be selected, in order for the dual authorisation function to work.</p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_DualAuthorisationReq_1.png" />
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Function type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Process Template</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Entity data attributes used</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">None</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Tolerance type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">None</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Pre-requisite functions</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Non approved proposed orders</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Outputs</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>Approved, Calculated, Cancelled or Rejected proposed orders</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

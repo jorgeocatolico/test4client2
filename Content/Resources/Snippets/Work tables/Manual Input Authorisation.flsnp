@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>This field shows the state on the 'Manual Input Authorisation' status stream. </p>
+        <p>Records are entered in a state of 'Pending Authorisation'. When reviewed by a second user, records can be manually transitioned to either 'Authorised' or 'Rejected'.</p>
+    </body>
+</html>

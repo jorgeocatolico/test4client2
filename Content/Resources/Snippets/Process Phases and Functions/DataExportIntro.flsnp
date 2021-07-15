@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The functions in this phase export data that has been used or calculated by the process. The data can then be used for further analysis, or reporting to external systems.</p>
+    </body>
+</html>

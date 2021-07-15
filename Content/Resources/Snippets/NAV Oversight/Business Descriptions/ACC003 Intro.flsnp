@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The validation will test that one specified set of account balances or variations when summed are equal to or equal to and opposite to a second specified set of account balances when summed, i.e., the calculated value of set of accounts 1 exactly offsets the calculated value of set of accounts 2 either in a positive, equal (LHS = RHS) or negative, opposite (LHS = RHS * -1) way.
+
+Validations for this test are configured in the static worktable L360: Generic Account Balance Offset Validations.  </p>
+    </body>
+</html>

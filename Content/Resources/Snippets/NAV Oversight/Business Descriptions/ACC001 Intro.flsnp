@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The generic validations configured test the movement in a GL Account Balances and allows a user to define their own account balance movement validations by specifying the tests to perform in a static pControl worktable.</p>
+        <p>The L340: Generic Account Balance Movement Validations worktable is used to specify if the validation is to validate the:</p>
+        <ul class="TableListBullets">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Account balance movement (as a %, $, Impact or Per Unit Impact) or,</li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Account Balance variation (either as a %, $, Impact or Per Unit Impact.</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>
+            <MadCap:equation>$ Days\ in\ year\ = days\ in\ year\ of\ the\ prior\ day$</MadCap:equation>
+        </p>
+        <p>Either 365 or 366 for leap years i.e. if the prior day falls in a leap year, the calculation would use 366 Days in Year. In non-leap years, the 365 days would be used.</p>
+    </body>
+</html>

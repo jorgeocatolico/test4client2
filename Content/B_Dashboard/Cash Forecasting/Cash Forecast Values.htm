@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Cash Forecast Values</h1>
+        <p>All Cash Financial events, i.e. financial events where the transition type is ‘cash’, ‘pre settlement’, ‘post settlement’ or ‘holdback’, where that status is not ‘cancelled’, and the settlement date is within the date range specified, will be included in the cash forecast.</p>
+        <div class="note_label">Note</div>
+        <div class="note_content_short_width">
+            <div style="width: 575px;">
+                <p>‘Balance Difference’ cash financial events will always be excluded from the date columns of the Cash Forecast table, as they are always displayed in the ‘Opening Balance’ column.</p>
+            </div>
+        </div>
+        <p>&#160;</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Cash Forecast Example</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Cash forecast values will be displayed under the date column corresponding to the ‘settlement date’ of the associated financial event. At the entity originator level, the cash forecast value will also be carried forward to the next date, and summed with any new financial events.</p>
+                <div class="example_label">Example</div>
+                <div class="example_content">
+                    <p>CXP_BANK_ACCT_CLIENT_AUD has financial events totalling $27,200 with a settlement date of 5 June 2017. The $27,200 cash request value is also carried forward to subsequent days at the entity originator level, (CXP_Custodian_Depository level), bank account currency code level, bank account levels (CXP_SETTL_GROUP_AUD) and cash type levels. If there were other financial events with settlement dates of 6/6, 7/6, 8/6 etc, the $27,200 would be summed with the cash value of those financial events at the entity level, while the underlying child levels would only display the cash value on the date the financial event is due to settle.</p>
+                    <p>
+                        <img src="../../Resources/Images/Cash Forecasting Images/CF_cashforecastvalues_v2 - needs replaced.png" style="width: auto;height: auto;max-width: 850px;" />
+                    </p>
+                    <p>When a transaction is settled, the cash value will be displayed against the ‘settled’ row, and the ‘pending’ row will no longer be appear in the hierarchy drill down.</p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Failed settlement transactions</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Failed settlement transaction values will be displayed under the first date column, even if the settlement date of the transaction is prior to the date range selected. The ‘Opening’ column represents the bank account value, and therefore failed settlements have not impacted the bank account, and hence cannot be included in the ‘opening’ column.</p>
+                <p>A failed settlement is any cash financial event where:</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">the internal state is not ‘Cancelled’, ‘Completed’, or ‘Balance Difference’, and</li>
+                    <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">the settlement date is earlier than the ‘From date’ selected on the Cash Forecast view.</li>
+                </ul>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Remaining Column</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The remaining column displays the summed value of all cash financial events, which are:</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">not cancelled, or not ‘Balance Difference’ and</li>
+                    <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">have a settlement date greater than the ‘To date’, summed with cash value as at the date prior to the ‘remaining’ column.</li>
+                </ul>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+    </body>
+</html>

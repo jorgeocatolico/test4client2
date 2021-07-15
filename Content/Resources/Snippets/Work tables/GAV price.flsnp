@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The 'Gross Asset Value' price of an entity. GAV price includes management fees, taxes, as well as dividends, and any gains. This is calculated as:</p>
+        <p style="font-size: 6pt;">&#160;</p>
+        <p style="font-size: 11pt;"> <MadCap:equation>$\large \frac{\left (  Entity's\ Gross\ Asset\ Value \right )}
+{Units\ on\ Issue}$</MadCap:equation> </p>
+    </body>
+</html>

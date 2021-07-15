@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <ol class="stepList">
+            <li class="stepList">Select the  <img src="../../Images/Portfolio Management Images/PM_deleteicon.png" alt="" title="" /> icon. </li>
+            <li>
+                <p>A warning message will be displayed asking whether you're sure you wish to delete this calendar.</p>
+            </li>
+            <li>Select &lt;Yes&gt; to delete the calendar; or &lt;No&gt; to return to the calendars view.</li>
+        </ol>
+    </body>
+</html>

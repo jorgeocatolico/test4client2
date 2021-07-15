@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../TableStyles/MG_TableStyle02TableinaTable_No header.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table style="mc-table-style: url('../../TableStyles/MG_TableStyle02TableinaTable_No header.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle02TableinaTable_No_header" cellspacing="18">
+            <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+            <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                        <p>Business Description</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                        <p>
+                            <MadCap:snippetText src="../NAV Oversight/Business Descriptions/VC020 Intro.flsnp" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                        <p>Processing Detail</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                        <p>This check tests whether the processing day (effective date) that a process is being run for is a valid processing day (or 'working day') for the entity, based on the calendar data associated with the processing entity.</p>
+                        <ul class="TableListBullets">
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the processing day is marked as a working day, the check passes and processing continues.</li>
+                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the processing day is not marked as a working day, the check fails, an error status is reported along with the message ‘&lt;DD-MMM-YYYY&gt; is not a valid processing day’ and processing stops with the approval state of the control (price) record transitioned to ‘Unable to Process’.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                        <p>Entity Data Attributes Used</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Pricing Calendar</li>The calendar, or calendar schedule entity, (overlay of working days and holiday days) contains a calendar defining the working and holiday dates.<br />If the 'Use Alternate Calendar Source' check box is selected, valid working days will be sourced from the<b class="BufferandFunctionBold"> L390: Working Days</b> worktable.<br /><img src="../../Images/NAV Oversight Images/Calendar_attributes.png" alt="" title="" /></ul>
+                        <p style="font-style: italic;">Note: Only one of the above attributes needs to be configured, not all three.</p>
+                        <p style="font-style: italic;">Please refer to <MadCap:xref href="../../../H_System Configuration/Calendars/Calendars.htm">Calendars</MadCap:xref> for further detail on configuring calendars, and calendar schedule entities.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                        <p>Interdependencies</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                        <p>Prerequisite Functions</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-090em_font">
+                        <p>Outputs</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyA-Column1-090em_font">
+                        <p>Process status messages report the status of this check</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

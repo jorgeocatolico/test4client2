@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The number of pricing periods, (days, weeks or months) the price of the asset has remained stale, (i.e unchanged).</p>
+        <p>
+            <i>Note: If the asset is a daily priced asset, pricing periods is days. If the asset is a weekly priced asset, the pricing period is a week.</i>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,1337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/MG_TableStyle02TableinaTable.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Cash Allocation Calculation</h1>
+        <h2 class="_orange">In the Processing Module</h2>
+        <p>The 'Calculation' processing phase performs a number of calculations to generate a set of proposed orders for an entity.</p>
+        <p>The calculation processing template functions which are executed in the Calculations phase of cash allocation process are shown below.</p>
+        <h3 class="_orange">Cash Allocation Functions</h3>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Calculate Starting Position / Weights</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Processing Phase</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Calculations</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Description</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>This function calculates the starting positions for the entity in terms of the actual allocation weights into its investments and the amount it is currently holding in ‘liquidity’.</p>
+                                <p>The Total Investment Value is first calculated and output to the status messages. This is calculated as</p>
+                                <p style="background-color: #00ff00;">Total Investment Value = ‘Calculated liquidity balance’ + ‘Total Investments Holdings balance’.</p>
+                                <p style="background-color: #00ff00;">Starting positions are then calculated as;</p>
+                                <p style="background-color: #00ff00;">Investment Holdings value of an asset</p>
+                                <p style="background-color: #00ff00;">Total Investment value</p>
+                                <p>For example, If an entity holds the following investments:</p>
+                                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle02TableinaTable.css');" class="TableStyle-MG_TableStyle02TableinaTable" cellspacing="0">
+                                    <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                    <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                    <thead>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                                            <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">Asset</th>
+                                            <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1">Holding Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Asset 1</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>$100</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Asset 2</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>$200</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font">
+                                                <p>Liquidity</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font">
+                                                <p>$50</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>&#160;</p>
+                                <p>The starting position for Asset 1 would be calculated as follows:</p>
+                                <p>100/(100+200+50)</p>
+                                <p>= 28.5714%</p>
+                                <p>Similarly, Asset 2 would be calculated as 57.1429% and liquidity 14.2857%.</p>
+                                <p>All starting positions are output to the status messages (in percent to 4dp).</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Function type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Process Template</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Entity data attributes used</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">None</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Tolerance type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">No tolerance required</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Pre-requisite functions</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The following pre-requisite functions are optional but will impact the starting positions calculated by this function:
+</p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load Calculated and Approved Proposed Orders from Investors
+</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load COB Liabilities
+</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load Intra-day Liabilities
+</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load Manual Adjustment Liabilities
+</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load Investment Holdings</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">	Load Liquidity Account Balances
+</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load Forward Liquidity Account Balance Projections 
+</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load Liquidity Adjustment (Standard Worktable)
+</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Outputs</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>Calculated starting positions /weight for assets held</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Calculate AU Value vs Liabilities Mismatch</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Processing Phase</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Calculations</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Description</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>This feature applies to UK Life Companies that perform Asset/Liability Matching (ALM).</p>
+                                <p>This function calculates the total mismatch value between AU Value and Liabilities.</p>
+                                <p>The mismatch value =</p>
+                                <p>Total Liabilities (COB + Intra-day + Manual Adjustment) – Total AU Value + Liquidity Accounts</p>
+                                <p>When this function is selected, pControl will calculate the mismatch value between AU value and Liabilities including liquidity accounts as part of the proposed orders calculation.</p>
+                                <p>Details of the calculation are displayed in the processing status message:</p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_CAlculateAUValuevsLiabilitiesMismatch.png" class="greyborder" />
+                                </p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">When the mismatch value is &gt; 0, pControl will generate an Application proposed order</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">When the mismatch value is &lt; 0. pControl will generate a Redemption proposed order</li>
+                                </ul>
+                                <p>The example above showed a mismatch order of $650,000.00 (600,000 + 100,000 + 50,000 – 600,000 + 500,000). The AU internal Provider order is created with a value of $650,000.00.</p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_CalculateAUValuevsLiabilitiesMismatch_2.png" class="greyborder" />
+                                </p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_CalculateAUValuevsLiabilitiesMismatch_3.png" class="greyborder" />
+                                </p>
+                                <p>At the end of the cash allocation process, pControl will also create an AU Registry order based on total value of the proposed orders that are in an Approved state. Any rejected proposed orders will not form part of the AU Internal Provider order. The example below shows two approved proposed orders ($30,000 each) and one rejected proposed order, pControl will only create the mismatch order of $60,000 (sum of the two approved proposed orders).</p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_CalculateAUValuevsLiabilitiesMismatch_4.png" class="greyborder" />
+                                </p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_CalculateAUValuevsLiabilitiesMismatch_5.png" class="greyborder" />
+                                </p>
+                                <p>In addition, if tolerances are set on the ALPs of the investing funds / assets (i.e. ‘Minimum/Maximum/Rounding Amount’ or ‘Minimum/Maximum/Rounding Units’), pControl will adjust the value of the mismatch order (the AU Internal Provider orders) by these breaches in the proposed orders.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Function type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Process Template</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Entity data attributes used</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The AU value is calculated based on the units * price where:
+</p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Price = ‘Price Type for Valuations’ price type from the last approved price of the current entity on or before the current effective date.
+</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Units = Registered Holders Total Units for the originator specified on the ‘Asset Unit Entity’ attribute.
+</li>
+                                </ul>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_CalculateAUValuevsLiabilitiesMismatch_6.png" />
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Tolerance type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">None</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Pre-requisite functions</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load COB Liabilities
+</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load Intra-day Liabilities
+</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load Manual Adjustment Liabilities
+</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load investment holdings from ‘Asset Unit Entity’ and calculate the AU Value
+</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Last approved price of the current entity
+</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Outputs</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">AU Registry Orders</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Calculate Proposed Orders</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Processing Phase</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Calculations</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Description</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>This function calculates the proposed orders for the entity based on the information already loaded and calculated in pControl. The calculation is executed differently depending on the ‘Allocation Methodology’ selected on the entity which will be discussed in detail individually in the next section.</p>
+                                <p>The available allocation methodologies in pControl are:</p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Straight Percentage</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Zero Cash To Allocate</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Towards Target</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Rebalance to Target</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Partial Rebalance to Percent Target</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Box Management</li>
+                                </ul>
+                                <p>Based on the allocation methodology, pControl will calculate the ‘Ideal Order’ either in cash or unit base for each investment and is then tested against the criteria set on the relevant ALP.</p>
+                                <p>Prior to the creation of the proposed orders, a validation will be performed by pControl to ensure:</p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">There is a latest approved price available AND</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The price type configured on the fund should match with the price type on the asset’s latest approved price for any assets that the fund is investing in.</li>
+                                </ul>
+                                <p>If there is no latest approved price, zero price or no matched price type available, an error status message with ‘No Latest Unit Price found for Asset X for price date DD-MM-YYYY for price type XYZ price. A price of 1.00 will be used for calculation of proposed order unit amounts for positive/negative orders’ will be displayed on the processing status.</p>
+                                <p>The master proposed order with an Exception state will be displayed on the ASM. The cash allocation process can be transitioned to ‘Run Again’ or ‘Run in Error’.</p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_CalculateProposedOrders_1.png" class="greyborder" />
+                                </p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_CalculateProposedOrders_2.png" class="greyborder" />
+                                </p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_CalculateProposedOrders_3.png" class="greyborder" />
+                                </p>
+                                <p>The following tests are performed on the ‘Ideal Order’ once it has been converted to the currency of the asset (if this is different to the base currency of the fund):</p>
+                                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle02TableinaTable.css');" class="TableStyle-MG_TableStyle02TableinaTable" cellspacing="0">
+                                    <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                    <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                    <thead>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                                            <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">Cash-Based Tests</th>
+                                            <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1">Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Transaction Rounding Amount</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>If a rounding value has been configured on the ALP, the proposed order will be rounded to the nearest multiple of this value (applications are rounded down towards 0 and redemptions are rounded up towards 0). The resulting rounded order amount is written into the 'Rounded Order' field on the proposed order and if the order has been rounded, the rounded order flag will be selected on the proposed order.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Transaction Minimum Amount</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>If this has been set on the ALP, then the ‘Rounded Order’ will be tested against it and if the rounded order is less than the minimum amount, the ‘Proposed Order’ field will be set to 0 and the ‘Min/Max Breach’ flag will be selected on the proposed order record.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font">
+                                                <p>Transaction Maximum Amount</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font">
+                                                <p>If this has been set on the ALP, then the ‘Rounded Order’ will be tested against it and if the rounded order is greater than the maximum amount, the ‘Proposed Order’ field will be set to the maximum amount and the ‘Min/Max Breach’ flag will be selected on the proposed order.</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>&#160;</p>
+                                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle02TableinaTable.css');" class="TableStyle-MG_TableStyle02TableinaTable" cellspacing="0">
+                                    <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                    <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                    <thead>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                                            <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">Unit-Based Tests</th>
+                                            <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1">Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Transaction Units rounding</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>If a rounding unit value has been configured on the ALP, the proposed order will be rounded to the nearest multiple of this unit value (applications are rounded down towards 0 and redemptions are rounded up towards 0). The resulting rounded order is written into the ‘Rounded Order’ field on the proposed order and if the order has been rounded, the rounded order flag will be selected on the proposed order.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Transaction Minimum units</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>If this has been set on the ALP, then the ‘Rounded Order’ will be tested against it and if the rounded order is less than the minimum units, the ‘Proposed Order’ field will be set to 0 and the ‘Min/Max Breach’ flag will be selected on the proposed order record.</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font">
+                                                <p>Transaction Maximum units</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font">
+                                                <p>If this has been set on the ALP, then the ‘Rounded Order’ will be tested against it and if the rounded order is greater than the maximum units, the ‘Proposed Order’ field will be set to the maximum units and the ‘Min/Max Breach’ flag will be selected on the proposed order.</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The ‘Proposed Order’ field on the Proposed Order is updated to the amount that is the result of these tests.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The ‘Transaction Type’ is set on the Proposed Order to be the:</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">‘Application Transaction Type’ if the ‘Proposed Order’ amount is greater than 0</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">‘Redemption Transaction Type’ if the ‘Proposed Order’ amount is less than 0</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The appropriate flags will be selected on the proposed orders:</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Is Unit Based? – the proposed orders are unit base orders</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Min/Max Breach? – the proposed orders have breached min/max transaction amount/unit</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Order Rounded? – the rounding tests have been applied to the proposed orders</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Full Redemption? – the proposed orders have breached the ‘Cannot have Short Positions’ in entity attribute.</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Cash Reallocated? – proposed orders have spare cash and ‘Reallocate Spare Cash’ has been selected in process template.</li>
+                                </ul>
+                                <p>Note: All information on these calculations and tests is written out as status messages.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Function type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Process Template</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Entity data attributes used</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The following attributes are used by all cash allocation methodologies (unless otherwise specified):</p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_CalculateProposedOrders_4.png" />
+                                </p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Exclude Unapproved Orders - if selected, orders which are ‘Unapproved’ will not be included in the ‘Cash to Allocate’ calculation i.e. where registry orders are not configured to be created in ‘Approved’ state and have not been manually transitioned to ‘Approved’.</li>
+                                </ul>
+                                <p><span style="background-color: #00ff00;" MadCap:conditions="Note To Selfs.ScreenOnly">Note: For further information on configuration required to create registry orders in an ‘Approved’ state, refer to section 4.2.5 Default Processing Attributes.</span>
+                                </p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Rounding Method – This rounding method attribute is used in conjunction with the ‘Rounding amount’ or ‘Units rounding’ configured on the allocation parameters to determine how the proposed orders are created. The rounding methods are discussed below:</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Round Down:</li>
+                                </ul>
+                                <p> The negative amounts (typically redemption) are rounded to the nearest multiple of the rounding amount that is FURTHER from zero.</p>
+                                <p>	The positive amounts (typically application) are rounded to the nearest multiple of the rounding amount that is CLOSER to zero.</p>
+                                <ul class="TableListBullets">
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Round Nearest:</li>
+                                </ul>
+                                <p>Both positive (typically application) and negative (typically redemption) amounts are rounded to the nearest multiple of the rounding amount.</p>
+                                <ul class="TableListBullets">
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Round Towards Zero:</li>
+                                </ul>
+                                <p>Both positive (typically application) and negative (typically redemption) amounts are rounded to the nearest multiple of the rounding amount that is CLOSER to zero.</p>
+                                <ul class="TableListBullets">
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Round Using Rules: Will use client rounding rules</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Spare Cash – This determines how the residual cash should be allocated. If no option is selected, pControl will default to ‘Largest Investment Holdings (ALP)’.</li>
+                                </ul>
+                                <p><span style="background-color: #00ff00;" MadCap:conditions="Note To Selfs.ScreenOnly">Note: For further information on spare cash, please refer to section 4.3.5.4 Reallocate Spare Cash.</span>
+                                </p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Cannot Have Short Positions– Where a redemption transaction would generate a sale of an underlying asset which is greater than the position held i.e. generate a short position, the selection of this attribute will only allow a ‘full redemption’ transaction to be generated i.e. the full ‘confirmed’ holding will be redeemed and the order marked as a ‘full redemption’. The remaining redemption (which cannot be funded) is reflected as negative ‘Spare Cash’ balance to be funded through future cash allocation processing.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Proposed Orders</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Application Transaction Type- This determines which transaction type will be used for the ‘Proposed Order’ where the calculated value is &gt; 0.</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Redemption Transaction Type- This determines which transaction type will be used for the ‘Proposed Order’ where the calculated value is &lt; 0.</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Application Price Type -The price type that will be used to calculate the unit value of applications for the proposed order into the underlying asset e.g. NAV Price.</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Redemption Price Type – The price type that will be used to calculate the unit value of redemptions for the proposed order into the underlying asset e.g. NAV Price.</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Application Dealing Basis – This determines whether cash or units will be used to process applications.</li>
+                                    <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Redemption Dealing Basis – This determines whether cash or units will be used to process redemptions.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Tolerance type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">No tolerance required</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Pre-requisite functions</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The following functions are optional pre-requisites but will impact the proposed orders calculated by this function:</p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load Investment Holdings</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Calculate Liquidity Balance (Cash to Allocate)</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load Calculated and Approved Proposed Orders from Investors</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load all Orders and Calculated Proposed Orders</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Outputs</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">Proposed Orders</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+                <p>&#160;</p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Straight Percentage</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                        <p>Processing Phase</p>
+                                    </th>
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                        <p>Calculations - Additional Information</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Description</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>The cash available to allocate (liquidity balance) is divided up amongst the investments specified by the Allocation Parameters (ALPs). This creates a proposed order for each investment (application or redemption). This value is written into the ‘Ideal Order’ field on the Proposed Order.</p>
+                                        <p MadCap:conditions="Note To Selfs.ScreenOnly">Note: Refer to the methodologies section in the Cash Allocation user guide for further information. 3.1.11</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Entity data attributes used</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_StraightPercentage.png" />
+                                        <ul class="TableListBullets">
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Allocation Methodology = Straight Percentage</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Allocation Grouping – if blank, pControl will default to ‘Effective Date’</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Straight Percentage Weight Method</li>
+                                            <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Target Weight – pControl will use the value set in ALP</li>
+                                            <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Current Weight – pControl will use the Asset Allocation</li>
+                                        </ul>
+                                        <p><i>Note: If left blank, pControl will default to use Target Weight. This attribute is only applicable for ‘Straight Percentage’ methodology.</i>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Tolerance type</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">No tolerance required</td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Pre-requisite functions</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>The following functions are optional pre-requisites but will impact the proposed orders calculated by this function:
+</p>
+                                        <ul class="TableListBullets">
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load Investment Holdings
+</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Calculate Liquidity Balance (Cash to Allocate)</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load Calculated and Approved Proposed orders from Investors (for Box Management Methodology only) 
+</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load All Orders and Calculated Proposed Orders 
+</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                        <p>Outputs</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">Proposed Orders</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>&#160;</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <p>&#160;</p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Zero Cash to Allocate</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                        <p>Processing Phase</p>
+                                    </th>
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                        <p>Calculations - Additional Information</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Description</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>This methodology allows users to have the option not to allocate cash to funds when a cash allocation and rebalancing process is run, even though target weights and liquidity have been set up in an ALPs. Proposed orders with zero value will be created, and this provides the opportunity to adjust the proposed order amounts, or to leave the values at zero.
+The ‘Zero Cash to Allocate’ method will simply zero out the ideal order value on the proposed orders, even when there is cash to allocate. The starting position, available cash, etc. remain viewable on the proposed order.
+</p>
+                                        <p MadCap:conditions="Note To Selfs.ScreenOnly">Note: Refer to the methodologies section in the Cash Allocation user guide for further information. 3.1.11</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Entity data attributes used</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_ZeroCashtoAllocate.png" />
+                                        <ul class="TableListBullets">
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Allocation Methodology = Zero Cash To Allocate</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Allocation Grouping – if blank, pControl will default to ‘Effective Date’</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Tolerance type</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">No tolerance required</td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Pre-requisite functions</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">None</td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                        <p>Outputs</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                        <p>Proposed order with no value generated.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>&#160;</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <p>&#160;</p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Towards Target</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                        <p>Processing Phase</p>
+                                    </th>
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                        <p>Calculations - Additional Information</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Description</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>This methodology will take the cash to allocate and propose orders that will move investments that are furthest away from their target back to target first. Money is given to overweight or underweight assets in proportion to the value of how overweight or underweight they are.
+Where the cash available to allocate (liquidity) balance is positive, the application order will propose to get the investment that is furthest away from target (underweight) back to target. If there is still cash left once all underweight investments are back to target (or if there are no underweight investments to begin with), then the remaining cash will be allocated according to target weights across all investments, in proportion to the under/overweight value. The same methodology is applied to negative cashflows and overweight investments.
+</p>
+                                        <p MadCap:conditions="Note To Selfs.ScreenOnly">Note: Refer to the methodologies section in the Cash Allocation user guide for further information. 3.1.11</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Entity data attributes used</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_TowardsTarget.png" />
+                                        <ul class="TableListBullets">
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Allocation Methodology = Towards Target</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Allocation Grouping – leave blank, pControl will default to ‘Effective Date’</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Tolerance type</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">No tolerance required</td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Pre-requisite functions</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>The following functions are optional pre-requisites but will impact the proposed orders calculated by this function:
+</p>
+                                        <ul class="TableListBullets">
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load Investment Holdings
+</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Calculate Liquidity Balance (Cash to Allocate).
+</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load Calculated and Approved Proposed orders from Investors (for Box Management Methodology only) </li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">	Load All Orders and Calculated Proposed Orders 
+</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                        <p>Outputs</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                        <p>Proposed Orders</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>&#160;</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Rebalance to Target</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                        <p>Processing Phase</p>
+                                    </th>
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                        <p>Calculations - Additional Information</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Description</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>Rebalancing is usually performed to re-weight any investment holdings that are out of tolerance. In pControl, this process calculates and creates proposed orders in the same way as Cash Allocation.</p>
+                                        <p>For each Allocation Parameter (ALP), pControl checks whether the starting position in each asset specified by the ALP is outside of the tolerances that have been set, i.e. the following test is performed.</p>
+                                        <p MadCap:conditions="Note To Selfs.ScreenOnly"><span style="background-color: #00ff00;">Insert equations</span>
+                                        </p>
+                                        <p>If Starting Position (Start Weight %) &lt; (Target Weight – Lower Tolerance) OR Starting Position (Start Weight %) &gt; (Target Weight + Upper Tolerance) then propose a rebalancing order because the investment is outside of tolerance.</p>
+                                        <p>If (Target Weight – Lower Tolerance) &lt; = Starting Position (Start Weight %) &lt; = (Target Weight + Upper Tolerance) then pControl will not propose a rebalancing order because the investment is within tolerance.</p>
+                                        <p><i>Note:&#160;A rebalance will be initiated if any of the starting positions are outside of the tolerance i.e. also applied for the liquidity entity. If there is an amount in cash when the rebalancing runs, and it is outside of the upper tolerance, then the rebalance will generate a proposed order to bring the holding to within the upper limit.</i>
+                                        </p>
+                                        <p>For each investment that has been identified as being outside of tolerance, an ‘Ideal Order’ is calculated as follows:</p>
+                                        <p MadCap:conditions="Note To Selfs.ScreenOnly"><span style="background-color: #00ff00;">Insert equations</span>
+                                        </p>
+                                        <p>Ideal Order = (Target weight into Asset * Total investment value of the Fund) - Starting value of investment in the asset</p>
+                                        <p>
+                                            <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_RebalancetoTarget.png" />
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Entity data attributes used</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <ul class="TableListBullets">
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Allocation Methodology = Rebalance to Target</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Allocation Grouping – leave blank, pControl will default to ‘Effective Date’</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Tolerance type</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">No tolerance required</td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Pre-requisite functions</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>The following functions are optional pre-requisites but will impact the proposed orders calculated by this function:
+</p>
+                                        <ul class="TableListBullets">
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load Investment Holdings
+</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Calculate Liquidity Balance (Cash to Allocate).
+</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load Calculated and Approved Proposed orders from Investors (for Box Management Methodology only) </li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">	Load All Orders and Calculated Proposed Orders 
+</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                        <p>Outputs</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                        <p>Proposed Orders</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>&#160;</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Partial Rebalance to Percent Target</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                        <p>Processing Phase</p>
+                                    </th>
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                        <p>Calculations - Additional Information</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Description</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>The ‘Partial Rebalance to % Target’ methodology checks each Allocation Parameter (ALP) to determine whether the starting position into the asset specified by the ALP is outside of the tolerances that have been set.</p>
+                                        <p>If any investment is identified as being outside of tolerance, an ‘Ideal Order’ is calculated for all investments as follows:</p>
+                                        <p MadCap:conditions="Note To Selfs.ScreenOnly"><span style="background-color: #00ff00;">Insert equation</span>
+                                        </p>
+                                        <p>Ideal Order = (Partial rebalance weight in asset * Total investment value of the fund) - Starting value of investment in the asset ($ value)</p>
+                                        <p>‘Partial Rebalance Weight’ in asset = Percent towards target * Target weight in asset + (1 - Percent towards target) * Starting position (% value).</p>
+                                        <p>This value is written into the ‘Ideal Order’; field on the Proposed Order.</p>
+                                        <p>The following works through an example of this methodology:</p>
+                                        <p>Percent towards Target = 40%</p>
+                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle02TableinaTable.css');" class="TableStyle-MG_TableStyle02TableinaTable" cellspacing="0">
+                                            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                                                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">
+                                                        <p>&#160;</p>
+                                                    </th>
+                                                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">
+                                                        <p>Asset 1</p>
+                                                    </th>
+                                                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">
+                                                        <p>Asset 2</p>
+                                                    </th>
+                                                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">
+                                                        <p>Asset 3</p>
+                                                    </th>
+                                                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1">
+                                                        <p>Asset 4</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                        <p>Actual Holdings</p>
+                                                    </td>
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">500,000</td>
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">301,000</td>
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">199,000</td>
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" style="text-align: center;">100,000</td>
+                                                </tr>
+                                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                        <p>Target Weight</p>
+                                                    </td>
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">40.00%</td>
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">30.00%</td>
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">20.00%</td>
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" style="text-align: center;">10.00%</td>
+                                                </tr>
+                                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">Starting Position</td>
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">45.4545%</td>
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">27.3636%</td>
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">18.0909%</td>
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" style="text-align: center;">9.0909%</td>
+                                                </tr>
+                                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">Partial Rebalance Weight</td>
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">43.27%</td>
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">28.42%</td>
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">18.85%</td>
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" style="text-align: center;">9.45%</td>
+                                                </tr>
+                                                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font">Ideal Order Amount</td>
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font" style="text-align: center;">-24,000.00</td>
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font" style="text-align: center;">11,600.00</td>
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font" style="text-align: center;">8,400.00</td>
+                                                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font" style="text-align: center;">4,000.00</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p>&#160;</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Entity data attributes used</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>&#160;</p>
+                                        <p>
+                                            <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_PartialRebalancetoPercentTarget_1.png" />
+                                        </p>
+                                        <ul class="TableListBullets">
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Allocation Methodology = Rebalance to Target</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Allocation Grouping – leave blank, pControl will default to ‘Effective Date’</li>
+                                        </ul>
+                                        <p>‘Percent Towards Target’ attribute is only used for the ‘Partial Rebalance to Percent Target’ methodology. </p>
+                                        <p style="font-style: italic;">Note: This attribute is actually located under the Rebalancing / Calculations tab, but can be used by both the Cash Allocation and Rebalancing processes. Therefore, users must enter the % value into this field, even if running Cash Allocation process ‘Partial Rebalance to % Target’ methodology.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Tolerance type</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">No tolerance required</td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                        <p>Pre-requisite functions</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                        <p>The following functions are optional pre-requisites but will impact the proposed orders calculated by this function:
+</p>
+                                        <ul class="TableListBullets">
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load Investment Holdings
+</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Calculate Liquidity Balance (Cash to Allocate)</li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Load Calculated and Approved Proposed orders from Investors (for Box Management Methodology only) </li>
+                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">	Load All Orders and Calculated Proposed Orders 
+</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                        <p>Outputs</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                        <p>Proposed Orders</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>&#160;</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Box Management</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                        <p>Processing Phase</p>
+                                    </th>
+                                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                        <p>Calculations - Additional Information</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                        <p>Description</p>
+                                    </td>
+                                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                        <p>The ‘Box Management’ methodology in the pControl cash allocation product supports the notion of using a manager’s box within an investment structure to effectively trade on behalf of the manager. This strategy is typically used in UK Life Company environments to support trading limits.
+</p>
+                                        <p>
+                                            <MadCap:conditionalText MadCap:conditions="Note To Selfs.ScreenOnly" style="background-color: #00ff00;">Note: Please refer to Appendix D – UK Life Company Processing for more detail on Box Management usage.</MadCap:conditionalText><![CDATA[
+]]></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>&#160;</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Generate Notional Portfolio Allocation Records - NEW</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Processing Phase</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Calculations</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Description</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">&#160;</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Function type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">&#160;</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Entity data attributes used</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">&#160;</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Tolerance type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">&#160;</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Pre-requisite functions</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">&#160;</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Outputs</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Reallocate Spare Cash</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Processing Phase</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Calculations</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Description</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The ‘Calculate Proposed Order’ function (as shown above) calculates the ‘Ideal Orders’ that should be made into investments and then performs a number of tests on these ideal orders to generate a set of proposed orders, e.g., minimum transaction test and rounding.
+If an ideal order is rounded or fails one of the tests, the actual proposed order may be different to the ideal and there will be some ‘spare cash’ left over. This spare cash can be a positive or negative figure.
+</p>
+                                <p>For example:
+</p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the ideal order was an application for $550,000 but the maximum order into this asset was set to $500,000, the proposed order would be $500,000 and there would be $50,000 spare cash left over that will not be ‘allocated’.
+</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the ideal order was a redemption for $47,000 but the minimum order into this asset was set to $50,000, the proposed order would be $0 and there would be $47,000 spare cash left over that will not be ‘allocated’
+</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the ideal order was an application for $47,000 and the rounding was set to $5,000, the proposed order would be $45,000 and there would be $2,000 spare cash left over that will not be ‘allocated’. </li>
+                                </ul>
+                                <p>
+This function will attempt to ‘reallocate’ the spare cash to the fund’s investments to ensure that the fund is fully invested.</p>
+                                <p>There are four methods in which spare cash may be allocated to its underlying proposed orders depending on the option selected in the attribute on the entity.</p>
+                                <p>All of the information on this cycle is reported out through status messages. A sample is shown below.</p>
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_ReallocateSpareCash_1.png" />
+                                </p>
+                                <p>Note: If the ‘Straight Percentage (with orders criteria)’ methodology has been used and more than one criteria ‘bucket’ has been processed, spare cash will be reported by critera and will try to be allocated by criteria group using the following process.</p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The new proposed order amount is then tested again using the minimum, maximum and rounding settings from the ALP.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">	If any spare cash can be re-allocated to this investment within the tests that are set, the amount that has been reallocated is reported and the Reallocated Cash flag is set on the Proposed Order</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">	If the spare cash remaining is still not zero, the next allocation investment is retrieved and the remaining spare cash is added to the Proposed Order and the tests are performed again.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">This cycle continues until all of the investments have been processed.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Any remaining spare cash at the end of this cycle is reported and will remain as liquidity or cash at hand for the fund until the next cash allocation process is executed.</li>
+                                </ul>
+                                <p>&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Function type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Process Template</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Entity data attributes used</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>
+                                    <img src="../../../Resources/Images/Cash Allocation Images - Need replaced/CA_ReallocateSpareCash_2.png" />
+                                </p>
+                                <p>There are four methods in which spare cash may be allocated to its underlying proposed orders:</p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Allocation Priority – The ‘Priority’ field on the Allocation Parameters (ALP) is used, with the number 1 being the highest priority setting. pControl will retrieve the investment with the highest priority number and reallocate the spare cash to its proposed order to create a new proposed order amount.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Largest Investment Holding (absolute) – The spare cash will be reallocated to the largest investment holding, by value. For example, if the current investment holdings value is $100 and $95 respectively, then the spare cash will be allocated to the $100 investment holdings.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Largest Investment Holding (ALP) – The target weights are used to determine the priority with which the spare cash should be allocated. All spare cash will go to the investment with the largest target weight. For example, if there is $100 spare cash and there are 3 ALPs for 40%, 40 % and 20%, then the spare cash is allocated to the first highest priority investment, i.e. the one with 40% target weight. If there is more than one investment with the same target weight, the first allocation that is encountered during processing is used.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Move Closer to Target – The spare cash will be reallocated to the investment that is furthest away from its target weight (after the initial allocation of cash, not as per starting position). Any spare cash will be allocated up to the investment’s weight, at which point any remaining spare cash would go to the next investment that is now furthest away from its target, and so on.</li>
+                                </ul>
+                                <p><i>Note: If a ‘Spare Cash Method’ is not selected, pControl will default to ‘Largest Investment Holdings (ALP)’.</i>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Tolerance type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>No tolerance required</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Pre-requisite functions</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>None</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Outputs</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>Proposed Order amended by any ‘Spare Cash’ values and spare cash invested.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+        <p MadCap:conditions="Note To Selfs.ScreenOnly">&#160;</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                        <p MadCap:conditions="Note To Selfs.ScreenOnly">Processing Phase</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                        <p MadCap:conditions="Note To Selfs.ScreenOnly">Process Validation</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p MadCap:conditions="Note To Selfs.ScreenOnly">Description</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" MadCap:conditions="Note To Selfs.ScreenOnly">&#160;</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p MadCap:conditions="Note To Selfs.ScreenOnly">Function type</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" MadCap:conditions="Note To Selfs.ScreenOnly">&#160;</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p MadCap:conditions="Note To Selfs.ScreenOnly">Entity data attributes used</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" MadCap:conditions="Note To Selfs.ScreenOnly">&#160;</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p MadCap:conditions="Note To Selfs.ScreenOnly">Tolerance type</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" MadCap:conditions="Note To Selfs.ScreenOnly">&#160;</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p MadCap:conditions="Note To Selfs.ScreenOnly">Pre-requisite functions</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" MadCap:conditions="Note To Selfs.ScreenOnly">&#160;</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                        <p MadCap:conditions="Note To Selfs.ScreenOnly">Outputs</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                        <p MadCap:conditions="Note To Selfs.ScreenOnly">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="Note To Selfs.ScreenOnly">&#160;</p>
+        <p MadCap:conditions="Note To Selfs.ScreenOnly">&#160;</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                        <p MadCap:conditions="Note To Selfs.ScreenOnly">Processing Phase</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                        <p MadCap:conditions="Note To Selfs.ScreenOnly">Process Validation</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p MadCap:conditions="Note To Selfs.ScreenOnly">Description</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" MadCap:conditions="Note To Selfs.ScreenOnly">&#160;</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p MadCap:conditions="Note To Selfs.ScreenOnly">Function type</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" MadCap:conditions="Note To Selfs.ScreenOnly">&#160;</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p MadCap:conditions="Note To Selfs.ScreenOnly">Entity data attributes used</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" MadCap:conditions="Note To Selfs.ScreenOnly">&#160;</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p MadCap:conditions="Note To Selfs.ScreenOnly">Tolerance type</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" MadCap:conditions="Note To Selfs.ScreenOnly">&#160;</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p MadCap:conditions="Note To Selfs.ScreenOnly">Pre-requisite functions</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" MadCap:conditions="Note To Selfs.ScreenOnly">&#160;</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                        <p MadCap:conditions="Note To Selfs.ScreenOnly">Outputs</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                        <p MadCap:conditions="Note To Selfs.ScreenOnly">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="Note To Selfs.ScreenOnly">&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                        <p>Processing Phase</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                        <p>Process Validation</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Description</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Function type</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Entity data attributes used</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Tolerance type</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Pre-requisite functions</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                        <p>Outputs</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

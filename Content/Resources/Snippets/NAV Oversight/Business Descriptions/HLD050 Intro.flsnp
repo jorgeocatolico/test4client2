@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Will fail the test if the market price date on the holding record is stale, i.e., the same market price date has been delivered on the holding record for this asset for consecutive effective dates.</p>
+        <p>This test also takes into account assets defined as infrequently priced. Where an asset is defined as infrequently priced (present in the L245 worktable), pControl will calculate the next expected price date and ensure that the current effective date is not greater than or equal to this date, i.e., the market price date should have changed.</p>
+        <p>This is a true/false validation and either passes the test or fails – there is no comparison to a tolerance.</p>
+        <p>This validation will not run for new securities.</p>
+    </body>
+</html>

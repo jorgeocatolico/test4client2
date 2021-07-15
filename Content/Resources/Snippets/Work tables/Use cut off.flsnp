@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Determines whether the cut-off will be applied to this cashflow and therefore potentially this will move to the next effective date if the process runs after the fund's cut-off time. Options are Yes or No.</p>
+    </body>
+</html>

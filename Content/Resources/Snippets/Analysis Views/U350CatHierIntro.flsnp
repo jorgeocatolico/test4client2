@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The Category Hierarchy in pControl supports the production of the Distribution Yield Analysis, Oversight Comparison Analysis, NAV Movement Analysis, Clean Price Analysis and Account Movement Attribution views. It also defines the components of a price which will be used to compare one price to another. Prior to use within Oversight, the category hierarchy must be defined in the <b class="BufferandFunctionBold">U350: Classification Hierarchy</b> worktable to allow the movement in shares outstanding, NAV prices and net distributed income, for example, to be categorised according to internal classifications. </p>
+        <p>A number of standard categories have been defined in the <b class="BufferandFunctionBold">U350: Classification Hierarchy</b> worktable for use in the DYAS, NMA, OMAS, CPAS and AMAS views and reports. The categories used for NAV reporting,  can be identified by the suffix, for example, categories for DYAS can be identified with the '_DYAS' suffix; categories for OMAS use the '_OS' suffix.</p>
+        <p>An extract of the <b class="BufferandFunctionBold">U350: Category Hierarchy</b> worktable is shown below and  the detail of each analysis view hierarchy, is available: </p>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../B_Dashboard/NAV Oversight/Analysis Views/Category Hierarchy for NMA.htm">Category Hierarchy for NMA</MadCap:xref>
+            </li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../B_Dashboard/NAV Oversight/Analysis Views/Category Hierarchy for OMAS.htm">Category Hierarchy for OMAS</MadCap:xref>
+            </li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../B_Dashboard/NAV Oversight/Analysis Views/Category Hierarchy for AMAS.htm">Category Hierarchy for AMAS</MadCap:xref>
+            </li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../B_Dashboard/NAV Oversight/Analysis Views/Category Hierarchy for Share Class Impacts.htm">Category Hierarchy for CPAS</MadCap:xref>
+            </li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../B_Dashboard/NAV Oversight/Analysis Views/Category Hierarchy for DYAS.htm">Category Hierarchy for DYAS</MadCap:xref>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <p class="zoom4Detail">
+            <img src="../../Images/NAV Oversight Images/CATHIER.png" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

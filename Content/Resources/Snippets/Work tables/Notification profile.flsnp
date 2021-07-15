@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Determines the configuration of the notificataion to be created.</p>
+        <p>
+            <i>Note: Profile options will vary depending on the implementation however a standard default option will be provided. </i>
+        </p>
+    </body>
+</html>

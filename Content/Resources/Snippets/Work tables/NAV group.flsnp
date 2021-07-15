@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Represents the NAV processing group that this entity belongs to. This is used in pControl Analysis reporting. <MadCap:conditionalText MadCap:conditions="Note To Selfs.ScreenOnly"><span style="background-color: #00ff00;">(Confirm this last sentence is correct. I&#160;made this up)</span></MadCap:conditionalText></p>
+    </body>
+</html>

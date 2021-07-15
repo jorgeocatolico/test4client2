@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Effective date of the unit price used to value the asset. This will be the latest unit price available as at the effective date. 
+Represents the date of the unit price applicable to the order. For an order received on 1st September, the 'Price Date' field will contain 1st September, even though the unit price for this effective date will not be confirmed and received until approximately 3rd September.</p>
+    </body>
+</html>

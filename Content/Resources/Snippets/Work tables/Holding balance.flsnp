@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Unit balance calculated in pControl. This field captures the holding balance provided by Depository after associated order is completed. Where populated pControl validates balance to internally calculated balance. Where a balance is outside of defined tolerance a hard warning is displayed.</p>
+    </body>
+</html>

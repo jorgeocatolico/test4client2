@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>This calculation will reprice each asset holding based on current day U175 prices and if required, U107 Fair Value factors. The difference in value between the prior day actual value, and the calculated expected value, will be divided by the fund's last known  NAV, to calculate the expected return. The day over day return for each asset holding will then be summed to calculate a total 'holding constituent return' which will be used in the Expected NAV&#160;calculation.</body>
+</html>

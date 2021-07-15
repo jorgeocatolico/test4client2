@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../TableStyles/MG_TableStyle02TableinaTable_090em.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <ul class="FirstLevelBlueBullet">
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"><b class="BufferandFunctionBold" style="font-size: 0.9em;">Allocation Grouping</b>
+            </li>The setting of the ‘Allocation Grouping’ option will have an impact on the price date on the proposed order and subsequent actual order. This applies to cash allocation and also rebalancing runs. </ul>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../TableStyles/MG_TableStyle02TableinaTable_090em.css');" class="TableStyle-MG_TableStyle02TableinaTable_090em" cellspacing="18">
+            <col class="TableStyle-MG_TableStyle02TableinaTable_090em-Column-Column1" />
+            <col class="TableStyle-MG_TableStyle02TableinaTable_090em-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font">
+                        <p>Effective Date </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font">
+                        <p>The effective date allocation grouping will create orders from the fund with a price date equal to the effective date. This is the same as normal cash allocation, i.e. no deferral of cash allocation orders is required.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font">
+                        <p>Forward</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font">
+                        <p>The forward allocation grouping will create orders from the fund with a price date equal to the greatest deferral (notice) date on the bottom-most-level asset invested in. The settlement date on the proposed order will equal to the ‘Value Date’ configured on the asset entity level.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font">
+                        <p>Historic </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font">
+                        <p>The historic allocation grouping will create orders from the fund with a price date equal to the last approved price date of the asset. This is similar to standard cash allocation, i.e. no deferral of cash allocation orders is required, although an historic price may be used if historic allocation grouping is specified.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font">
+                        <p>Forward and Historic</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font">
+                        <p>If ‘Forward and Historic’ allocation grouping is selected, then two cashflows groups from the fund will be created – one containing orders with a forward (deferred price) date, and another with a historic (last approved price) date.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font">
+                        <p>Orders Criteria</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font">
+                        <p>The ‘Orders Criteria’ allocation grouping uses the allocation criteria in the Orders Criteria attribute table to determine how the incoming cashflows are processed. This ensures that the relevant price date, transaction type or price type for any cashflows received is applied consistently throughout the investment structure.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyB-Column1-090em_font">
+                        <p>Blank</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyA-Column1-090em_font">
+                        <p>If left blank, pControl will default to 'Effective Date'.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Multi-Leg Holdings are loaded into pControl as two or more separate assets that represent the different legs of the same instrument. Holdings based validations, including [HLD057] Basis Point Impact Tolerance Check performs at the individual asset/leg, however when part of a multi-leg derivative, the [MLH057] validation, is used to perform checks as a single instrument, i.e. a combined valuation based upon the sum of the values of the individual legs. </p>
+    </body>
+</html>

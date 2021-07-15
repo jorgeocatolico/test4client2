@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1737" MadCap:lastWidth="1019">
+    <head>
+    </head>
+    <body>
+        <h1>Altering Hierarchy</h1>
+        <p>The cashforecast-config.xml file contains the entity hierarchy used in the cash forecasting web page. With the exception of ‘CLIENT’, all other levels of the hierarchy, i.e. those in the red box below can be reordered by a System Administrator.</p>
+        <p>To modify the entity hierarchy:</p>
+        <ol class="stepList">
+            <li class="stepList">Navigate to the .\etc folder</li>
+            <li>Open the  cashforecast-config.xml.</li>
+            <p> <img src="../../Resources/Images/Cash Forecasting Images/CF_cashforecast-config_file.png" /></p>
+            <li>Reorder any of the nodes in the red box</li>
+            <li>Save and close the file</li>
+            <li>Restart the container, and re-open the web page. (Clear browsing data if necessary).</li>
+        </ol>
+        <p>&#160;</p>
+        <h2>Default Expansion Option</h2>
+        <p>The Cash Forecasting page can be configured to open to a default expansion level if required. The value in the &lt;mainBranch&gt; row is used to determine the lowest level of expansion.</p>
+        <p>COUNTER_PARTY_CODE is the value selected as the ‘mainBranch’. Therefore, when the cash forecast page is opened, all levels of the hierarchy above COUNTER_PARTY_CODE will be expanded. This value can be replaced by a System Administrator with any other value from the &lt;!—Possible Values row.</p>
+        <p>
+            <img src="../../Resources/Images/Cash Forecasting Images/CF_DefaultExpansionOption.png" />
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

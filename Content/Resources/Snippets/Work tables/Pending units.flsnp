@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The estimated number of units of the asset that are pending confirmation; indicates that the related orders for the pending units were created as unit orders. The estimation is based on the last available price in pControl prior to the price date of the order.
+In the Interfundings View, refers to the number of units that have a Value type of Estimated Amount.
+</p>
+    </body>
+</html>

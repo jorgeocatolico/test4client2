@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Where versioning is being used, the 'run id' identifies which version of the data this record represents. e.g. if FX rates are supplied several times per day, each version of the data will have a different run id, 001, 002, 003. </p>
+        <p style="font-style: italic;">Note: If versioning is not being used, and a data file is supplied and loaded twice, the original data will be overwritten, and run id will remain at 001.</p>
+    </body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>This calculation formula is used to select all asset transactions since the Last Good NAV&#160;date up to and including the Effective date of the Expected Pricing process or Backup NAV&#160;process. The transactions are categorised into one of the below categories and written out to the <b class="BufferandFunctionBold">A01: Product Validation</b> worktable for use in the VMAS report. Values are then also written to the <b class="BufferandFunctionBold">P606: Constituent Structure </b>worktable.</body>
+</html>

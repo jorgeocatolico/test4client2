@@ -1,0 +1,608 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle02TableinaTable.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/MG_TableinanAccordionDropDown.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1><a name="Auto_Clearance"></a>Auto Clearance</h1>
+        <p>Validation exceptions can be configured to be auto cleared if they meet certain pre-defined criteria. For example, if the movement of an asset price has triggered an exception, and auto clearance is configured for this check and fund; pControl is able to verify the asset price against a third part data source, and then auto clear the exception.  This allows Funds Accountants to focus on the investigation of other more complex exceptions, ultimately reducing the time it takes to validate the NAV.</p>
+        <p>Auto cleared exceptions can be identified with the status of 'Auto Cleared'; They also have a pre-defined comment to indicate the method / reason for the auto clearance. </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead><a name="Auto_Clearance_entity"></a>
+                <MadCap:dropDownHotspot>Configuring Auto Clearance entities</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>An 'Auto Clearance' entity is required for each rules file, and is used to house the auto clearance criteria.</p>
+                <p>In this example, AUTO_CLEAR_ASSET_PRICE contains the rules file, ACR001, which has been configured to compare the asset prices of <b class="BufferandFunctionBold">U100: Investment Holdings </b>to a third party pricing source. If the prices are within tolerance, any exceptions raised by the validation checks listed in the <b class="BufferandFunctionBold">L600: Auto Clearance Validations</b> worktable will be auto cleared.</p>
+                <p>
+                    <img src="../../Resources/Images/Exceptions Images/Auto_Clear_entity.bmp" alt="" title="">
+                    </img>
+                </p>
+                <p>Attributes of the Auto Clearance entity</p>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable.css');" class="TableStyle-MG_TableStyle02TableinaTable" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" style="width: 80px;">
+                    </col>
+                    <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1">
+                    </col>
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">Attribute</th>
+                            <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                <p>Rules File</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                <p>The name of the rules file used to execute the auto clearance on any exceptions raised against validation checks listed in the <b class="BufferandFunctionBold">L600: Auto Clearance Validations</b> worktable.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                <p>Categories</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                <p>Auto clearance will only be attempted on assets with the category code listed in the right hand column. I.e.: In this example, only 'Fixed Interest' and 'Equity' assets are eligible for auto clearance.</p>
+                                <MadCap:snippetBlock src="../../Resources/Snippets/NAV Oversight/ERM Content/NO_CategoryCode_HOLDINGS.flsnp">
+                                </MadCap:snippetBlock>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font">
+                                <p>Price Comparison Rounding</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font">
+                                <p>Where the auto clear rule is comparing two different values, e.g. U100.Asset price and U175.Asset price, both values are first rounded to the number of decimal places shown in this attribute before they are compared.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>The specific validations to be cleared by this entity are listed in the <b class="BufferandFunctionBold">L600: Auto Clearance Validations</b> worktable:</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Configuring Auto Clearance on Validation entities</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Auto clearance will be performed for those validation checks where the 'Exception Event Calculation Details Rules' attribute is populated with the rule to be used for auto clearance.</p>
+                <p>
+                    <img src="../../Resources/Images/Exceptions Images/ValidationEntity_Autoclear_attb.bmp" alt="" title="">
+                    </img>
+                </p>
+                <p><i>Note: For further detail on all attributes of this entity, refer to </i>
+                    <MadCap:xref href="../../AA_Library/Entities/Validation Entities.htm" style="font-style: italic;">Validation Entities</MadCap:xref><i>.</i>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Configuring Auto Clearance on a Fund</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Auto clearance rules are turned on or off for each fund using the following attributes:</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">'Auto Clearance of Exceptions allowed' check box - If this is selected, all auto clearance rules will be applied to any exceptions raised on applicable validation checks.</li>
+                    <img src="../../Resources/Images/NAV Oversight Images/NO_Auto_Clear_attb.bmp" alt="" title="">
+                    </img>
+                    <br>
+                    </br>
+                </ul>
+                <table class="TableStyle-MG_TableStyle02TableinaTable" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable.css');margin-left: 0;margin-right: auto;">
+                    <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1">
+                    </col>
+                    <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1">
+                    </col>
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">
+                                <p>Auto Clear to State</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1">
+                                <p>Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                <p>Auto Cleared</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                <p>If selected, exceptions on any applicable validation checks,  will be auto cleared, meaning, the user does not need to review the exception.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                <p>Proposed Auto Cleared</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                <p>Exceptions on the applicable validation checks will be auto cleared to this state, and will then need to be reviewed and cleared by a user.</p>
+                                <p><i>Note: If this attribute is set to blank, the value on the </i><b class="BufferandFunctionBold" style="font-style: italic;">L600: Auto Clearance Validations</b><i> worktable will be used.</i>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font" colspan="2">
+                                <p><i>Note: If the value selected in this attribute is different to the 'Auto Clear End State' selected on the <b class="BufferandFunctionBold">L600: Auto Clearance Validations</b> worktable, for a specified validation check, the lower value will be used. E.g. If the above attribute is set to 'Auto Cleared', and the L600.Auto Clear End State is set to 'Proposed Auto Clear' for HLD003 validation check, all HLD003 validation exceptions, will be transitioned to 'Proposed Auto Clear' and will require user review.</i>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="note_label">Note</div>
+                <div class="note_content">The above example shows a pool fund, however these attributes are available under the 'Common' tab of all processing entities.</div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Configuring Auto Clearance worktables</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h3><a name="L600"></a>L600: Auto Clearance Validations</h3>
+                <p>In this example, the auto clearance entity, AUTO_CLEAR_ASSET_PRICE is used to auto clear any exceptions raised against the validation checks listed in the <b class="BufferandFunctionBold">L600: Auto Clearance Validations</b> worktable:</p>
+                <p class="zoom4Detail">
+                    <img src="../../Resources/Images/Exceptions Images/L600_Auto_Clear_Validations.bmp" alt="" title="">
+                    </img>
+                </p>
+                <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle02TableinaTable" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1">
+                    </col>
+                    <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1">
+                    </col>
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">Column</th>
+                            <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                <p>Validation Entity Code</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                <p>The validation to be auto cleared.</p>
+                                <p><i>Note: Validation entity codes can be found on the validation entity.</i>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                <p>Auto Clearance Entity Code</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                <p>Unique code of the auto clearance entity containing the rules file to execute the auto clearance check.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                <p>Sort Order</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                <p>This numerical order determines the ascending order the auto clearances are executed in.</p>
+                                <p>This allows the validation code that usually generates the most exceptions to be listed first (lowest number), so as to auto clear the largest number of exceptions first.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                <p>Action on Unknown</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                <p>A drop down list of rules files, which contain an action to be taken if the auto clearance is not able to execute successfully. </p>
+                                <p>For example, if an auto clearance check compares the price of an asset in the <b class="BufferandFunctionBold">U100: Investment Holdings </b>worktable, against the <b class="BufferandFunctionBold">U175: Security Prices</b> worktable, and there is no U175 record for a specific asset, the check cannot be completed, Therefore, the action listed in this field, such as make a request to Bloomberg for this particular asset price will be performed.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                <p>Autoclear End State</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                <p>Auto cleared exceptions are transitioned to the lower of either the state specified in this field, or the state in the 'Auto Clear to State' attribute on the fund entity.</p>
+                                <p>For example, the end state for HLD113 validation check is 'Auto Cleared'. If a fund entity is configured to transition all auto cleared exceptions to 'Proposed Auto Cleared', the auto clearance rule for HLD113 will only transition the exception to 'Proposed Auto Cleared'</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                <p>Stop if Unknown</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                <p>If this check box is selected, and the required data is not available to perform the auto clearance rules check specified in this row, all subsequent auto clearance checks will be stopped.</p>
+                                <p>If not selected, each auto clearance check will be executed in order, regardless of whether the required data is available or not.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font">
+                                <p>Active</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font">
+                                <p>Only rows with this checkbox selected will have auto clearance performed on the validation check in this row.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+                <h3><a name="L610"></a>L610: Auto Clearance Valid Reason Codes</h3>
+                <p>Auto cleared exceptions can be identified with the status of 'Auto Cleared', and they have a pre-defined comment to indicate the method / reason for the auto clearance. These comments are configured in the <b class="BufferandFunctionBold">L610: Auto Clearance Valid Reason Codes</b> worktable.</p>
+                <p class="zoom4Detail">
+                    <img src="../../Resources/Images/Exceptions Images/L610_Auto_Clear_Valid_Reason_Codes.bmp" alt="" title="">
+                    </img>
+                </p>
+                <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle02TableinaTable" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1">
+                    </col>
+                    <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1">
+                    </col>
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">Column</th>
+                            <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                <p>Auto Clearance Entity Code</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                <p>Unique code of the auto clearance entity containing the rules file to execute the auto clearance check.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                <p>Reason Code</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                <p>List of valid reason codes for an auto clearance rule. When an auto clearance rule is run, it will clear the exception with the related fixed comment, where the underlying data has one of these reason codes. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                <p>Fixed Comment</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                <p>The text to be used in the comments field on an auto cleared exception.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font">
+                                <p>Manual</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font">
+                                <p>If this field is selected, and a user manually clears an exception, the fixed comment on this row will be used as the comment on the cleared exception, <i>and</i> the reason code will also be saved to the relevant worktable, e.g. U175 against the asset code which incurred the exception. This reason code, (now saved to a corresponding worktable, e.g. U175) can then be used by the auto clearance rule to clear any further exceptions on other funds for the same validation check, same asset, same effective date, and same price run type.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>Auto Clearance Rules</h2>
+        <p>The Auto Clearance Rules, run at the end of a NAV process, use predefined criteria to auto clear specified exceptions on  funds configured for auto clearance. </p>
+        <p>The following drop downs contain the rules and criteria used during auto clearance.</p>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">ACR001: Asset Price Match</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/MG_TableinanAccordionDropDown.css');">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>&#160;</p>
+                                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css');" class="TableStyle-MG_TableStyle02TableinaTable_No_header" cellspacing="18">
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" style="width: 119px;" />
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <tbody>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Business Description</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>Auto Clearance rule ACR001 can be used to auto clear validation exceptions caused by an asset's price, or price movement, if that price can be independently verified.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Allowable Validation checks</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>Auto Clearance Rule ACR001 can be applied to any or all of the following validation checks.</p>
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[HLD003] - Zero Market Price Check</li>
+                                                        <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[HLD012] - Zero Market Price Movement</li>
+                                                        <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[HLD051] - Security Price to Benchmark Movement</li>
+                                                        <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[HLD113] - Asset Price Movement Check</li>
+                                                    </ul>
+                                                    <p>&#160;</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Data Requirements</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p><b class="BufferandFunctionBold">[A03]: Holding Validation</b> worktable </p>
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Asset Code</li>
+                                                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Market Price Date</li>
+                                                        <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Price Local Cur</li>
+                                                    </ul>
+                                                    <p style="font-style: italic;">Note: [EX210] - Export Holdings Summary function must be selected on the process template, to export the asset holdings from the U100 to the A03.</p>
+                                                    <p style="font-style: italic;">&#160;</p>
+                                                    <p><b class="BufferandFunctionBold">[U175]: Security Prices</b> worktable </p>
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Asset Code</li>
+                                                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Effective Date </li>
+                                                        <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Price Run Type</li>
+                                                        <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Market Mid Price</li>
+                                                        <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Reason Code</li>
+                                                    </ul>
+                                                    <p>&#160;</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Criteria for Auto Clearance</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>All of the following criteria must be met for an exception to be auto cleared:</p>
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The values in all fields of the below worktables must contain the exact same values:</li>
+                                                    </ul>
+                                                    <table class="TableStyle-MG_TableStyle02TableinaTable" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable.css');margin-left: 0;margin-right: auto;">
+                                                        <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                                        <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                                        <thead>
+                                                            <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                                                                <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">
+                                                                    <p><b class="BufferandFunctionBold">A03:Holding Validation</b>
+                                                                    </p>
+                                                                </th>
+                                                                <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1">
+                                                                    <p><b class="BufferandFunctionBold">U175: Security Prices</b>
+                                                                    </p>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                                <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                                    <p>Asset Code</p>
+                                                                </td>
+                                                                <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                                    <p>Asset Code</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                                <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                                    <p>Market Price Date</p>
+                                                                </td>
+                                                                <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                                    <p>Effective Date</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                                <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                                    <p>Price Local Cur *</p>
+                                                                </td>
+                                                                <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                                    <p>Market Mid Price *</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                                <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font">
+                                                                    <p>Price Run Type</p>
+                                                                </td>
+                                                                <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font">
+                                                                    <p>Security Price Run Type</p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">U175.Reason Code field must contain a valid reason code</li>The reason code field can be populated either by pControl where it has been able to verify an asset's price against a market data provider's price, or manually, where a price investigation has occurred, and the price has been verified.<br /></ul>
+                                                    <p>&#160;</p>
+                                                    <p><i>* Note: The U100 price local cur, and U175 market mid price are rounded to the number of decimal places specified on the Auto Clearance attribute, and then the prices are compared. </i> <i>For further details, refer to <MadCap:xref href="#Auto_Clearance_entity">Configuring Auto Clearance entities</MadCap:xref></i></p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Action on Unknown</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>If the verified data required for auto clearance is not available, pControl will take the action specified in the <MadCap:xref href="#L600">L600: Auto Clearance Validations</MadCap:xref> worktable.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-1em_font">
+                                                    <p>Outputs</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyA-Column1-1em_font">
+                                                    <p>If the criteria for auto clearance is met, the exception will be auto cleared. The comment field will display the fixed comment text from the <MadCap:xref href="#L610">L610: Auto Clearance Valid Reason Codes</MadCap:xref> worktable, which contains the corresponding reason code as the U175 record, used in the asset clearing process.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop" MadCap:conditions="MG Staff Only.ScreenOnly">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">ACR010: Recurring Exceptions <MadCap:snippetText src="../../Resources/Snippets/All/NewContentforReview.flsnp" /> </MadCap:dropDownHotspot>
+                    <MadCap:conditionalText MadCap:conditions="MG Staff Only.ScreenOnly">
+                        <MadCap:dropDownHotspot class="AccordionDrop">PR-6484</MadCap:dropDownHotspot>
+                    </MadCap:conditionalText>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>&#160;</p>
+                                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css');" class="TableStyle-MG_TableStyle02TableinaTable_No_header" cellspacing="18">
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" style="width: 119px;" />
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" style="width: 751px;" />
+                                        <tbody>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Business Description</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>Auto Clearance rule ACR010 can be used to auto clear the 'same' exception for a defined number of days, where the exception has been cleared for a specific reason.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Allowable Validation checks</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>Auto Clearance Rule ACR010 can be applied to any or all of the following validation checks.</p>
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[HLD003] - Zero Market Price Check</li>
+                                                        <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[HLD012] - Zero Market Price Movement</li>
+                                                        <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[[HLD013] - Market Price Date Check</li>
+                                                    </ul>
+                                                    <p>&#160;</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Data Requirements</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p><b class="BufferandFunctionBold">[A03]: Holding Validation</b> worktable </p>
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Asset Code</li>
+                                                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Market Price Date</li>
+                                                        <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Price Local Cur</li>
+                                                    </ul>
+                                                    <p>And: </p>
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Prior Day Exception Events </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Criteria for Auto Clearance</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>All of the following criteria must be met for an exception to be auto cleared:</p>
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The exception is the "same" as the exception raised the previous day, that has been cleared. An exception is considered the "same" as the exception raised the previous day and cleared, where the following conditions  are met:</li>
+                                                        <ul class="FirstLevelBlueBullet">
+                                                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Entity Code</li>
+                                                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Validation Code</li>
+                                                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Price Run Type</li>
+                                                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Test Item Entity e.g. Asset Code, Account Code</li>
+                                                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Test Item e.g. Asset Description</li>
+                                                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Test Item Transparency e.g. Currency</li>
+                                                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Test Item Group e.g. Category</li>
+                                                        </ul>
+                                                        <br />The following table defines "same" for each validation type:</ul>
+                                                    <table class="TableStyle-MG_TableStyle02TableinaTable" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable.css');margin-left: 0;margin-right: auto;">
+                                                        <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                                        <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                                        <thead>
+                                                            <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                                                                <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">&#160;</th>
+                                                                <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1">Conditions for Inheritance</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                                <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                                    <p>[HLD003] - Zero Market Price Check</p>
+                                                                </td>
+                                                                <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                                    <ul class="FirstLevelBlueBullet">
+                                                                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The Validation Code matches prior day</li>
+                                                                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Asset Code matches prior day</li>
+                                                                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Price of the asset is the same</li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                                <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                                    <p>[HLD012] - Zero Market Price Movement</p>
+                                                                </td>
+                                                                <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                                    <ul class="FirstLevelBlueBullet">
+                                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The Validation Code matches prior day</li>
+                                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Asset Code matches prior day</li>
+                                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Current Market Price Date matches prior day </li>
+                                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Asset Price remains unchanged. </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                                <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font">
+                                                                    <p>[HLD013] - Market Price Date Check</p>
+                                                                </td>
+                                                                <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font">
+                                                                    <ul class="FirstLevelBlueBullet">
+                                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The Current Market Price Date matches prior day </li>
+                                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Asset prices remains unchanged</li>
+                                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"><span style="background-color: #7cfc00;">The Description matches  prior day. - Carmel to ask Theresa what this means</span>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The exception was cleared (validated), and a fixed reason code, as defined in the <b class="BufferandFunctionBold">L610: Auto Clearance Valid Reason Codes</b> worktable, was selected during validation. </li>
+                                                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The exception has not yet reached the maximum number of days allowed to auto clear as defined in the <b class="BufferandFunctionBold">L610: Auto Clearance Valid Reason Codes</b>.Recurring Days field. </li>
+                                                    </ul>
+                                                    <p>&#160;</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Action on Unknown</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>If the criteria for auto clearance is not met, the exceptions are not cleared.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-1em_font">
+                                                    <p>Outputs</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyA-Column1-1em_font">
+                                                    <p>If the criteria for auto clearance is met, the exception will be auto cleared. The comment field will display the fixed comment text from the <MadCap:xref href="#L610">L610: Auto Clearance Valid Reason Codes</MadCap:xref> worktable.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The validation allows for a value or sum of values delivered in one worktable for an entity to be compared to a value or sum of values delivered in another buffer for the same entity. This is to ensure that the data being delivered is consistent and conforms to known consistency checks.</p>
+        <p>Validations for this test are configured in the static worktable L320: Generic Data Consistency Validations. </p>
+        <p>Tolerances are configured in the L200: Tolerances worktable.</p>
+    </body>
+</html>

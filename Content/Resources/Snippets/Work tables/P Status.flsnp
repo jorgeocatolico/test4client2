@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>The p_Status value indicates the status of an individual record. pControl processes uses this status value to determine whether or not to select a record for inclusion in a process. For a full list of p_Status values and their descriptions, refer to the table on the <MadCap:xref href="../../../G_Data/Worktables/Import/Import Worktables.htm">Import </MadCap:xref>worktables page.</p>
+    </body>
+</html>

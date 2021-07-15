@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>The currency the entity is registered in.</p>
+        <p style="font-style: italic;">Note: currencies are stored in pControl as entities, and use the 3 digit ISO&#160;currency code as their entity id.</p>
+    </body>
+</html>

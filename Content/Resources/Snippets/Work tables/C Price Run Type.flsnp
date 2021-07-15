@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Indicates the client's specific price_run_type code. May be mapped to price_run_type code in pControl.</p>
+    </body>
+</html>

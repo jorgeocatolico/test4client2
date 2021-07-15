@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="16" MadCap:lastHeight="7099" MadCap:lastWidth="1042">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Starting the Process</h1>
+        <p>Portfolio Management processes require Cash Allocation to be run via the Processing mode in order to be viewed in web mode. The Cash Allocation process starts with cashflows provided from Registries, Transfer Agencies, Wholesale Clients or any external source. pControl then processes these cashflows through the investment structure such that orders into underlying Portfolios, Assets or External Products are created and can be sent to market. </p>
+        <p>The Cash Allocation process is designed to run across complex, multi-tiered investment structures. It aims to use straight-through processing to take the cashflow data and invest it into the investment structure to ensure funds are 'fully invested'.</p>
+        <p>To manage the processing of cashflows through the investment structure, pControl manages the dependencies that exist between funds through its inherent understanding of both the actual investment structure (reflected by investment holdings and registry balances) and also the target investment structure (Classification Parameters).</p>
+        <div class="note_label">Note</div>
+        <div class="note_content">
+            <p>For further details on the Cash Allocation process, please refer to the Cash Allocation user guide.</p>
+        </div>
+        <h2 class="_orange">Web Mode</h2>
+        <p>The processes that can be initiated for an entity depend on the type of entity and the processes associated to that entity type, via the template in System Administration.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Requesting a process </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>To request a process manually or schedule manually while in web mode:</p>
+                <MadCap:snippetBlock src="../../Resources/Snippets/Process Menu/Proc_Request Processing - Web.flsnp" />
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Processing Mode</h2>
+        <p>Processes can be initiated manually,  or automatically via Straight-through Processing. A cash allocation process in pControl is started for an individual entity as follows.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Starting the Cash Allocation process manually</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <MadCap:snippetBlock src="../../Resources/Snippets/Process Menu/Proc_Request Processing - Processing (Swing).flsnp" />
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>Processes can also be run at a group level. For further information refer to pControl User Guide - Processing Volume I. </p>
+                    <p>Processes can be configured to be resubmitted automatically in the event of an error. For further detail on automatic resubmission refer to pControl User Guide – Rules.</p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Straight-through Processing (STP)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <MadCap:snippetBlock src="../../Resources/Snippets/Process Menu/Proc_STP - Create entity.flsnp" />
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

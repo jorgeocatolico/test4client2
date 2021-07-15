@@ -1,0 +1,1294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="MG Staff Only.ScreenOnly">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/MG_TableinanAccordionDropDown.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>FVC Process Phases and Functions</h1>
+        <p>The following is a list Fair Value Control  functions and their descriptions. These functions are available for selection on FVC Process Templates. Select the function name to view further detail.</p>
+        <p MadCap:conditions="MG Staff Only.ScreenOnly" style="background-color: #00ff00;">The following bullet point refers to all validations... check with Brent.</p>
+        <p MadCap:conditions="MG Staff Only.ScreenOnly">All FVC Oversight entities have been processed and approved for prior day. <span style="background-color: #7cfc00;" MadCap:conditions="MG Staff Only.ScreenOnly">BRENT - does this mean all oversight entities have had their Oversight processes completed? or FVC processes completed?</span></p>
+        <h2 class="_orange">Validation Checks</h2>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">[FVC001] - Security Price Movement Check</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>&#160;</p>
+                                    <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle02TableinaTable_No_header" cellspacing="18">
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <tbody>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Business Description</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>This validation checks if the movement in the price of the security since prior day has exceeded the  tolerance. </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Processing Detail</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>The validation is performed on the price from the primary price source, the <b class="BufferandFunctionBold">U175: Security Prices worktable</b>, and checks if the price has moved out of tolerance since prior day. </p>
+                                                    <p>The check calculations are:</p>
+                                                    <p>
+                                                        <MadCap:equation>$Check\ Value\ =\ 
+\large
+\frac{Current\ Primary\ Price }{Prior\ Primary\ Price\ -1}$</MadCap:equation>
+                                                    </p>
+                                                    <p>where: </p>
+                                                    <p>
+                                                        <MadCap:equation>$\small Current\ Primary\ Price\ =\ A50.Primary\ Price\ at\ T$</MadCap:equation>
+                                                    </p>
+                                                    <p>
+                                                        <MadCap:equation>$\small Prior\ Primary\ Price\ =\ A50.Primary\ Price\ at\ T-1$</MadCap:equation>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Entity Data Attributes Used</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Interdependencies</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The SAM data is required from the <b class="BufferandFunctionBold">A50: Security Asset Master</b> Worktable</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Prerequisite Functions</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-1em_font">
+                                                    <p>Outputs</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyA-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Process status messages report the status.</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the [FVC001] check breaches the tolerance set, an exception will be raised.</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Results of this validation check are written to the <b class="BufferandFunctionBold">A52 : Security Asset Master Daily Plan</b> worktable</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">[FVC002] - Security Price Impact Check</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>&#160;</p>
+                                    <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle02TableinaTable_No_header" cellspacing="18">
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <tbody>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Business Description</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>This validation checks if the movement in the market value of the security, from prior pricing point has had a material impact on the NAV or UOI of the fund which holds that asset.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Processing Detail</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>The validation runs for all funds on which the security is held and creates one validation output record per security per price group. For example, if the security is held on multiple funds linked to the same price group, one  exception would be raised which lists each of the pools on which tolerance has been breached.</p>
+                                                    <p>The check calculations are:</p>
+                                                    <p>
+                                                        <MadCap:equation>$NAV\ Impact\ =\ 
+
+
+\Large 
+\frac{
+
+\frac{\left [\left ( SAM\ Primary\ Price\ -\ SAM\ PD\ Price \right ) \times\   Unit\ Holdings \times\ A03.pricing\ factor  \right ] }{Holding\ FX\ Rate\ }
+
+
+}{NAV}$</MadCap:equation>
+                                                    </p>
+                                                    <p>or</p>
+                                                    <p>
+                                                        <MadCap:equation>$\small Per\ Unit\ Impact\ =\ 
+
+\Large 
+\frac{
+
+\frac{\left [\left ( SAM\ Primary\ Price\ -\ SAM\ PD\ Price \right ) \times\   Unit\ Holdings \times\ A03.pricing\ factor  \right ] }{Holding\ FX\ Rate\ }
+
+
+}{UOI}$</MadCap:equation>
+                                                    </p>
+                                                    <p>where </p>
+                                                    <p>SAM is the <b class="BufferandFunctionBold">A50: Security Asset Master</b> record. </p>
+                                                    <p>UOI is derived from the <b class="BufferandFunctionBold">U108: Units on Issue</b> worktable.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Entity Data Attributes Used</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Interdependencies</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The SAM data is required from the <b class="BufferandFunctionBold">A50: Security Asset Master</b> Worktable</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Prerequisite Functions</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-1em_font">
+                                                    <p>Outputs</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyA-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Process status messages report the status.</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the [FVC002] check breaches the tolerance set, an exception will be raised.</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Results of this validation check are written to the <b class="BufferandFunctionBold">A52 : Security Asset Master Daily Plan</b> worktable</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">[FVC003] and [FVC003-PUI] - Unchanged Price Movement Check</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>&#160;</p>
+                                    <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle02TableinaTable_No_header" cellspacing="18">
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <tbody>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Business Description</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>This validation checks if the security price has remained unchanged since the prior pricing point. </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Processing Detail</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p> If the market price date is equal to the current effective date, and the movement of the security is zero, the check will fail and an exception will be raised.</p>
+                                                    <p>
+                                                        <MadCap:equation>$\small \%NAV\ =\ 
+
+\large
+\frac{
+Shares\ held\ by\ fund\ \times\ Current\ Price}{Total\ Net\ NAV\ of\ the\ fund}
+
+\small \times 100$</MadCap:equation>
+                                                    </p>
+                                                    <p>Where:</p>
+                                                    <p>Shares held = A03.Holding Cur as at T-1</p>
+                                                    <p>Current Price = A50.Primary Price at T</p>
+                                                    <p>Net NAV Amount = A01.Net NAV Amount as at T-1 (or latest U101.net_nav_amount value.)</p>
+                                                    <p>&#160;</p>
+                                                    <p>Similarly the [FVC003-PUI] check tests the <i>per unit impact</i> to determine if an exception will be raised. </p>
+                                                    <p>
+                                                        <MadCap:equation>$\small PUI\ Impact\ =\ 
+
+\large
+\frac{Market\ Value\ of\ the\ asset\ in\ the\ pool}{UOI\ of\ the\ pool}$</MadCap:equation>
+                                                    </p>
+                                                    <p>Where: </p>
+                                                    <p>Market Value = the A03.value_cur_base as at T-1</p>
+                                                    <p>UOI = U108.confirmed_units as at T-1</p>
+                                                    <p><i>Note: Where one asset is held by many funds, the fund with the largest impact caused by this validation breach will be displayed in the exception message. </i>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Entity Data Attributes Used</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Interdependencies</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"> SAM data is required from the <b class="BufferandFunctionBold">A50: Security Asset Master</b> Worktable</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"><b class="BufferandFunctionBold">U175: Security asset prices</b> </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Prerequisite Functions</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-1em_font">
+                                                    <p>Outputs</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyA-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Process status messages report the status</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the check fails, an exceptions will be raised on the Exceptions view, and will include '%NAV' and 'PUI&#160;Impact'. </li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Results of this validation check are written to the <b class="BufferandFunctionBold">A52 : Security Asset Master Daily Plan</b> worktable</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">[FVC004] and [FVC004-PUI] - Stale Price Check </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>&#160;</p>
+                                    <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle02TableinaTable_No_header" cellspacing="18">
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <tbody>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Business Description</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>This validation checks if the market price date is equal to the current effective date.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Processing Detail</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p> If the market price date is equal to the prior day SAM market price date, the check will fail and an exception will be raised. Similarly the [FVC004-PUI] check tests the <i>per unit impact</i> to determine if an exception will be raised. </p>
+                                                    <p>
+                                                        <MadCap:equation>$\small Units\ held\ =\ Current\ Holdings\ for\ the\ asset\ in\ the\ pool\ as\ at\ T-1$</MadCap:equation>
+                                                    </p>
+                                                    <p>
+                                                        <MadCap:equation>$\small \%NAV\ =\ 
+
+\large
+\frac{
+Market\ Value\ of\ the\ asset\ in\ the\ pool}{Total\ Net\ NAV\ of\ the\ pool}
+
+\small \times 100$</MadCap:equation>
+                                                    </p>
+                                                    <p>Where</p>
+                                                    <p>Market Value = the A03.value_cur_base as at T-1</p>
+                                                    <p>Total Net NAV of the Pool = A01.net_cur as at T-1</p>
+                                                    <p>
+                                                        <MadCap:equation>$\small PUI\ Impact\ =\ 
+
+\large
+\frac{Market\ Value\ of\ the\ asset\ in\ the\ pool}{UOI\ of\ the\ pool}$</MadCap:equation>
+                                                    </p>
+                                                    <p>Where: </p>
+                                                    <p>Market Value = the A03.value_cur_base as at T-1</p>
+                                                    <p>UOI = U108.confirmed_units as at T-1</p>
+                                                    <p><i>Note: Where one asset is held by many funds, the fund with the largest impact caused by this validation breach will be displayed in the exception message. </i>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Entity Data Attributes Used</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Interdependencies</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"> SAM data is required from the <b class="BufferandFunctionBold">A50: Security Asset Master</b> Worktable</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"><b class="BufferandFunctionBold">U175: Security asset prices</b> </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Prerequisite Functions</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-1em_font">
+                                                    <p>Outputs</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyA-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Process status messages report the status</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the check fails, an exceptions will be raised on the Exceptions view, and will include 'Units Held', and '%NAV'. </li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Results of this validation check are written to the <b class="BufferandFunctionBold">A52 : Security Asset Master Daily Plan</b> worktable</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">[FVC005] and [FVC005-PUI] - Suspended Trading Check</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>&#160;</p>
+                                    <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle02TableinaTable_No_header" cellspacing="18">
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <tbody>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Business Description</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>This validation checks if the asset price or security has been suspended from trading.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Processing Detail</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p> If the asset's trading status on the <b class="BufferandFunctionBold">U175: Security Prices</b> worktable indicates the asset has been suspended (s), the check will fail and an exception will be raised.</p>
+                                                    <p>
+                                                        <MadCap:equation>$\small Units\ held\ =\ Current\ Holdings\ for\ the\ asset\ in\ the\ pool\ as\ at\ T-1$</MadCap:equation>
+                                                    </p>
+                                                    <p>
+                                                        <MadCap:equation>$\small \%NAV\ =\ 
+
+\large
+\frac{
+Market\ Value\ of\ the\ asset\ in\ the\ pool}{Total\ Net\ NAV\ of\ the\ pool}
+
+\small \times 100$</MadCap:equation>
+                                                    </p>
+                                                    <p>Where</p>
+                                                    <p>Market Value = the A03.value_cur_base as at T-1</p>
+                                                    <p>Total Net NAV of the Pool = A01.net_cur as at T-1</p>
+                                                    <p>&#160;</p>
+                                                    <p>Similarly the [FVC005-PUI] check tests the <i>per unit impact</i> to determine if an exception will be raised. </p>
+                                                    <p>
+                                                        <MadCap:equation>$\small PUI\ Impact\ =\ 
+
+\large
+\frac{Market\ Value\ of\ the\ asset\ in\ the\ pool}{UOI\ of\ the\ pool}$</MadCap:equation>
+                                                    </p>
+                                                    <p>Where: </p>
+                                                    <p>Market Value = the A03.value_cur_base as at T-1</p>
+                                                    <p>UOI = U108.confirmed_units as at T-1</p>
+                                                    <p><i>Note: Where one asset is held by many funds, the fund with the largest impact caused by this validation breach will be displayed in the exception message. </i>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Entity Data Attributes Used</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Interdependencies</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The SAM data is required from the <b class="BufferandFunctionBold">A50: Security Asset Master</b> Worktable</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">U175: Security Prices record with the same asset code and effective date as the asset being checked are also required.</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Prerequisite Functions</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-1em_font">
+                                                    <p>Outputs</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyA-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Process status messages report the status</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the check fails, an exception will be raised on the Exceptions view, and will include 'Units Held', '%NAV' and 'PUI Impact' of the pool with the largest impact.</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Results of this validation check are written to the <b class="BufferandFunctionBold">A52 : Security Asset Master Daily Plan</b> worktable</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">[FVC006] and [FVC006-PUI] - Delisted Securities Check</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>&#160;</p>
+                                    <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle02TableinaTable_No_header" cellspacing="18">
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <tbody>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Business Description</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>This validation checks if the asset price or security has been delisted from trading.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Processing Detail</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p> If the asset's trading status on the <b class="BufferandFunctionBold">U175: Security Prices</b> worktable indicates the asset has been delisted (d), the check will fail and an exception will be raised.</p>
+                                                    <p>
+                                                        <MadCap:equation>$\small Units\ held\ =\ Current\ Holdings\ for\ the\ asset\ in\ the\ pool\ as\ at\ T-1$</MadCap:equation>
+                                                    </p>
+                                                    <p>
+                                                        <MadCap:equation>$\small \%NAV\ =\ 
+
+\large
+\frac{
+Market\ Value\ of\ the\ asset\ in\ the\ pool}{Total\ Net\ NAV\ of\ the\ pool}
+
+\small \times 100$</MadCap:equation>
+                                                    </p>
+                                                    <p>Where</p>
+                                                    <p>Market Value = the A03.value_cur_base as at T-1</p>
+                                                    <p>Total Net NAV of the Pool = A01.net_cur as at T-1</p>
+                                                    <p>&#160;</p>
+                                                    <p>Similarly the [FVC006-PUI] check tests the <i>per unit impact</i> to determine if an exception will be raised. </p>
+                                                    <p>
+                                                        <MadCap:equation>$\small PUI\ Impact\ =\ 
+
+\large
+\frac{Market\ Value\ of\ the\ asset\ in\ the\ pool}{UOI\ of\ the\ pool}$</MadCap:equation>
+                                                    </p>
+                                                    <p>Where: </p>
+                                                    <p>Market Value = the A03.value_cur_base as at T-1</p>
+                                                    <p>UOI = U108.confirmed_units as at T-1</p>
+                                                    <p><i>Note: Where one asset is held by many funds, the fund with the largest impact caused by this validation breach will be displayed in the exception message.</i>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Entity Data Attributes Used</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Interdependencies</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The SAM data is required from the <b class="BufferandFunctionBold">A50: Security Asset Master</b> Worktable</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">U175: Security Prices record with the same asset code and effective date as the asset being checked are also required.</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Prerequisite Functions</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-1em_font">
+                                                    <p>Outputs</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyA-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Process status messages report the status</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the check fails, an exception will be raised on the Exceptions view, and will include 'Units Held', '%NAV' and 'PUI Impact' of the pool with the largest impact.</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Results of this validation check are written to the <b class="BufferandFunctionBold">A52 : Security Asset Master Daily Plan</b> worktable</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop" MadCap:conditions="MG Staff Only.ScreenOnly,Note To Selfs.ScreenOnly">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">[FVC011] - Trade Limits Check - to be written </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableinanAccordionDropDown.css');width: 100%;margin-left: 0;margin-right: auto;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>&#160;</p>
+                                    <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle-MG_TableStyle02TableinaTable_No_header" cellspacing="18">
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" style="width: 130px;" />
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <tbody>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Business Description</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>&#160;</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Processing Detail</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>&#160;</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Entity Data Attributes Used</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Interdependencies</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The SAM data is required from the <b class="BufferandFunctionBold">A50: Security Asset Master</b> Worktable.</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">U175: Security Prices record with the same asset code and effective date as the asset being checked are also required.</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">All FVC Oversight entities have been processed and approved for prior day. <span style="background-color: #7cfc00;" MadCap:conditions="MG Staff Only.ScreenOnly">BRENT - does this mean all oversight entities have had their Oversight processes completed? or FVC processes completed?</span></li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Price Source Agreements (PSA) are known and linked to Price Group.</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Prerequisite Functions</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[DL030] - Load Investment Holdings Balances</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[DL120] - Load External Prices</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[DL200] - Load Asset Transactions</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-1em_font">
+                                                    <p>Outputs</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyA-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Process status messages report the status</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the check fails, an exception will be raised on the Exceptions view.</li>
+                                                        <li>Results of this validation check are written to the <b class="BufferandFunctionBold">A52 : Security Asset Master Daily Plan</b> worktable</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">[FVO001] - Prior Day Price Consistency Check</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableinanAccordionDropDown.css');width: 100%;margin-left: 0;margin-right: auto;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>&#160;</p>
+                                    <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle-MG_TableStyle02TableinaTable_No_header" cellspacing="18">
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" style="width: 130px;" />
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <tbody>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Business Description</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p>This validation checks if the prior day price is consistent across all funds holding the asset, which are linked to the same Price Source Agreement (PSA)</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Processing Detail</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>Where an exact match is not found, the check will fail and an exception will be raised.</p>
+                                                    <p>The check calculation is:</p>
+                                                    <p>
+                                                        <MadCap:equation>$\small A03.pre\ fair\ value\ price &lt;&gt; A03.price$</MadCap:equation>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Entity Data Attributes Used</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Interdependencies</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The SAM data is required from the <b class="BufferandFunctionBold">A50: Security Asset Master</b> Worktable.</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Prerequisite Functions</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-1em_font">
+                                                    <p>Outputs</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyA-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Process status messages report the status</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the check fails, an exception will be raised on the Exceptions view.</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Results of this validation check are written to the <b class="BufferandFunctionBold">A52 : Security Asset Master Daily Plan</b> worktable</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">[FVO002] - Prior Day Price Source Consistency Check</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>&#160;</p>
+                                    <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle-MG_TableStyle02TableinaTable_No_header" cellspacing="18">
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" style="width: 133px;" />
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <tbody>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Business Description</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p> This validation checks if the prior day price source is consistent with Price Source Agreements (PSA)&#160;and the pools or funds holding the asset. </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Processing Detail</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>Where an exact match is not found, the check will fail and an exception will be raised.</p>
+                                                    <p>The check calculations are:</p>
+                                                    <p>
+                                                        <MadCap:equation>$\small A50.price\ source &lt;&gt; A03.price\ source$</MadCap:equation>
+                                                    </p>
+                                                    <p>AND</p>
+                                                    <p>
+                                                        <MadCap:equation>$\small A50.price\ source &lt;&gt; PSA.price\ source$</MadCap:equation>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Entity Data Attributes Used</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Interdependencies</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The SAM data is required from the <b class="BufferandFunctionBold">A50: Security Asset Master</b> Worktable.</li>
+                                                        <li>Price Source Agreements (PSA) are identified and linked to Price Group.</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Prerequisite Functions</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-1em_font">
+                                                    <p>Outputs</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyA-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Process status messages report the status</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the check fails, an exception will be raised on the Exceptions view.</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Results of this validation check are written to the <b class="BufferandFunctionBold">A52 : Security Asset Master Daily Plan</b> worktable</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">[FVO003] - Prior Day Price Type Consistency Check</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>&#160;</p>
+                                    <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle-MG_TableStyle02TableinaTable_No_header" cellspacing="18">
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" style="width: 133px;" />
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                        <tbody>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Business Description</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p> This validation checks if the prior day price type is consistent with Price Source Agreements (PSA)&#160;and the pools or funds holding the asset. </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Processing Detail</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>Where an exact match is not found, the check will fail and an exception will be raised.</p>
+                                                    <p>The check calculations are:</p>
+                                                    <p>
+                                                        <MadCap:equation>$\small A50.prior\ day\ price\ type &lt;&gt; A03.price\ type$</MadCap:equation>
+                                                    </p>
+                                                    <p>AND</p>
+                                                    <p>
+                                                        <MadCap:equation>$\small A50.prior\ day\ price\ type &lt;&gt; PSA.price\ type$</MadCap:equation>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Entity Data Attributes Used</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Interdependencies</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The SAM data is required from the <b class="BufferandFunctionBold">A50: Security Asset Master</b> Worktable.</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Price Source Agreements (PSA) are identified and linked to Price Group.</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Prerequisite Functions</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-1em_font">
+                                                    <p>Outputs</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyA-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Process status messages report the status</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the check fails, an exception will be raised on the Exceptions view.</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Results of this validation check are written to the <b class="BufferandFunctionBold">A52 : Security Asset Master Daily Plan</b> worktable</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop" MadCap:conditions="MG Staff Only.ScreenOnly">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">[FVO004] - Holding Key Consistency Check <MadCap:snippetText src="../../Resources/Snippets/All/NewContentforReview.flsnp" /> PR-5288 - assigned to brent to review</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>&#160;</p>
+                                    <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle-MG_TableStyle02TableinaTable_No_header" cellspacing="18">
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" style="width: 133px;" />
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" style="width: 854px;" />
+                                        <tbody>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Business Description</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p> This validation checks for a given SAM record, the Holding Key (Asset Description, Local Currency, Exchange Code and Category Code) are consistent with the Price Source Agreement (PSA) and the Pool Funds holding the asset. </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Processing Detail</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>Where an exact match is not found, i.e. where all of the following criteria are met, the check will fail and an exception will be raised.</p>
+                                                    <p><span style="background-color: #00ff00;">What happens if one of these criteria are not met??</span>
+                                                    </p>
+                                                    <p>
+                                                        <MadCap:equation>$[A50.exchange &lt;&gt; Price\_Group.exchange$</MadCap:equation><span style="background-color: #00ff00;"> (where does price group exchange come from? and does Exchange code mean currency code??)</span>
+                                                    </p>
+                                                    <p>
+                                                        <MadCap:equation>$and\ A50.category\ code &lt;&gt; A03.category\ code$</MadCap:equation>
+                                                    </p>
+                                                    <p>
+                                                        <MadCap:equation>$and\ A50.instrument\ type &lt;&gt; PSA.instrument\ type]$</MadCap:equation>
+                                                    </p>
+                                                    <p>OR</p>
+                                                    <p>
+                                                        <MadCap:equation>$A50.asset\ description &lt;&gt; A03.asset\ description$</MadCap:equation>
+                                                    </p>
+                                                    <p>
+                                                        <MadCap:equation>$and\ A50.local\ currency &lt;&gt; A03.local\ currency$</MadCap:equation>
+                                                    </p>
+                                                    <p>
+                                                        <MadCap:equation>$and\ A50.exchange &lt;&gt; A03.exchange$</MadCap:equation>
+                                                    </p>
+                                                    <p>
+                                                        <MadCap:equation>$and\ A50.category\ code &lt;&gt; A03.category\ code$</MadCap:equation>
+                                                    </p>
+                                                    <p>
+                                                        <MadCap:equation>$and\ A50.instrument\ type &lt;&gt; A03.instrument\ type]$</MadCap:equation>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Entity Data Attributes Used</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"><b class="BufferandFunctionBold">Local Currencies</b> and <b class="BufferandFunctionBold">Exchange</b> are defined on the Price Group entity</li>
+                                                        <img src="../../Resources/Images/NAV Oversight Images/FVO004LocalCurr.png" class="greyborder" />
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"><b class="BufferandFunctionBold">Instrument Type</b> as defined on the Price Source Agreement can be specifically included or excluded from this check. In this example the 'Fixed Income | US Bonds' instrument group is excluded from the FVO004 validation check</li>
+                                                        <img src="../../Resources/Images/NAV Oversight Images/FVO004InstType.png" class="greyborder" />
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Interdependencies</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The SAM data is required from the <b class="BufferandFunctionBold">A50: Security Asset Master</b> Worktable.</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">All FVC Oversight entities have been processed and approved for prior day. <span style="background-color: #7cfc00;" MadCap:conditions="MG Staff Only.ScreenOnly">BRENT - does this mean all oversight entities have had their Oversight processes completed? or FVC processes completed?</span></li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Price Source Agreements (PSA) are identified and linked to Price Group.</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                                                            <MadCap:snippetText src="../../Resources/Snippets/FVC/Rounding.flsnp" />
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Prerequisite Functions</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:conditions="MG Staff Only.ScreenOnly" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"><span style="background-color: #7cfc00;">Brent - please check these as we are guessing based on what is on the PT&#160;of the Automated Test Case</span>
+                                                        </li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[DL030] - Load Investment Holdings Balances</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[DL120] - Load External Prices</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[DL200] - Load Asset Transactions</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-1em_font">
+                                                    <p>Outputs</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyA-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Process status messages report the status</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the check fails, an exception will be raised on the Exceptions view.</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop" MadCap:conditions="MG Staff Only.ScreenOnly">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">[FVO006] and [FVO006-PUI] - Prior Day Price Vendor Comparison Impact Check <MadCap:snippetText src="../../Resources/Snippets/All/NewContentforReview.flsnp" /> PR-6596 - assigned to Michael McCarthy, ready for review</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableinanAccordionDropDown.css');margin-left: 0;margin-right: auto;width: 100%;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular" />
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2">
+                                    <p>&#160;</p>
+                                    <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle-MG_TableStyle02TableinaTable_No_header" cellspacing="18">
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" style="width: 133px;" />
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" style="width: 854px;" />
+                                        <tbody>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Business Description</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <p> This validation checks if the variance in prices received across price vendors on the prior day, has a material impact on the NAV or UOI,&#160;of any funds which hold the asset. The impact of the variance between Primary, Secondary and Tertiary prices are checked. </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Processing Detail</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <p>Where an exact match is not found, i.e. where all of the following criteria are met, the check will fail and an exception will be raised. </p>
+                                                    <p>The check calculations for [FVO006] are: </p>
+                                                    <p>
+                                                        <MadCap:equation>$\frac{
+\left (  
+\frac{ 
+\Large\ 
+
+Largest\ Price\ Source\ Price\ Difference\ \times\ Current\ holdings\ \times\ Pricing\ Factor 
+}{ \Large\ FX\ Rate\ Currency}  \right )
+}{ \normalsize Current\ NAV}$</MadCap:equation>
+                                                    </p>
+                                                    <p>The check calcuations for [FVO006-PUI] are:</p>
+                                                    <p>
+                                                        <MadCap:equation>$\frac{
+\left (  
+\frac{ 
+\Large\ 
+
+Largest\ Price\ Source\ Price\ Difference\ \times\ Current\ holdings\ \times\ Pricing\ Factor 
+}{ \Large\ FX\ Rate\ Currency}  \right )
+}{ \normalsize UOI}$</MadCap:equation>
+                                                    </p>
+                                                    <p>Where:</p>
+                                                    <p>Largest Price Source Price Difference is the highest absolute value returned from:</p>
+                                                    <p>
+                                                        <MadCap:equation>$ \small
+Primary\ Price - Secondary\ Price$</MadCap:equation>
+                                                    </p>
+                                                    <p>
+                                                        <MadCap:equation>$ \small Primary\ Price - Tertiary\ Price$</MadCap:equation>
+                                                    </p>
+                                                    <p>
+                                                        <MadCap:equation>$\small Secondary\ Price - Tertiary\ Price$</MadCap:equation>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Entity Data Attributes Used</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                    <p>Interdependencies</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The SAM data is required from the <b class="BufferandFunctionBold">A50: Security Asset Master</b> Worktable.</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">All FVC Oversight entities have been processed and approved for prior day. <span style="background-color: #7cfc00;" MadCap:conditions="MG Staff Only.ScreenOnly">BRENT - does this mean all oversight entities have had their Oversight processes completed? or FVC processes completed?</span></li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Price Source Agreements (PSA) are identified and linked to Price Group.</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                    <p>Prerequisite Functions</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:conditions="MG Staff Only.ScreenOnly" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"><span style="background-color: #7cfc00;">Michael - please check these as we are guessing based on what is on the PT&#160;of the Automated Test Case</span>
+                                                        </li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[DL030] - Load Investment Holdings Balances</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[DL120] - Load External Prices</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[DL200] - Load Asset Transactions</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-1em_font">
+                                                    <p>Outputs</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyA-Column1-1em_font">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Process status messages report the status</li>
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If the check fails, an exception will be raised on the Exceptions view.</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

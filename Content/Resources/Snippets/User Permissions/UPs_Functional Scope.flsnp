@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Functional Scope identifies which of the web views a user has access to, for example Dashboard, Price Control Summary, Calendars and subsequently which data views, status streams, and transitions within that web view. The combination of these four components is typically labelled with a job function, for example, "Fund Accountant", "Manager", "Pricing Analyst" or "Supervisor". The configuration of functional roles is used to allow users varying levels of access to different components of pControl.</p>
+    </body>
+</html>

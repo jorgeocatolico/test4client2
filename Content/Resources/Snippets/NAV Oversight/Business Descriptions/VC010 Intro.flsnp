@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Checks if the process entity should be included in the NAV Oversight process. If selected, the process will run for this entity.</p>
+    </body>
+</html>

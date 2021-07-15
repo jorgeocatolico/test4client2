@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Calendar Schedules</h1>
+        <p>Calendar Schedules are created as a stand alone entity type, and are a means of overlaying one or more holiday calendars with a processing calendar to specify valid processing days. Calendar schedules are then associated with a processing entity via the 'Pricing Calendar' attributes.</p>
+        <div class="example_label">Example</div>
+        <div class="example_content">
+            <p>In the calendar schedule below, </p>
+            <ul class="FirstLevelBlueBullet">
+                <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Green squares are derived from the DAILY_PRICING calendar, and indicate valid processing days;</li>
+                <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Orange squares are derived from one of the holiday calendars.</li>
+            </ul>
+            <p>Where one date is included in both calendars, such as 16 May, pControl uses the '<a href="#roll">Calendar roll web</a>' attribute to determine whether this is a valid processing day or holiday. </p>
+            <ul class="FirstLevelBlueBullet">
+                <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Where roll = 'Forward' or 'Backward', 16 May will be a holiday</li>
+                <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Where roll = 'Never', processing will be performed on 16 May.</li>
+            </ul>
+            <p>
+                <img src="../../Resources/Images/Calendars/Cal_sched_example.png" alt="" title="" class="greyborder" />
+            </p>
+        </div>
+        <p>&#160;</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Create a Calendar Schedule Entity</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList">
+                    <li>
+                        <p>Navigate to Library &gt; Entities. Select the location in entity tree where new entity is to reside. </p>
+                        <p>Right click, and select <span class="ButtonArrows">Add</span></p>
+                    </li>
+                    <li>
+                        <p>Select:</p>
+                        <ul class="FirstLevelBlueBullet">
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">'Funds Processing' from the Template Group drop down menu, and </li>
+                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">'Calendar Scheduling Template Web' from the Template Type drop down menu.</li>
+                        </ul>
+                        <div class="note_label">Note</div>
+                        <div class="note_content_in_list">'Calendar Scheduling Template' is a different entity type to 'Calendar Scheduling Template Web'. The first is only used in the  processing mode.</div>
+                        <p>&#160;</p>
+                        <p> <img src="../../Resources/Images/Calendars/Cal_add_sched_tmpl_web.png" alt="" title="" /></p>
+                    </li>
+                    <li>Select &lt;Continue&gt; to save the changes and continue, or &lt;Cancel&gt; to close the window without saving.</li>
+                    <li>Enter a unique entity code and description; select the 'Active' flag,</li>
+                    <li>
+                        <p>Navigate to the 'Common' tab, and select the required Process Calendar, in this case the 'Daily Pricing' was selected.</p>
+                        <p class="zoom4Detail">
+                            <img src="../../Resources/Images/Calendars/Cal_sched_tmpl_common.png" alt="" title="" class="greyborder" />
+                        </p>
+                        <div class="tip_label">Tip</div>
+                        <div class="tip_content">
+                            <p>The arrow <img src="../../Resources/Images/NAV Oversight Images/Cal_arrow.png" /> on the entity navigates direct to the calendar on the schedules page.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Scroll down and select a start date; processing frequency; and calendar roll type:</p>
+                        <p class="zoom4Detail">
+                            <img src="../../Resources/Images/NAV Oversight Images/CAL_StartDate.png">
+                            </img>
+                        </p>
+                        <p>&#160;</p>
+                        <p><a name="roll"></a>
+                        </p>
+                        <MadCap:snippetBlock src="../../Resources/Snippets/Calendars/Calendar_Roll_Freq.flsnp">
+                        </MadCap:snippetBlock>
+                        <p>&#160;</p>
+                    </li>
+                    <li>
+                        <p>Select &lt;Save&gt; to save the new entity; &lt;Validate&gt; to validate all fields have been populated correctly, or &lt;Cancel&gt; to exit without saving.</p>
+                    </li>
+                    <MadCap:snippetBlock src="../../Resources/Snippets/All/Save_includes_validate.flsnp" />
+                    <li>Navigate to Configuration &gt; Calendars.</li>
+                    <li>Select the 'Schedules' tab.</li>
+                    <li>
+                        <p>Select the settings icon,<img src="../../Resources/Images/Portfolio Management Images/PM_SettingsIcon.png" alt="" title="" />next to the entity name. The schedule will open and the Processing calendar selected on the entity will be applied and the listed on the right of the view.</p>
+                        <p class="zoom4Detail">
+                            <img src="../../Resources/Images/Calendars/Cal_sched_add_blank.png" alt="" title="" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Navigate to the Processing tab, on left side of screen, and select 1 x processing calendar;</p>
+                        <p>Navigate to the Holidays tab, on left side of screen, and select 1 or more holiday calendars, by selecting the plus icon, <img src="../../Resources/Images/Calendars/Cal_plus_icon.png" /> next to the required calendar.</p>
+                        <p>The schedule entity will then be display an overlay of all calendars selected:</p>
+                        <p class="zoom4Detail">
+                            <img src="../../Resources/Images/Calendars/Cal_sched_example.png" alt="" title="" class="greyborder" />
+                        </p>
+                    </li>
+                    <li>Select &lt;Save&gt; to save the changes, &lt;Validate&gt; to validate the changes made, or &lt;Cancel&gt; to exit without saving changes.</li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Edit a Calendar Schedule Entity</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList">
+                    <li>Navigate to Configuration &gt; Calendars</li>
+                    <li>
+                        <p>Select the 'settings' icon,<img src="../../Resources/Images/Portfolio Management Images/PM_SettingsIcon.png" alt="" title="" />next to the calendar schedule to be edited.</p>
+                    </li>
+                    <li>
+                        <p>The calendar schedule entity will open displaying processing and holiday dates overlayed:</p>
+                        <p class="zoom4Detail">
+                            <img src="../../Resources/Images/Calendars/Cal_sched_edit.png" class="greyborder" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Delete calendars from the schedule by selecting the delete icon, <img src="../../Resources/Images/Portfolio Management Images/PM_deleteicon.png" alt="" title="" /> on the right hand side of the screen.</p>
+                    </li>
+                    <li>
+                        <p>Add additional holiday calendars, by selecting the 'Holidays' tab, and then the add button next to the required holiday calendar.</p>
+                        <p>
+                            <img src="../../Resources/Images/NAV Oversight Images/CAL_Hollist.png" class="greyborder" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>The Calendar Schedule will now show the three holiday calendars which have been added.</p>
+                        <p class="zoom4Detail">
+                            <img src="../../Resources/Images/Calendars/Cal_sched_edit_added_3holcals.png" />
+                        </p>
+                        <p>Select &lt;Save&gt; to save the changes, &lt;Validate&gt; to validate the changes made, or &lt;Cancel&gt; to exit without saving changes.</p>
+                    </li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="Associate_a_Calendar_Schedule_Entity_with_a_pControl_processing_entity"></a>Associate a Calendar Schedule Entity with a pControl processing entity</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList">
+                    <li>
+                        <MadCap:snippetBlock src="../../Resources/Snippets/Calendars/Assoc_cal_with_entity_step1.flsnp" />
+                    </li>
+                    <li>
+                        <p>Select the calendar schedule entity from the drop down menu, i.e. Online Help Calendar Schedule.</p>
+                    </li>
+                    <li>
+                        <p>Select &lt;Save&gt; to save the changes, or &lt;Cancel&gt; to exit without saving changes.</p>
+                    </li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+    </body>
+</html>

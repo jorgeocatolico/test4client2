@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The OSP&#160;validations are used with OMAS information, so should be selected only on the Oversight Pricing entity.</p>
+        <p>Validate OMAS Index Movement (CAT_IND_OS_UDV) - This validation checks that the movement in the value of the index category is within tolerance.</p>
+    </body>
+</html>

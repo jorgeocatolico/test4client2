@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Will fail the test if the % weight of assets in the benchmark is less than the tolerance set, i.e. the weight of the assets in my entity that are in the benchmark will breach if it is less than a specified %. This test ensures that the key benchmark being used is a good representation of the entity’s assets.</body>
+</html>

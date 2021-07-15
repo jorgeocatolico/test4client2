@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>If daily forward distribution on Value Current:</p>
+        <p>
+            <MadCap:equation>$Forward\ days\ =\ number\ of\ days\ until\ next\ business\ day\ from\ the\ current\ day$</MadCap:equation>
+        </p>
+        <p>For example, if current day = Friday, then Forward days = 2.</p>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Loads the  entity’s unitised cashflows data from the<b class="BufferandFunctionBold"> U109: Cashflows - Unitised</b> worktable, or from pControl balances.</p>
+    </body>
+</html>

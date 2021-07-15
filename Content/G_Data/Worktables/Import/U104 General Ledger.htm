@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Note To Selfs.ScreenOnly">
+    <head><title>U104: General Ledger</title>
+        <link href="../../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>U104: General Ledger</h1>
+        <p>
+            <MadCap:snippetText src="../../../Resources/Snippets/All/NewContentforReview.flsnp" />
+        </p>
+        <p>The <b class="BufferandFunctionBold">U104: General Ledger</b> worktable contains items and values that will be loaded to pControl accounts, for example, from an external general ledger or report. The imported data is enriched to allow the journal creation process to run, which will create journals to update pControl accounts. This provides an audit trail of the imported values and any enrichments prior to creation of account movement journals in pControl.</p>
+        <MadCap:snippetBlock src="../../../Resources/Snippets/All/WorktableNavigation.flsnp" />
+        <h3>U104: General Ledger - Worktable Fields and Definitions</h3>
+        <p>A description of the fields in the worktable is found below.</p>
+        <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Columncentred" MadCap:pattern="15" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Columncentred-Header1">
+                        <p>Column</p>
+                        <p>Position</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                        <p>Database Field Name</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                        <p>Field Name</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                        <p>Data </p>
+                        <p>Type</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                        <p>Maximum</p>
+                        <p>Length</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">	1	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>pcontrol_id</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	pControl id	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Integer	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	8	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <MadCap:snippetText src="../../../Resources/Snippets/Work tables/pControl Id.flsnp" />	&#160;	</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">	2	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>last_updated_date</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Last updated date</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Text</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">17</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;<MadCap:snippetText src="../../../Resources/Snippets/Work tables/Last Updated Date.flsnp" /><![CDATA[	]]></td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>3</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>last_updated_by</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Last updated by</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Text</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">75</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;	<MadCap:snippetText src="../../../Resources/Snippets/Work tables/Last Updated By.flsnp" /></td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>4</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>integrity_value</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Integrity value</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Text	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">27</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">	&#160;<MadCap:snippetText src="../../../Resources/Snippets/Work tables/Integrity Value.flsnp" /><![CDATA[	]]></td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>5</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>p_status</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">p Status</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Text</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">1</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <MadCap:snippetText src="../../../Resources/Snippets/Work tables/P Status.flsnp" />	&#160;	</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>6</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>p_description</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>p Description</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Text</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>255</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The description of any validation failures on the record.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>7</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>p_load_timestamp</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>p Load timestamp</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Text</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>17</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The date and time the record was loaded into the worktable.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>8</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>p_load_ source</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>p Load source</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Text</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>50</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The source of the record. This could be an external application, data provider, csv file or other data source. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>9</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>p_batch_id</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>p Batch id</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Text</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>20</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Unique identifier of the batch load.</p>
+                        <p><i>Note: Some files may be split into several batches to be loaded into pControl, if the number of records in a file exceeds the value in the 'Batch Size' attribute on the take on entity.</i>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>10</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>pcontrol_code</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	pControl code	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Text	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	25	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <MadCap:snippetText src="../../../Resources/Snippets/Work tables/Entity Code.flsnp" />	&#160;	</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>11</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>effective_date</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Effective date	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Text	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	8	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <MadCap:snippetText src="../../../Resources/Snippets/Work tables/Effective Date.flsnp" />	&#160;	</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>12</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>price_run_type</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Price run type	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Text	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	50	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <MadCap:snippetText src="../../../Resources/Snippets/Work tables/Price Run Type.flsnp" />	&#160;	</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>13</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>run_id</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Run id	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Text	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	3	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <MadCap:snippetText src="../../../Resources/Snippets/Work tables/Run Id.flsnp" />	&#160;	</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>14</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>account_group</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Account group</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Text</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>25</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Refers to the <b class="BufferandFunctionBold">L315: Account Groups</b> and allows all accounts within a group to be mapped into a category and/or category code.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>15</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>external_account_code</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">External account code</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">	Text	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">50</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>External account code from <b class="BufferandFunctionBold">U104: General Ledger</b></p>
+                        <p>It will be populated only on export records for individual accounts. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">	16	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>pcontrol_account_code</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">pControl account code</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Text</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">50</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>pControl account code from <b class="BufferandFunctionBold">U104: General Ledger</b>.</p>
+                        <p>It will be populated only on export records for individual accounts.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">	17	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>description</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Description</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Text</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">500</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Free text field used to enter a description.</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>18</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>base_currency</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Base currency</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Text </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The base currency cash balance for the fund.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>19</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>currency_code</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Currency code</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Text</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>25</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Three digit ISO currency code.</p>
+                        <p><i>Note: Currencies are configured as entities in pControl. The currency code is used as the entity code.</i>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1" MadCap:conditions="">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>20</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Acc_bal_ navigation_ key</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Acc bal navigation key</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Text</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>30</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>21</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>local_amount</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Local amount</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The local currency of cash balance for the fund.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>22</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>c_pControl_code</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>c pControl code</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Text</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>25</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Client code for the pControl entity code which is mapped to the pControl code via data manager enrichments.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>23</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>data_source</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Data source</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Text</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>75</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The source system, or company who supplied the imported data.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>24</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>c_price_run_type</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>c Price run type</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Text</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>50</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Indicates the client's specific price_run_type code. May be mapped to price_run_type code in pControl.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1" MadCap:conditions="">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>25</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Fund_split_pControl_code</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Fund split pControl code</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Text</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>25</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>26</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Item</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Item</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Text</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>50</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Name of the field that is being imported from a file or the external GL code being imported. The item imported is mapped directly to a pControl account for updating of pControl.</p>
+                        <p>Note: This field is created during data load.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>27</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Journal</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Journal</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Text</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>50</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>An accounting record where all business transactions are originally entered. A journal details which transactions occurred and what accounts were affected. Journal entries are usually recorded in chronological order, and using the double-entry method of bookkeeping.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>28</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>movement</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Movement</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The movement in the account balance from prior valuation point. A change in price, value or rate.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>29</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>rollover_date</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Rollover date</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The most recent prior Year End Date from the Effective date of the record - dependent on whether a rollover has occurred for the entity (as recorded in the <b class="BufferandFunctionBold">L370: General Ledger Rollover Dates</b>). For example, if a rollover has occurred then the value will be the most recent prior Year End Date while if a rollover has not occurred then the value will be the most recent prior Year End Date less one year.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>30</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>source_type</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Source type</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Text</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>25 </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Provides details of the source of the data imported, based on the attributes on the Data Load entity.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>31</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>split_percentage</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Split percentage</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Allows certain data to be split between two accounts (or have the value increased).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">
+                        <p>32</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>split_tax_category</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Split tax category</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Text</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>50</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Allocates a category that an item may be split to.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">33</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">sub_balance code</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Sub balance code</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Text</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">25</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">pControl code that may be used to allocate the counterparty for journal or to determine the sub-balance of an account when determining takeon values.</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">34	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>value_previous</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Value previous</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Decimal</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">24,9</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Previous value (movement or balance) of the account for the allocated effective date that is being updated by the import data values.</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">	35</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>value_type</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Value type</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Text</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">25</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">The Value Type field attaches an identifier to indicate the 'Type' of the 'Value' of the record. This field is used to assist in determining the 'Value Previous' as it helps to indicate if the value effectively relates to a 'YTD movement' or an 'As At Balance'.</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">	36	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Split_or_duplicate</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Split or duplicate</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Text</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">25</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Columncentred-Row1">	37	</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Credit</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Credit</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Decimal</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">&#160;</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">A journal entry recording a decrease in assets. With cash basis accounting, credits are recorded when income is received. With accrual basis accounting, credits are recorded and recognised when income is earned.</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Columncentred-Row1">	38</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                        <p>Debit</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">Debit</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">	Decimal</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">&#160;</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">An accounting entry which results in either an increase in assets or a decrease in liabilities or net worth.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

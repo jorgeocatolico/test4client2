@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Navigating to the Fund Sign Off view </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>There are multiple routes to navigate to the Fund Sign Off view; those driven from the dashboard will navigate to a filtered set of funds according to the selections on the primary filter.</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Via the main menu: Process &gt; Fund Sign Off.</li>
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Via the Analytics Bar.</li>
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Via the Fund Overview donuts on the dashboard.</li>
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Via the Funds tab on the SLA Monitor.</li>
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Via the Process Summary.</li>
+                </ul>
+                <ol class="stepList">
+                    <li class="stepList">
+                        <p>Select any of the sections highlighted to navigate to the Fund Sign Off view.</p>
+                        <p class="zoom4Detail">
+                            <img src="../../Images/NAV Oversight Images/NavigatingtoFundOverview.png" />
+                        </p>
+                    </li>
+                    <li class="stepList">
+                        <p>The Fund Sign Off view opens.</p>
+                        <p class="zoom4Detail">
+                            <img src="../../Images/Exceptions Images/Funds Sign Off3.png" />
+                        </p>
+                        <p>&#160;</p>
+                    </li>
+                    <li>
+                        <p>Records can be transitioned from the <MadCap:xref href="../../../C_Process/Fund Sign Off.htm">Fund Sign Off</MadCap:xref> view by selecting the ellipsis. Options will be subject to access permissions that are set up in System Administration. </p>
+                        <p>&#160;</p>
+                    </li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

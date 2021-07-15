@@ -1,0 +1,2140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Note To Selfs.ScreenOnly">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey_9pt.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Master and Proposed Order Status Streams</h1>
+        <p>As the cash allocation process progresses through the phases of processing, there are many 'paths' that processing can take depending on the configuration of the entity and pControl static data, the data used in processing etc. The 'paths' in pControl are determined by status streams, status streams represent a predefined map of states and transitions between states. </p>
+        <p>There are two status streams, the Master Proposed Order Status Stream and the Proposed Order Status Stream which are described diagrammatically below. </p>
+        <p>&#160;</p>
+        <h2>Master Proposed Order Status Stream</h2>
+        <p>
+            <img src="../../Resources/Images/Portfolio Management Images/PM_MasterPropOrderStatusStream.png" />
+        </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>States and Transitions</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey_9pt.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle-MG_TableStyle01Grey_9pt" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1">
+                                <p>State</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1">
+                                <p>State Descriptions</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1">
+                                <p>Modifiable State</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1">
+                                <p>Transitions</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1">
+                                <p>Manual Processing</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1">
+                                <p>pControl Rules Processing</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1">
+                                <p>Date / Time on transitions</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadD-Regular-Header1">
+                                <p>Comment required on transitions</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Not started</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Start state for the Master Proposed Order record</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Validating</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl automatically transitions to this state once the Initialisation and Validations phase starts</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>&#160;</p>
+                                <p>Validating</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>The initialisation and validations phase is running</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>n/a</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Load Data</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl automatically transitions to this state once the Data Load phase starts</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Exception</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl automatically transitions to this state if there is an exception present (i.e. invalid Cash Allocation day) in the Initialisation and Validations phase.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run Date + Time</p>
+                                <p>OR</p>
+                                <p>Run Date + Time taken from ‘Proposed Order to be Released by’</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                                <p>Load Data</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                                <p>The Data Load phase is running</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Calculations</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl automatically transitions to this state once the Data Validations and Calculations phase starts</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Waiting</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl automatically transitions to Waiting if data is not ready or available</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run Date + Time</p>
+                                <p>OR</p>
+                                <p>Run Date + Time taken from ‘Proposed Order to be Released by’</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Exception (override allowed)</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl automatically transitions to ‘Exception (Override Allowed)’ if there is an exception raised in the Validating Load Data phase where the exception is allowed to be overridden</p>
+                                <p>For example, COB AU value and Liabilities exceeds the mismatch tolerance, UOI unit difference exceeds the unit difference tolerance etc.</p>
+                                <p><i>Note: Exception (Override Allowed) can only be raised on the Master proposed order level.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run Date + Time</p>
+                                <p>OR</p>
+                                <p>Run Date + Time taken from ‘Proposed Order to be Released by’</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>Calculations</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>The Data Validations and Calculations phase is running</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Post Validations</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl automatically transitions once the Post-Process Validations phase starts</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Exception </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl automatically transitions to ‘Exception’ if there is an exception raised in the Data Validations and Calculations phase i.e. target weights don’t sum to 100%, no liquidity ALP present etc.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run Date + Time</p>
+                                <p>OR</p>
+                                <p>Run Date + Time taken from ‘Proposed Order to be Released by’</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Post Validations</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>The Post Process Validations phase is run after proposed orders have been created</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Finished</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Waiting</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run Date + Time</p>
+                                <p>OR</p>
+                                <p>Run Date + Time taken from ‘Proposed Order to be Released by’</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                                <p>Exception (override allowed)</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                                <p>This state indicates that override allowed exceptions have been encountered in the data load phase of the cash allocation process for the entity</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                                <p>Yes</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">Override</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually override the exception and allow the cash allocation process to continue on to the Calculations phase.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">Run Again</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to this state and force the cash allocation process to start again once the exception has been resolved</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run in Error</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to stop the cash allocation process which has been run by mistake / wish to terminate the cash allocation process.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Override</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>This is a temporary state where users override the exception and to allow the cash allocation process to continue on to the Calculations phase.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Waiting</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl automatically transitions the master proposed order to Waiting if user intervention (data / proposed orders in correct state etc.) is required.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run Date + Time</p>
+                                <p>OR</p>
+                                <p>Run Date + Time taken from ‘Proposed Order to be Released by’</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>Exception</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>This state indicates that an exception has occurred during the initialisation and validation phase of the cash allocation process for the entity</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>Yes</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run Again</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to force the cash allocation process to start again once the exception has been resolved</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run in Error</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>User manually transitions to stop the cash allocation process which has been run by mistake / wish to terminate the cash allocation process.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>Waiting</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>pControl is waiting for data that the cash allocation process requires – this can either be data in a buffer (liquidity adjustments) or proposed orders to be in the right state, i.e. approved or rejected.</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>n/a</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Load Data</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl auto transitions to Load Data once the data that it was waiting for becomes available</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">n/a</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Finished</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl auto transitions to Finished when all processing has been completed.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">n/a</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run Again</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>The user transitions to ‘Run Again’ to force the Cash Allocation process to start again after an exception has occurred and has been investigated.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Validating</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl automatically transitions to this state once the Initialisation and Validations phase starts.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">n/a</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run in Error</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>An end state for the cash allocation process. User moves to this state after an exception has occurred to indicate the process was run in error.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>None</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Row1">
+                                <p>Finished</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Row1">
+                                <p>End state for the Master Proposed Order Record</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Row1">
+                                <p>None</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyA-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>Proposed Order Status Stream </h2>
+        <p>
+            <img src="../../Resources/Images/Portfolio Management Images/PM_ProposedOrderStatusStream.png" />
+        </p>
+        <p>&#160;</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>States and Transitions</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey_9pt.css');margin-left: 0;margin-right: auto;width: auto;" class="TableStyle-MG_TableStyle01Grey_9pt" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1">
+                                <p>State</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1">
+                                <p>State Descriptions</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1">
+                                <p>Modifiable State</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1">
+                                <p>Transitions</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1">
+                                <p>Manual Processing</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1">
+                                <p>pControl Rules Processing</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadE-Regular-Header1">
+                                <p>Date / Time on transitions</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey_9pt-HeadD-Regular-Header1">
+                                <p>Comment required on transitions</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="8">
+                                <p>Not started</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="8">
+                                <p>Starting state when Proposed Order is first created</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="8">
+                                <p>n/a</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Proposed</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl will auto transition to Proposed if there are no warnings present in the proposed orders, and where the ‘Automatically Approve Proposed Orders’ attribute is not selected on the processing entity.</p>
+                                <p><i>Note: Warnings are configured in the ‘Warning Type’ table in the ‘Issue warning on these Events’ attribute.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run Date + Time</p>
+                                <p>OR</p>
+                                <p>Run Date + Time taken from ‘Proposed Order to be Released by’</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Proposed Warnings</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl will auto transition to Proposed - Warnings if there are warnings present in the proposed orders and where the ‘Automatically Approve Proposed Orders’ attribute is not selected on the processing entity.</p>
+                                <p><i>Note: Warnings are configured in the ‘Warning Type’ table in the ‘Issue warning on these Events’ attribute. Warning messages can be viewed on the proposed orders.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run Date + Time</p>
+                                <p>OR</p>
+                                <p>Run Date + Time taken from ‘Proposed Order to be Released by’</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Calculated</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl will auto transition to Calculated if there are no warnings present in the proposed orders and where the ‘Automatically Approve Proposed Orders’ attribute is selected and the ‘Automatically Approve Proposed Orders to State’ is set to ‘Calculated’ on the processing entity.</p>
+                                <p><i>Note: Warnings are configured in the ‘Warning Type’ table in the ‘Issue warning on these Events’ attribute.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run Date + Time</p>
+                                <p>OR</p>
+                                <p>Run Date + Time taken from ‘Proposed Order to be Released by’</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Calculated Warnings</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl will auto transition to Calculated - Warnings if there are warnings present in the proposed orders and where ‘Automatically Approve Proposed Orders’ attribute is selected and the ‘Automatically Approve Proposed Orders To State’ is set to ‘Calculated’ on the processing entity.</p>
+                                <p><i>Note: Warnings are configured in the ‘Warning Type’ table in the ‘Issue warning on these Events’ attribute. Warning messages can be viewed on the proposed orders.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run Date + Time</p>
+                                <p>OR</p>
+                                <p>Run Date + Time taken from ‘Proposed Order to be Released by’</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Approved</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl will auto transition to Approved if there are no warnings present in the proposed orders and where the ‘Automatically Approve Proposed Orders’ attribute is selected and the ‘Automatically Approve Proposed Orders to State’ is set to ‘Approved’ on the processing entity.</p>
+                                <p><i>Note: Warnings are configured in the ‘Warning Type’ table in the ‘Issue warning on these Events’ attribute.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run Date + Time</p>
+                                <p>OR</p>
+                                <p>Run Date + Time taken from ‘Proposed Order to be Released by’</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Approval Exception</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl will auto transition to Approval Exception if there are exceptions present in the validation phase of the proposed orders where the ‘Automatically Approve Proposed Orders’ attribute is selected and the ‘Automatically Approve Proposed Orders to State’ is set to ‘Approved’ on the processing entity.</p>
+                                <p><i>Note: The exception details will be displayed in the ‘Approval Exceptions’ field on the proposed order. Users are required to correct these exceptions (i.e. amend the static data set up on the processing entity) before transitioning to either ‘Pending Approval’ or ‘Pending Rejection’.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run Date + Time</p>
+                                <p>OR</p>
+                                <p>Run Date + Time taken from ‘Proposed Order to be Released by’</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Exception Proposed Order</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl will auto transition to Exception Proposed Order if there are any breach of the compliance rules set on the proposed orders.</p>
+                                <p><i>Note: Compliance Rules are configured in the ‘Post-Calculation Validation’ tab. The exception details will be displayed in the ‘Processing Notes’ field of the proposed orders.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run Date + Time</p>
+                                <p>OR</p>
+                                <p>Run Date + Time taken from ‘Proposed Order to be Released by’</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Cancelled</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>All states are transitioned to this state should the PFE (Process) fail, to clear the business object from the dashboard.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="6">
+                                <p>Proposed</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="6">
+                                <p>Proposed orders are created in this state if the ‘Automatically Approve Proposed Orders’ attribute is not selected on the entity and there are no warnings present.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="6">
+                                <p>Yes</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Approval</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to Pending Approval and pControl rules auto transition to Approved state and generate a physical order for the amount in the ‘Prop Order (user)’ column and with the transaction type that is specified.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Calculated</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to Pending Calculated and pControl rules auto transition to Calculated state where no actual orders will be created, however cash allocation will flow through the fund hierarchy.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Cancel</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to Pending Cancel and pControl rules auto transition to Cancelled state where the process will end without firing its completion EDNs and therefore will not trigger the next level of interfund processes.</p>
+                                <p><i>Note: If any of the proposed orders are set to Pending Cancel, all proposed orders will be transition to Cancelled state and the Master proposed order is transitioned to Not Started.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Rejection</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to Pending Rejection and pControl rules auto transition to Rejected state where the process will end and no proposed orders are created for that entity level.</p>
+                                <p>pControl will send out the completion EDNs and trigger the next level of interfund processes.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Rejected</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl will auto transition to ‘Rejected’ when a ‘Bulk Cancel Orders’ process is run on the entity.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Cancelled</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>All states are transitioned to this state should the PFE (Process) fail, to clear the business object from the dashboard.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="6">
+                                <p>Proposed Warnings</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="6">
+                                <p>Proposed Orders are created in this state where the Automatically Approve Proposed Orders is not selected on the processing entity and there are warnings present in the proposed orders.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="6">
+                                <p>Yes</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Approval</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to Pending Approval and pControl rules auto transition to Approved state and generate a physical order for the amount in the ‘Prop Order (user)’ column and with the transaction type that is specified.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Calculated</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to Pending Calculated and pControl rules auto transition to Calculated state where no actual orders are created, but proposed orders do flow through the fund hierarchy.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Cancel</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to Pending Cancel and pControl rules auto transition to Cancelled state where the process will end without firing its completion EDNs and therefore will not trigger the next level of interfund processes.</p>
+                                <p><i>Note: If any of the proposed orders are set to Pending Cancel, all proposed orders will be transitioned to Cancelled state and the Master proposed order is transitioned to Not Started.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Rejection</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to Pending Rejection and pControl rules auto transition to Rejected state where the process will end and no proposed orders are created for that entity level.</p>
+                                <p>pControl will send out the completion EDNs and trigger the next level of interfund processes.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Rejected</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl will auto transition to ‘Rejected’ when a ‘Bulk Cancel Orders’ process is run on the entity.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Cancelled</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>All states are transitioned to this state should the PFE (Process) fail, in order to clear the business object from the dashboard.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="5">
+                                <p>Pending Calculated</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="5">
+                                <p>This is a temporary state where users can transition the proposed orders to, and pControl will subsequently auto transition to the next appropriate states.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="5">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Calculated</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl will auto transition to Calculated if there are no warnings present in the proposed orders where the ‘Automatically Approve Proposed Orders’ attribute is selected and the ‘Automatically Approve Proposed Orders to State’ is set to ‘Calculated’ on the processing entity.</p>
+                                <p><i>Note: Warnings are configured in the ‘Warning Type’ table in the ‘Issue warning on these Events’ attribute.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Calculated Warnings</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl will auto transition to Calculated - Warnings if there are warnings present in the proposed orders where ‘Automatically Approve Proposed Orders’ attribute is selected and the ‘Automatically Approve Proposed Orders To State’ is set to ‘Calculated’ on the processing entity.</p>
+                                <p><i>Note: Warnings are configured in the ‘Warning Type’ table in the ‘Issue warning on these Events’ attribute. Warning messages can be viewed on the proposed orders.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">Now</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Exception Proposed Order</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl will auto transition to Exception Proposed Order if there is any breach of the compliance rules set on the processing entity.</p>
+                                <p><i>Note: Compliance Rules are configured in the ‘Post-Calculation Validation’ tab. The exception details will be displayed in the ‘Processing Notes’ field of the proposed orders.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">Now</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Dual Authorisation</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl will auto transition to Dual Authorisation if ‘Dual Authorisation Required for Amount\Unit Amendments’ has been selected on the process template and amendments have been made on the proposed order’s amount or unit.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">Now</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Cancelled</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>All states are transitioned to this state should the PFE (Process) fail, to clear the business object from the dashboard.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="5">
+                                <p>Calculated</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="5">
+                                <p>Proposed Orders are created in this state if the ‘Automatically Approve Proposed Orders’ flag is set on an entity and the ‘Automatically Approve Proposed Orders to State’ field is set to Calculated</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="5">
+                                <p>Yes</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Approval</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to Pending Approval and pControl rules auto transition to Approved state and generate a physical order for the amount in the ‘Prop Order (user)’ column and with the transaction type that is specified.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Cancel</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to Pending Cancel then pControl rules auto transition to Cancelled state where the process will end without firing its completion EDNs and therefore will not trigger the next level of interfund processes.</p>
+                                <p><i>Note: If any of the proposed orders are set to Pending Cancel, all proposed orders will be transitioned to Cancelled state and the Master proposed order is transitioned to Not Started.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Rejection</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to Pending Rejection and pControl rules auto transition to Rejected state where the process will end and no proposed orders are created for that entity level.</p>
+                                <p>pControl will send out the completion EDNs and trigger the next level of interfund processes.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Rejected</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl will auto transition to ‘Rejected’ when a ‘Bulk Cancel Orders’ process is run on the entity.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">n/a</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Cancelled</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>All states are transitioned to this state should the PFE fail, in order to clear the business object from the dashboard.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">n/a</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="5">
+                                <p>Calculated - Warning</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="5">
+                                <p>Proposed Orders are created in this state if the ‘Automatically Approve Proposed Orders’ is selected and the ‘Automatically Approve Proposed Orders to State’ is set to Calculated and there are warnings present in the proposed orders.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="5">
+                                <p>Yes</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Approval</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to Pending Approval and pControl rules auto transition to Approved state and generate a physical order for the amount in the ‘Prop Order (user)’ column and with the transaction type that is specified.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Cancel</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to Pending Cancel then pControl rules auto transition to Cancelled state where the process will end without firing its completion EDNs and therefore will not trigger the next level of interfund processes.</p>
+                                <p><i>Note: If any of the proposed orders are set to Pending Cancel, all proposed orders will be transitioned to Cancelled state and the Master proposed order is transitioned to Not Started.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Rejection</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to Pending Rejection and pControl rules auto transition to Rejected state where the process will end and no proposed orders are created for that entity level.</p>
+                                <p>pControl will send out the completion EDNs and trigger the next level of interfund processes.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Rejected</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl will auto transition to ‘Rejected’ when a ‘Bulk Cancel Orders’ process is run on the entity</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Cancelled</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>All states are transitioned to this state should the PFE (Process) fail, to clear the business object from the dashboard</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">n/a</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="4">
+                                <p>Dual Authorisation</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="4">
+                                <p>This is a function on the process template. When selected, any amendment made on the proposed order’s amount or unit will require second person’s approval for the changes.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="4">
+                                <p>Yes</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Approval</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Alternate users with the correct level of security can manually transition to Pending Approval and pControl rules auto transition to Approved state and generate a physical order for the amount in the ‘Prop Order (user)’ column and with the transaction type that is specified.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Calculated</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Alternate users with the correct level of security can manually transition to Pending Calculated and pControl rules auto transition to Calculated state where no actual orders will be created, but proposed orders do flow through the fund hierarchy.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Cancel</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to Pending Cancel then pControl rules auto transition to Cancelled state where the process will end without firing its completion EDNs and therefore will not trigger the next level of interfund processes.</p>
+                                <p><i>Note: If any of the proposed orders are set to Pending Cancel, all proposed orders will be transitioned to Cancelled state and the Master proposed order is transitioned to Not Started.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Rejection</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to Pending Rejection and pControl rules auto transition to Rejected state where the process will end and no proposed orders are created for that entity level.</p>
+                                <p>pControl will send out the completion EDNs and trigger the next level of interfund processes.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="5">
+                                <p>Pending Approval</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="5">
+                                <p>This is a temporary state where users can transition the proposed orders to and pControl will subsequently auto transition to the next appropriate states.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="5">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Approved</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl automatically transitions to Approved state and there are no warnings present on the proposed orders during cash allocation process.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Approval Exception</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl will auto transition to Approval Exception if there are exceptions present in the validation phase of the proposed orders where the ‘Automatically Approve Proposed Orders’ attribute is selected and the ‘Automatically Approve Proposed Orders to State’ is set to ‘Approved’ on the processing entity.</p>
+                                <p><i>Note: The exception details will be displayed in the ‘Approval Exceptions’ field on the proposed order. Users are required to correct these exceptions (i.e. amend the static data set up on the processing entity) before transitioning to either ‘Pending Approval’ or ‘Pending Rejection’.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run Date + Time</p>
+                                <p>OR</p>
+                                <p>Run Date + Time taken from ‘Proposed Order to be Released by’</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Exception Proposed Order</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl will auto transition to Exception Proposed Order if there are any breaches of the compliance rules set on the processing entity.</p>
+                                <p><i>Note: Compliance Rules are configured in the ‘Post-Calculation Validation’ tab. The exception details will be displayed in the ‘Processing Notes’ field of the proposed orders.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Dual Authorisation</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl will auto transition to Dual Authorisation if ‘Dual Authorisation Required for Amount/Unit Amendments’ has been selected on the process template and amendments have been made on the proposed order’s amount or unit.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Cancelled</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>All states are transitioned to this state should the PFE (Process) fail, to clear the business object from the dashboard</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">n/a</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>Pending Rejection</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>This is a temporary state where users can transition the proposed orders to, and pControl will subsequently auto transition to the next appropriate states.</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>n/a</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Rejected</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl automatically transitions to Rejected when the transition has been made to Pending Rejection.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">n/a</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Cancelled</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>All states are transitioned to this state should the PFE (Process) fail, to clear the business object from the dashboard</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">n/a</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="6">
+                                <p>Exception Proposed Order</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="6">
+                                <p>Proposed orders are moved to this state if they have failed a compliance rule check.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="6">
+                                <p>Yes</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Override</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to Override with mandatory comments. pControl will then auto transition to the ‘Approved’ state. This forces the creation of an actual order from the proposed order even though it has failed some compliance rules.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Mandatory</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Cancel</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to Pending Cancel then pControl rules auto transition to Cancelled state where the process will end without firing its completion EDNs and therefore will not trigger the next level of interfund processes.</p>
+                                <p><i>Note: If any of the proposed orders are set to Pending Cancel, all proposed orders will be transition to Cancelled state and the Master proposed order is transitioned to Not Started.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Rejection</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to Pending Rejection, and pControl rules auto transition to Rejected state where the process will end and no proposed orders are created for that entity level.</p>
+                                <p>pControl will send out the completion EDNs and trigger the next level of interfund processes.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run Again Proposed Order</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to Run Again after updating the proposed order amount / unit to force the compliance rules to Run Again and create a new set of proposed orders.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Cancel and Run Again</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>User transition to this state will cancel all proposed orders from this run and rerun the Cash Allocation from the beginning. Any compliance rules will also be re-run, so this option would only be selected after fixing any compliance rule breaches first.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Cancelled</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>All states are transitioned to this state should the PFE (Process) fail, to clear the business object from the dashboard.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">n/a</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="8">
+                                <p>Run Again Proposed Order</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Proposed Orders in a Run Again state will have their compliance rules re-executed which will lead to the Proposed Order moving into an Exception state again (rules fail again) or being Approved (rules pass this time)</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Proposed</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Compliance rules have been re-executed on the amended proposed orders and passed where the ‘Automatically Approve Proposed Orders’ is not selected on the processing entity.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Proposed</p>
+                                <p>Warning</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Compliance rules have been re-executed on the amended proposed orders and there are warnings present in the proposed orders where the ‘Automatically Approve Proposed Orders’ is not selected on the processing entity.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Calculated</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Compliance rules have been re-executed on the amended proposed orders and passed where the ‘Automatically Approve Proposed Orders’ attribute is selected and the ‘Automatically Approve Proposed Orders to State’ is set to Calculated on the processing entity.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="5">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="5">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Calculated Warning</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Compliance rules have been re-executed on the amended proposed orders and there are warnings present in the proposed orders where ‘Automatically Approve Proposed Orders’ attribute is selected and the ‘Automatically Approve Proposed Orders To State’ is set to Calculated on the processing entity.</p>
+                                <p><i>Note: Warnings are configured in the ‘Warning Type’ table in the ‘Issue warning on these Events’ attribute. Warning messages can be viewed on the proposed orders.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Approved</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Compliance rules have been re-executed on the amended proposed orders and passed where the ‘Automatically Approve Proposed Orders’ attribute is selected and the ‘Automatically Approve Proposed Orders to State’ is set to Approved on the processing entity.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">n/a</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Approval Exception</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Compliance rules have been re-executed on the amended proposed orders and there are exceptions present in the validation phase of the proposed orders where the ‘Automatically Approve Proposed Orders’ is selected and the ‘Automatically Approve Proposed Orders to State’ is set to Approved.</p>
+                                <p><i>Note: The exception details will be displayed in the ‘Approval Exceptions’ field. Users are required to correct the exception (i.e. amend the static data set up on the processing entity) before transitioning to either ‘Pending Approval’ or ‘Pending Rejection’.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Exception Proposed Order</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Compliance rules have been re-executed on the amended proposed orders and fail again.</p>
+                                <p><i>Note: Compliance Rules are configure in the ‘Post-Calculation Validation’ tab. The exception details will be displayed in the ‘Processing Notes’ field.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Cancelled</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>All states are transitioned to this state should the PFE (Process) fail, to clear the business object from the dashboard.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Cancel and Run Again</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>All proposed orders from the Cash Allocation run will be cancelled. The process will then be rerun, including compliance rules, which will lead to the proposed order moving into an ‘Exception’ state again, if rules fail again, or being approved if rules pass.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Cancelled</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>All proposed orders are transitioned to ‘Cancelled’</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="4">
+                                <p>Override</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="4">
+                                <p>Proposed Orders in an Override state have been manually overridden by a user after a compliance rule has failed</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="4">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Approved</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl will auto transition to Approved after an exception on the proposed order has been overridden.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">n/a</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Approval Exception</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl will auto transition to Approval Exception after an exception on the proposed order has been overridden however there are exceptions present in the validation phase of the proposed orders where the ‘Automatically Approve Proposed Orders’ attribute is selected and the ‘Automatically Approve Proposed Orders to State’ is set to ‘Approved’ on the processing entity.</p>
+                                <p><i>Note: The exception details will be displayed in the ‘Approval Exceptions’ field on the proposed order. Users are required to correct these exceptions (i.e. amend the static data set up on the processing entity) before transitioning to either ‘Pending Approval’ or ‘Pending Rejection’.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run Date + Time</p>
+                                <p>OR</p>
+                                <p>Run Date + Time taken from ‘Proposed Order to be Released by’</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Dual Authorisation</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl will auto transition to Dual Authorisation if ‘Dual Authorisation Required for Amount\Unit Amendments’ has been selected on the process template and amendments have been made on the proposed order’s amount or unit.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run Date + Time</p>
+                                <p>OR</p>
+                                <p>Run Date + Time taken from ‘Proposed Order to be Released by’</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Cancelled</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>All states are transitioned to this state should the PFE (Process) fail, to clear the business object from the dashboard.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">n/a</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                                <p>Approved</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                                <p>Proposed Orders in an Approved state will have corresponding physical orders in pControl which are created based on the Prop Order (user) amount field on the Proposed Order when users have transitioned to the Approved state</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                                <p>n/a</p>
+                                <p>&#160;</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Approved Exception</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>pControl will auto transition to Approval Exception if there are exceptions present in the validation phase of the proposed orders where the ‘Automatically Approve Proposed Orders’ attribute is selected and the ‘Automatically Approve Proposed Orders to State’ is set to ‘Approved’ on the processing entity.</p>
+                                <p><i>Note: The exception details will be displayed in the ‘Approval Exceptions’ field on the proposed order. Users are required to correct these exceptions (i.e. amend the static data set up on the processing entity) before transitioning to either ‘Pending Approval’ or ‘Pending Rejection’.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Run Date + Time</p>
+                                <p>OR</p>
+                                <p>Run Date + Time taken from ‘Proposed Order to be Released by’</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Approved Version</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users must move all Approved proposed orders for an entity to this state if there is to be another cash allocation process executed through the entire investment structure. New proposed orders will be made into underlying investments, and they should ‘wait’ for before progressing.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Cancelled</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>All states are transitioned to this state should the PFE (Process) fail, to clear the business object from the dashboard.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">n/a</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                                <p>Approval Exception</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                                <p>pControl will auto transition to Approval Exception if there are exceptions present in the validation phase of the proposed orders where the ‘Automatically Approve Proposed Orders’ attribute is selected and the ‘Automatically Approve Proposed Orders to State’ field is set to ‘Approved’ on the processing entity.</p>
+                                <p><i>Note: The exception details will be displayed in the ‘Approval Exceptions’ field. Users are required to correct the exception (i.e. amend the static data set up on the processing entity) before transitioning to either ‘Pending Approval’ or ‘Pending Rejection’ state.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="3">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Rejection</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to Pending Rejection and pControl rules auto transition to Rejected state where the process will end and no proposed orders are created for that entity level.</p>
+                                <p>pControl will send out the completion EDNs and trigger the next level of interfund processes.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Approval</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p> Users manually transition to Pending Approval and pControl rules auto transition to Approved state and generate a physical order for the amount in the ‘Prop Order (user)’ column and with the transaction type that is specified.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Now</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Cancelled</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>All states are transitioned to this state should the PFE (Process) fail, to clear the business object from the dashboard.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Pending Cancel</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users can transition the proposed orders to this state when the cash allocation process is required to be re-run manually.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Cancelled</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users manually transition to Pending Cancel then pControl rules auto transition to Cancelled state where the process will end without firing its completion EDNs and therefore will not trigger interfund processes.</p>
+                                <p><i>Note: If any of the proposed orders are set to Pending Cancel, all proposed orders will be transitioned to Cancelled state and the Master proposed order is transitioned to Not Started.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">n/a</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>Rejected</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>Proposed Orders in a Rejected state will have no associated physical order present in pControl and the process will continue to the next interfund level.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" rowspan="2">
+                                <p>n/a</p>
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Rejected Version</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Users must move all rejected proposed orders for an entity to this state if there is to be another cash allocation process executed through the investment structure and new proposed orders will be made into underlying investments that they should ‘wait’ for before progressing</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                                <p>Optional</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Cancelled</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>All states are transitioned to this state should the PFE (Process) fail, to clear the business object from the dashboard.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">n/a</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Approved Version</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>This is an end state signifying that this proposed order is a version, and another cash allocation process will be executed on the investment structure</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>n/a</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Cancelled</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>All states are transitioned to this state should the PFE (Process) fail, to clear the business object from the dashboard.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">n/a</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Rejected Version</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>This is an end state signifying that this proposed order is a version, and another cash allocation process will be executed on the investment structure</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>Cancelled</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                                <p>All states are transitioned to this state should the PFE (Process) fail, to clear the business object from the dashboard.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">n/a</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Row1">
+                                <p>Cancelled</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Row1">
+                                <p>This is an end state. All states are transitioned to this state should the PFE fail so the process can be run again.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Row1">n/a</td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyA-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

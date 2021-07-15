@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This validation checks the share class movement against the pool movement and raises an exception where the difference is greater than the tolerance indicated in the L200: tolerance value. </p>
+    </body>
+</html>

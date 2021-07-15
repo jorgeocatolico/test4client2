@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>In order for pControl to generate the cashflow records, the following data is required in the U108: Units on Issue: </p>
+        <p>The Unit Mvt Status = 'L' (for Loading) and the 'Calc Unit Mvt' field should be selected. </p>
+    </body>
+</html>

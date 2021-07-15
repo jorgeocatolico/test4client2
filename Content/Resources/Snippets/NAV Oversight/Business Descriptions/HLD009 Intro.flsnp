@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Will fail the test if the market price on the holding record for the asset is not consistent (% tolerance) with the price for the asset held in the U175 security prices worktable or held internally within pControl (choice available on what to compare to - see Price Validation Source attribute on Company Default Entity)</p>
+        <p>This validation is intended to check each holding record to ensure that the market price delivered on the holding record is consistent with that held in pControl - which should be the case for all holdings.</p>
+        <p>This is a validation that calculates a difference between two values and tests that % difference against the tolerances set for the validation.</p>
+    </body>
+</html>

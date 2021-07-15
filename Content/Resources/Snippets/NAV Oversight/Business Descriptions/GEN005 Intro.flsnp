@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The validation allows for a value delivered in U100: Investment Holdings import worktable for each holding of a fund to be compared to its previous value. </p>
+        <p>Validations for this test are configured in the static worktable L333: Generic Holding Data Variation Validation. </p>
+        <p>The choice of comparison indicator in the L333 worktable, determines which GEN005 Validation Entity is used.</p>
+    </body>
+</html>

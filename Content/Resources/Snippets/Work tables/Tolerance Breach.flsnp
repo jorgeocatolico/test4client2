@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>The severity of tolerance breach incurred as a result of the validation check. </p>
+        <p><i>Note: Severity level is derived from the Tolerance Status field of the L200: Tolerance worktable</i>
+        </p>
+    </body>
+</html>

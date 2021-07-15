@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>There are several processes that can be run against the same entity in <MadCap:variable name="General.ProductName" /> and can be run as standard, for example, daily pricing and expected pricing. </p>
+        <p>A  daily pricing process example shown below, will use the process template linked to the entity, and will generate a daily pricing record in pControl.</p>
+        <p style="text-align: left;">
+            <img src="../../Images/NAV Oversight Images/RequestProcessing_DailyPricing.png" class="MaxWidth50PerCent" /> </p>
+        <p style="text-align: left;"><![CDATA[  ]]></p>
+    </body>
+</html>

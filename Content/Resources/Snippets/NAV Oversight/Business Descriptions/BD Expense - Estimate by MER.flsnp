@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="78" MadCap:lastWidth="983">
+    <body>
+        <p>This methodology takes the entities actual expense ratio, and then calculates an estimated expense impact for use in NAV calculations.</p>
+        <p>Refer to the <MadCap:xref href="#Processi">Processing Requirements</MadCap:xref> below for further details and the full formula.</p>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Currency</h1>
+        <p>The currency column contains the currency type of the underlying financial event/s. A blue triangle in the top right hand corner of a forecast value indicates the underlying <MadCap:glossaryTerm glossTerm="Glossary.Term17">financial events</MadCap:glossaryTerm> have been executed in multiple currencies. Hovering over these cells will display the latest foreign exchange rates used to convert the settlement value into a different currency.</p>
+        <div class="note_label">Note</div>
+        <div class="note_content_short_width">
+            <div style="width: 575px;">
+                <p style="width: 575px;">The FX rate/s displayed in the pop up box are the latest rates available within pControl. These may be different to the rates used on the settlement date.</p>
+            </div>
+        </div>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Currency Example</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <div class="example_label">Example</div>
+                <div class="example_content">
+                    <p>In the following example, the forecast value for GAL ACCOUNT 1A as at 20 Jan 2017 is $AUD143,881.10.</p>
+                    <p>
+                        <img src="../../Resources/Images/Cash Forecasting Images/CF_Forecastvalue - needs replaced.png" />
+                    </p>
+                    <p>This value is made up of several financial event transactions in AUD, EUR and USD currencies as can be seen in the processing mode:</p>
+                    <p>
+                        <img src="../../Resources/Images/Cash Forecasting Images/CF_TransactionDisplay - needs replaced.png" />
+                    </p>
+                    <div class="note_label">Note</div>
+                    <div class="note_content">
+                        <p>This shows the ‘View Transaction’ screen. The underlying ‘cash financial events’ of each of these transactions can be viewed by right clicking on each individual transaction and selecting ‘View Financial Events’.</p>
+                    </div>
+                    <p>The two foreign currency values are converted back to AUD using the rates displayed above to arrive at the total $AUD143,881.10.</p>
+                    <p>EUR 55 * 1.386856758 = $76.27712169</p>
+                    <p>USD 35,000 * 1.251566335 = $43,804.821725</p>
+                    <p>AUD $100,000 + $76.277 + $43,804.821 = $143,881.098</p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+    </body>
+</html>

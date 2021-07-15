@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="RestrictingComments"></a>Restricting comments by functional role </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Comments can be restricted to a limited audience through the configuration of a functionality scope. Functionality scopes are attached to user roles and users are assigned one or more user role. Users then have access to all functionality available to the user roles that they are assigned. To ensure that a user cannot see a comment that is marked for 'Internal Users', ensure that the 'View Internal Users' function is inactive in all functional roles that the user has access to. </p>
+                <p class="zoom4Detail">
+                    <img src="../../Images/User Permissions Images/UPs_Comments.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

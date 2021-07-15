@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>This validation checks that the difference between the actual NAV and a calculated NAV&#160;(using data provided) is within a tolerance. </body>
+</html>

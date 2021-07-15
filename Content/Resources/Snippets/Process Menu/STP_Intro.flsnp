@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Straight-through processing (STP)  is a term  to describe a system where transactions or processes can be run with no human intervention, or as little human intervention as possible.</p>
+        <p>pControl processes can be run using STP. Processes are initiated, and run automatically when the required data arrives. pControl handles the interdependencies of processing, manages 'wait' states, (when the required input data is not yet available), and can release the results of a process, such as a price, rate, or order. Where data anomalies occur, or exceptions are encountered during processing, they are notified to the user via  <MadCap:xref href="../../../B_Dashboard/Process Dashboard/Process Dashboard.htm#SLA_Monitor">The SLA Monitor</MadCap:xref>. </p>
+        <p>Straight-through processing is configured via the creation of a 'Run STP Processing' entity, and the <b class="BufferandFunctionBold">P400: STP Configuration</b> worktable.</p>
+    </body>
+</html>

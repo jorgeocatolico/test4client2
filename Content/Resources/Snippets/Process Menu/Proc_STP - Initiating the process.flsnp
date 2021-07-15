@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>The very first time the STP process is to be run, it must be started manually:</p>
+        <ol class="stepList">
+            <li>
+                <p>Start the initial STP&#160;process by right clicking on the STP entity, and selecting 'Request Processing'.</p>
+                <p>
+                    <img src="../../Images/NAV Oversight Images/STP_setup.png" class="greyborder" />
+                </p>
+            </li>
+            <li>
+                <p>Complete the 'Request Processing' window as below:</p>
+                <p>
+                    <img src="../../Images/NAV Oversight Images/MG_STP_OH2.png" class="greyborder" />
+                </p>
+                <p MadCap:conditions="Note To Selfs.ScreenOnly">
+                    <img src="../../Images/All/RequestProcessingWindow_STP.png" MadCap:conditions="Note To Selfs.ScreenOnly" />
+                </p>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>Refer to <MadCap:xref href="../../../C_Process/Request Processing.htm">Request Processing</MadCap:xref> for details on each of the above fields.</p>
+                </div>
+                <p>&#160;</p>
+            </li>
+            <li>
+                <p>Select &lt;Ok&gt; to start the process, or &lt;Cancel&gt; to exit without starting</p>
+                <p>&#160;</p>
+                <p>The process will start, which will then initiate all processes in the P400 worktable in the specified priority order.</p>
+            </li>
+        </ol>
+    </body>
+</html>

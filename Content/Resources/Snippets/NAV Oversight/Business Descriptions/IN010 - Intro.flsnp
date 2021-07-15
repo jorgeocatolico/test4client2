@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Indicates initialisation of tokens for Actual or Oversight Pricing. </p>
+        <p>
+If selected, the process will run in initialisation mode, i.e any checks which require prior day data will be skipped if that prior day’s data is not present. Functions such as <b class="BufferandFunctionBold">DL005</b> and <b class="BufferandFunctionBold">EX050</b> are automatically selected (turned on) during this phase.
+</p>
+    </body>
+</html>

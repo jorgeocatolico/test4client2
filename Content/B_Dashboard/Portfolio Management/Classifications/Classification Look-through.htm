@@ -1,0 +1,1171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Note To Selfs.ScreenOnly">
+    <head>
+        <link href="../../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Classification Look-through</h1>
+        <h2 class="_orange">Understanding Classification Look-through</h2>
+        <p>Classification look-through provides the ability  to look through a plan's investment structure allowing compliance checking of the underlying child assets on the Portfolio Management classification structure panel. </p>
+        <p>The classification structure can be populated by:</p>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Using externally sourced look-through weights. This is known as External  Look-through with data loaded into the <MadCap:xref href="../../../G_Data/Worktables/Import/U490 - External Look Through.htm">U490: External Look-through</MadCap:xref> worktable.</li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Using Investment Allocation Parameters (ALPs) or Investment Allocation Records (ALRs) as the source of weights. This is known as Internal Single Level.</li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Using the Internal Look-through worktable as the source of weights which is considered Internal Multi Level. This uses the P490: Look-through worktable.</li>
+        </ul>
+        <p>The weights and values of the plan's direct assets, (i.e. the investment ALR), are pro-rated by their child asset weights to create a look-through ALR for each child asset. The child assets can be assigned to a look-through classification structure. CAR will then create a classification ALR allowing the child assets to be displayed in a classification and used in compliance checks.</p>
+        <p>Child assets can be externally sourced holdings or factors, or internal investment structure entities. </p>
+        <h2 class="_orange">Source of Look-through Weights</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Data source options</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>There are four potential sources of the look-through weights: </p>
+                <ol>
+                    <li>P490: Internal Look-through worktable. </li>
+                    <li>U490: External Look-through worktable.</li>
+                    <li>Investment ALP: static data.</li>
+                    <li>Investment ALR: CAR process output.</li>
+                </ol>
+                <p>An attribute setting is available on the Cash Allocation tab to determine which type of look-through is to be applied.</p>
+                <p>
+                    <img src="../../../Resources/Images/Portfolio Management Images/PM_Look-throughALRs.png" />
+                </p>
+                <p>Data source options include Allocation records, External, Internal, Strategic allocation parameters or Target allocation parameters. </p>
+                <p>The chain length level refers to the number of levels to look through down from the asset for the internal and external look-through.</p>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>When the Allocation Records, Target Weights, or Strategic Weights option is chosen as the data source, then the chain length level / look through level can only be one. </p>
+                    <p>If a deeper look-through level is required, then the look-through process should be run at a deeper level with the internal data source. </p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Internal Look-through</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Data is written to the P490: Internal Look-through worktable as part of the look-through process. </p>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Field name</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Entity or Investment ALR source</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Plan</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">The process entity on which CAR is being run, the parent in the look-through relationship. This is used to determine the assets.&#160;These assets are then used to determine the child assets. </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Effective Date</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">The process date on which CAR is being run.</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Source</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>P490</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Level</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Entity attribute indicating which level of data to retrieve from the sources. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>A list of assets from the Investment ALR (T215) for the 'Plan' and the 'Effective Date'.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Child Asset</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>For each asset a list of child assets from the P490 where:</p>
+                                <p>p490.pControl_code = 'Asset' and</p>
+                                <p>p490.effective_date = 'Effective Date' and</p>
+                                <p>(If 'Level' = lowest then where is_bottom = 0, else where p490.chain_length = 'Level')</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Child Weight</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>For each child asset, the allocation percent from the P490 for the child asset selection. </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>If there are no records in the P490 worktable for the effective date, the latest date set prior to the effective date will be used and a message displayed accordingly.</p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>External Look-through </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The external look-through data is loaded into the U490: External Look-through worktable. Similar to the P490: Internal Look-through worktable, the process for retrieving data from the U490 is the same as for the P490 except instead of calculating the look-through data from the investment path, the U490 may hold investment path and other types of look-through weights such as risk factors or asset class components. Therefore, there is an additional field in U490 for a classification tag. </p>
+                <p>Further information is provided under  <MadCap:xref href="../../../G_Data/Worktables/Import/U490 - External Look Through.htm">U490: External Look-through.</MadCap:xref></p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>ALR Look-through</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The ALR look-through (T215) refers to using the output of CAR processing from lower level plans, as the weights in the look-through calculation. Although an Investment ALR could be used to go down multiple levels in the investment structure, the ALR look-through can only be used to view one level down. The internal look-through should be used if multiple levels of the investment structure are to be looked through. </p>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Field name</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Entity or Investment ALR source</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Plan</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">The process entity on which CAR is being run, the parent in the look-through relationship. This is used to determine the assets.&#160;These assets are then used to determine the child assets. </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Effective Date</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">The process date on which CAR is being run.</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Source</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>T215 Investment ALR</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Level</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>A list of assets from the Investment ALR (T215) for the 'Plan' and the 'Effective Date'.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Child Asset</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>For each asset a list of child assets from the T215 where:</p>
+                                <p>t215.plan_entity_node_id = 'Asset' and</p>
+                                <p>t215.effective_date = 'Effective Date' and</p>
+                                <p>where the master status stream has a state of finished</p>
+                                <p style="font-style: italic;">Note: The status stream should be in a state of finished so as not to select from CAR runs where processing is not finished and the proposed orders not approved. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Child Weight</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>For each child asset, the after weight from the T215 for the child asset selection. </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>It is expected that Start of Day processing will be run daily and will provide the look-through data as the process is automatically finished and all orders are approved. In cases where there are two or more CAR runs for a day that have been completed, the latest run will be used. </p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>ALP Look-through</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The ALP look-through (T210) refers to using the Asset's Investment ALP Target and Strategic weights as the weights in the look-through calculation. The data source will specify either the target or strategic weight. The selection process is the same, except a different column is used for the child weight.</p>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Field name</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Entity or Investment ALR source</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Plan</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">The process entity on which CAR is being run, the parent in the look-through relationship. This is used to determine the assets.&#160;These assets are then used to determine the child assets. </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Effective Date</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">The process date on which CAR is being run.</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Source</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>T210 Investment ALP</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Level</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>N/A</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Asset</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>A list of assets from the Investment ALP (T210) for the 'Plan' and the 'Effective Date'.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Child Asset</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>For each asset a list of child assets from the T210 where:</p>
+                                <p>t210.plan_entity_node_id = 'Asset' and</p>
+                                <p>the latest t210.start_date &lt;= 'Effective Date' and</p>
+                                <p style="font-style: italic;">Note: when selecting from the t210 Allocation Parameter table, the start date may be ragged i.e. not all assets will have the same start date. The process needs to select the latest start date on or prior to the effective date for each asset. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Child Weight</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>For each child asset, the target or strategic weight from the T210, depending on the data source selected.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Look-through calculation</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Consistency check</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The Investment ALR will be pro-rated to create Look-through ALR. </p>
+                <p>Using the data selected from one of the sources, there is a Plan and Effective Date:</p>
+                <ol>
+                    <li>A list of the Plan's assets.</li>
+                    <li>Multiple lists of Child Assets (one for each of the Plan's Assets).</li>
+                    <li>A child weight for each child asset. </li>
+                </ol>
+                <p>A Look-through ALR is created for each child asset, which is based on the parent, but with changes that are outlined below:</p>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>For each asset, the sum of child weights must equal 100%. If this does not occur, then there is a data inconsistency and an exception will be raised. </p>
+                </div>
+                <p> </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>ALR creation</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1" colspan="3">
+                                <p>Changes required to create a Look-through ALR for each child asset</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Sub_Heading" MadCap:pattern="18">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Sub_Heading" colspan="3">
+                                <p>Changes to record identifiers</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">asset_id</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" colspan="2">Replace with the Child Asset ID</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">counterparty_id</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" colspan="2">Replace with Child Asset ID</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">allocation_record_type</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" colspan="2">Replace with LT&#160;ALR record type</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">originator_id</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" colspan="2">
+                                <p>Replace with asset_id </p>
+                                <p><i>Note: this is the original asset id, not the updated one.</i>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Sub_Heading" MadCap:pattern="18">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Sub_Heading" colspan="3">
+                                <p>The following fields are multiplied by the child weight</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">initial_pre-start_weight</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">initial_pre_start_inv_bal_base</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">proposed_order_asset</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>pre_start_weight</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>pre_start_inv_bal_base</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>proposed_ord_base</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>initial_weight</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>initial_inv_bal_base</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>proposed_ord_units</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>start_weight</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>start_inv_bal_base</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>proposed_ord_weight</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>actual_weight</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>after_inv_bal_base</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>actual_ord_asset</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>after_weight</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>initial_inv_bal_asset</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>actual_ord_base</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>actual_after_weight</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>start_inv_bal_asset</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>actual_ord_units</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>after_inv_bal_asset</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>after_units</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Sub_Heading" MadCap:pattern="18">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Sub_Heading" colspan="3">
+                                <p>Fields populated with new values</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>rel_id</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>last_updated_date</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>last_updated_by</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>integrity_version</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Sub_Heading" MadCap:pattern="18">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Sub_Heading" colspan="3">
+                                <p>Fields  populated with the same value</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>effective_date</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>price_run_type_id</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>external_reference</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>batch_number</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>price_type_id</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>is_master</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>alr_tag</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>transaction_type__id</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>order_id</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>alr_type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>plan_entity_node_id</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Aggregating across like child asset</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>In the case where the Look-through ALR has the same asset and originator ID, then these are aggregated as there is only one place in the tree to map these child assets.</p>
+                <p>When multiple instances of the same child asset exist, then:</p>
+                <ol>
+                    <li>The value and weights fields are summed.</li>
+                    <li>The new value fields are to take new values.</li>
+                    <li>The following same value fields are not to be populated: external_reference, order_id, and transaction_type_id.</li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Look-through Example</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Internal Look-through using the P490</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <div class="example_label">Example</div>
+                <div class="example_content">
+                    <h3>Internal Look-through using the P490</h3>
+                    <p>In this example, the look-through source has been set to internal at the lowest level.</p>
+                    <h3>ALR Data</h3>
+                    <p>Plan: ABC has three assets: Asset A, Asset B and Asset C with weights of these assets within ABC of: 20%, 30% and 50% respectively. The CAR process results are as follows:</p>
+                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <thead>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Plan</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Effective Date</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Asset</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="text-align: right;">
+                                    <p>After Weight</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="text-align: right;">
+                                    <p>After Value</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1" style="text-align: right;">
+                                    <p>Order</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset A</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.2</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">2,000,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-1,000,000</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset B</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.3</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">3,000,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">Asset C</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">0.5</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">5,000,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1" style="text-align: right;">1,000,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3>P490 Data</h3>
+                    <p>Asset to Child Assets: Each Asset (A, B, C) can now be considered a plan and each have three assets - which are referred to as Child Assets of the Plan ABC. The following table shows details of the P490 for Asset A, Asset B, and Asset C. </p>
+                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <thead>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>pControl Code</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Effective Date</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Asset</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="text-align: right;">
+                                    <p>Allocation Percentage</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="text-align: right;">
+                                    <p>Allocation Value</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1" style="text-align: right;">
+                                    <p>Is Bottom</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset A</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset AA</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.15</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">1,500,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">0</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset A</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset AB</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.40</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">4,000,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">0</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset A</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset AC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.45</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">4,500,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">0</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset B</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset BA</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.25</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">5,000,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">0</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset B</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset BB</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.35</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">7,000,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">0</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset B</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset BC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.40</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">8,000,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">0</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset C</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset AA</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.05</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">1,500,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">0</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset C</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset CB</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>0.65</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>19,500,000</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>0</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset C</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset CC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>0.30</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>9,000,000</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>0</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1" colspan="6">
+                                    <p style="font-style: italic;">The asset named 'Asset AA' is held by both 'Asset A' and 'Asset C'. </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="note_label">Note</div>
+                    <div class="note_content">
+                        <p>In the P490, a 0 value in the 'is bottom' field indicates that it is the lowest level. Otherwise, this field would be populated with -1.</p>
+                    </div>
+                    <h3>Selection Variables</h3>
+                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <thead>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Plan</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Effective Date</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Source</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Level</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                    <p>Asset</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">U490</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Lowest</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Asset A</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">U490</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Lowest</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Asset B</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">U490</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">Lowest</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">Asset C</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3>Internal Look-through (P490)</h3>
+                    <p>Once the selection variables are joined with the P490 data, the additional fields are:</p>
+                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <thead>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Plan</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Effective Date</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Source</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Level</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Asset</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Child Asset</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1" style="text-align: right;">
+                                    <p>Weight</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">U490</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Lowest</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset A</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset AA</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">0.15</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">U490</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Lowest</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset A</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset AB</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">0.40</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">U490</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Lowest</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset A</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset AC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">0.45</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">U490</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Lowest</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset B</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset BA</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">0.25</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">U490</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Lowest</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset B</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset BB</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">0.35</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">U490</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Lowest</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset B</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset BC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">0.40</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">U490</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Lowest</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset C</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset AA</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">0.05</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">U490</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Lowest</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset C</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset CB</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>0.65</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                    <p>01-Mar-2018</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">U490</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">Lowest</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">Asset C</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">Asset CC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1" style="text-align: right;">
+                                    <p>0.30</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3>Look-through Calculation</h3>
+                    <p>The next step is to create the Look-through ALR from the Investment ALR. The Look-through ALR records are:</p>
+                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <thead>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Plan</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Effective Date</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Originator</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Asset</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="text-align: right;">
+                                    <p>After Weight</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="text-align: right;">
+                                    <p>After Value</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1" style="text-align: right;">
+                                    <p>Order</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset A</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset AA</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.030</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">300,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-150,000 </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset A</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset AB</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.080</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">800,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-400,000</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset A</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset AC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.090</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">900,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-450,000</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset B</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset BA</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.075</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">750,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset B</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset BB</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.105</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">1,050,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset B</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset BC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.120</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">1,200,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset C</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset AA</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.025</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">250,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">50,000</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset C</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset CB</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.325</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">3,250,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">650,000</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                    <p>01-Mar-2018</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">Asset C</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">Asset CC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">0.150</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">1,500,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1" style="text-align: right;">300,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="note_label">Note</div>
+                    <div class="note_content_in_list">
+                        <p>Each weight from the P490 is multiplied by the weight and values from the Investment ALR of the plan whose assets related to the pControl code in the P490.</p>
+                    </div>
+                    <h3>Aggregating across like child asset</h3>
+                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <thead>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Plan</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Effective Date</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Originator</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Asset</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="text-align: right;">
+                                    <p>After Weight</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" style="text-align: right;">
+                                    <p>After Value</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1" style="text-align: right;">
+                                    <p>Order</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset A</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset AA</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.055</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">550,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-100,000 </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset A</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset AB</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.080</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">800,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-400,000</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset A</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset AC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.090</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">900,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-450,000</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset B</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset BA</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.075</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">750,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset B</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset BB</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.105</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">1,050,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset B</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset BC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.120</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">1,200,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">-</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">01-Mar-2018</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset C</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Asset CB</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">0.325</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">3,250,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">650,000</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">ABC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                    <p>01-Mar-2018</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">Asset C</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">Asset CC</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">0.150</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">1,500,000</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1" style="text-align: right;">300,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>&#160;</p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Default Asset Classification</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Understanding Default Asset Classification </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>To assist in the maintenance of the Classification Parameters, the default asset classification and a classification check are attributes in the Cash Allocation process template. As the non-leaf nodes of a classification are mainly static and shared across multiple plans, and the leaf nodes for a plan (i.e. the assets)  can change on a more regular basis, maintenance of these assets on a per plan basis can be reduced by using the Default Asset Classification functionality.</p>
+                <p>Sectors that share the same code as the asset are referred to as Default Sectors. Default Asset Classification will automatically assign the asset to their default sector.</p>
+                <p>There are two attributes in the Cash Allocation Process template to determine asset classification.</p>
+                <p>
+                    <img src="../../../Resources/Images/Portfolio Management Images/PM_AssetClassification.png" />
+                </p>
+                <h3>Classify Assets</h3>
+                <p>When active, this attribute will ensure that the asset classification process is run as part of the CAR or Start of Day processes. </p>
+                <h3>Check for Unclassified Assets</h3>
+                <p>The default sector refers to a sector with the same code as the unclassified asset. pControl will check to see if a matched sector exists and is type H - holding. If there is no match found, then processing stops for the asset in this classification and a message indicates Asset XXX has no default sector in classification YYY.</p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

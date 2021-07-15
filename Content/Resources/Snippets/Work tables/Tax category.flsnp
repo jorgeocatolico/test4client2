@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The tax category to which the account is allocated (utilised for Account Views reporting and Tax and Distribution Calculations). </p>
+        <p style="font-style: italic;">Note: Tax categories are generally the same as those outlined by the Taxation Office for categorisation of income and expenses. The Tax Category is maintained via a lookup "Tax Category" in System Admin.</p>
+    </body>
+</html>

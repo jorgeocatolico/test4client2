@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>This validation compares the Target Hedge Ratio to the Actual Hedge Ratio and will generate an exception where the difference exceeds the tolerance.</body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Classifications, also known as 'Classification Allocation Records' (Classification ALRs) enable the display of proposed investments via different classifications, such as, but not limited to: asset class, or economic sector groupings,  custodian or country of origin. Validation checks can then be set against these user defined classifications to ensure compliance with various defined limits, or business rules. For example, International Equities could have a classification check to ensure its weight within the plan is between 20% to 30% of the total plan value; or its weight within all international sectors is between 70% to 80%.</body>
+</html>

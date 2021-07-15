@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The methodology for the fee calculation.</p>
+        <p>Flat percentage - applies a flat rate to the FUM that has been calculated.</p>
+        <p>Absolute percentage - applies the percentage applicable for the tier on the sliding scale for each sector, stepping up through the tier levels for each level of the FUM.</p>
+        <p>Cumulative percentage - applies the percentage applicable for each tier on the sliding scale for each sector, stepping up through the tier levels for each level of the FUM.</p>
+    </body>
+</html>

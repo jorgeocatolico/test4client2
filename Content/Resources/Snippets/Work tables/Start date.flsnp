@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The effective date of the classification allocation parameter, i.e. classifications generated on or after this date will have the checks configured in this worktable run against them.</p>
+    </body>
+</html>

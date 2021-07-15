@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This check tests whether there is an approved control record in pControl for the process being run for the entity for the prior valuation point (i.e. previous working day).</p>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Unexplained values are calculated as follows:</p>
+        <p>
+            <MadCap:equation>$\small Unexplained\ Value\ =\ NAV\ -\ \small\sum NAV\ accounts$</MadCap:equation>
+        </p>
+    </body>
+</html>

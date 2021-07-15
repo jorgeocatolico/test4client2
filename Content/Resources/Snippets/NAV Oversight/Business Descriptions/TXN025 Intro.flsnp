@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Will fail the test if there is a transaction present in the U200 worktable with no associated holding record in the U100 worktable unless all transactions into this asset sum to 0, i.e., there was a purchase and sale the same day.
+</p>
+        <p>
+This validation is intended to check each transaction record to ensure that there is an associated holding record for the entity.
+</p>
+        <p>
+This is a true/false validation and either passes the test or fails – there is no comparison to a tolerance.
+</p>
+    </body>
+</html>

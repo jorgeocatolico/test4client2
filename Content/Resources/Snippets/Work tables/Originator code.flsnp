@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The code of the entity that generates the order or transaction, or has a holding in the underlying (interfund) investment. </p>
+        <p>The originator of the asset when the asset is held multiple times in a multi-originator structure. For example, two originators could invest into the same cash asset. </p>
+    </body>
+</html>

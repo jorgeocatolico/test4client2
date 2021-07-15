@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Will fail the test if the market price date on the holding record is not equal to the effective date on the holding record unless the security has been flagged as infrequently priced through the L245 infrequently priced assets worktable.</p>
+        <p>This validation is intended to check each holding record to ensure that the market price date is the same as the current effective date and therefore the price on the holding record is not ‘stale’.</p>
+        <p>This is a true/false validation and either passes the test or fails – there is no comparison to a tolerance.</p>
+    </body>
+</html>

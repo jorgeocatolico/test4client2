@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>The AMAS category records as well as individual account records are exported to the <b class="BufferandFunctionBold">U782: Account Movement Analysis</b> worktable when the [EX092] Export Account Movement Analysis Data attribute is selected. Records are exported in the order they appear on the AMAS view. Existing records in the table are replaced when processes are re-run.</body>
+</html>

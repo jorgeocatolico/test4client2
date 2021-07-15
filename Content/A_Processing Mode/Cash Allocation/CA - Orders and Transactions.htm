@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>CA - Orders and Transactions</h1>
+        <h2 class="_orange">In Processing Mode</h2>
+        <p>pControl captures and processes orders and transactions for an entity. This updates the asset balances (investment holdings), registry balances and internal account balances (‘investment ledger’ accounts). It is these investment, registry and account balances which are used by the Cash Allocation product to calculate an entity’s liquidity position and actual investment position into its underlying assets for a given day or point in time.</p>
+        <p>The four main types of transactions supported by pControl are as follows:</p>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Orders – pControl processes orders into unitised vehicles, with an order representing two fundamental asset transfers (financial events). Details of the order including the originator, counterparty and asset entities involved in the transaction:</li>
+        </ul>
+        <ul class="Test2">
+            <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The transfer of cash between the originator and counterparty – updates the liquidity position (cash settlement related internal account balances) of both parties</li>
+            <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The transfer of units or shares in the asset between the originator and counterparty – updates the investment balances of both originator and counterparty and the registry position of the asset</li>
+        </ul>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Payments / Receipts – pControl processes payments or receipts between two entities by capturing the originator and counterparty involved in the transaction and creating the following asset transfers (financial events):</li>
+        </ul>
+        <ul class="Test2">
+            <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The transfer of cash from the originator to the counterparty in the case of a payment i.e. management fee payment</li>
+            <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The transfer of cash from the counterparty to the originator in the case of a receipt i.e. management fee rebate</li>
+        </ul>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Journals – pControl processes journals to transfer cash amounts between internal pControl accounts for an entity (fund), i.e. debiting one account and crediting another with the cash amount specified i.e. fee and tax accruals.</li>
+        </ul>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Revaluations – revaluation transactions in pControl are used to update the value of a unit holding balance between an originator and an asset. A revaluation transaction has the following impact:</li>
+        </ul>
+        <ul class="Test2">
+            <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Originator’s investment balance in the asset is updated</li>
+            <li class="test2" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Asset’s registry balance for the originator is updated.</li>
+        </ul>
+        <p>Cash allocation processing is focussed around the generation of proposed orders which ultimately lead to the generation of orders which can go out to the market.</p>
+    </body>
+</html>

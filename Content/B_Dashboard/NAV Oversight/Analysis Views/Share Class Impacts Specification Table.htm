@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="MG Staff Only.ScreenOnly">
+    <head>
+        <link href="../../../Resources/TableStyles/MG_TableStyle01Grey_9pt.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Share Class Impacts Specification Table</h1>
+        <p>The formulas shown below for 'Class Impact (bp)' apply to both the 'Master Class Impact (bp)' and 'Actual Class Impact (bp)' columns.</p>
+        <p>The 'Difference (bp)' column is not shown in the table below, however this is calculated as: </p>
+        <p>
+            <MadCap:equation>$\small Master\ Class\ Impact\ -\ Actual\ Class\ Impact$</MadCap:equation>
+        </p>
+        <p>The results of the validation checks   and  are compared to the <b class="BufferandFunctionBold">L200: Tolerance values</b>, and the tolerance status is displayed in CPAS analysis view.</p>
+        <table class="TableStyle-MG_TableStyle01Grey_9pt" cellspacing="0" style="mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey_9pt.css');width: auto;">
+            <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" style="width: 74px;" />
+            <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey_9pt-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Head-Header1">
+                    <th colspan="3" class="TableStyle-MG_TableStyle01Grey_9pt-HeadD-Regular-Header1">
+                        <p>Share Class Impacts  Report Specification</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" style="font-size: 0.90em;font-weight: bold;">
+                        <p>Category
+ Code</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1" style="font-size: 0.90em;font-weight: bold;">
+                        <p>Category Name</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1" style="font-size: 0.90em;font-weight: bold;">
+                        <p style="font-size: ;">Class Impact (bp)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>UPI_CP</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>NAV&#160;price return</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>
+                            <MadCap:equation>$\frac{U101\ nav\ price}{U101\ prev\ nav\ price - 1} \times 10000$</MadCap:equation>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>CUPI_CP</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Clean Price Return</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>
+                            <MadCap:equation>$\small NAV\ Price\ Return\ (UPI\_CP) - Performance\ Impacts\ (IMP\_CP)$</MadCap:equation>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>IMP_CP</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Performance Impacts</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Sum of all underlying performance impacts</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>DIV_CP</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Dividend Impacts</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>
+                            <MadCap:equation>$\frac{U101\ gross\ dist\ paid}{U101\ prev\ net\ nav\ amount} \times 10000$</MadCap:equation>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>FEE_CP</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Fees</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>
+                            <MadCap:equation>$\frac{Change\ in\ Fee\ Accrual\ Account\ Since\ Last\ Valuation\ Point}{Previous\ Net\ NAV\ Amount} $</MadCap:equation>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>FX_CP</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>FX&#160;Impact</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>
+                            <MadCap:equation>$\left ( \frac{Current\ FX\ Rate}{Previous\ FX\ Rate} \right ) -1$</MadCap:equation>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>HDG_CP</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Hedging Impact</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>
+                            <MadCap:equation>$\small U101.hedge \_\ ratio\ \times FX  \_\ CP\ \times -1$</MadCap:equation>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>RND_CP</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Rounding Impact</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>
+                            <MadCap:equation>$\small Rounding\ Impact\ = Unrounded\ NAV\ price\ return\ - Rounded\ NAV\ price\ return$</MadCap:equation>
+                        </p>
+                        <p>
+                            <MadCap:equation>$\small Unrounded\ NAV\ Price\ Return\ = \normalsize \frac{U101\ Unrounded\ nav\ price}{U101\ prev\ unrounded\ nav\ price\ -1}$</MadCap:equation>
+                        </p>
+                        <p>
+                            <MadCap:equation>$\small Rounded\ NAV\ Price\ Return\ = \normalsize \frac{U101\ nav\ price}{U101\ prev\ nav\ price\ -1}$</MadCap:equation>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>RNDCAP_CP</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p> Capital Rounding Impact</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>
+                            <MadCap:equation>$\small Rounded\ Unit\ Change\ = \normalsize \frac{Capital\ Flows}{Prev\ Rounded\ NAV\ price}$</MadCap:equation>
+                        </p>
+                        <p>
+                            <MadCap:equation>$\small Unrounded\ Unit\ Change\ = \normalsize \frac{Capital\ Flows}{Prev\ Unrounded\ NAV\ price}$</MadCap:equation>
+                        </p>
+                        <p>
+                            <MadCap:equation>$\small Value\ Difference\ = \left ( Unit\ change\ -\ Unrounded\ Unit\ Change \right ) \times Previous\ Rounded\ NAV\ Price$</MadCap:equation>
+                        </p>
+                        <p>
+                            <MadCap:equation>$\small Impact\ = \normalsize \frac{Value\ Difference}{Previous\ Net\ NAV\ Amount}$</MadCap:equation>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>FWDCAP_CP</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p> Capital Forward Impact</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <p>Client specific. This row will display zero, unless otherwise configured.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>DILCAP_CP</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyE-Regular-Row1">
+                        <p>Capital Dilution Impacts</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyD-Regular-Row1">
+                        <MadCap:equation>$\large \frac{\left ( \frac{\left ( Previous\ NAV\ Price\ -\ Current\ NAV\ Price \right )\ x\ Total\ Cashflows}
+
+{Previous\ NAV\ Price}
+ 
+\right )
+}
+{\small Previous\ Net\ NAV\ Amount\ x\ 10000}$</MadCap:equation>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey_9pt-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Row1">
+                        <p>All</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyB-Regular-Row1">
+                        <p>Account Impact</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey_9pt-BodyA-Regular-Row1">
+                        <p>
+                            <MadCap:equation>$\frac{\left (  sum\left ( U104.Base\ Amount \right ) -\ sum\left ( Prev\ U104.Base\ Amount \right ) 
+\right )}
+{Prev\ U101.NAV}$</MadCap:equation>
+                        </p>
+                        <p style="font-style: italic;">Note: This price impact is used to calculate the impact based on movement in account balances for an account group. It can be used for any price type.</p>
+                        <p style="font-style: italic;">The U104 accounts must be mapped to an account group in the <b class="BufferandFunctionBold">L184: Account Category</b> and and L315:Account Code Mapping worktables prior to generating the CPAS analysis view.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

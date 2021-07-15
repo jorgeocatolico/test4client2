@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Balance Differences</h1>
+        <p>Where a difference is identified between pControl’s value and an actual bank account value (as supplied from an external source), a balance difference transaction needs to be executed in pControl’s processing module. Once investigated and an appropriate transaction created, the balance difference can be cancelled.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Starting cash balance</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The transaction type used on balance difference transactions is determined by the following attribute on account entities.</p>
+                <p>In the following example, pControl shows a cash balance of -$2001 for PL_ACCOUNT_2 originator entity as at close of business 24-Jan-2017:</p>
+                <p>
+                    <img src="../../Resources/Images/Cash Forecasting Images/CF_CashMovementTransactions.png" />
+                </p>
+                <p>&#160;</p>
+                <p>
+                    <img src="../../Resources/Images/Cash Forecasting Images/CF_CashHoldingBalance.png" style="width: 483px;height: 93px;" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Creating ‘Balance Difference’ transactions</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The actual bank balance value of $5,000 for 25-Jan-2017 is received into pControl via a csv file which is imported to the U365: Cash Balances worktable. The importing and processing of bank account values is completed using the pControl take-on process.</p>
+                <p>
+                    <img src="../../Resources/Images/Cash Forecasting Images/CF_ActualBalanceImported.png" style="width: 652px;height: 103px;" />
+                </p>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>Positive values in the U365: Cash Balances worktable indicate positive bank account values. Negative values indicate negative bank balances.</p>
+                </div>
+                <p>As soon as the take on and validation processes are completed, and the U365: Cash Balances worktable contains a ‘completed’ record,  the ‘Balance Difference’ process will automatically commence. pControl will calculate the difference between the cash holdings, (-$2001) and the U365 value ($5000), and will generate an Income / Expense transaction for $7001, using the transaction type configured on the account.</p>
+                <p>
+                    <img src="../../Resources/Images/Cash Forecasting Images/CF_BalanceDifferenceTransaction.png" />
+                </p>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>In the ‘Maintain Income / Expense’ view, a positive value is a payment, and a negative value is a receipt.</p>
+                </div>
+                <p style="font-size: 6pt;">&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Amending 'Balance Difference' transactions</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList" start="1">
+                    <li class="stepList">Right click on the Income / Expense transaction and select ‘Properties’.</li>
+                    <li class="stepList">Click on the padlock icon, it will change to an open padlock. The properties view of the Income / Expense transaction is displayed, and values in black text, such as the ‘Cash Amount’ can be amended if required.</li>
+                    <div class="note_label">Note</div>
+                    <p>
+                        <div class="note_content_in_list">The padlock icon will only appear from the 'Maintain Income / Expense' view. It is not possible to amend any values from the 'View Income / Expense' screen.</div>
+                    </p>
+                    <p>&#160;</p>
+                    <p>
+                        <img src="../../Resources/Images/Cash Forecasting Images/CF_PropertiesView.png" />
+                    </p>
+                    <li class="stepList">Change the required values.</li>
+                    <li class="stepList">Select &lt;Ready to Auth&gt; when all changes are completed, and to send the change to be checked by a different user, or</li>
+                    <ul class="FirstLevelBlueBullet">
+                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Select &lt;In Progress&gt; to save the changes and continue working on them later or</li>
+                        <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Select &lt;Validate&gt;, and pControl will check all completed fields or </li>
+                        <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Select &lt;Cancel&gt; to exit the view without saving any changes.</li>
+                    </ul>
+                    <li class="stepList">Select whether this amendment is an originator or counterparty amendment, and enter any notes. </li>
+                    <p>
+                        <img src="../../Resources/Images/Cash Forecasting Images/CF_OriginatorAmend.png" />
+                    </p>
+                    <li class="stepList">A different user can then retrieve the amended Income / Expense transaction; review the changes and then either approve or reject. </li>
+                    <p>
+                        <img src="../../Resources/Images/Cash Forecasting Images/CF_ViewIncomeExpense.png" style="width: 548px;height: 137px;" />
+                    </p>
+                    <p>pControl will now hold a cash balance of $5001 for this account.</p>
+                    <p>&#160;</p>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Cancelling ‘Balance Difference' transactions</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>In this example, the initial bank balance for ‘Dollars and Sense Account 1’ was $10,000. The external bank account value is $6,500. A file is received from an external source into the U365: Cash Balances worktable showing the $6,500. When this file is loaded and validated, pControl will automatically write a balance difference journal transaction for the difference of $3,500.</p>
+                <p>
+                    <img src="../../Resources/Images/Cash Forecasting Images/CF_InitialBankBalance.png" />
+                </p>
+                <p>Once investigated and an appropriate transaction created, the balance difference can be cancelled by:</p>
+                <ol class="stepList" start="1">
+                    <li class="stepList">Select the required transaction from the ‘Maintain Income / Expense’ view</li>
+                    <li class="stepList">Select &lt;Delete / Cancel&gt;</li>
+                    <p>
+                        <img src="../../Resources/Images/Cash Forecasting Images/CF_SelectJournal.png" />
+                    </p>
+                    <li class="stepList">Select whether this is an ‘Originator Cancel’ or ‘Counterparty cancelled’ transaction, and enter any processing notes as required.</li>
+                    <p style="font-style: italic;">Note: The text shown in the ‘Processing Notes’ fields will be auto populated into this field. This can be modified if required.</p>
+                    <p>
+                        <img src="../../Resources/Images/Cash Forecasting Images/CF_CancelTransaction.png" style="width: 360px;height: 162px;" />
+                    </p>
+                    <li class="stepList">Select &lt;Ok&gt; to cancel the transaction, or &lt;Cancel&gt; to exit without completing the cancellation.</li>
+                    <p>The ‘cancel amend type’ of this transaction will now show as ‘Originator Cancellation’, and the status of the ‘Trade Capture and Validation’ status stream is showing ‘Trade Accepted’:</p>
+                    <p>
+                        <img src="../../Resources/Images/Cash Forecasting Images/CF_Transactioncancelled.png" />
+                    </p>
+                    <div class="note_label_in_list">Note: The view may need to be refreshed by selecting the binoculars icon to show the updated ‘Cancel Amend type’.</div>
+                    <li class="stepList">Open the transaction in the properties view, by right clicking and selecting, ‘Properties’.</li>
+                    <li class="stepList">Unlock the transaction by selecting the padlock icon</li>
+                    <li class="stepList">Select &lt;Ready to Auth&gt; in the bottom right hand corner.</li>
+                    <p>
+                        <img src="../../Resources/Images/Cash Forecasting Images/CF_UnlockforCancellation.png" style="width: 646px;height: 474px;" />
+                    </p>
+                    <li class="stepList">Select a reason for cancellation and add any processing notes as required.</li>
+                    <p>
+                        <img src="../../Resources/Images/Cash Forecasting Images/CF_ReasonforCancellation.png" style="width: 434px;height: 196px;" />
+                    </p>
+                    <li class="stepList">Select &lt;Ok&gt; to cancel the transaction, or &lt;Cancel&gt; to exit without completing the cancellation.</li>
+                    <p>A second user can then review the cancellation, and approve or reject the cancellation.</p>
+                    <li class="stepList">Second user selects Functions &gt; Funds Processing &gt; Capture and Maintain &gt; Income / Expense.</li>
+                    <li class="stepList">Select the cancelled transaction, and open the properties view.</li>
+                    <li class="stepList">Unlock the transaction with the padlock icon.<ul start="14" class="FirstLevelBlueBullet"><li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Select &lt;Authorise&gt; to complete the cancellation, or &lt;Reject&gt; to exit the cancellation process.</li></ul></li>
+                    <p>
+                        <img src="../../Resources/Images/Cash Forecasting Images/CF_AuthoriseorReject.png" style="width: 652px;height: 451px;" />
+                    </p>
+                </ol>
+                <p>Once the cancellation has been ‘Authorised’, the balance difference transaction is removed, leaving only the original cash balance of $10,000.</p>
+                <p>
+                    <img src="../../Resources/Images/Cash Forecasting Images/CF_ConfirmCancelled.png" />
+                </p>
+                <p>Where a bank balance file is received more than once per day, pControl will process each file in turn, and will calculate the difference each time a new file is received. The original balance difference transaction does not have to be cancelled manually.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+    </body>
+</html>

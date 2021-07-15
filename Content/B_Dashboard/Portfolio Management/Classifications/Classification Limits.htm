@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Note To Selfs.ScreenOnly">
+    <head>
+        <link href="../../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Classification Limits</h1>
+        <p>Overnight market movements and allocating cash can change the market value of an asset and therefore the market value of the sector or classification grouping. If the weight of an asset sector within a plan moves away from a 'Target', the Portfolio Manager may want to change the value of the asset, and therefore a sector by investing or divesting in that asset.</p>
+        <p>The target weights of an asset or sector within a classification and its allowable limits,  i.e. how far the asset or sector value can deviate from a target value, can be configured in processing mode and web mode; with outputs displayed in the Portfolio Management classification panel in the web view. </p>
+        <h2 class="_orange">Web Mode</h2>
+        <p>It is possible to directly input the parameter values while in web mode, using the Classification Parameters view. The steps for configuring Classifications and Parameters in web mode are described in   <MadCap:xref href="../../../H_System Configuration/Portfolio Management Configuration/Portfolio Management Configuration.htm">Portfolio Management Configuration.</MadCap:xref></p>
+        <h2 class="_orange">Processing Mode</h2>
+        <p>The examples provided below describes how classification limits are used and how they are configured in processing mode. </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Tolerances and bounds</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If the value of an asset or sector moves outside of the limits, the order may not be able to be approved, depending on whether a 'hard' or 'soft' breach is detected. There are two limits defined within pControl, 'tolerances' and 'bounds'. </p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Tolerances are the percentage movements away from a target where the portfolio is considered outside tolerance. </li>
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Bounds are absolute upper and lower limit where the portfolio is considered out of bounds.</li>
+                </ul>
+                <div class="example_label">Example</div>
+                <div class="example_content">
+                    <p>
+                        <img src="../../../Resources/Images/Portfolio Management Images/PM_Class_Limits_scale.png" style="width: 730px; height: 111px;" class="MaxWidth75Percent" />
+                    </p>
+                    <p>Percentage values could be calculated as a percentage of the plan's total value, <i>e.g, the Target Value of USD investments is 30% of the total plan</i>; or as a percentage of a parent classification, <i>e.g., the Target Value of USD investments is 30% of all foreign currency classifications</i>; or any other value / classification could be used. The value to be used is defined in the denominator field of the U496: Classification Allocation Parameters worktable.</p>
+                    <h3>Recording values in the U496: Classification Allocation Parameters worktable</h3>
+                    <ul class="FirstLevelBlueBullet">
+                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Target values are entered into the <MadCap:xref href="../../../G_Data/Worktables/Import/U496 - Classification Allocation Parameters.htm">U496: Classification Allocation Parameters</MadCap:xref> worktable as an absolute value; and the CA_LOAD_CLASSFCATION_ALPS process is run in pControl.</li>
+                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Tolerance values are entered into the U496: Classification Allocation Parameters as positive values relative to the target, i.e. the difference between the lower tolerance and target; and the upper tolerance and target.</li>
+                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Bound values are entered into the U496: Classification Allocation Parameters worktable as absolute values.</li>
+                    </ul>
+                    <p>To create the above target, tolerance and bound values above, they would be entered into the pControl worktable as follows:</p>
+                    <p>
+                        <img src="../../../Resources/Images/Portfolio Management Images/PM_Class_Limits_scale_pControl.png" class="greyborder" />
+                    </p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Classification basis</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Classification basis allows pControl to choose the value to include in the classification test. This can be one of three values which can be selected in pControl as shown below.</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Total Value</li>
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Confirmed Value</li>
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Confirmed Value (Trade)</li>
+                </ul>
+                <h3>Total Value</h3>
+                <p>This is the default value that is used in classification tests. The value tested is the sum of confirmed investment value plus:</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The value of any in-flight trades; plus</li>
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">The value of any proposed transactions.</li>
+                </ul>
+                <h3>Confirmed Value</h3>
+                <p>This value represents the confirmed investment value. Confirmed value in pControl means the sum of all trades where trade date is less than or equal to effective date and the order is confirmed. </p>
+                <h3>Confirmed Value (Trade)</h3>
+                <p>Confirmed Value on a trade date basis, is a similar method to the confirmed value, but assumes that all trades are confirmed at their confirmation date i.e. the sum of all trades where trade date is less than or equal to effective date and order is confirmed or unconfirmed. </p>
+                <p>&#160;</p>
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/Portfolio Management Images/PM_ClassificationCheckSwing.png" alt="" title="" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Soft / hard breaches</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <p>Whether a breach is a hard or soft, is determined by the 'Compliance Checks' attribute within the Cash Allocation tab on entities within the processing mode. </p>
+            <MadCap:dropDownBody>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Soft breaches can be overridden, to allow an order to be approved. </li>
+                    <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Hard breaches cannot be overridden. Instead, the order's value needs to be changed to move the entity's value and the classification's value back inside the limits.</li>
+                </ul>
+                <p>Up to 5 classification checks can be configured in pControl. For each check configured, both the tolerance check and bound check needs to be defined as either a soft or hard breach using the drop-down menus below.</p>
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/Portfolio Management Images/PM_HardSoft_warnings_attribute.png" class="MaxWidth90Percent" />
+                </p>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>Compliance checks can be configured  in the processing module using the combination of the U495: Classification Sectors and U496: Classification Allocation Parameters worktables as shown here. However, the output of classification compliance checks can only be viewed  in web mode.</p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Classification configuration and output example </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <div class="example_label">Example</div>
+                <div class="example_content">
+                    <p style="font-style: normal;">In the following example, classification categories of <i>Currency Exposure</i>, <i>Economic Sector</i>, and <i>Fund Manager</i> have been configured in the U495: Classification Allocation Parameters worktable, and are displayed as the tab names in this panel. </p>
+                    <p>
+                        <img src="../../../Resources/Images/Portfolio Management Images/PM_ClassificationLimits.png" alt="" title="" class="greyborder" />
+                    </p>
+                    <p>The HKD Exposure classification is composed of the  portfolios whose base currency is HKD. This is also configured in the U495 worktable. The first row in the below image shows the parent sector code of CCY_HKD.</p>
+                    <p>The six sector rows below that all have a common 'Parent Code' of 'CCY_HKD', indicating they are the child rows of the CCY_HKD parent. They also each have a Value Type  of 'H' (Holding), meaning the order values displayed against these portfolio entities will be the actual order values as calculated by processing.</p>
+                    <p>
+                        <img src="../../../Resources/Images/Portfolio Management Images/PM_U495_CCY_HKD_ClassSectors.png" style="width: 649px; height: 195px;" class="greyborder" />
+                    </p>
+                    <div class="note_label">Note</div>
+                    <div class="note_content">
+                        <p>Value Type in the U495 worktable is known as <MadCap:xref href="Classifications.htm#Row">Row Type</MadCap:xref> in the Classification panel.</p>
+                    </div>
+                    <p>The order value as calculated by the Cash Allocation process for each of the above child rows are summed to the parent row for display in the Classification panel. The target weight, tolerances and bounds for this HKD&#160;Exposure classification are configured in the U496 worktable, as shown in the third row of the following image: </p>
+                    <p>
+                        <img src="../../../Resources/Images/Portfolio Management Images/PM_U496_CCY_HKD_ClassLimits.png" style="width: 892px; height: 265px;" class="greyborder" />
+                    </p>
+                    <p>The CCY_HKD sector is configured with a target weight of 30% of the total value of $25,525,060.355</p>
+                    <p>The following table shows the calculated target weight, tolerance and bound values:</p>
+                    <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <thead>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1" colspan="2">
+                                    <p>Values from U496 Worktable</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                    <p>Calculated Values</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Upper Bound</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">35% of Total Value allocated</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">$8,933771.12</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Upper Tolerance</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">2.5% (Meaning 2.5% above TW = 32.5%)</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">$8,295,644.62</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Target Weight</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">30% of Total Value allocated</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">$7,657,518.11</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Lower Tolerance</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">2.5% (Meaning 2.5% below TW = 27.5%)</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">$7,019,391.60</td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">Lower Bound</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">25% of Total Value allocated</td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">$6,381,265.09</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>The aggregated HKD value of the total cash allocated is $6,757,992.36 or 26.48% of the total value allocated. This is outside the lower Tolerance value, and hence is shown as 'Outside of Tolerance' within the Classification panel:</p>
+                    <p>
+                        <img src="../../../Resources/Images/Portfolio Management Images/PM_ClassificationLimits_HKD_OOT_1.png" alt="" title="" class="greyborder" />
+                    </p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

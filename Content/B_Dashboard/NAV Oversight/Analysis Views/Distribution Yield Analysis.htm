@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Distribution Yield Analysis</h1>
+        <p>A fund's distribution yield is a measure of the income return of a fund. This yield is expressed as a percentage based on the income amount per share divided by the share's net asset value. Fund yields vary with the fund's market value and changes to the annual dividend distribution. The distribution yield is calculated by taking the most recent distribution i.e. current day, divided by the shares of the fund, then divided by the NAV price of the fund, and then multiplying it by the number of days in the year to annualise it. The annualised total is reported as a percentage.</p>
+        <p>Distribution Yield Analysis (DYAS) provides a day over day or period over period view into the components and impacts of a pool or class' distribution yield in a framework that is similar to NAV Movement Analysis, which then provides a means to compare the performance of funds. The distribution yield analysis is performed on days that the fund or share class distributes; and for income share-classes (i.e. not for accumulation share classes) or at pool level if a fund is not defined as either Income or Accumulative. A change in Distribution Yield can be explained by the change in:</p>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Shares Outstanding</li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">NAV&#160;Price</li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">and Net Distributed Income.</li>
+        </ul>
+        <p>The change in Net Distributed Income can be further broken down based on account balances at the fund or share class level and applying a tolerance; a breach of tolerance may assist in the understanding of the change in yield. </p>
+        <p>The DYAS view displays the distribution yield components based on general ledger accounts i.e. the <b class="BufferandFunctionBold">U104: General Ledger</b>. The view is  is accessible following the navigation described in <MadCap:xref href="../../../C_Process/Exceptions.htm#Using">Using the Analysis Views</MadCap:xref> from the <MadCap:xref href="../../../C_Process/Exceptions.htm">Exceptions</MadCap:xref> screen, or via the <MadCap:xref href="../../../C_Process/Fund Sign Off.htm#Fund">Fund Overview</MadCap:xref> ellipsis on the <MadCap:xref href="../../../C_Process/Fund Sign Off.htm">Fund Sign Off</MadCap:xref> screen.</p>
+        <h2 class="_orange">DYAS Report/View </h2>
+        <p class="zoom4Detail">
+            <img src="../../../Resources/Images/NAV Oversight Images/DYAS_View19Nov.png" />
+        </p>
+        <h2 class="_orange">Worktables</h2>
+        <p>The DYAS utilises NAV prices as well as values and mappings from the following worktables. Examples of data mappings are provided in <MadCap:xref href="Data Mapping for Analysis Views.htm">Data Mapping for Analysis Views</MadCap:xref>.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>U101: External Unit Prices</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The <b class="BufferandFunctionBold">U101: External Unit Prices</b> worktable provides the NAV price for the DYAS view.</p>
+                <p>
+                    <img src="../../../Resources/Images/NAV Oversight Images/DYAS_U101.png" class="greyborder" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>U104: General Ledger</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The <MadCap:xref href="../../../G_Data/Worktables/Import/U104 General Ledger.htm">U104: General Ledger</MadCap:xref> worktable contains items and values that will be loaded to pControl accounts, for example, from an external general ledger or report. The DYAS report/view consists of categories representing accounts from the <b class="BufferandFunctionBold">U104:&#160;General Ledger</b>, in addition to the categories for Yield, Shares Outstanding and Net Distributed Income.</p>
+                <p>
+                    <img src="../../../Resources/Images/Cash Allocation Images/DYAS_U104example.png" class="greyborder" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>U108: Units on Issue</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <MadCap:snippetText src="../../../Resources/Snippets/Analysis Views/U108Intro.flsnp" /> The DYAS utilises the current and previous day confirmed paid units as part of the calculations. Calculations are described in full in <MadCap:xref href="DYAS Specification Table.htm">DYAS Specification Tables.</MadCap:xref></p>
+                <p>
+                    <img src="../../../Resources/Images/Cash Allocation Images/DYAS_U108example.png" class="greyborder" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>L315: Account Code Mapping</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/L315AccountCodeMappingIntro.flsnp" />
+                <p>
+                    <img src="../../../Resources/Images/Cash Allocation Images/DYAS_L315example.png" class="greyborder" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>L184: Account Category</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <MadCap:snippetText src="../../../Resources/Snippets/Analysis Views/DYAS_L184intro.flsnp" /> </p>
+                <p>
+                    <img src="../../../Resources/Images/Cash Allocation Images/DYAS_DL190.png" class="greyborder" />
+                </p>
+                <p>The <b class="BufferandFunctionBold">L184: Account Category</b> maps the account group to the DYAS category. Only categories that have "Distribution Yield Attribution" identified in the L184 category column, will be included in the DYAS view. Setting the category field associates the account groups and linked category codes to DYAS. </p>
+                <p>
+                    <img src="../../../Resources/Images/Cash Allocation Images/DYAS_L184example.png" class="greyborder" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>U350: Category Hierarchy</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/U350DYASIntro.flsnp" />
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>U783: Distribution Yield Analysis</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <MadCap:snippetText src="../../../Resources/Snippets/Analysis Views/DYAS_U783Intro.flsnp" /> This export worktable is described under <MadCap:xref href="../../../G_Data/Worktables/Export/U783 Distribution Yield Analysis Worktable.htm">U783: Distribution Yield Analysis.</MadCap:xref></p>
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/NAV Oversight Images/DYAS_U78319thNov.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Functions</h2>
+        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/AnalysisViewsDLsnippet.flsnp" />
+        <p>The following functions determine whether  the DYAS is populated and exported to the U783: Distribution Yield Analysis worktable; and specify the frequency of the fund, share class, or pricing entity distribution utilising the distribution yield calendar attributes:</p>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../AA_Library/Entities/NAV Process Phases and Functions.htm#VA860">[VA860] - Generate Distribution Yield Analysis Data </MadCap:xref>
+            </li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../AA_Library/Entities/NAV Process Phases and Functions.htm#EX093">[EX093] - Export Distribution Yield Attribution Data </MadCap:xref>
+            </li>
+        </ul>
+        <p>
+            <MadCap:snippetText src="../../../Resources/Snippets/Analysis Views/DailyForwardBackward.flsnp" />
+        </p>
+        <p>The following is a validation check that can be performed to check the yield impact does not exceed a specified tolerance.</p>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[CAT015] - Yield Impact Check </li>
+        </ul>
+        <h2 class="_orange">Calculations</h2>
+        <p>The <MadCap:xref href="DYAS Specification Table.htm">DYAS Specification Tables</MadCap:xref> detail the data, calculations and categories used, in addition to information on column definitions. </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>A validation entity exists in pControl for most validation checks that can be performed as part of a pControl process. These entities contain the validation formula, and other criteria defining the check.</p>
+    </body>
+</html>

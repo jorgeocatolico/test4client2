@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>This function calculates a Daily Rate of Return (ROR) based on a specified price type and stores this in the Daily ROR price type on the price record.</body>
+</html>

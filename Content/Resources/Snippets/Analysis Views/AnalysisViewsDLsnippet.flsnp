@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The following function is used to load General Ledger data into the NAV process for use in calculations, validations, and analysis views report generation:</p>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../AA_Library/Entities/NAV Process Phases and Functions.htm#DL190">[DL190] - Load General Ledgers  </MadCap:xref>
+            </li>
+        </ul>
+    </body>
+</html>

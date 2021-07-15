@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The validation will test the current Balance in a GL Account ($) or the Balance in a GL Account as a % of the NAV (%) against the specific comparison value configured and using the specified numeric operator.  
+
+Validations for this test are configured in the static worktable L350: Generic Account Balance Value Validations.  </p>
+    </body>
+</html>

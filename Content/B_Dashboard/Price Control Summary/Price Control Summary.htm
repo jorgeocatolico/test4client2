@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Note To Selfs.ScreenOnly">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Price Control Summary</h1>
+        <p>Many pControl processes result in the creation of a record known as a ‘Control Record’. Control records include unit price records, security price records, FX rates and imported data records. All control records are displayed in the ‘Price Control Summary’ view. Additional panels on this page, contain further detail about the processing status of that record, exception events, calculation details and several navigation options for obtaining further details related to the record. There are also several filtering options to enable searching for like control records.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Price Control Summary panel </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The Price control Summary panel allows users to monitor in detail the progress of a control record. It also shows the status of each control record within the 'Group' currently selected on the library tree, and shows the current high level status of the process in terms of the states of the various processing phases. </p>
+                <p>The panel shows all of the control records that have been initialised, calculated or loaded into pControl for the current group of entities selected on the library tree and/or primary filter across the data range selected. The panel displays the state of the flows as they transition to completed. </p>
+                <p>The columns displayed in the first panel will depend on the data view created and filters selected. </p>
+                <p>
+                    <img src="../../Resources/Images/Price Control Summary/NpC_Price Control Summary - needs updated.png" />
+                </p>
+                <p>The following table highlights some information that is stored in the control record in the Price Control Summary screen.</p>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Field</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Price Run Type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The type of record (price or valuation point) this represents, e.g. daily pricing.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Effective From Date</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The date that the price is effective from.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Entity Code</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The pControl code of the entity.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Effective Date</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The date that the price is to be used for i.e. is effective for.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Run ID</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The run id (or version id) for the selected control record.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Currency</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The currency of the control record - this is always the base currency of the entity.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Control Record Values</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The control record values shown will depend on the processing that has been run for that entity i.e. if MDV is run on a benchmark, the control records will show an index value, if MDV is run on a currency, the control record will display an FX rate, and if unit pricing is run on an entity, the control record will display the various price types calculated (NAV, Buy, Sell and GAV).</p>
+                                <p>The calculations that are completed for a particular entity are configured through the selection of functions on the process template.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1" MadCap:conditions="">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Approval Status</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The current status of the control record in the ‘Control Record – Approval’ status stream.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1" MadCap:conditions="">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Process Phases Status</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>The status of the processing phases associated with processing which have status streams attached (Process Validations, Data Loads, Interfund Impact etc).</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>The control records displayed can be filtered by 'Price run Type' and 'Status' using the filter on the first panel.</p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Additional information on each control record </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The second panel displays a number of tabs which provide additional information about the control record selected in the top panel. The purpose of these tabs are described in the table below.</p>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Tab</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Description</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Further Information where available</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Specification Table </p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Attachments</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Allows documents to be attached to the control record selected. 
+Control records which have an attachment added can be identified with the paper clip icon shown on the control record.
+</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Comments</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Allows comments to be added to the control record. </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Exception Events</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>The exception event tab lists all of the exceptions that have been raised during the process for the selected control record. All of these exceptions need to be overridden by a user before the control record can be approved and 'released', i.e. the data can be used in downstream or follow on processes. </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>
+                                    <MadCap:xref href="../../C_Process/Exceptions.htm">Exceptions </MadCap:xref>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Processing Status</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Shows the processing status messages that were created by the process which generated the control record selected.</p>
+                                <p><i>Note: This processing status is view only. For processing e.g. running/re-running processes, navigate to Process &gt; Processing Status.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>
+                                    <MadCap:xref href="../../C_Process/Processing Status.htm">Processing Status</MadCap:xref>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Calculation Audit</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Provides information on specific calculations that were performed by the process on the selected control record (i.e. this tab is not applicable for all processing e.g. distribution calculation).</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">AMAS</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Generated during a pricing process, displays NAV components based on General Ledger account values.</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>
+                                    <MadCap:xref href="../NAV Oversight/Analysis Views/Account Movement Attribution Screen (AMAS).htm">Account Movement Attribution</MadCap:xref>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>
+                                    <MadCap:xref href="../NAV Oversight/Analysis Views/AMAS Specification Table.htm">AMAS Specification Table</MadCap:xref>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">CPAS</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Provides a view across classes within the same fund to ensure their returns are moving in line with each other in an expected and predictable way.</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>
+                                    <MadCap:xref href="../NAV Oversight/Analysis Views/Share Price Impacts CPAS.htm">Clean Price Analysis</MadCap:xref>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>
+                                    <MadCap:xref href="../NAV Oversight/Analysis Views/Share Class Impacts Specification Table.htm">CPAS Specification Table</MadCap:xref>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">DYAS</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Provides a breakdown of the components of the distribution and compares the value with the prior distribution.</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ECM_AMAS</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Populated during the Expense Cap Management process and displays actual expenses from the General Ledger.</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1" MadCap:conditions="">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ECM_OMAS</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Provides a comparison between expenses calculated by pControl and actual expenses, as provided in the General Ledger. </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1" MadCap:conditions="">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">ECM_EMAS</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Explains the movement in an entity's expense postings from the previous pricing point. Expenses are broken down into a hierarchy of categories to provide a detailed breakdown of the movement. </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>&#160;</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1" MadCap:conditions="">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>VMAS</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Explains the movement in a valuation or price from the previous pricing point. The total NAV&#160;is also broken down into a hierarchy of categories to provide a detailed breakdown of movement.</p>
+                                <p><i>Note: The NAV Movement Analysis Report (VMAS) was previously called the Movement Value Attribution (MVA) Report.</i>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>
+                                    <MadCap:xref href="../NAV Oversight/Analysis Views/NAV Movement Analysis.htm">NAV Movement Analysis  </MadCap:xref>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>
+                                    <MadCap:xref href="../NAV Oversight/Analysis Views/NMA Specification Table.htm">NMA Specification Table</MadCap:xref>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1" MadCap:conditions="">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>OMAS</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>This tab is populated as a function of the daily pricing process where oversight processing is utilised. pControl will use the pricing data from the daily and expected pricing processes to populate the corresponding categories within the OMAS.</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>
+                                    <MadCap:xref href="../NAV Oversight/Analysis Views/Oversight Comparison Analysis.htm">Oversight Comparison Analysis</MadCap:xref>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>
+                                    <MadCap:xref href="../NAV Oversight/Analysis Views/OMAS Specification Table.htm">OMAS Specification Table </MadCap:xref>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

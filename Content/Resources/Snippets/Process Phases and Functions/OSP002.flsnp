@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The OSP validations are used with OMAS information, so should be selected only on the Oversight Pricing entity.</p>
+        <p style="font-weight: normal;">Category Validation for UPM_OS Category Code (CAT_UPM_OS_UDV) - This validation checks that the difference between the actual value of the category versus the expected value of the category as a proportion of the NAV is within tolerance.</p>
+    </body>
+</html>

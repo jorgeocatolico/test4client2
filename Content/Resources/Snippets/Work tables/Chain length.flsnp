@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Details the number of investment entities that are part of the chain from the Unitholder Code to the Asset Code (will equal the number of enities in the Ownership Chain less 1).</p>
+        <p>From the Unitholder perspective - this represents the number of Investment levels that the investment (that is being measured) is from its Unitholder. For example, a Chain Length of '2' indicates that the entity is two chain lengths away from its investment (i.e. Entity A invests into Entity B which invests into Entity X; in this scenario Entity A is 2 chain lengths form Entity X).</p>
+        <p>From an investment assets perspective - this represents the number of Unitholder levels that the Unitholder (that is being determined) is from its investment.</p>
+    </body>
+</html>

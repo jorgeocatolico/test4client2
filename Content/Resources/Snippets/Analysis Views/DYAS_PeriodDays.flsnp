@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <MadCap:equation>$Period\ days\ =\ number\ of\ days\ between\ prior\ day\ and\ current\ day$</MadCap:equation>
+    </body>
+</html>

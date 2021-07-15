@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Collections</h1>
+        <h2 class="_orange">In Processing Mode</h2>
+        <MadCap:snippetBlock src="../Resources/Snippets/Library/LY_Collections.flsnp" />
+        <p>There are three entity types described below, which are used to support the creation and maintenance of collections.</p>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Collection groups</li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Dynamic collections</li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Static collections</li>
+        </ul>
+        <div class="note_label">Note</div>
+        <div class="note_content">
+            <p>Users must have access to the 'Maintain Collections' function in System Administration to be able to create collection groups. Refer to System Administration User Guide for details on how to create a collection group entity.</p>
+        </div>
+        <h2 class="_orange">Understanding Collections</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To view all entities that form a collection </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList">
+                    <li class="stepList">
+                        <p>Collections are accessed by selecting the 'Entities' drop-down at the top of the library tree, and changing the selection to 'Collections'.</p>
+                        <p>
+                            <img src="../Resources/Images/Library Images/LY_CollectionsStart.png" class="greyborder" />
+                        </p>
+                        <div class="note_label">Note</div>
+                        <div class="note_content">
+                            <p>Only collections that are included in the entity set to which a user group has access will be displayed. These settings are maintained in System Administration.</p>
+                        </div>
+                    </li>
+                    <li class="stepList">
+                        <p>Right click on the collection and select 'Entities'. </p>
+                        <p>
+                            <img src="../Resources/Images/Library Images/LY_Coll_RightClickEntities.png" class="greyborder" />
+                        </p>
+                    </li>
+                    <li class="stepList">
+                        <p>This opens a new search view, listing all of the entities in the collection. </p>
+                        <p>
+                            <img src="../Resources/Images/Library Images/LY_Coll_NewSearchView.png" />
+                        </p>
+                    </li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Collection Groups</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Collection group entities</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Collection Group entities are used to house 'dynamic' and 'static' collections. The following image shows 'Domestic_Funds' and 'International_Funds' collection groups.</p>
+                <p>
+                    <img src="../Resources/Images/Library Images/LY_Coll_Group_Entities.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Dynamic Collections</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Dynamic collection entities</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Dynamic collections are the result of a defined search. This is similar to the F3 search functionality, where attribute values are used to find all entities that meet the selection criteria. For example, all entities with 'Shares' in their description name; or all entities with a 'time to be released by' = 2pm. Unlike the search, the dynamic collection remains constant each time pControl is opened. It can also be viewed and edited by other users who have access to the entities within the collection. Where a new entity is created which contains the attribute criteria specified in the search, the new entity will automatically form part of the dynamic collection.</p>
+                <p>The selection criteria for a dynamic collection can be changed or deleted, by opening the properties view and modifying the criteria, or deleting rows. </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To create a dynamic collection entity</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList" start="1">
+                    <li class="stepList">Right click on the collection group entity, and select New &gt; Collection &gt; Dynamic Collection.</li>
+                    <li class="stepList">
+                        <p>Enter a code and description for the Dynamic collection entity. </p>
+                        <p>
+                            <img src="../Resources/Images/Library Images/LY_Coll_DynamicCollectionCodeandDescription.png" class="greyborder" />
+                        </p>
+                    </li>
+                    <li class="stepList">
+                        <p>Specify the selection criteria for the collection, by choosing an attribute group, attribute, and (optionally) values for that attribute. In this example, the dynamic collection consists of all entities where 'Data Source 1' is the primary data source type.</p>
+                        <p>Additional selection criteria can be specified by selecting <span class="ButtonArrows">Add</span>.</p>
+                        <p>
+                            <img src="../Resources/Images/Library Images/LY_Coll_DynamicCollectionSelectionCriteria.png" />
+                        </p>
+                    </li>
+                    <li class="stepList">To see which entities meet the specified selection criteria, select <span class="ButtonArrows">Entities</span> at the bottom of the window. This will open a new search tab in the same way as the F3 search, displaying the relevant entities, or displaying nothing if no entities meet the criteria.</li>
+                    <li class="stepList">When all selection criteria is complete, select <span class="ButtonArrows">OK</span> to save the changes and create the collection, or <span class="ButtonArrows">Cancel</span> to exit without saving. </li>
+                    <li class="stepList">
+                        <p>The collection entity will now appear under the group.</p>
+                        <p>
+                            <img src="../Resources/Images/Library Images/LY_Coll_NewDynamicGroup.png" />
+                        </p>
+                    </li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Static Collections</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Static collection entities</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Static collections consist of a user chosen selection of up to 160 entities. Static collections are viewable and editable by other users, with the required security access. These collections will also remain from one pControl session to the next. </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To create a static collection entity</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList">
+                    <li>Right click on the collection group entity, and select New &gt; Collection &gt; Static Collection</li>
+                    <li>Enter a code and description for the collection entity.</li>
+                    <li>
+                        <p>Select the entities to form the collection by selecting the required entities and then clicking the arrow buttons to move them across to the 'selected' category.</p>
+                        <p>
+                            <img src="../Resources/Images/Library Images/LY_Coll_StaticCollectionView.png" />
+                        </p>
+                    </li>
+                    <li>When all entities have been selected, select <span class="ButtonArrows">OK</span> to save the changes and create the collection, or <span class="ButtonArrows">Cancel</span> to exit without saving.</li>
+                    <li>
+                        <p>The collection entity will now appear under the group. </p>
+                    </li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+    </body>
+</html>

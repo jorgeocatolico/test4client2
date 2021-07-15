@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CatapultSkin
+  Version="1"
+  SkinType="WebHelp2"
+  ComponentType="MasterPage"
+  TemplateName="Fluid"
+  Comment="HTML5 Fluid Layout"
+  EnableResponsiveOutput="true"
+  RemoveImagesOnSave="true"
+  CommentsInTopic="false"
+  conditions="MG Staff Only.ScreenOnly">
+  <Stylesheet>
+    <Resources>
+      <Resource
+        Name="pContol_Main Logo from Renee Oct18.png">H4sIAAAAAAAEAAFsBZP6iVBORw0KGgoAAAANSUhEUgAAAJwAAAA1CAYAAAC0q4JrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUBSURBVHhe7Zvrlds2EIW3hPyNpZy4hJSQEtJArKwrcAlbgktICVuCO/BDLsAluIMEd3BBgdgBCFIkBWjnO2fOAiQA4nE5eCz1YBiGYazNt9Pxr/Pj4el8evNpMBf/+v63fz6ffv+FyQxjGd8ej/+eH4//zbfDsxPgWxZjGHngrXQRLbXDE4s2jAvn0+FPXTBrmQnPIOe/f/2pi2R9s7XeK+b76c0fmii2NkzbrILxWlh/rTbT3A6XVTHuneW7z3Xty7vjF1bJuFdu7tlSM093v+BsTB30m9vhA6to3BP6YLdhtnu9M76+O/7QBrolY1WN3ml3Kk3NDofvAn1w2zRW2eiVfrxbMPNyXbPnv63WMlbd6BFtQFs3eGVW3+iJ5g55K83+A9EpPU6nwdgEoye0gezF2ASjJ7SB7MXw6RSbYfSCNpD92P7HI/6r58OTmAvzslHD9p+Mb22HZzZlU/A/3NFad/g1WlSXVyY+tJnBenrdoQ62w2dLlz7Ki9vd+4A0+IaQl25CcCCMbsqi5/ipIRnEnmxjwQWx1awVxQu6tPhdLi/tTvOC8z9aVgayF9tYcHgGRMfoJKE/Gd2d5gUnbyUq2altuUsNazRGq0GeW+2epV9aFhxIB7EnwwvDZmSJO0Y95HbXeHsE7i0RTm73Gm8y4u8OtSnYl+G9d/zbkjhfXLdw7YWxDB/2dRqt26N6Sp+G61E/4ZlMMgL3GJzH8JAObY7gJI8mBC7407JCvjVAWdq/4oZ1X7LZCILzA/9yswKxqXWmaBgdwDW5h/KcpfmCqLX+xPNzZTI4D6lMp8YmFEE6vKUlb5WuvdZci+HZU//3xbPGHssJDuKgh9KASNJyS4LL1cOJTD5NY1RFROfqw6iwuH9iN92bsQlFatMiTRh0GfDK8qeoKSdMc4xWPz9NU/RwmfLoRScP0JE/9oC58ibpd6dad+jLtJO/+EKnBw9QO+BTxGVOET+v9vlpmpLgnEf8yOiImucAV6dneFVGq/OpIHNvpq03NGrTIg3SIpx6nKVAbLXHKqynfOMngitMp4G0jlNrOEZH1LYzLbs2n0qP0yqrPsmStLH45uLEIpsQH3Z1zQx0Spy2RcGBOO2cfC8IHdyLzTmMRXoGJ4nTIhw8zhzg1YbjCFn434fg0rJr82Xxi8fxwLZqrHIVkqdi0NOdqXj9ZGdWA8oIQsWaB2sfuTFB/OwWBYc1YFyn2nxZevFy2kFpCeSpWbhztzbaXCBv6TglxQvsMhC1UzMEGqfbW3A1LyTSjY9upts1CRopFWjVFnocGKMqOWHIW+2u4z4vZcFgaGn988vHDmmaPQVXc+aopZnKU41UrlFjFWcheTMDAYLYcqJw1+WkvbRuFIFk0oTyc/m1qXup4EDuWsmLiXfPvMyh77QXicHruAxAY1bosBLIi78YcIRlUS8COTxdduflc7rQ6Wn+eEZIByQm7lPvNS95tek+3Gc0C/IzOBCmdTGW4cPl/hvaIn/ZPpajtQ3XGbyeMD20YhgkVm02yM+g4MXjO3TO+gx44VAsHJiS0FKG/M7mrkX3Iu6fOW27muARbm14Y1mlRaAMBo3Wub2nu/5HMiiHQaMH/DSgiWFbmzvd5UBZDBo9MSwqt7YFRx8lUCaDRm9s7u0W7kSNO8cJ762c3WiiWWImNKMW2c0uEt/1GwLD8NNudJYj5uJrbQIMwzAMY08eHv4H62GzLIoAnGsAAAAASUVORK5CYILJHPGHbAUAAA==</Resource>
+    </Resources>
+    <Styles>
+      <Medium
+        Name="Tablet">
+        <Style
+          Name="Navigation Slide Out Button">
+          <Properties></Properties>
+        </Style>
+        <Style
+          Name="Navigation Panel">
+          <Properties></Properties>
+        </Style>
+        <Style
+          Name="Navigation Panel Item">
+          <Properties>
+            <Property
+              Name="LineHeight">1</Property>
+          </Properties>
+        </Style>
+        <Style
+          Name="Search Filter">
+          <Properties></Properties>
+        </Style>
+        <Style
+          Name="Search Filter Drop-down">
+          <Properties></Properties>
+        </Style>
+        <Style
+          Name="Search Filter Drop-down (hover)">
+          <Properties></Properties>
+        </Style>
+      </Medium>
+      <Style
+        Name="Header">
+        <Properties>
+          <Property
+            Name="Height">122px</Property>
+          <Property
+            Name="BackgroundColor">#f3f4f6</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Menu Item">
+        <Classes>
+          <StyleClass
+            Name="2nd Level">
+            <Properties>
+              <Property
+                Name="MarginRight">0px</Property>
+              <Property
+                Name="PaddingRight">10px</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="3rd Level">
+            <Properties>
+              <Property
+                Name="PaddingRight">10px</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="4th Level">
+            <Properties>
+              <Property
+                Name="PaddingRight">10px</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="1st Level">
+            <Properties>
+              <Property
+                Name="PaddingRight">10px</Property>
+              <Property
+                Name="PaddingLeft">4px</Property>
+              <Property
+                Name="PaddingTop">4px</Property>
+              <Property
+                Name="PaddingBottom">4px</Property>
+            </Properties>
+          </StyleClass>
+        </Classes>
+        <Properties>
+          <Property
+            Name="FontSize">14px</Property>
+          <Property
+            Name="PaddingLeft">15px</Property>
+          <Property
+            Name="PaddingTop">10px</Property>
+          <Property
+            Name="BackgroundImage">none</Property>
+          <Property
+            Name="Color">#777777</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Search Input">
+        <Properties>
+          <Property
+            Name="BackgroundColor">#ffffff</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Menu">
+        <Properties>
+          <Property
+            Name="Float">right</Property>
+          <Property
+            Name="BackgroundImage">none</Property>
+          <Property
+            Name="AlignmentHorizontal">right</Property>
+          <Property
+            Name="Color">#777777</Property>
+        </Properties>
+        <Classes>
+          <StyleClass
+            Name="1st Level">
+            <Properties>
+              <Property
+                Name="BackgroundColor">#e0e0e0</Property>
+            </Properties>
+          </StyleClass>
+        </Classes>
+      </Style>
+      <Style
+        Name="Search Submit Button">
+        <Properties>
+          <Property
+            Name="BackgroundColor">#D02b2b</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Logo">
+        <Properties>
+          <Property
+            Name="BackgroundImage">url('pContol_Main%20Logo%20from%20Renee%20Oct18.png')</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Search Result Link">
+        <Properties>
+          <Property
+            Name="Color">#5688ad</Property>
+          <Property
+            Name="FontSize">12pt</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Search Pagination Item">
+        <Properties>
+          <Property
+            Name="Color">#5688ad</Property>
+          <Property
+            Name="FontSize">12pt</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Search Heading">
+        <Properties>
+          <Property
+            Name="FontSize">12pt</Property>
+          <Property
+            Name="Color">#D02b2b</Property>
+          <Property
+            Name="FontWeight">normal</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Search Glossary Result">
+        <Properties>
+          <Property
+            Name="FontSize">11pt</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Menu Item (hover)">
+        <Classes>
+          <StyleClass
+            Name="3rd Level">
+            <Properties></Properties>
+          </StyleClass>
+          <StyleClass
+            Name="1st Level">
+            <Properties>
+              <Property
+                Name="BackgroundColor">#e0e0e0</Property>
+            </Properties>
+          </StyleClass>
+        </Classes>
+        <Properties>
+          <Property
+            Name="Color">#777777</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Search Bar">
+        <Properties>
+          <Property
+            Name="BorderRight">solid 1px #d02b2b</Property>
+          <Property
+            Name="BorderTop">solid 1px #d02b2b</Property>
+          <Property
+            Name="BorderBottom">solid 1px #d02b2b</Property>
+          <Property
+            Name="BorderLeft">solid 1px #d02b2b</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Main Page">
+        <Properties>
+          <Property
+            Name="MaxWidth">72.5em</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Search Result Abstract">
+        <Properties></Properties>
+      </Style>
+    </Styles>
+  </Stylesheet>
+  <WebHelpOptions
+    NavigationPanePosition="Right"
+    OffCanvasMenuStyle="Drilldown" />
+  <Strings>
+    <Stylesheet
+      lang="en-au">
+      <Stylesheet>
+        <Resources></Resources>
+        <Styles>
+          <Medium
+            Name="Tablet">
+            <Style
+              Name="Navigation Slide Out Button">
+              <Properties></Properties>
+            </Style>
+            <Style
+              Name="Navigation Panel">
+              <Properties></Properties>
+            </Style>
+            <Style
+              Name="Navigation Panel Item">
+              <Properties>
+                <Property
+                  Name="LineHeight">1</Property>
+              </Properties>
+            </Style>
+            <Style
+              Name="Search Filter">
+              <Properties></Properties>
+            </Style>
+            <Style
+              Name="Search Filter Drop-down">
+              <Properties></Properties>
+            </Style>
+            <Style
+              Name="Search Filter Drop-down (hover)">
+              <Properties></Properties>
+            </Style>
+          </Medium>
+          <Style
+            Name="Header">
+            <Properties>
+              <Property
+                Name="Height">122px</Property>
+              <Property
+                Name="BackgroundColor">#292928</Property>
+            </Properties>
+          </Style>
+          <Style
+            Name="Menu Item">
+            <Classes>
+              <StyleClass
+                Name="2nd Level">
+                <Properties>
+                  <Property
+                    Name="PaddingRight">10px</Property>
+                  <Property
+                    Name="MarginRight">0px</Property>
+                </Properties>
+              </StyleClass>
+              <StyleClass
+                Name="3rd Level">
+                <Properties>
+                  <Property
+                    Name="PaddingRight">10px</Property>
+                </Properties>
+              </StyleClass>
+              <StyleClass
+                Name="4th Level">
+                <Properties>
+                  <Property
+                    Name="PaddingRight">10px</Property>
+                </Properties>
+              </StyleClass>
+            </Classes>
+            <Properties></Properties>
+          </Style>
+          <Style
+            Name="Search Input">
+            <Properties>
+              <Property
+                Name="BackgroundColor">#ffffff</Property>
+              <Property
+                Name="Placeholder">Search MG Staff Content </Property>
+            </Properties>
+          </Style>
+          <Style
+            Name="Menu">
+            <Properties>
+              <Property
+                Name="Float">right</Property>
+            </Properties>
+          </Style>
+          <Style
+            Name="Search Submit Button">
+            <Properties>
+              <Property
+                Name="BackgroundColor">#5688ad</Property>
+            </Properties>
+          </Style>
+          <Style
+            Name="Search Heading">
+            <Properties>
+              <Property
+                Name="Format">Some of the results may include content pertinent to MG staff only. Please use the separate client project for any content you wish to share outside of the company. Your search for {query} returned {total_results} result(s). </Property>
+            </Properties>
+          </Style>
+        </Styles>
+      </Stylesheet>
+    </Stylesheet>
+  </Strings>
+</CatapultSkin>

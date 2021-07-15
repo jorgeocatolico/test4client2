@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>The validation allows for a value delivered in U101: External Price import worktable for a fund or share class to be compared to its previous value.</p>
+        <p>Validations for this test are configured in the static worktable L332: Generic Product Data Variation Validation.</p>
+        <p>The choice of comparison indicator in the L332 worktable, determines which Validation Entity is used.  There are three different comparison indicators and therefore three validation entities.</p>
+    </body>
+</html>

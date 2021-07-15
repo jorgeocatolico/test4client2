@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../TableStyles/MG_TableStyle02TableinaTable.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <p>The <b class="BufferandFunctionBold">P400: STP Configuration</b> worktable contains details of the processes to be initiated at regular intervals by the 'Run STP Processing' entity.</p>
+        <ol class="stepList">
+            <li>Navigate to the <b class="BufferandFunctionBold">P400: STP Configuration</b> worktable, add a new row for each combination of entity type and process to be initiated by the 'Run STP Processing' entity.</li>
+        </ol>
+        <p>For example, two rows have been added to the P400, to run Unit Pricing for two different entity types: Pools and Classes entities. It is also possible to run for Pricing entities.</p>
+        <p class="zoom4Detail">
+            <img src="../../Images/NAV Oversight Images/stp_P400.png" />
+        </p>
+        <p class="zoom4Detail">
+            <img src="../../Images/All/P400_STP_Config.png" alt="" title="" class="MaxWidth100Percent" MadCap:conditions="Note To Selfs.ScreenOnly" />
+        </p>
+        <p>&#160;</p>
+        <table style="mc-table-style: url('../../TableStyles/MG_TableStyle01Grey.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                        <p>P400 Field</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>STP&#160;Entity Code</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The entity code of the 'Run STP&#160;Processing' entity. </p>
+                        <p>When the process is started for this entity, it will trigger all the processes listed in the P400: STP&#160;Configuration worktable.</p>
+                        <p><i>Note: The STP entity, STP_EXAMPLE shown above, does not need to exist on the entity tree within the same group as the entities that are the target of the STP processing.</i>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Target Entity</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The parent entity, housing all other entities which are to have a process initiated by STP.</p>
+                        <p>In this example, all entities underneath 'POOL_CLASS', which meet the other criteria in this worktable will have a process started.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Target Process Code</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The name of the process to be run for the entities specified. There are several names for the same process, e.g. Unit Pricing = Daily Pricing. Refer to the drop down list below for a full list of valid process names to be used in this field.</p>
+                        <MadCap:dropDown>
+                            <MadCap:dropDownHead>
+                                <MadCap:dropDownHotspot>'Target Process Code' Values</MadCap:dropDownHotspot>
+                            </MadCap:dropDownHead>
+                            <MadCap:dropDownBody>
+                                <table style="border-top-left-radius: 6px;border-top-right-radius: 6px;border-bottom-right-radius: 6px;border-bottom-left-radius: 6px;border-left-style: solid;border-left-width: 1px;border-left-color: #697a84;border-right-style: solid;border-right-width: 1px;border-right-color: #697a84;border-top-style: solid;border-top-width: 1px;border-top-color: #697a84;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #697a84;margin-left: 0;margin-right: auto;mc-table-style: url('../../TableStyles/MG_TableStyle02TableinaTable.css');" class="TableStyle-MG_TableStyle02TableinaTable" cellspacing="0">
+                                    <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                    <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                    <thead>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                                            <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">
+                                                <p>Process Name</p>
+                                            </th>
+                                            <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1">
+                                                <p>Value to be used in 'Target Process Code' field</p>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Account Extract</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>ACCOUNT_EXTRACT</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Account Import</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">ACCOUNT_IMPORT</td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Archive</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>ARCHIVE</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Asset Validation</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>ASSET_PRICING</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Bulk Submit</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>BULK_SUBMIT</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Cash Allocation</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>CASH_ALLOCATION</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Charting</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>CHARTING</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Daily Pricing</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>UNIT_PRICING</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Distn Calc/Accr</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>DIST_CALC</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Distn Payment</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>DIST_PAYMENT</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Distn Reinvest</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>DIST_REINVEST</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Ex-Div Pricing</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>EX_DIST_PRICING</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Expected Pricing</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>OS_PRICE</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>General</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>GENERAL_PROCESS</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Generate Stats</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>GEN_STATS</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Hand Off</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>HAND_OFF</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>HO Pre-Req</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>HANDOFF_PRE_REQS</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Index Pricing</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>INDEX_PRICING</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Initialisation</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>INITIALISATION</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Message Process</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>MESSAGE_PROCESS</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Order Mgmt</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>UORDER_MGMT</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Oversight Pricing</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>UNIT_PRICING</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Rebalancing</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>REBALANCING</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Release</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>RELEASE_PROCESS</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Report Adhoc</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>REPORT_ADHOC</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Report Handoff</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>REPORT_HANDOFF</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Report Pack Adh</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>RP_ADHOC</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Report Pack Sch</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>HO_PACK_SCH</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Report Schedule</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>REPORT_SCHEDULE</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Restore</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>RESTORE</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Revaluation</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>REVALUATION</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Start of Day</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>START_OF_DAY_CA</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Statistics</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>STATISTIC_CALC</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>STP</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>STP</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Take On</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>TAKE_ON</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Tech Pricing</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>TECH_PRICING</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Test Process</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>TEST_PROCESS</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Trans Profile</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>TRAN_VALID_PROFILE</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>UOM GP</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>UOM_GP</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Validate data</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>VALIDATE</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>Valuation 1</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>MD_VALIDATION</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                <p>View Validation</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                                                <p>VIEW_ACTIVATED_VALIDATION</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font">
+                                                <p>Web File Load</p>
+                                            </td>
+                                            <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font">
+                                                <p>WEB_FILE_LOAD</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>&#160;</p>
+                            </MadCap:dropDownBody>
+                        </MadCap:dropDown>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Target Template</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>All entities of the 'entity type', i.e. created from the 'Template type' listed in this column will have the specified process started.</p>
+                        <p style="font-style: italic;">Note: Entity Types / Template types can be found in the Library Tree by looking at the entity templates.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Order</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The priority order of processing. </p>
+                        <p>In this example, Unit Pricing will be run for the funds and pool entities prior to the classes.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                        <p>Active</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                        <p>If selected, this row of the P400 is 'active', and will initiate the specified processes.</p>
+                        <p>If not selected, the processes in this row will be not initiated.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ol class="stepList" start="2">
+            <li>Select <span class="ButtonArrows">Save</span> to save the newly added rows to this worktable.</li>
+        </ol>
+    </body>
+</html>

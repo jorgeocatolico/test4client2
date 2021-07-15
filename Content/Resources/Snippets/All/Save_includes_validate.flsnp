@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <div class="note_label">Note</div>
+        <div class="note_content_in_list">
+            <p>When &lt;Save&gt; is selected, pControl will automatically validate the changes made.</p>
+        </div>
+    </body>
+</html>

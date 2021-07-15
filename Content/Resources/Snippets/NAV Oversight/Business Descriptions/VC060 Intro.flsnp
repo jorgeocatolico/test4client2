@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>pControl records (as an external balance) the number of times the pricing process has been run and tests against this record i.e., is this external balance greater than 1 thus testing whether there has been a previous run of the process for the entity on the effective date. This check will notify this and the number of runs (if any) to the user via the status messages on the process run.</body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Note To Selfs.ScreenOnly" style="mc-master-page: url('..\..\..\Resources\MasterPages\WorktableTopics.flmsp');">
+    <head>
+        <link href="../../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>U485: External Child Assets</h1>
+        <p>The U485: External Child Assets worktable is used in conjunction with the U490: External Look-through worktable. The U490: External Look-through worktable stores the investment path details or risk factors for the direct assets of a Cash and Rebalancing (CAR) process. These are recorded as a set of external child assets and their weights within the direct asset. As the child assets do not exist in pControl, the U485: External Child Asset data load and associated process, first needs to be run in order to create these assets. This data is used by CAR for <MadCap:xref href="../../../B_Dashboard/Portfolio Management/Classifications/Classification Look-through.htm">Classification Look-through</MadCap:xref> when the look-through weights are externally supplied. </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>U485: External Child Assets - worktable fields and definitions</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <MadCap:snippetBlock src="../../../Resources/Snippets/Portfolio Management/PM_U485 External Child Assets Intro.flsnp" />
+                <p>The external child assets once created, are stored  in the allocation parameters and allocation records as a pControl id. With the mandatory fields being code and description, these are stored in a node id table, similar to how the classification sectors are stored with a unique node type. </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

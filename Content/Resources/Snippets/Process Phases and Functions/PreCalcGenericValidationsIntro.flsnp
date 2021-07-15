@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>The pre calc generic validations processing phase includes functions which test the data consistency. For example, [GEN001] allows for a value or sum of values in one worktable for an entity to be compared to a value or sum of values delivered in another worktable for the same entity; this is to ensure that the data that is being delivered is consistent and conforms to known consistency checks.</body>
+</html>

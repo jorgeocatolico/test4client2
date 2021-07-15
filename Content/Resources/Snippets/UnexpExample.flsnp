@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <div class="example_label">Example</div>
+        <div class="example_content">
+            <h2 class="indropdown">Prior Day</h2>
+            <p>The Unexplained Values, or UNEXP_AMAS as it is referred to on the AMAS view, on the prior day AMAS was $140.00. </p>
+            <p>The $140.00 includes $100.00 in AUD_INTEREST and $40.00 from BROKERAGE_FEES. Both accounts constitute part of the NAV and both accounts were not linked to an AMAS category on the prior day.</p>
+            <h2 class="indropdown">Current Day</h2>
+            <p>AUD_INTEREST is mapped on the current day to account group BANK_INTEREST and has been mapped to the category code INT_AMAS. </p>
+            <p>BROKERAGE_FEES is mapped on the current day to the account group MISC_FEES which maps to category code OTH_FEES_AMAS. </p>
+            <h2 class="indropdown">Unexplained Values</h2>
+            <p>The Unexplained Values for the Value Previous on the AMAS (i.e. the prior day) will be 0.00.</p>
+            <p>The Unexplained Values for the Value Current on the AMAS (i.e. the current day) will be Fund NAV - Total of constituent accounts.</p>
+        </div>
+    </body>
+</html>

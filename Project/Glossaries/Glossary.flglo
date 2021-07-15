@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CatapultGlossary>
+  <GlossaryEntry
+    glossTerm="Glossary.Term16"
+    Stem=""
+    IgnoreCase="true"
+    TermClass="Popup">
+    <Terms>
+      <Term>Exception</Term>
+    </Terms>
+    <Definition
+      Link="">An exception occurs when a validation check is breached. Exceptions require a manual review to determine their cause. If the exception is acceptable it can be manually 'overridden' and processing can continue. If the exception is caused by data or configuration errors, the data must be corrected and processing re-run.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term17"
+    Stem=""
+    IgnoreCase="true"
+    TermClass="Popup">
+    <Terms>
+      <Term>Financial Event</Term>
+    </Terms>
+    <Definition
+      Link="">A financial event shows the movement between the underlying accounts (records) when an order or transaction is created.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term18"
+    TermClass="Popup"
+    Stem="True"
+    IgnoreCase="true">
+    <Terms>
+      <Term>Allocation Parameters (ALP)</Term>
+    </Terms>
+    <Definition
+      Link="">Allocation Parameters (ALPs) define the relationship between two funds (an investor / originator and an asset) in terms of the percentage an investor is targeted to have invested in the asset. The tolerances around that target that will trigger a rebalancing trade, and the criteria a trade must meet to be executed, e.g. the minimum transaction amount permitted in the asset.
+
+The ALPs are used in the Cash Allocation process as the basis on which the investment decisions are made and proposed orders created.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term19"
+    TermClass="Popup"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>Summary Record</Term>
+    </Terms>
+    <Definition
+      Link="">A summary record, formerly known as a 'Master Proposed Order' represents the status of the underlying Cash Allocation process for an entity, or a 'Plan entity'. The status of the summary record is determined by the current state of the Master Proposed Order status stream.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term20"
+    TermClass="Popup"
+    Stem=""
+    IgnoreCase="true">
+    <Terms>
+      <Term>Master Proposed Transaction Status Stream</Term>
+    </Terms>
+    <Definition
+      Link="">Status streams represent the different 'paths' processing can take within pControl, depending on the configuration of entities, static data, and processing data. The Master Proposed Transaction is the main status stream used for the Portfolio Management dashboard.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term21"
+    TermClass="Popup"
+    Stem=""
+    IgnoreCase="true">
+    <Terms>
+      <Term>Process Template</Term>
+    </Terms>
+    <Definition
+      Link="">A process template defines the behaviour of a process for an entity or group of entities with similar processing requirements. This is done via selection of function check boxes on the template to indicate which functions are performed, (or excluded). 
+Each entity in pControl will have a process template associated for each type of processing run, e.g. Daily Pricing, Distributions, Cash Allocation.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term0"
+    TermClass="Popup"
+    Stem=""
+    IgnoreCase="true">
+    <Terms>
+      <Term>Phase</Term>
+    </Terms>
+    <Definition
+      Link="">pControl processes are organised into processing phases which are executed in sequence. There are a number of activities, known as functions, performed during each phase.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term1"
+    TermClass="Popup"
+    Stem=""
+    IgnoreCase="true">
+    <Terms>
+      <Term>Function</Term>
+    </Terms>
+    <Definition
+      Link="">Functions are the activities performed during process phases. Functions can be switched on or off by selecting / deselecting check boxes on the process template.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term2"
+    Stem=""
+    IgnoreCase="true"
+    TermClass="Popup">
+    <Terms>
+      <Term>Destination From Entity</Term>
+    </Terms>
+    <Definition
+      Link="">Where the value of an asset / investment holding is allocated to a different entity for the purposes of revaluation, the 'Destination From' entity has the value of this holding subtracted from it's total value.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term3"
+    TermClass="Popup"
+    Stem=""
+    IgnoreCase="true">
+    <Terms>
+      <Term>Destination To Entity</Term>
+    </Terms>
+    <Definition
+      Link="">Where the value of an asset / investment holding is allocated to a different entity for the purposes of revaluation, the 'Destination To' entity has the value of this holding added to it's total value.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term4"
+    TermClass="Popup"
+    Stem=""
+    IgnoreCase="true">
+    <Terms>
+      <Term>web views</Term>
+    </Terms>
+    <Definition
+      Link="">the modules available as listed across the top navigation menu in pControl</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term5"
+    Stem="True"
+    IgnoreCase="true"
+    TermClass="Popup">
+    <Terms>
+      <Term>Asset Level Validation (ALV)</Term>
+    </Terms>
+    <Definition
+      Link="">Validates the valuation of direct assets which sit at the bottom of an investment structure. ALV is intended to be performed on portfolios that have direct asset holdings which are managed in an external investment management system or by an external custodian or third party.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term6"
+    Stem=""
+    IgnoreCase="true"
+    TermClass="Popup">
+    <Terms>
+      <Term>attribute</Term>
+    </Terms>
+    <Definition
+      Link="">Each processing entity has attributes associated with it, where the attribute describes an element of the entity, e.g. fund name or description, unit price spread, fee rate.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term7"
+    TermClass="Popup"
+    Stem=""
+    IgnoreCase="true">
+    <Terms>
+      <Term>Audit History</Term>
+    </Terms>
+    <Definition
+      Link="">Shows the full history of changes and actions</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term8"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>Cash Allocation</Term>
+      <Term>CA</Term>
+    </Terms>
+    <Definition
+      Link="">This process allocates cash through the Interfunding hierarchy using the 'Allocation Parameters'</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term9"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>P Status</Term>
+    </Terms>
+    <Definition
+      Link="">The p_status value indicates the status of an individual record. pControl processes use this status value to determine whether to include a record in a process or not.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term10"
+    Stem=""
+    IgnoreCase="false"
+    TermClass="Popup">
+    <Terms>
+      <Term>FOP</Term>
+    </Terms>
+    <Definition
+      Link="">Free of Payment</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term11"
+    TermClass="Popup"
+    Stem=""
+    IgnoreCase="true">
+    <Terms>
+      <Term>Straight Through Processing (STP)</Term>
+    </Terms>
+    <Definition
+      Link="">Straight through processing (STP)  is a term  to describe a system where transactions or processes can be run with no human intervention, or as little human intervention as possible</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term12"
+    Stem="True"
+    IgnoreCase="false"
+    TermClass="Popup">
+    <Terms>
+      <Term>Entity Templates</Term>
+    </Terms>
+    <Definition
+      Link="">Entity templates are used as the basis for the creation of a new entity. They define the appearance, and valid process types applicable to an entity. Entity templates are configured in System Administration.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term14"
+    TermClass="Popup"
+    Stem="True">
+    <Terms>
+      <Term>SLA</Term>
+    </Terms>
+    <Definition
+      Link="">The Service Level Agreement (SLA) time, is the time by which a fund's process needs to be completed and released by. This is configured in the 'Price to be released by' attribute.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term13">
+    <Terms>
+      <Term>calendar schedule entities</Term>
+    </Terms>
+    <Definition>A means of overlaying one or more holiday calendars with a processing calendar to specify valid processing days</Definition>
+  </GlossaryEntry>
+</CatapultGlossary>

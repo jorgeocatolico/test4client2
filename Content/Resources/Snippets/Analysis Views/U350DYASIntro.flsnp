@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The <b class="BufferandFunctionBold">U350: Category Hierarchy</b> enables the movement in Shares Outstanding, NAV prices and Net Distributed Income to be categorised according to internal classifications. The  <MadCap:xref href="../../../G_Data/Worktables/U350 Category Hierarchy worktable.htm">U350: Category Hierarchy </MadCap:xref> is used to order the categories within the report. </p>
+        <p class="zoom4Detail">
+            <img src="../../Images/Cash Allocation Images/DYAS_U350example.png" />
+        </p>
+    </body>
+</html>

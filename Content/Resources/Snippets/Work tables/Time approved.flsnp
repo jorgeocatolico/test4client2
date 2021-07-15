@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The time the price record was approved within pControl. </p>
+        <p style="font-style: italic;">Note: Price records may be approved automatically or manually depending on the configuration of the entity's attributes.</p>
+    </body>
+</html>

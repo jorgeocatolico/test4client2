@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Entities with assets to be excluded from Cash Allocation and Rebalancing process are identified using this attribute under the common tab of the entity. When selected, the excluded asset will not have proposed orders generated for cash allocation and rebalancing processing. In addition to this, the value of the asset will be excluded from the plan value for rebalancing calculations, and all other non-excluded assets in the plan will have their target weight refactored to account for the excluded asset's target weight. Where the excluded asset is part of a target group, the weight of the excluded asset is refactored across the other assets in the target group, as opposed to the whole portfolio.</p>
+    </body>
+</html>

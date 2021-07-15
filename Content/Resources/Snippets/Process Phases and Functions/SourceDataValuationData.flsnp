@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Source Data Validations are validations on the valuation source data that has been supplied by an external system and the consistency of it, i.e. checking that base and local currency amounts on a transaction record supplied reflect the exchange rate present on the transaction record. Valuation Data Validations are validations on the valuation data that has been supplied by an external system, for example validating that the value of holdings in an individual asset have not moved outside of a pre-defined tolerance from the previous pricing point.</body>
+</html>

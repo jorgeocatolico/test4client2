@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The current unit price on transaction which is automatically populated from the last approved Unit Price captured in pControl. This field can be overridden, if necessary and assuming appropriate user permissions.</p>
+    </body>
+</html>

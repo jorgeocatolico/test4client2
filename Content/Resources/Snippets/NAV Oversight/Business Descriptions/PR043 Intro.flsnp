@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Will fail the test if the movement in the Investment Assets of the Entity (defined by the impact of the AST category) are not equal (% tolerance) to the movement in the entity's calculated dynamic composite index. This test is performed to allow entities with a high cash holding to test only the movement of their investment assets against the calculated dynamic composite index (which only takes into account the movement in investment assets delivered in the U100:&#160;Investment Holdings worktable.</body>
+</html>

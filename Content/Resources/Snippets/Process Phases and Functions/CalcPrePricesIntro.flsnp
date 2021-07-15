@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>The Calculate Pre Prices functions include the [PPC010] which ensures journals (if any) written on a previous run of the calculate pre-prices phase of the pricing process for this entity will be cancelled on re-run (to avoid double counting). This phase can also be utilised to create a ‘wait’ state just after ‘Calculate Liabilities’ and before ‘Valuation/Price Calculation’ phases to provide an opportunity to either confirm or manually adjust data generated in this phase. </body>
+</html>

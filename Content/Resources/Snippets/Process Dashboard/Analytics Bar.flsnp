@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Analytics Bar</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The Analytics Bar  displays the status stream progress of each part of the process, for example, data loaded, pending worktable changes, funds signed off. The Analytics Bar displays data according to selections in the primary filter. Hovering over the bar shows the number of funds outstanding, rather than the percentage. Selecting the bar navigates to the relevant view with filters applied. </p>
+                <p class="zoom4Detail">
+                    <img src="../../Images/NAV Oversight Images/AnalyticsBar1.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

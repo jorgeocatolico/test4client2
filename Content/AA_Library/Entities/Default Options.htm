@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Note To Selfs.ScreenOnly">
+    <head>
+    </head>
+    <body>
+        <h1>Balancing or Default Options</h1>
+        <p>A ‘Default Option’ can be used to reduce the number of transactions that are sent to the market within an investment structure, and also keep a set of investment (balancing) options’ actual allocations in line with their targets.</p>
+        <p>Example</p>
+        <p>Investment options 1, 2 and 3 will perform their standard cash allocation process each day and will generate physical orders (black lines) into asset classes 1 to 4 according to their allocation parameters, the cash / liquidity they have available and the methodology that is used. Once these investment options have made their orders into the underlying asset classes, all of these orders are effectively reversed by the default option (green lines) so that no transactions need to go to the underlying managers of these asset classes. The Default Option will be able to make these reversing transactions because the fund is large enough to absorb them without moving outside of its actual allocation tolerances into these asset classes.</p>
+        <p>The sum of the reversing transactions made ($600 in the example) is then invested into the asset class that is set to be the offset asset class for the default option (orange line) in the appropriate data attribute. If this attribute is not set to anything, then the $600 will become part of the liquidity of the Default Option when it does its own cash allocation process.</p>
+        <p>There can be one or more default options within an investment set and if there is more than one, then each Investment Option can be ‘balanced’ by one or more of them. For example, Investment Option 1 may have 50% of its transactions reversed by Default Option 1 and the other 50% reversed by Default Option 2.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../Resources/Images/CAR and PM Process Phases/CAR_DefaultOptions.png" />
+        </p>
+    </body>
+</html>

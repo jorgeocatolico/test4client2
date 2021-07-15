@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Used to identify a data set, which is usually associated to a specific process. Where multiple files or data sets may be received into the same worktable from several sources, the 'price run type' can be used to distinguish each data set. </p>
+        <p style="font-style: italic;">Note: Attributes on the entity are used to specify which data set to select for use in the process, e.g. price run type = 'Daily Pricing', price run type = 'Index Pricing', or price run type = 'Valuation data'.</p>
+    </body>
+</html>

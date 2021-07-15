@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>The Overs and Unders function provides a basic means to explain the movement of an entity’s valuation versus a specified benchmark. If the constituents of a specified benchmark and their associated weights within the benchmark were loaded into pControl, this function could use these constituents and weights to perform a detailed analysis of an entity’s valuation against a benchmark and explain why the movement may be different.
+In the absence of the constituents of a benchmark, the function performs as explained below. If the constituents of the benchmark are present in the U280: Benchmark worktable then the weights from those constituents are used in place of the weights of the asset in the entity.
+</body>
+</html>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>Account Movement Attribution</h1>
+        <p>The Account Movement Attribution Analysis (AMAS) screen displays the movement from previous pricing point in the components of the NAV, based on the General Ledger (GL) account balances. The report is presented in both Balance Sheet and Income Statement format. The AMAS consists of categories representing accounts from the <b class="BufferandFunctionBold">U104: General Ledger</b>, for example, assets and liabilities, and income and expenses; as well as additional supporting categories for benchmark values, unit prices, and NAV values. The AMAS provides insights into the day on day movement of these values and the impact of the movement. </p>
+        <p>As with other analysis reports, <MadCap:xref href="Analysis View Validation Checks.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">Validation Checks</MadCap:xref> can be performed on the output of the AMAS report to compare the impacts of components  against tolerance values.</p>
+        <h2 class="_orange">AMAS Report/View </h2>
+        <p>The AMAS is accessible following the navigation described in <MadCap:xref href="../../../C_Process/Exceptions.htm#Using" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">Using the Analysis Views</MadCap:xref> from the <MadCap:xref href="../../../C_Process/Exceptions.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">Exceptions</MadCap:xref> screen, or via the <MadCap:xref href="../../../C_Process/Fund Sign Off.htm#Fund" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">Fund Overview</MadCap:xref> ellipsis on the <MadCap:xref href="../../../C_Process/Fund Sign Off.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">Fund Sign Off</MadCap:xref> screen.</p>
+        <p>&#160;</p>
+        <p class="zoom4Detail">
+            <img src="../../../Resources/Images/NAV Oversight Images/AMAS_Report.png" />
+        </p>
+        <div class="note_label">Note</div>
+        <div class="note_content">
+            <p>The  AMAS view shown above and throughout this section is using a pool entity i.e. investment holdings or expenses level. It is possible to apply the AMAS view at class level and it is typically used for [CAT006] Class Price vs Pool Price to check the movement of share class prices is in line with the movement of the pool price. </p>
+        </div>
+        <h2 class="_orange">Worktables</h2>
+        <p>The AMAS utilises  values and mappings from the following worktables. Examples of data mappings are provided in <MadCap:xref href="Data Mapping for Analysis Views.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">Data Mapping for Analysis Views</MadCap:xref>.</p>
+        <MadCap:dropDown xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>U104: General Ledger </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The AMAS is populated at Category Code level with account balances from the <b class="BufferandFunctionBold">U104: General Ledger</b>.</p>
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/NAV Oversight Images/AMAS_U104.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>U280: Benchmarks </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>For Benchmark tracking funds, the AMAS displays benchmark values. As with other categories, the current, previous and movement values are displayed, allowing visual comparison of benchmark movement versus NAV price movement. The validation to check that these values are in line is completed in the <b class="BufferandFunctionBold">[POV010] - Price Movement vs Benchmark</b>  check. There are two Benchmark categories on AMAS, the IND1_AMAS for Key Benchmark values and the IND2_AMAS for Dynamic Composite Benchmark values.</p>
+                <p>Benchmark Values are loaded from the <b class="BufferandFunctionBold">U280: Benchmark</b> worktable, validated and price record written during the Market Data Validation process.</p>
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/Library Images/U280.png" />
+                </p>
+                <h3 class="_orange">Key Benchmarks</h3>
+                <p>For the Benchmark set on the fund entity as the Key Benchmark, current and previous price values will be loaded to the NAV Oversight process and written to the IND1_AMAS category.</p>
+                <h3 class="_orange">Dynamic Benchmarks</h3>
+                <p>Dynamic composite benchmarks can be composed of the underlying assets of an entity and their associated weights, or the benchmarks of those assets. They are used to compare the movement of the entities value against that of the dynamic benchmark. The constituents of the dynamic composite benchmark are mapped in the L235: Benchmark Mapping Worktable. Current and previous price values will be loaded to the NAV Oversight process and written to the IND2_AMAS category.</p>
+                <p>
+                    <img src="../../../Resources/Images/NAV Oversight Images/AMAS_L235BM_Mapping.png" class="greyborder" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>L184: Account Category </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <MadCap:snippetText src="../../../Resources/Snippets/Analysis Views/DYAS_L184intro.flsnp" />
+                </p>
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/Cash Allocation Images/AMAS_DL190onFund.png" />
+                </p>
+                <p>The <b class="BufferandFunctionBold">L184: Account Category</b> maps the account group to the AMAS category. Only categories that have "Account Movement Attribution" identified in the category field in the L184: Account Category will be included in the AMAS view. Setting the category field associates the account groups and linked category codes to AMAS.</p>
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/NAV Oversight Images/AMAS_L184v2.png" />
+                </p>
+                <p>It is possible to map a single account to a category without mapping it to an Account Group in which case the Account Group field should be left blank. </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>L315: Account Code Mapping</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/L315AccountCodeMappingIntro.flsnp" />
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/NAV Oversight Images/AMAS_L315v2.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>U350: Category Hierarchy</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The Category Hierarchy used by the AMAS report is configured in the <b class="BufferandFunctionBold">U350: Category Hierarchy</b> worktable, and is used to order the categories within the AMAS report. </p>
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/NAV Oversight Images/AMAS_U350.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>U782: Account Movement Analysis</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <MadCap:snippetText src="../../../Resources/Snippets/Analysis Views/U782intro.flsnp" />
+                </p>
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/Cash Allocation Images/AMAS_U782.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>A09: Account Balance Validation</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The <b class="BufferandFunctionBold">A09: Account Balance Validation</b> worktable is populated during the pricing process with the category code for the account record. Each category in the AMAS is a collection of accounts; the A09: Account Balance Validation provides a breakdown of those accounts and their balances, movements and impact of those movements. </p>
+                <p>The A09: Account Balance Validation worktable provides valuable information that can be used to:</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">check records have been mapped </li>
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">to analyse the makeup of the unexplained values on the AMAS </li>
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">and provide data from the impact field for the <b class="BufferandFunctionBold">[ACC004] Account Impact Check</b> which validates the movement against account level. </li>
+                </ul>
+                <p>Where the category code is left blank, the account record has not been mapped and it is these records that makeup the Unexplained Value total. </p>
+                <p>It is possible to navigate to the A09: Account Balance Validation worktable via the ellipsis on the AMAS view providing the ability to investigate movements within an account category itself. The data in the A09: Account Balance Validation worktable will sort by category accordingly.</p>
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/NAV Oversight Images/AMAS_A09v2.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Functions</h2>
+        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/AnalysisViewsDLsnippet.flsnp" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <p>The following functions determine whether the AMAS view is populated and the data exported to the U782: Account Movement Attribution worktable:</p>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../AA_Library/Entities/NAV Process Phases and Functions.htm#VA850">[VA850] - Generate Account Movement Analysis Data  </MadCap:xref>
+            </li>
+            <li xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../AA_Library/Entities/NAV Process Phases and Functions.htm#EX092">[EX092] - Export Account Movement Analysis Data  </MadCap:xref>
+            </li>
+        </ul>
+        <p>The following are validation checks that can be performed on the values within the AMAS, to determine if the values calculated are within or outside of tolerances:</p>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../AA_Library/Entities/NAV Process Phases and Functions.htm#CAT006">[CAT006] - Class Price vs Pool Price   </MadCap:xref>
+            </li>
+            <li xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../AA_Library/Entities/NAV Process Phases and Functions.htm#CAT011">[CAT011] - Category Level Account Impact Check </MadCap:xref>  and [CAT011-PUI] Category Level Account Impact Check (Per Unit Impact)</li>
+            <li xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../AA_Library/Entities/NAV Process Phases and Functions.htm#CAT012">[CAT012] - UPR vs UPM Breakdown  </MadCap:xref>
+            </li>
+            <li xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../AA_Library/Entities/NAV Process Phases and Functions.htm#CAT013">[CAT013] - Check for Unexplained Values  </MadCap:xref>
+            </li>
+            <li xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../AA_Library/Entities/NAV Process Phases and Functions.htm#CAT014">[CAT014] - Unexplained NAV Impact  </MadCap:xref>
+            </li>
+            <li xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../AA_Library/Entities/NAV Process Phases and Functions.htm#CAT016">[CAT016] - Balance Sheet NAV v Capital and Income NAV </MadCap:xref> </li>
+            <li xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../AA_Library/Entities/NAV Process Phases and Functions.htm#ACC004">[ACC004] - Account Impact Check </MadCap:xref>
+            </li>
+        </ul>
+        <h2 class="_orange">Calculations</h2>
+        <p>The <MadCap:xref href="AMAS Specification Table.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">AMAS Specification Table</MadCap:xref> detail the data, calculations and categories used, in addition to information on column definitions.</p>
+        <p>&#160;</p>
+    </body>
+</html>

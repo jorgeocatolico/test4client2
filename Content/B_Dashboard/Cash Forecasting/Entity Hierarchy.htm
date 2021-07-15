@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Entity Hierarchy</h1>
+        <p>The entity column contains a hierarchical drill down of entity descriptions for which an order transaction has been generated, and there are cash financial events associated with that order. The settlement date of those orders is generally in the future, meaning a positive or negative cash flow is anticipated on the settlement date.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Default Entity Hierarchy</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The default hierarchy, shown below, is used in most scenarios, where an order is settled in either the same currency or a different currency to the Originator's currency. Where the order is settled in a different currency, pControl can convert the value back to the Originator's currency using the FX&#160;rates in the <b class="BufferandFunctionBold">U178: FX Rates</b> worktable.</p>
+                <p>Client</p>
+                <p style="text-indent: 0.5in;">Originator</p>
+                <p style="text-indent: 1in;">Alternate Funding</p>
+                <p style="text-indent: 1.5in;">Other Party Code</p>
+                <p style="text-indent: 2in;">Cash Movement</p>
+                <p style="text-indent: 1in;">Bank Account Currency Code</p>
+                <p style="text-indent: 1.5in;">Bank Account code (i.e. bank account / settlement instruction of the originator of the financial event)</p>
+                <p style="text-indent: 2.5in;">Cash Type</p>
+                <p style="text-indent: 3in;">Status Code</p>
+                <p style="text-indent: 3.5in;">Other Party Code</p>
+                <p style="text-indent: 4in;">Transaction Type Code</p>
+                <p>
+                    <img src="../../Resources/Images/Cash Forecasting Images/CF_EntityHierarchy - needs replaced.png" />
+                </p>
+                <p>It is possible for the System Administrator to <a href="Altering Hierarchy.htm">alter some of this hierarchy</a> via the cashforecast-config.xml file. </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Row Descriptions for Entity Hierarchy</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The following table describes each row type. </p>
+                <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">Row type</th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Client</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Represents the legal entity the order is being executed for.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Originator</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The originator of the ‘cash funding’ financial event.</p>
+                                <p><i>Note: The term ‘Originator’ is also used to refer to the originator of an order transaction.  When it refers to order transactions, the originator is the entity  associated to a client requesting the order.</i>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Alternate Funding</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The alternate funding row will be displayed under all originators, regardless of whether there are any cash forecast values or not.</p>
+                                <ul class="FirstLevelBlueBullet">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If there are no financial events there will be no further drill down available beyond this row.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">If there are financial event/s associated to an asset which has been identified as an alternate funding source, via selection of the ‘Cash Forecasting Funding Source’ attribute, the next level of drill down options will be displayed, along with the corresponding cash forecast values.</li>
+                                </ul>
+                                <p>For further detail, refer to <a href="Alternate Funding.htm">Alternate Funding</a>.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Other Party Code</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Other party refers to the opposing party for the cash settlement. Where the transaction type is:</p>
+                                <ul class="FirstLevelBlueBullet">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">a transfer, the other party code refers to the other party involved in the transfer. </li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">anything other than a transfer:</li>
+                                </ul>
+                                <ul class="TableListBullets">
+                                    <li class="test2" style="margin-left: 24px;margin-bottom: 6px;margin-top: 6px;margin-right: 6px;text-indent: 0.5in;" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">and the originator of the order is located above this current point in the hierarchy, the other party code is the 'counterparty'.</li>
+                                    <li class="test2" style="margin-left: 24px;margin-bottom: 6px;margin-top: 6px;margin-right: 6px;text-indent: 0.5in;" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">and the originator of the order is not located above this current point in the hierarchy, the other party code will be the 'originator'.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Cash Movement</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Cash Movement is only displayed under ‘Alternate Funding’ when there is a financial event movement within the selected date range against an asset where the ‘Cash Forecasting Funding Source’ attribute is selected.</p>
+                                <p>Failed settlements, and future settlements may also be displayed within the ‘cash movement’ row. The cash movement displayed here is from the ‘alternate parties’ perspective. Therefore, if the originator of the cash event is receiving funds, the value will be negative, and the ‘alternate balance’ will be reduced.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Bank Account Currency Code</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">The three letter currency code of the cash financial event.
+Note: It is possible for one counterparty to have several associated settlement instruction entities, each with a different currency code. For further details refer to pControl User Guide – UOM.
+</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Bank Account Code</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>This field will display the settlement instructions entity containing details of the bank account numbers, currency details, and methods of payment, which are associated to the originator on a financial event.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Cash Type</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Cash type grouping indicates whether the cash financial event is linked to the originator of the transaction or not.</p>
+                                <ul class="FirstLevelBlueBullet">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Where the financial event is linked to the originator of the transaction, the cash type is ‘Cash Funding’</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Where the financial event is not linked to the originator of the transaction, the cash type is ‘Cash Requests’.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Status Code</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Status code refers to the grouping that the internal pControl financial event status code is linked to. Valid group values include:</p>
+                                <ul class="FirstLevelBlueBullet">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Pending – The state of the financial event is not in ‘Cancelled’, or ‘Completed’, and the settlement date of the financial event is greater than or equal to the ‘From date’.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Failed – Internal state not in ‘Cancelled’, or ‘Completed’, and the settlement date of the financial event is less than the ‘From Date’</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Balance Difference – values are created when the bank account values imported into pControl are different to the value calculated by pControl. These are always displayed in the first column of the Cash Forecast table, regardless of the date range selected.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Settled – The state of the financial event is in ‘Completed’, and the settlement date of the financial event is greater than or equal to the ‘From Date’.</li>
+                                </ul>
+                                <p style="font-style: italic;">Note: the ‘state’ of cash financial events are displayed in processing mode on the Financial event view in the first column below:</p>
+                                <p>
+                                    <img src="../../Resources/Images/Cash Forecasting Images/CF_FinEvents_statuscolumn.png" />
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Other Party Code</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Other party refers to the opposing party for the cash settlement. Where the transaction type is:</p>
+                                <ul class="TableListBullets">
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">a transfer, the other party code refers to the other party involved in the transfer.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">anything other than a transfer,</li>
+                                    <li class="test2" style="text-indent: 0.5in;" MadCap:autonum="&lt;span style=&quot;color: #58bfc4;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">and the originator of the order is located above this current point in the hierarchy, the other party code is the ‘counterparty’.</li>
+                                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">and the originator of the order is not located above this current point in the hierarchy, the other party code will be the ‘originator’.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Transaction Type Code</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>The code to indicate the type of transaction to which financial events are attached.</p>
+                                <p>Some of the most common transaction types are ‘Sub’ ‘Red’, ‘Transfer’, and ‘Payments’.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>Entity descriptions are taken from pControl User Guide – Unitised Order Management. For further detail on entity types and order processing, refer to this User Guide. </p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Special Case Entity Hierarchy - Three currencies used in a trade</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>There are some scenarios, where three currencies are used in a trade. For example, the trade may be settled in EUR, into a GBP bank acct, for an Originator whose currency is AUD. In this scenario, a third currency row will be added into the hierarchy as shown below:</p>
+                <p>Client</p>
+                <p style="text-indent: 0.5in;">Originator</p>
+                <p style="text-indent: 1in;">Alternate Funding</p>
+                <p style="text-indent: 1.5in;">Other Party Code</p>
+                <p style="text-indent: 2in;">Cash Movement</p>
+                <p style="text-indent: 1in;">Bank Account Currency Code</p>
+                <p style="text-indent: 1.5in;">Bank Account code (i.e. bank account / settlement instruction of the originator of the financial event)</p>
+                <p style="text-indent: 2in;color: #40ac76;">Cash Currency Code</p>
+                <p style="text-indent: 2.5in;">Cash Type</p>
+                <p style="text-indent: 3in;">Status Code</p>
+                <p style="text-indent: 3.5in;">Other Party Code</p>
+                <p style="text-indent: 4in;">Transaction Type Code</p>
+                <p>&#160;</p>
+                <p>&#160;</p>
+                <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">Row type</th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Cash Currency Code</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>The three letter currency code of the cash financial event. This row is only used where the currency of the financial event is different to both bank account and originator's currency.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

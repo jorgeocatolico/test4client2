@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The Value Type field attaches an identifier to indicate the 'Type' of the 'Value' of the record. This field is used to assist in determining the 'Value Previous' as it helps to indicate if the value effectively relates to a 'YTD movement' or an 'As At Balance'</p>
+    </body>
+</html>

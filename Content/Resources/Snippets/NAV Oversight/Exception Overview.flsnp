@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Exception Overview </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p> The Exception Overview alerts users and managers to processes which require intervention. The Exception Overview would typically display exceptions with the potential to stop the process, i.e. L2 or L3 severity, however it may differ according to what is configured in System Administration.</p>
+                <p>Selecting a data bar on the Exception Overview navigates to the <MadCap:xref href="../../../C_Process/Exceptions.htm">Exceptions</MadCap:xref> view with the existing date and filters applied.</p>
+                <p>
+                    <img src="../../Images/NAV Oversight Images/NAVDash_ExceptionsOverview.png" class="greyborder" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

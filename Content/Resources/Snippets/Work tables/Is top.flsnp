@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Indicates that the entity in the Unitholder code field has no other Unitholders investing into it and so it is the top entity in the Ownership chain. Where lower lengths of the same ownership chain are displayed then either the 'Is Top' and/or 'Is Bottom' fields will not be selected.</p>
+    </body>
+</html>

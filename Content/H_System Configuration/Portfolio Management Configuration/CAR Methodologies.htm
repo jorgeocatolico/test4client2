@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Note To Selfs.ScreenOnly">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle02TableinaTable.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/MG_TableStyle02TableinaTable_090em.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/MG_TableinanAccordionDropDown.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Cash Allocation and Rebalancing Methodologies</h1>
+        <p>Cash Allocation methodologies supported in pControl include:</p>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Straight Percentage</li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Zero Cash To Allocate</li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Towards Target</li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Box Management</li>
+        </ul>
+        <p>Rebalancing methodologies supported by pControl include:</p>
+        <ul class="FirstLevelBlueBullet">
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Rebalance to Target</li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Partial Rebalance to Percent Target</li>
+        </ul>
+        <p>&#160;</p>
+        <p>The methodology to be used for Cash Allocation and Rebalancing processes is specified through the ‘Allocation methodology’ attribute on the fund. The Cash Allocation attribute is shown below. For rebalancing, navigate to the Rebalancing process in the left hand column and select the Calculations phase.</p>
+        <p>
+            <img src="../../Resources/Images/CAR and PM Process Phases/CA_CAL040onentity1.png" class="greyborder" />
+        </p>
+        <h2 class="_orange">Cash Allocation Methodologies</h2>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">Straight Percentage methodology  </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableinanAccordionDropDown.css');width: 100%;margin-left: 0;margin-right: auto;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular">
+                        </col>
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular">
+                        </col>
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>&#160;</p>
+                                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_090em.css');" class="TableStyle-MG_TableStyle02TableinaTable_090em" cellspacing="18">
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_090em-Column-Column1">
+                                        </col>
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_090em-Column-Column1">
+                                        </col>
+                                        <tbody>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font" style="font-size: ;">
+                                                    <p>Business Description</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font" style="font-size: ;">
+                                                    <p>
+                                                        <p>The cash available to allocate (liquidity balance) is divided up amongst the investments specified by the Allocation Parameters (ALPs). This creates a proposed order for each investment (application or redemption). This value is written into the ‘Ideal Order’ field on the Proposed Order.</p>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font" MadCap:conditions="MG Staff Only.ScreenOnly">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font" style="font-size: ;">
+                                                    <p>Data Requirements</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font" style="font-size: ;">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">&#160;</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font" style="font-size: ;">
+                                                    <p>Processing Requirements</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font" style="font-size: ;">
+                                                    <p>For each ALP, the straight percentage calculation is:  </p>
+                                                    <p>
+                                                        <MadCap:equation>$Ideal\ Order\ =\ Cash\ available\ to\ allocate\ \times \left ( Target\ Weight\ \%\ or\ Current\ Weight\ \%\ for\ the\ asset \right )$</MadCap:equation>
+                                                    </p>
+                                                    <p>Where Orders Criteria grouping is selected on the entity, the calculation is:</p>
+                                                    <p>
+                                                        <MadCap:equation>$Ideal\ Order\ =\ Cash\ available\ to\ allocate\ for\ order\ criteria\ group\ \times \left ( Target\ Weight\ \%\ or\ Current\ Weight\ \%\ for\ the\ asset \right )$</MadCap:equation>
+                                                    </p>
+                                                    <p>The entity attribute Straight Percentage Weight Method determines if Target or Current weight from the ALPs is used in the calculation.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyB-Column1-090em_font" style="font-size: ;">
+                                                    <p>Entity Data Attributes Used</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyA-Column1-090em_font" style="font-size: ;">
+                                                    <MadCap:dropDown>
+                                                        <MadCap:dropDownHead>
+                                                            <MadCap:dropDownHotspot>Straight Percentage Methodology</MadCap:dropDownHotspot>
+                                                        </MadCap:dropDownHead>
+                                                        <p>The following attributes are used by all cash allocation methodologies (unless otherwise specified):</p>
+                                                        <ul class="FirstLevelBlueBullet">
+                                                            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"><b class="BufferandFunctionBold">Allocation Methodology</b>
+                                                            </li>
+Select methodology.<li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"><b class="BufferandFunctionBold">Allocation Grouping </b></li>
+The setting of this attribute will have an impact on the price date on the proposed order and subsequent actual order. This applies to both cash allocation and rebalancing runs.<table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_090em.css');" class="TableStyle-MG_TableStyle02TableinaTable_090em" cellspacing="18"><col class="TableStyle-MG_TableStyle02TableinaTable_090em-Column-Column1"></col><col class="TableStyle-MG_TableStyle02TableinaTable_090em-Column-Column1"></col><tbody><tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font"><td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font"><p>Effective Date </p></td><td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font"><p>The effective date allocation grouping will create orders from the fund with a price date equal to the effective date. This is the same as normal cash allocation, i.e. no deferral of cash allocation orders is required.</p></td></tr><tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font"><td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font"><p>Forward</p></td><td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font"><p>The forward allocation grouping will create orders from the fund with a price date equal to the greatest deferral (notice) date on the bottom-most-level asset invested in. The settlement date on the proposed order will equal to the ‘Value Date’ configured on the asset entity level.</p></td></tr><tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font"><td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font"><p>Historic </p></td><td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font"><p>The historic allocation grouping will create orders from the fund with a price date equal to the last approved price date of the asset. This is similar to standard cash allocation, i.e. no deferral of cash allocation orders is required, although an historic price may be used if historic allocation grouping is specified.</p></td></tr><tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font"><td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font"><p>Forward and Historic</p></td><td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font"><p>If ‘Forward and Historic’ allocation grouping is selected, then two cashflows groups from the fund will be created – one containing orders with a forward (deferred price) date, and another with a historic (last approved price) date.</p></td></tr><tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font"><td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font"><p>Orders Criteria</p></td><td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font"><p>The ‘Orders Criteria’ allocation grouping uses the allocation criteria in the Orders Criteria attribute table to determine how the incoming cashflows are processed. This ensures that the relevant price date, transaction type or price type for any cashflows received is applied consistently throughout the investment structure.</p></td></tr><tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font"><td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyB-Column1-090em_font"><p>Blank</p></td><td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyA-Column1-090em_font"><p>If left blank, pControl will default to 'Effective Date'.</p></td></tr></tbody></table></ul>
+                                                        <ul class="FirstLevelBlueBullet" style="text-align: left;">
+                                                            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"><b class="BufferandFunctionBold">Straight Percentage Weight Method </b>
+                                                            </li>
+&#160;
+Determines whether the Target or Current weight from the ALPs is used in the allocation calculations.<br /></ul>
+                                                        <MadCap:dropDownBody>
+                                                            <ul class="FirstLevelBlueBullet">
+                                                                <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle02TableinaTable_No_header" cellspacing="18">
+                                                                    <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                                                    <col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" />
+                                                                    <tbody>
+                                                                        <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                                            <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font">
+                                                                                <p>Target Weight</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font">
+                                                                                <p>pControl will use the value set in ALP</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font">
+                                                                            <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font">
+                                                                                <p>Current Weight</p>
+                                                                            </td>
+                                                                            <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font">
+                                                                                <p>pControl will use the Asset Allocation</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font">
+                                                                            <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-090em_font">Blank</td>
+                                                                            <td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyA-Column1-090em_font">
+                                                                                <p>pControl will default to use Target Weight.</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <br />&#160;<img src="../../Resources/Images/CAR and PM Process Phases/CA_CAL040onentity3.png" class="greyborder" />&#160;<br /></ul>
+                                                        </MadCap:dropDownBody>
+                                                    </MadCap:dropDown>
+                                                    <MadCap:dropDown>
+                                                        <MadCap:dropDownHead>
+                                                            <MadCap:dropDownHotspot>Straight Percentage Methodology with Orders Criteria Grouping</MadCap:dropDownHotspot>
+                                                        </MadCap:dropDownHead>
+                                                        <MadCap:dropDownBody>
+                                                            <p>The price or ‘value’ date, transaction type or price type for any cashflows received can be applied to proposed orders generated throughout the investment structure. This means that together with a ‘straight percentage’ method, the cashflows can be further grouped by the specified criteria. The entity attributes are as follows: </p>
+                                                            <ul class="FirstLevelBlueBullet">
+                                                                <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"><b class="BufferandFunctionBold">Allocation Methodology</b>
+                                                                </li>Straight Percentage <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"><b class="BufferandFunctionBold">Allocation Grouping</b></li> Orders Criteria Grouping<li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"><b class="BufferandFunctionBold">Orders Criteria </b></li>&#160;Ensures that the relevant price or 'value' date, transaction type or price type for any cashflows received is applied throughout the investment structure. <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_No header.css');" class="TableStyle-MG_TableStyle02TableinaTable_No_header" cellspacing="18"><col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" /><col class="TableStyle-MG_TableStyle02TableinaTable_No_header-Column-Column1" /><tbody><tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font"><td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-090em_font"><p>Price Date</p></td><td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-090em_font"><p>Refers to the different value dates populated in the 'Price Date' field in the U110: Cashflows and Orders worktable with the same price date, will be grouped together.</p></td></tr><tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-1em_font"><td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyE-Column1-1em_font"><p>Price Type</p></td><td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyD-Column1-1em_font"><p>Refers to the different price type populated in the ‘Price Type’ field in the U110: Cashflows and Orders worktable. Cashflows with the same price type (e.g. buy price, sell price) will be grouped together.</p></td></tr><tr class="TableStyle-MG_TableStyle02TableinaTable_No_header-Body-090em_font"><td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyB-Column1-090em_font"><p>Transaction Type</p></td><td class="TableStyle-MG_TableStyle02TableinaTable_No_header-BodyA-Column1-090em_font"><p>Refers to the transaction types populated in the ‘Tran Type’ field in the U110: Cashflows and Orders worktable, together with the transaction types that have been configured in the ‘Group in Cash Allocation’ field in the L250: Transaction Flow Configuration worktable. Cashflows with the same transaction type will be grouped together.</p></td></tr></tbody></table><p>For example, if Price Date is selected, the cash available to allocate is divided by the price date. The value of orders loaded in each price date group is then processed individually with proposed orders made for each investment according to both the ALP&#160;weights and the price date group. Where price date is specified for grouping, a proposed order will be created for each investment with the price date equal to the effective date (application or redemption). The value is then written into the Ideal Order field on the Proposed Order with the price date equal to the effective date. </p>&#160;<img src="../../Resources/Images/CAR and PM Process Phases/CA_CAL020_onentity.png" class="greyborder" /></ul>
+                                                            <p>&#160;</p>
+                                                        </MadCap:dropDownBody>
+                                                    </MadCap:dropDown>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop" MadCap:conditions="MG Staff Only.ScreenOnly">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">Zero Cash to Allocate methodology  </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableinanAccordionDropDown.css');width: 100%;margin-left: 0;margin-right: auto;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular">
+                        </col>
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular">
+                        </col>
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>&#160;</p>
+                                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_090em.css');" class="TableStyle-MG_TableStyle02TableinaTable_090em" cellspacing="18">
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_090em-Column-Column1">
+                                        </col>
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_090em-Column-Column1">
+                                        </col>
+                                        <tbody>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font" style="font-size: ;">
+                                                    <p>Business Description</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font" style="font-size: ;">
+                                                    <p>This methodology allows users to have the option not to allocate cash to funds when a cash allocation and rebalancing process is run, even though target weights and liquidity have been set up in an ALPs. Proposed orders with zero value will be created, and this provides the opportunity to adjust the proposed order amounts, or to leave the values at zero.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font" style="font-size: ;">
+                                                    <p>Data Requirements</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font" style="font-size: ;">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">&#160;</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font" style="font-size: ;">
+                                                    <p>Processing Requirements</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font" style="font-size: ;">
+                                                    <p>The ‘Zero Cash to Allocate’ method will simply zero out the ideal order value on the proposed orders, even when there is cash to allocate. The starting position, available cash, etc. remain viewable on the proposed order.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyB-Column1-090em_font" style="font-size: ;">
+                                                    <p>Entity Data Attributes Used</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyA-Column1-090em_font" style="font-size: ;">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">Towards Target methodology  </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableinanAccordionDropDown.css');width: 100%;margin-left: 0;margin-right: auto;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular">
+                        </col>
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular">
+                        </col>
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>&#160;</p>
+                                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_090em.css');" class="TableStyle-MG_TableStyle02TableinaTable_090em" cellspacing="18">
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_090em-Column-Column1">
+                                        </col>
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_090em-Column-Column1">
+                                        </col>
+                                        <tbody>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font" style="font-size: ;">
+                                                    <p>Business Description</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font" style="font-size: ;">
+                                                    <p>This methodology allocates cash towards target based on proportional difference to target amounts. Positive cashflows are allocated proportionally to assets underweight, whereas negative cashflows are allocated proportionally to assets that are overweight. Positive cashflows are never allocated to overweight assets and vice versa.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font" MadCap:conditions="MG Staff Only.ScreenOnly">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font" style="font-size: ;">
+                                                    <p>Data Requirements</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font" style="font-size: ;">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">&#160;</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font" style="font-size: ;">
+                                                    <p>Processing Requirements</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font" style="font-size: ;">
+                                                    <p>Where the liquidity balance is positive, proposed orders for underweight assets will be calculated proportionally based on the difference to target amounts. The value of the liquidity balance is always included in the calculation of the start weights (and thus the difference to target amounts). The underweight asset that is farthest from target will get the largest allocation of cash. </p>
+                                                    <p><i>Note, this is NOT a ranked methodology in which the asset that is farthest from target is first brought all the way to target, and so on.</i> </p>
+                                                    <p>Allocation of cash is proportional to all eligible assets based upon difference to target amounts. Cash that cannot be allocated (in the event that all assets are at their target) will either remain in liquidity or be allocated as per the spare cash methodology defined on the entity. </p>
+                                                    <p>The same methodology and behaviour applies for negative cashflows.</p>
+                                                    <p>If Cash to Allocate &gt; 0 and Difference to Target &lt; 0, then ideal order =</p>
+                                                    <p>
+                                                        <MadCap:equation>$Cashflow\ Amount\ \times 
+\large
+\left ( 
+\frac{
+Difference\ to\ Target\ for\ ALR }{Total\ Difference\ to\ Target\ for\ all\ Unders}
+
+
+\right )$</MadCap:equation>
+                                                    </p>
+                                                    <p>If Cash to Allocate &lt; 0 and Difference to Target &gt; 0, then ideal order =</p>
+                                                    <p>
+                                                        <MadCap:equation>$Cashflow\ Amount\ \times 
+\large
+\left ( 
+\frac{
+Difference\ to\ Target\ for\ ALR }{Total\ Difference\ to\ Target\ for\ all\ Overs}
+
+
+\right )$</MadCap:equation>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyB-Column1-090em_font" style="font-size: ;">
+                                                    <p>Entity Data Attributes Used</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyA-Column1-090em_font" style="font-size: ;">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop" MadCap:conditions="MG Staff Only.ScreenOnly,Note To Selfs.ScreenOnly">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">Box Management methodology  </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableinanAccordionDropDown.css');width: 100%;margin-left: 0;margin-right: auto;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular">
+                        </col>
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular">
+                        </col>
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>&#160;</p>
+                                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_090em.css');" class="TableStyle-MG_TableStyle02TableinaTable_090em" cellspacing="18">
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_090em-Column-Column1">
+                                        </col>
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_090em-Column-Column1">
+                                        </col>
+                                        <tbody>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font" style="font-size: ;">
+                                                    <p>Business Description</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font" style="font-size: ;">
+                                                    <p>This strategy is typically used in UK Life Company environments to support trading limits.</p>
+                                                    <p>The ‘Box Management’ methodology in the pControl cash allocation product supports the notion of using a manager’s box within an investment structure to effectively trade on behalf of the manager. </p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font" style="font-size: ;">Data Requirements</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font" style="font-size: ;">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">&#160;</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font" style="font-size: ;">
+                                                    <p>Processing Requirements</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font" style="font-size: ;">
+                                                    <p>&#160;</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyB-Column1-090em_font" style="font-size: ;">
+                                                    <p>Entity Data Attributes Used</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyA-Column1-090em_font" style="font-size: ;">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h2 class="_orange" MadCap:conditions="MG Staff Only.ScreenOnly">Rebalancing Methodologies</h2>
+        <div class="AccordionDrop" MadCap:conditions="MG Staff Only.ScreenOnly">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">Rebalance to Target methodology  </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableinanAccordionDropDown.css');width: 100%;margin-left: 0;margin-right: auto;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular">
+                        </col>
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular">
+                        </col>
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>&#160;</p>
+                                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_090em.css');" class="TableStyle-MG_TableStyle02TableinaTable_090em" cellspacing="18">
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_090em-Column-Column1">
+                                        </col>
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_090em-Column-Column1">
+                                        </col>
+                                        <tbody>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font" style="font-size: ;">
+                                                    <p>Business Description</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font" style="font-size: ;">
+                                                    <p>Rebalancing is usually performed to re-weight any investment holdings that are out of tolerance. In pControl, this process calculates and creates proposed orders in the same way as Cash Allocation.</p>
+                                                    <p>For each Allocation Parameter (ALP), pControl checks whether the starting position in each asset specified by the ALP is outside of the tolerances that have been set, i.e. the following test is performed.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font" style="font-size: ;">Data Requirements</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font" style="font-size: ;">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">&#160;</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font" style="font-size: ;">
+                                                    <p>Processing Requirements</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font" style="font-size: ;">
+                                                    <p>A rebalance will be initiated if any of the starting positions are outside of tolerance, including liquidity. If there is an amount in cash when the rebalancing runs, and it is outside of the upper tolerance, then the rebalance will generate a proposed order to bring the holding to within the upper limit.</p>
+                                                    <p>If <MadCap:equation>$Start\ Weight\ \% &lt;  \left ( TW\ -\ Lower\ Tolerance \right )$</MadCap:equation> OR <MadCap:equation>$Start\ Weight\  \% &gt;\   \left ( TW\ +\ Upper\ Tolerance \right )$</MadCap:equation></p>
+                                                    <p>then, propose a rebalancing order.</p>
+                                                    <p>If <MadCap:equation>$\left ( TW\ -\ Lower\ Tolerance \right ) \leqslant\ Start\ Weight\ \% \leqslant\ \left(TW\ +\ Upper\ Tolerance \right)$</MadCap:equation> </p>
+                                                    <p>then the investment is within tolerance, and a rebalance will not be proposed. </p>
+                                                    <p>For each investment that has been identified as outside of tolerance, the calculation is as follows:</p>
+                                                    <p>
+                                                        <MadCap:equation>$Ideal\ Order\ =\ \left (TW\ \times Total\ Investment\ Value\ of\ the\ fund  \right )\ -\ Starting\ value\ of\ investment\ in\ the\ asset$</MadCap:equation>
+                                                    </p>
+                                                    <MadCap:dropDown>
+                                                        <MadCap:dropDownHead>
+                                                            <MadCap:dropDownHotspot>Ad-hoc Rebalancing</MadCap:dropDownHotspot>
+                                                        </MadCap:dropDownHead>
+                                                        <MadCap:dropDownBody>
+                                                            <p>Ad-hoc Rebalancing functionality allows funds to request rebalancing outside of their standard schedule rebalancing periods, with special allocation parameters used, if required, to override the default strategy and tolerances. Ad-hoc rebalancing is supported by both Rebalance to Target and Partial Rebalance to Percent Target methodologies. <span style="background-color: #98fb98;" MadCap:conditions="Note To Selfs.ScreenOnly">Jen to insert link here.</span></p>
+                                                            <p>A Rebalancing Calendar can be defined by using a ‘Calendar Schedule Entity’. The calendar schedule entity contains the calendar which determines the scheduled days when ad-hoc rebalancing should be allowed to run. For example, where a scheduled rebalance occurs on a public holiday, the default may move this rebalancing event to the next working day, however ad-hoc rebalancing can override this event, so that the rebalancing process takes place on the public holiday. </p>
+                                                            <p>
+                                                                <img src="../../Resources/Images/CAR and PM Process Phases/Rebalancing1.png" class="greyborder" />
+                                                            </p>
+                                                            <p>&#160;</p>
+                                                        </MadCap:dropDownBody>
+                                                    </MadCap:dropDown>
+                                                    <MadCap:dropDown>
+                                                        <MadCap:dropDownHead>
+                                                            <MadCap:dropDownHotspot>Miss a Scheduled Rebalance</MadCap:dropDownHotspot>
+                                                        </MadCap:dropDownHead>
+                                                        <MadCap:dropDownBody>
+                                                            <p>If selected, the rebalancing process will not run if an ad-hoc rebalance process has been run since the last rebalancing process.</p>
+                                                            <p>
+                                                                <img src="../../Resources/Images/CAR and PM Process Phases/Rebalancing2.png" class="greyborder" />
+                                                            </p>
+                                                            <p>&#160;</p>
+                                                        </MadCap:dropDownBody>
+                                                    </MadCap:dropDown>
+                                                    <MadCap:dropDown>
+                                                        <MadCap:dropDownHead>
+                                                            <MadCap:dropDownHotspot>Nudge Rebalancing (Glide Path)</MadCap:dropDownHotspot>
+                                                        </MadCap:dropDownHead>
+                                                        <MadCap:dropDownBody>
+                                                            <p>The daily nudge method uses a series of short-term daily rebalance events over a defined period to gradually move from the original weighting to the new target allocations. For the period between receipt of the request for change and the end date, predefined target allocations (ALPs) will be used to achieve a gradual switch of assets from one fund to another each day until the target is achieved. This is known as the ‘glide path’.</p>
+                                                            <p>At the end of the period, the fund may revert to use the ALPs that were in place prior to the nudge rebalancing occurring, or the target ALPs can be reset to ensure that the new target allocations are used.</p>
+                                                            <p>There are two nudge rebalancing methods:</p>
+                                                            <MadCap:dropDown>
+                                                                <MadCap:dropDownHead>
+                                                                    <MadCap:dropDownHotspot>Cash Flow Method</MadCap:dropDownHotspot>
+                                                                </MadCap:dropDownHead>
+                                                                <MadCap:dropDownBody>
+                                                                    <p>When the glide path method is ‘Cash Flow’, the investment manager is able to specify a target asset allocation that they want to move to, and a timescale (glide path) over which they want to achieve this transition.</p>
+                                                                    <p>When the current (Rebalancing) Allocation Methodology is ‘Straight Percentage’ and the rebalancing falls within the glide path period, pControl will change the allocation methodology from ‘Straight Percentage’ to ‘Towards Target’. Therefore, on a daily basis, the cash allocation process will utilise the net new money and allocate to either the most underweight or most overweight depending on the cash flow for the day.</p>
+                                                                    <p>The Towards Target methodology will check if the new holding is overweight or underweight, and readjust the proposed order amount by giving a proportionate amount to the other under/overweight ALPs</p>
+                                                                    <p>On the last day of the glide path period, the rebalancing process will rebalance using the ALPs that are effective on the glide path end date.</p>
+                                                                    <p>&#160;</p>
+                                                                </MadCap:dropDownBody>
+                                                            </MadCap:dropDown>
+                                                            <MadCap:dropDown>
+                                                                <MadCap:dropDownHead>
+                                                                    <MadCap:dropDownHotspot>Rebalancing Method</MadCap:dropDownHotspot>
+                                                                </MadCap:dropDownHead>
+                                                                <MadCap:dropDownBody>
+                                                                    <p>When the glide path method is ‘Rebalancing’, and it is in a glide path period, the investment manager is able to specify a target asset allocation that they want to move to and a timescale over which they want to achieve this transition.</p>
+                                                                    <p>On a daily basis, the cash allocation process will perform the necessary rebalancing transactions to take the fund back to the calculated target asset allocations. Tolerances may be applied on a daily basis but it is likely that they will be set to zero during the duration of the rebalance, to allow a rebalance to occur each day.</p>
+                                                                    <p>Rebalancing will occur to the calculated glide path ALPs for each day in the period.</p>
+                                                                    <p>&#160;</p>
+                                                                </MadCap:dropDownBody>
+                                                            </MadCap:dropDown>
+                                                            <p>&#160;</p>
+                                                        </MadCap:dropDownBody>
+                                                    </MadCap:dropDown>
+                                                    <MadCap:dropDown>
+                                                        <MadCap:dropDownHead>
+                                                            <MadCap:dropDownHotspot>Calculating Glide Path ALPs</MadCap:dropDownHotspot>
+                                                        </MadCap:dropDownHead>
+                                                        <MadCap:dropDownBody>
+                                                            <p>The ALPs that are used during the glide path period are calculated for each day in the period and depend on the glide path method that is used, i.e. Cash Flow or Rebalancing.</p>
+                                                            <p><u>When it is NOT the last day in the glide period</u> and irrelevant of cashflow or rebalancing method selected, the calculation is:</p>
+                                                            <p>
+                                                                <MadCap:equation>$TW\ =\  Start\ Date\ TW\ +\ 
+\frac{ \large
+\left ( End\ Date\ TW -\ Start\ Date\ TW \right )
+}{
+\left ( \large
+Total\ Duration\ Glide\ Path\ \times Current\ Day\ in\ Glide\ Path
+ \right )
+}$</MadCap:equation>
+                                                            </p>
+                                                            <p>Where:</p>
+                                                            <ul class="FirstLevelBlueBullet">
+                                                                <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">TW = Target Weight</li>
+                                                                <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Start Date TW is the ALP&#160;attribute effective at the start date of the nudge period</li>
+                                                                <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">End Date TW is the ALP attribute effective at the end date of the nudge period</li>
+                                                                <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Total Duration Glide Path is the Total number of days in the nudge period inclusive of the start and end date</li>
+                                                                <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Current Day in Glide Path is the Current day number in the period.</li>
+                                                                <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">&#160;</li>
+                                                            </ul>
+                                                            <p><u>When it IS the last day</u> in the glide period, and the Cash Flow method is used:</p>
+                                                            <p>
+                                                                <MadCap:equation>$TW\ =\ End\ Date\ TW$</MadCap:equation>
+                                                            </p>
+                                                            <p>where the End Date TW is the ALP attribute effective at the End Date of the nudge period.</p>
+                                                            <p>Example</p>
+                                                            <p>&#160;</p>
+                                                            <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle02TableinaTable" cellspacing="0">
+                                                                <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                                                <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                                                <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                                                                        <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">&#160;</th>
+                                                                        <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1" colspan="2" style="text-align: center;">Target Weight %</th>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                                                                        <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">&#160;</th>
+                                                                        <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1" style="text-align: center;">ALP 1</th>
+                                                                        <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1" style="text-align: center;">ALP 2</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">Opening Target Weights</td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">70</td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" style="text-align: center;">30</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                                            <p>05/11/2019 Start of the Glide Path</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">65</td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" style="text-align: center;">35</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                                            <p>06/11/2019</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">60</td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" style="text-align: center;">40</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">07/11/2019</td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">55</td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" style="text-align: center;">45</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">08/11/2019</td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">50</td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" style="text-align: center;">50</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">09/11/2019</td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">45</td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" style="text-align: center;">55</td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">10/11/2019 End of the Glide Path and End Target Weight</td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">40</td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" style="text-align: center;">60 </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font">&#160;</td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font" style="text-align: center;">&#160;</td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font" style="text-align: center;">&#160;</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>&#160;</p>
+                                                        </MadCap:dropDownBody>
+                                                    </MadCap:dropDown>
+                                                    <p>&#160;</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyB-Column1-090em_font" style="font-size: ;">
+                                                    <p>Entity Data Attributes Used</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyA-Column1-090em_font" style="font-size: ;">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <div class="AccordionDrop" MadCap:conditions="MG Staff Only.ScreenOnly">
+            <MadCap:dropDown class="AccordionDropDown">
+                <MadCap:dropDownHead class="AccordionDrop">
+                    <MadCap:dropDownHotspot class="AccordionDrop">Partial Rebalance to Percent Target methodology <span style="background-color: #ffe4e1;">- ready for review</span></MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody class="AccordionDropDown">
+                    <table class="TableStyle-MG_TableinanAccordionDropDown" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableinanAccordionDropDown.css');width: 100%;margin-left: 0;margin-right: auto;">
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular">
+                        </col>
+                        <col class="TableStyle-MG_TableinanAccordionDropDown-Column-Regular">
+                        </col>
+                        <tbody>
+                            <tr class="TableStyle-MG_TableinanAccordionDropDown-Body-Row1">
+                                <td class="TableStyle-MG_TableinanAccordionDropDown-BodyA-Regular-Row1" colspan="2" style="font-size: 0.9em;">
+                                    <p>&#160;</p>
+                                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable_090em.css');" class="TableStyle-MG_TableStyle02TableinaTable_090em" cellspacing="18">
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_090em-Column-Column1">
+                                        </col>
+                                        <col class="TableStyle-MG_TableStyle02TableinaTable_090em-Column-Column1">
+                                        </col>
+                                        <tbody>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font" style="font-size: ;">
+                                                    <p>Business Description</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font" style="font-size: ;">
+                                                    <p>The ‘Partial Rebalance to % Target’ methodology checks each Allocation Parameter (ALP) to determine whether the starting position into the asset specified by the ALP is outside of the tolerances that have been set.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font" style="font-size: ;">Data Requirements</td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font" style="font-size: ;">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">&#160;</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyE-Column1-090em_font" style="font-size: ;">
+                                                    <p>Processing Requirements</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyD-Column1-090em_font" style="font-size: ;">
+                                                    <p>If any investment is identified as being outside of tolerance, an ‘Ideal Order’ is calculated for all investments as follows:</p>
+                                                    <p>
+                                                        <MadCap:equation>$
+
+\left ( Partial\ Rebalance\ Weight\ in\ asset\ \times Total\ Investment\ Value\ of\ the\ fund\ \right )
+
+-\ Starting\ Value\ of\ the\ Investment\ in\ the\ asset$</MadCap:equation>
+                                                    </p>
+                                                    <p>Where, Partial Rebalance Weight in asset is calculated as:</p>
+                                                    <p>
+                                                        <MadCap:equation>$Percent\ Towards\ Target\ \times Target\ Weight\ in\ asset\ +
+
+\left ( 1\ -\ Percent\ Towards\ Target
+
+
+ \right )
+\times\  Starting\ Position$</MadCap:equation>
+                                                    </p>
+                                                    <p>Where, Starting Position is the % value.</p>
+                                                    <MadCap:dropDown>
+                                                        <MadCap:dropDownHead>
+                                                            <MadCap:dropDownHotspot>Example</MadCap:dropDownHotspot>
+                                                        </MadCap:dropDownHead>
+                                                        <MadCap:dropDownBody>
+                                                            <p>Where the Percent towards target is 40%.</p>
+                                                            <table style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle02TableinaTable.css');margin-left: 0;margin-right: auto;" class="TableStyle-MG_TableStyle02TableinaTable" cellspacing="0">
+                                                                <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                                                <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                                                <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                                                <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                                                <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+                                                                <thead>
+                                                                    <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                                                                        <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">
+                                                                            <p>&#160;</p>
+                                                                        </th>
+                                                                        <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">Asset 1</th>
+                                                                        <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">Asset 2</th>
+                                                                        <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">Asset 3</th>
+                                                                        <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1">Asset 4</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                                            <p>Actual Holdings</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: right;">
+                                                                            <p>500,000.00</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: right;">
+                                                                            <p>301,000.00</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: right;">
+                                                                            <p>199,000.00</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" style="text-align: right;">
+                                                                            <p>100,000.00</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                                            <p>Target Weight</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: right;">
+                                                                            <p>40.00%</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: right;">
+                                                                            <p>30.00%</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: right;">
+                                                                            <p>20.00%</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" style="text-align: right;">
+                                                                            <p>10.00%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                                            <p>Starting Position</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: right;">
+                                                                            <p>45.4545%</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: right;">
+                                                                            <p>27.3636%</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: right;">
+                                                                            <p>18.0909%</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" style="text-align: right;">
+                                                                            <p>9.0909%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font">
+                                                                            <p>Partial Rebalance Weight</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: right;">
+                                                                            <p>43.27%</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: right;">
+                                                                            <p>28.42%</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: right;">
+                                                                            <p>18.85%</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font" style="text-align: right;">
+                                                                            <p>9.45%</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font">
+                                                                            <p>Idea Order Amount</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font" style="text-align: right;">
+                                                                            <p>-24,000.00</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font" style="text-align: right;">
+                                                                            <p>11,600.00</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font" style="text-align: right;">
+                                                                            <p>8,400.00</p>
+                                                                        </td>
+                                                                        <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font" style="text-align: right;">
+                                                                            <p>4,000.00</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <p>&#160;</p>
+                                                        </MadCap:dropDownBody>
+                                                    </MadCap:dropDown>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-MG_TableStyle02TableinaTable_090em-Body-090em_font">
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyB-Column1-090em_font" style="font-size: ;">
+                                                    <p>Entity Data Attributes Used</p>
+                                                </td>
+                                                <td class="TableStyle-MG_TableStyle02TableinaTable_090em-BodyA-Column1-090em_font" style="font-size: ;">
+                                                    <ul class="FirstLevelBlueBullet">
+                                                        <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">nil</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <p>&#160;</p>
+    </body>
+</html>

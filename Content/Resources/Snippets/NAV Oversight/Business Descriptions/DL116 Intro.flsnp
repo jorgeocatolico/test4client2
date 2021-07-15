@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Checks if FX rates are present for the effective date, base currency of the fund and the FX Rate Type specified for the process.</body>
+</html>

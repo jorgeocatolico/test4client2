@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fileProperties>
+    <ImageOverlay>
+        <OriginalImage Type="Image" ShapeTimeSpan="10000" ComputedWidth="98" ComputedHeight="39" DPI="95.9612" EnableCropRectangle="false" CropRectangle="0,0,0,0">iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAATNJREFUSEvtlD9rwkAYxv26fgW50VVwyCgZOrk4ZxBKhwqixQwKpkigdElJglE6hCaEx5w58bx/vYKBFvrAAxne+z259727TrfXR5v+D/jWvyHAwdBbYv2WIDrkKL5yHOME4esSk5GjqL+1MYCM5wj2JfQqkYZzuAP1emptAPF2OJrYnIrDDhNNiDrA9RFZwi8qPnwMFSxFgAPv3Z5eVOyjblf4KM9EDhjUf8+WmJUjmI7QfeB2G/sgAk8OeLbBMzit5wOqCFOBJwe8JKy6VvWJYLFFetMxDfysBDOBJwWQVcaKgXTVgMh4w0AmOFWGhXCazC2iO/CawdE78WSE17JqkThkLuRsHZzKasiqY3oJMcGtjym16qJVJXfmZf3gojVu96lgbvWxu7rF5/oe/usBfZwAExeAUZE2YeUAAAAASUVORK5CYII=</OriginalImage>
+        <Variables />
+        <Shapes>
+            <Shape Type="Image" X="-5" Y="0" Width="78" Height="29" Format="png" ShapeTimeSpan="10000" Right="19" Bottom="-5" Left="-5" Top="23">iVBORw0KGgoAAAANSUhEUgAAAE4AAAAdCAYAAAAEsFpEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJVSURBVGhD7ZqxTuQwEIbztKkRoibF6VoKmmglHmPTUHAS4oo7rfwAULNIuxRwaAvEojn/tuOMgxNsLxLNfMhSMli25/M4jbd6fXunp38vdHt3R0opWq1W0iINbuAIruCswgOCm82G9vs9CXHgBo7gCs4qWERASAOu4KyCQam0dOAKziqcXyEPOBNxBYi4QkRcISKukGRxalFTvVDubWAq7lEt1acdrfVfd1pTG+uKPnVLM6MYMFezXLu3r2OnLujk5Ix+3btAAukVF01OUVtPyOjx4mb4RnE7PfeRzqFG+3lJWxf/jHRxMUk8YfPsFsD7eXGjinvoqOn7LkJx62XDxmqoewhjXh6f87PNiRBIOz6nm0f3jwQyxOl1jo6lrwAjwSYITJJ9IlFxdhN6AWbcYAMGiXzOoOKCOe3YsU/G+upMH8MLUjsXcBwiDWSJGySYF538ICuA94uJM0mzozl+Z5hNiIgLNgcEa3M8XtIPL0eP7+QdKg3kiWOyxgu3VcPanDjEJsW56uFjTYnjfUz7KH/7+5xJaunm+nBpIFOcTapZqkECGIvgux8TN1Nx4w2ZrbjI0Yzx/JfJ8tJa+vPsOhSQKY7v9EiUf3cVMyfOPce+caE4+y2MibOyh0+FGYMJHxPIO1AayBZnFzwkY3GyzMJ0MopVVFScph9Ht2bZaUG9eCfLNB1j1dtvmpdnNoz1tdFJjLwvkAbyxQkGEVeIiCtExBUi4goRcYWIuEKMOLnlysPfcsm9ah7+XlVu8tOAGziCK3OTL78dSWtwA0dw9fr2Tv8BInd7DgimOi8AAAAASUVORK5CYII=</Shape>
+        </Shapes>
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

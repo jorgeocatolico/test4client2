@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../TableStyles/MG_TableStyle02TableinaTable.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table class="TableStyle-MG_TableStyle02TableinaTable" style="margin-left: 0;margin-right: auto;mc-table-style: url('../../TableStyles/MG_TableStyle02TableinaTable.css');" cellspacing="0">
+            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+            <col class="TableStyle-MG_TableStyle02TableinaTable-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1">
+                        <p><span style="font-size: 10pt;">U180.Day Count Convention</span>
+                        </p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadE-Column1-Header1" style="text-align: center;">
+                        <p>Alternate Name</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle02TableinaTable-HeadD-Column1-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">
+                        <p>
+                            <MadCap:equation>$\frac{30}{360}$</MadCap:equation>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">
+                        <p>30/360 (German)</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                        <p>The number of accrued days is calculated on the basis of a year of 360 days with 12 x 30-day months. (Even February is considered to have 30 days)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">
+                        <p>
+                            <MadCap:equation>$\frac{30S}{360}$</MadCap:equation>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">
+                        <p>30S/360 (Special German)</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                        <p>The number of accrued days is calculated on the basis of a year of 360 days with 11 x 30-day months. and the actual number of days in February is used.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">
+                        <p>
+                            <MadCap:equation>$\frac{30U}{360}$</MadCap:equation>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">
+                        <p>30/360 (US)</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                        <p>The number of accrued days is calculated on the basis of a year of 360 days with 12 x 30-day months. (Even February is considered to have 30 days)</p>
+                        <p MadCap:conditions="Note To Selfs.ScreenOnly"><span style="background-color: #00ff00;">What is the diff between this one and the first??</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">
+                        <p>
+                            <MadCap:equation>$\frac{Actual}{365}$</MadCap:equation>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">
+                        <p> Actual / 365 (English)</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                        <p>The number of accrued days is equal to the actual number of days between the effective date and the terminating date, divided by 365 days.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">
+                        <p style="text-align: center;">
+                            <MadCap:equation>$\frac{Actual}{365L}$</MadCap:equation>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">
+                        <p>ISMA </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                        <p>The number of accrued days is calculated as the actual number of days between the effective date and the terminating date.  This number is divided by 366 if the terminating date falls in a leap year and 365 otherwise.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">
+                        <p style="text-align: center;">
+                            <MadCap:equation>$\frac{Actual}{360}$</MadCap:equation>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">
+                        <p>Actual / 360 (French)</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                        <p> The number of accrued days is equal to the actual number of days between the effective date and the terminating date, divided by 360.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">
+                        <p style="text-align: center;">
+                            <MadCap:equation>$\frac{Actual}{Actual}$</MadCap:equation>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyE-Column1-090em_font" style="text-align: center;">
+                        <p>Actual/Actual (ISMA-99)</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyD-Column1-090em_font">
+                        <p>The number of accrued days is the actual number of days between the effective date and terminating date, divided by the actual number of days in the year (either 365 or 366).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle02TableinaTable-Body-090em_font">
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font" style="text-align: center;">
+                        <p style="text-align: center;">
+                            <MadCap:equation>$\frac{Actual}{ActualL}$</MadCap:equation>
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyB-Column1-090em_font" style="text-align: center;">
+                        <p>Actual/Actual (ISDA)</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle02TableinaTable-BodyA-Column1-090em_font">
+                        <p>The number of accrued days is equal to the actual number of days between the effective date and the terminating date.  The accrual factor is the sum of the accrued days falling in a non-leap year divided by 365 and the accrued days falling in a leap year divided by 366.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The confirmation date is the date on which orders are unitised and are in dd mmmmm yyyy format.  This date will originally be blank when the proposed order is created and the title of the field will be modified to Estimated confirmation date where the order is not confirmed.</p>
+    </body>
+</html>

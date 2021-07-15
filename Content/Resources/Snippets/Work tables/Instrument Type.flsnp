@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>The Financial Instrument type classification of the asset. </p>
+        <p>Instrument types are associated with the category code and cat sub code of the asset. These are used in the <MadCap:xref href="../../../B_Dashboard/NAV Oversight/Analysis Views/NAV Movement Analysis.htm">NAV Movement Analysis  </MadCap:xref> report.</p>
+        <p>This value is used in some of the specific validations to identify groups of instruments to be used in the validations and also some of the calculations for transaction value.</p>
+    </body>
+</html>

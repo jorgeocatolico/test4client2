@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Functionality Scope</h1>
+        <p> <MadCap:snippetText src="../../Resources/Snippets/User Permissions/UPs_Functional Scope.flsnp" /></p>
+        <p>
+            <img src="../../Resources/Images/Work tables/WebAdminScreen4.png" />
+        </p>
+        <h2 class="_orange">Configuration of Functionality Scope </h2>
+        <p>The configuration of functional roles is used to allow users varying levels of access to different components of pControl.</p>
+        <p class="zoom4Detail">
+            <img src="../../Resources/Images/User Permissions Images/UPs_FunctionalRolesExplanation.png" />
+        </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Create a functional role</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>Functional Roles are created in an 'inactive' state. At the completion of the wizard creation process, the role must be activated by selecting the toggle from<img src="../../Resources/Images/User Permissions Images/UPs_ToggleOff.png" /> to <img src="../../Resources/Images/User Permissions Images/UPs_ToggleOn.png" /></p>
+                </div>
+                <ol class="stepList">
+                    <li class="stepList">Copy an existing functional role by selecting the duplicate icon <img src="../../Resources/Images/User Permissions Images/UPs_CopyIcon.png" />; or create a new role by selecting the create button <img src="../../Resources/Images/User Permissions Images/UPs_CreateNewFunctionalRole.png" class="Aligned_with_Centre_of_Row" style="width: 220px;height: 34px;" /> </li>
+                    <li class="stepList">
+                        <p>Enter a title for the functional role into the field at the top, for example, "Fund Accountant" or "Supervisor".</p>
+                    </li>
+                    <div class="note_label">Note</div>
+                    <div class="note_content_in_list">It is possible to duplicate names, however it is not possible to complete the role creation process without a title. </div>
+                    <li class="stepList">
+                        <p>Select the relevant <MadCap:glossaryTerm glossTerm="Glossary.Term4">web views</MadCap:glossaryTerm>, and any associated panels or sections of the web view. Select <img src="../../Resources/Images/User Permissions Images/UPs_Continue.png" style="width: 92px; height: 29px;" class="Aligned_with_Centre_of_Row" /></p>
+                        <p>
+                            <img src="../../Resources/Images/User Permissions Images/UPs_WebViews.png" class="MaxWidth75Percent" />
+                        </p>
+                    </li>
+                    <li class="stepList">
+                        <p>A list of available data views (for each web view) will appear. </p>
+                        <p>Select the 'view', 'add', 'delete' or 'modify' column next to the required data view, to enable access.  Where parent and child relationships exist, selecting the parent will auto-select all of its children. Alternatively, it is possible to select and de-select individually.</p>
+                    </li>
+                    <li class="stepList">Repeat the previous step for each web view activated.</li>
+                    <li class="stepList">When all required web views and data views are selected (i.e. check boxes ticked), select <img src="../../Resources/Images/User Permissions Images/UPs_Continue.png" style="width: 92px; height: 29px;" class="Aligned_with_Centre_of_Row" /></li>
+                    <li class="stepList">
+                        <p> The status streams related to the web and data views selected, where a manual change can be made to the data, will be displayed. </p>
+                        <p>Select the 'Enable' column check box on the relevant status stream row, to allow access to make changes to certain fields, when a record is within the state listed.</p>
+                        <p>Select <img src="../../Resources/Images/User Permissions Images/UPs_Continue.png" style="width: 93px;height: 29px;" class="Aligned_with_Centre_of_Row" /></p>
+                        <div class="example_label">Example</div>
+                        <div class="example_content">
+                            <p>In the image below, the 'Pending Approval' check box on a Cash Allocation Proposed Order status stream is selected. Therefore any users within the current functional role, will be able to change values in certain fields on Cash Allocation records when the record is in a state of 'Pending Approval'.</p>
+                            <p>
+                                <img src="../../Resources/Images/User Permissions Images/UPs_StatusStream_enable.png" alt="" title="" style="width: 727px;height: 385px;" />
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>The Status Stream Transitions will be displayed. </p>
+                        <p>Select the 'Enable' column check box to grant access to users within this functional role to be able to make manual status stream transitions within the pControl web application.</p>
+                        <div class="example_label">Example</div>
+                        <div class="example_content">
+                            <p>In the image below, the check box on a Cash Allocation status stream is selected. Therefore any users within the current functional role, will be able to manually transition cash allocation records from 'Approved Version' to 'Cancelled'.</p>
+                            <p>
+                                <img src="../../Resources/Images/User Permissions Images/UPs_StatusStreamTransition_enable.png" alt="" title="" style="width: 738px;height: 312px;" />
+                            </p>
+                        </div>
+                    </li>
+                    <li class="stepList">
+                        <p>Select <img src="../../Resources/Images/User Permissions Images/UPs_SaveAndExit.png" style="width: 80px; height: 27px;" class="Aligned_with_Centre_of_Row" /></p>
+                        <p>A message will appear to confirm the save and the new functional role will appear in the list of role names.</p>
+                    </li>
+                    <li>Activate the newly created functional role by selecting the grey toggle, <img src="../../Resources/Images/User Permissions Images/UPs_ToggleOff.png" /> in the 'Active' column on the Functional Scope page. The toggle will turn green, <img src="../../Resources/Images/User Permissions Images/UPs_ToggleOn.png" style="width: 34px; height: 29px;" class="Aligned_with_Centre_of_Row" />to indicate it is active.</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>View or edit a functional role</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList" start="1">
+                    <li class="stepList">From the list of role names under the Functionality Scope tab, find the required role and select the edit icon <img src="../../Resources/Images/User Permissions Images/UPs_EditIcon.png" />. Role names are listed alphabetically, or specific roles can also be searched. Once the edit icon is selected, all relevant web and data views will be displayed and can be edited by selecting / deselecting check boxes. </li>
+                    <li class="stepList">Complete steps 3 - 9 above.</li>
+                    <li class="stepList">Once completed, the last updated date field will reflect the date the changes were saved.</li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:snippetBlock src="../../Resources/Snippets/User Permissions/RestrictingComments.flsnp" />
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Activate or deactivate a functional role</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList">
+                    <li class="stepList">Find the appropriate functional role name from the list and select the toggle <img src="../../Resources/Images/User Permissions Images/UPs_ToggleOn.png" class="Aligned_with_Centre_of_Row" />(activate) <img src="../../Resources/Images/User Permissions Images/UPs_ToggleOff.png" class="Aligned_with_Centre_of_Row" />(deactivate).</li>
+                    <li class="stepList"> A confirmation prompt will appear. Select Activate/Deactivate or Cancel as appropriate.</li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Delete a functional role</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList">
+                    <li>Find the appropriate functional role name from the list and select  the delete icon <img src="../../Resources/Images/User Permissions Images/UPs_DeleteIcon.png" class="Aligned_with_Centre_of_Row" />. </li>
+                    <li>
+                        <p>A confirmation prompt will appear. Select Delete or Cancel as appropriate.</p>
+                    </li>
+                </ol>
+                <MadCap:snippetBlock src="../../Resources/Snippets/User Permissions/UP_Delete warning.flsnp" />
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:snippetBlock src="../../Resources/Snippets/User Permissions/UPs_Audit.flsnp" MadCap:conditions="MG Staff Only.ScreenOnly" />
+    </body>
+</html>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>If set, the Corporate Actions data will be loaded from the U224: Corporate Actions worktable to be used in some specific standard validations.</p>
+    </body>
+</html>

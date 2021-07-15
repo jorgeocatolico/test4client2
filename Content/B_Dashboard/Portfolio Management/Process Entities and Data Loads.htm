@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Note To Selfs.ScreenOnly">
+    <head><title></title>
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Process Entities and Data Loads</h1>
+        <h2 class="_orange">Processing Mode</h2>
+        <p>Portfolio Management relies upon multiple entities, attributes and worktables within the processing mode to run Cash Allocation and Rebalancing. </p>
+        <h2>Cash Allocation Process Entities</h2>
+        <p>The table below describes the entities most commonly used in Cash Allocation and Rebalancing process and Portfolio Management.</p>
+        <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                        <p>Icon</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                        <p>Entity Type</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>
+                            <img src="../../Resources/Images/Portfolio Management Images/PM_ExternalProductEntityIcon.png" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>External Product</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Represents an externally managed fund.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>
+                            <img src="../../Resources/Images/Portfolio Management Images/PM_GroupTrustEntityIcon.png" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Group Trust</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>For accounting / custodial reasons, some assets of a plan are held in a Group Trusts.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>
+                            <img src="../../Resources/Images/Portfolio Management Images/PM_PlanEntityIcon.png" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Plan</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>A plan entity defines the highest level of a collection of Portfolios.</p>
+                        <p>Any entity can behave as a plan, so long as that entity type is configured to run the Cash Allocation and Rebalancing process.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>
+                            <img src="../../Resources/Images/Portfolio Management Images/PM_ProductEntityIcon.png" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Product</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>A product entity  represents a standard unitised vehicle or fund in pControl on which processing may be run (e.g. Cash Allocation processing).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1" MadCap:conditions="Note To Selfs.ScreenOnly">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>
+                            <img src="../../Resources/Images/Portfolio Management Images/PM_CAProcessTemplateEntityIcon.png" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Cash Allocation Process Template</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Process templates are entity types that contain all the available functions of a process. Functions are turned on by selecting the check box, and turned off by deselecting. The selected functions will be performed during Cash Allocation processing.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>
+                            <img src="../../Resources/Images/Portfolio Management Images/PM_LiquidityAccountsEntityIcon.png" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Liquidity Accounts</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>An entity which defines the internal account/s balances to be retrieved and summed to generate a liquidity balance for an entity.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>
+                            <img src="../../Resources/Images/Portfolio Management Images/PM_LiquidityEntityIcon.png" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Liquidity Entity</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>An entity to represent the amount of cash / liquidity an entity is targeted to hold, i.e. cash at hand.</p>
+                        <p>Each entity running a Cash Allocation process will have an associated liquidity entity.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                        <p>
+                            <img src="../../Resources/Images/Portfolio Management Images/PM_NotionalSectorModelPortfolioEntityIcon.png" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                        <p>Notional Portfolio / Model Portfolio</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                        <p>An entity used to represent a set of target investments into assets which are shared across many funds.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Data Loads</h2>
+        <MadCap:snippetBlock src="../../Resources/Snippets/All/Worktable.flsnp" />
+        <p>The main worktables referenced by  Portfolio Management are listed below.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Import Worktables</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <p>Where further information is available, a link is provided in the table below.</p>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');margin-left: 0;margin-right: auto;">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Import Worktable</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>U100: Investment Holdings</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Holds the investment holding balances (i.e. interfund holdings and direct assets) for an entity for a specified valuation (effective) date.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>U108: Units on Issue</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Holds the units on issue of an entity.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>U109: Unitised Cash Flow</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Holds the unitised capital flows into an entity.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">U305: Cash Allocation - Liquidity Adjustments</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Holds adjustments that need to be made to the liquidity balance of an entity over a specified time period.</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">U306: Cash Allocation Liabilities</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Holds liability values of an entity for a specific date. Three different types of liability can be loaded into this worktable; close of business (CoB), intra-day, and manual adjustment.</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>
+                                    <MadCap:xref href="../../G_Data/Worktables/Import/U485 - External Child Assets.htm">U485: External Child Assets</MadCap:xref>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Holds the code and description of the external child assets required prior to loading the U490: External Look-through.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>
+                                    <MadCap:xref href="../../G_Data/Worktables/Import/U490 - External Look Through.htm">U490: External Look-through </MadCap:xref>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>Stores the investment path details or risk factors for the direct assets of a CAR process.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <MadCap:xref href="../../G_Data/Worktables/Import/U495 - Classification Sectors.htm">U495: Classification Sectors</MadCap:xref>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Holds Classification sectors which are used to classify investment data by different criteria, and then perform compliance checks on those sectors.</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <MadCap:xref href="../../G_Data/Worktables/Import/U496 - Classification Allocation Parameters.htm">U496: Classification Allocation Parameters</MadCap:xref>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Classification Allocation Parameters are used in conjunction with U495: Classification sectors. They define the compliance checks to be performed on proposed transactions.</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">U498: Investment Parameter Update</td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">Holds the allocation criteria, (target weights, tolerances and bounds) used by the Cash Allocation process to calculate how much cash to allocate to underlying assets</td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>
+                                    <MadCap:xref href="../../G_Data/Worktables/Import/U310 - Exposure Reallocation Source.htm">U310: Exposure Reallocation Source</MadCap:xref>
+                                </p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>Holds details of the assets and their values which are to be reallocated to other entities during  processing.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Static Worktables</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table class="TableStyle-MG_TableStyle01Grey" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Static Worktable</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>L290: Effective Exposure Reallocation</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>Lists the assets of the plan whose value is to be transferred from one entity to another.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

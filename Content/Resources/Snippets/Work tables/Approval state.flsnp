@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The current approval state of the record. </p>
+        <p>This is derived from the 'Control Record Approval' status stream, and indicates where along the status stream the record is.</p>
+    </body>
+</html>

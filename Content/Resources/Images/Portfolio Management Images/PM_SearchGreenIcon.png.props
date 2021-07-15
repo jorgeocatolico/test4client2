@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fileProperties>
+    <ImageOverlay ScreenRectangle="1562,266,28,28" Rectangle="1562,266,28,28">
+        <OriginalImage AutoAdjust="true" Format="tiff" Type="Image" ShapeTimeSpan="10000" EnableCropRectangle="true" CropRectangle="3,2,24,23" EnableGrayScaleFormat="false" ExportFormat="png" DPI="96" medium_print_ExportFormat="png" medium_tablet_ExportFormat="png" medium_mobile_ExportFormat="png" OutputScaleFactor="1.043" ComputedWidth="24" ComputedHeight="23">SUkqAKgCAACAPN6PZ/gCDQeEQmFQuGQ2HQ+IRGJQeBQSJxeMRmNRuKQOCxNRNpeABgudqAB1Pd4RyWRkLAkIAAfhkWAAvCYiQ2Kx+HHhkp8ANV3uGW0WjQkVhEPgBEDcwwmdwyQyNVt5iUesVmEFURDybTgAVGFmNgpCUSqtWmjy+Yp0fnCwx6GE1cIC1Xe0rMkXaxQq6Xa8YGjXq+XKF3+0gwRgArCYhgAiBMGgADAB7gB0OtngBOtBjgBt4KEYS4xbD3WjhkqABQDcagAPgOJvtzABYMtIgBIufA6S+wnESwfABHEwlgAYgd+AB3OtlgBRt5sADeBoAD4TDoAEoI5MAPjpota0BbWrfYa/aiOC43gBfiXrPp3L4AGBfrnqQ0JAA3kM7gAKAIOWaprj2AA2GsvK9tKnjgPUjQrB8uw0gqAqgwLA8EokGY5vcEALOYc5TgAKZjGgrTztM9LAI0KAersN6XgAcJwES+pmnciIMhq/5TA8/ZznFGwtGXHKsxTBqEOCjYUjUABchUpYDHyboAEuYBNAAVR6IWBjhkcIDjuSeYAGSZpCAAPBwQUwsVQdFiNsWOoijE7YHAIgx9nUABnnS2p3AJEAYgq6wJNkgx7yqUhnyyTreRRBbfyVB6WgYGD+BsKEAAiBKHuWc57H2AAMgVToAH7PZbGSRoAEXR6iyQudKLSCIUAAIYLVsms1mQdUTmSfdLj4HQq1uBs8VPVNV1bV6NVi084NEiVLABYdiiHY7qHJEYtGTE6N2fFdpI5agxg9TpbGsz9m2dSL0Tfcd4ovcKErIsyUpXeV9IOtjOLfBipJEACqqvfd9q4rybpzSSFp8oChKJgy8KSpamqehGGIcqaSJMs984kid+pmmuFJ1d+QZQiOM5TliFZXluYAAgIQAP4ABAABAAAAAAAAAAABBAABAAAAHAAAAAEBBAABAAAAHAAAAAIBAwAEAAAAbgMAAAMBAwABAAAABQAAAAYBAwABAAAAAgAAABEBBAABAAAACAAAABUBAwABAAAABAAAABYBBAABAAAAHAAAABcBBAABAAAAoAIAABoBBQABAAAAdgMAABsBBQABAAAAfgMAABwBAwABAAAAAQAAACgBAwABAAAAAgAAAD0BAwABAAAAAgAAAFIBAwABAAAAAgAAAAAAAAAIAAgACAAIAAB3AQDoAwAAAHcBAOgDAAA=</OriginalImage>
+        <Shapes />
+        <Variables />
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

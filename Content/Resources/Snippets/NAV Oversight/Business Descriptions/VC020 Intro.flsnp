@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This check tests whether the processing day (effective date) that a process is being run for is a valid processing day for the entity.</p>
+    </body>
+</html>

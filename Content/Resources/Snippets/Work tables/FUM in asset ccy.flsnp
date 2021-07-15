@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The FUM in the currency of the asset. Where the basis is daily, this will be the FUM as of effective date.</p>
+    </body>
+</html>

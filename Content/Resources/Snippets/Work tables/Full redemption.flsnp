@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>To indicate if this record represents a full redemption or not. Options are 0 or -1 for true or false.</p>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>If FX&#160;Rate returned = 1 and Local Currency &lt;&gt; Base Currency, the previous FX rate from the A03 worktable will be used as a 'stale rate'. </p>
+    </body>
+</html>

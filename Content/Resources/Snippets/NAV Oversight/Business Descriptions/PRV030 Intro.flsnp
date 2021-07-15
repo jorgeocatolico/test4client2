@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This check allows testing for backdated transactions by comparing the Units on Issue (UOI) movement in pControl from the prior pricing point to the cashflows that have been unitised since that point.</p>
+        <p>
+            <i>Note:  This test is only valid if UOI balances are being loaded from pControl.</i>
+        </p>
+    </body>
+</html>

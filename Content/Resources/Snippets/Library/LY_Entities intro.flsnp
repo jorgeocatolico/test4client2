@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>A processing entity is a pControl representation of a 'real life' object. Some entities are used to perform a process and others are to support a process. Each processing entity has attributes, or parameters, that contain information about the entity. </p>
+        <p>Entities exist within the 'Library'. The left-hand panel of the Library view contains the process tree (entity tree), showing the different types of processing entities for example, companies, benchmarks, funds, and process templates. All entities associated with the business are shown in the library and can be selected directly or via a search facility. Entities and their attributes are defined as templates in the system administration module.</p>
+    </body>
+</html>

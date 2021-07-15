@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>For a transaction marked as a dividend, this will fail the test if the net base income generated from the dividend is greater than the tolerance set as a % of the entity's previous NAV/GAV.</p>
+        <p>This validation is intended to check each transaction record to ensure that if the transaction represents a dividend payment (U200.ca_type set to ‘DIVIDEND’) then the base income on the transaction does not represent more than a specified percentage of the entity’s previous valuation.</p>
+    </body>
+</html>

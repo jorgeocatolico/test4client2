@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Calculate the Expected Value for each category code listed.</p>
+        <p>
+            <MadCap:equation>$\small Expected\, Value = \small VMAS: Value\, current\, for\, Category + Expected\, Value\, Difference$</MadCap:equation>
+        </p>
+        <p>Where</p>
+        <p>
+            <MadCap:equation>$\small Expected\ Value\ Diff\ =\ \small VMAS:Value\ Diff \normalsize \left (\frac{Days\ in\ Current\ Period}{Days\ in\ Prior\ Period} \right )$</MadCap:equation>
+        </p>
+    </body>
+</html>

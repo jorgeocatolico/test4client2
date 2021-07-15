@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>pControl calculates the notice date by applying the relevant subscription attributes. It is offset from the Dealing date calculation using Subscription Notice Period and Subscription Notice Period Calendar attributes. This field is automatically populated from the security or order selected and can be edited assuming appropriate security permissions. The date is in dd mmmmm yyyy format.</p>
+    </body>
+</html>

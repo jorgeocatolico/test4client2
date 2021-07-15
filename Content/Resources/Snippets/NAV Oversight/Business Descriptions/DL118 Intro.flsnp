@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>If this function is selected, pControl will determine the ‘Pricing Basis’ (i.e. the methodology to be used to generate the pricing swing basis) for the entity’s downstream processing by looking at entity attributes and cash flows (where relevant). This function also sets the ‘Published Price Basis’ to be the same as the pricing basis.</p>
+    </body>
+</html>

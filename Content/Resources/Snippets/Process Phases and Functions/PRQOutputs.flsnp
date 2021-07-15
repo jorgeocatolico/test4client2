@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Users will be alerted of any prerequisite checks that have not passed via the Exceptions dashboard. The following shows the expanded row where an alert has been raised from [PRQ001] FX Rates; [PRQ002] and [PRQ003] checks output the same information.</p>
+        <p class="zoom4Detail">
+            <img src="../../Images/NAV Oversight Images/PRQ001and002onExceptionsDashboard.png" />
+        </p>
+    </body>
+</html>

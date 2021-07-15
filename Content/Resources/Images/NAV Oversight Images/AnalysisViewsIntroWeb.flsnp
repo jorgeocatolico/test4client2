@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The tabs show movement analysis data and indicates what  has contributed to the exception event. Additional information includes a history of the same exception event and any related funds.</p>
+        <p class="zoom4Detail">
+            <img src="../Exceptions Images/FundLevelValidationSlidewithTabs.png" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

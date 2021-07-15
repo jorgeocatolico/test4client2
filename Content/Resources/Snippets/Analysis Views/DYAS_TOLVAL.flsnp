@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>If [CAT015] has been run on the category, this will be populated by the [CAT015] L200 tolerance value associated with that category. </p>
+        <p>If [CAT015] has not been run on the category this field will be blank.</p>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Indicates the data type of the field selected, e.g. Date, Numeric, Positive, Non-zero, Partial Date, etc.
+</p>
+        <p style="font-style: italic;">Note:
+where a field is mandatory (see field below) and a data type is set, then a value must be populated and must be the correct data type. - where a field is mandatory and a data type is not set then a value must be populated but there will be no data type checking. - where a field is not mandatory but a data type is set then the data type is only checked if the value in the field is not.</p>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="297" MadCap:lastWidth="1480">
+    <body>
+        <div class="note_label">Note</div>
+        <div class="note_content">
+            <p>At various stages in the wizard: </p>
+            <ul class="FirstLevelBlueBullet">
+                <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                    <img src="../../Images/User Permissions Images/UPs_Previous.png" class="Aligned_with_Centre_of_Row" /> will return to the previous screen without losing current selections</li>
+                <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                    <img src="../../Images/User Permissions Images/UPs_DiscardChangesAndExit2.png" alt="" title="" class="Aligned_with_Centre_of_Row" /> closes the wizard without saving any selections made</li>
+                <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                    <img src="../../Images/User Permissions Images/UPs_SaveAndExit.png" class="Aligned_with_Centre_of_Row" />saves the current selections and exits the wizard</li>
+                <li class="Test1" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                    <img src="../../Images/User Permissions Images/UPs_Continue.png" class="Aligned_with_Centre_of_Row" /> will save the selections made on the current screen, and move to the next screen in the wizard.</li>
+            </ul>
+        </div>
+    </body>
+</html>

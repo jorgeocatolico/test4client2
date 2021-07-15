@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Will fail the test if the FX (exchange) Rate on the holding record is not consistent (% tolerance) with the relevant exchange rate held in pControl
+This validation is intended to check each holding record to ensure that the FX Rate (exchange rate) delivered on the holding record is consistent with that held in pControl - which should be the case for all holdings.
+</p>
+        <p>
+This is a validation that calculates a difference between two values and tests that % difference against the tolerances set for the validation.
+</p>
+    </body>
+</html>

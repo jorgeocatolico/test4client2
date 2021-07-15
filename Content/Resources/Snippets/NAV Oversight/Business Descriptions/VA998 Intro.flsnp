@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This function can be used to generate an email alert which is sent to a defined distribution list if there is a pre-calculation (pricing) validation exception raised for an entity during processing.</p>
+        <p>If this option is set and a Pre-Calculation (Pricing) Validation exception is raised, an email is sent to the distribution list specified by the ‘Exception Notification Contacts’ attribute.</p>
+    </body>
+</html>

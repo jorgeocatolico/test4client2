@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The 'Unexplained' category on the AMAS report can be included by selecting the following entity attribute on the pool or pricing entity:</p>
+        <p>
+            <img src="../../Images/NAV Oversight Images/NO_VA850_attb.png" />
+        </p>
+        <div class="note_label">Note</div>
+        <div class="note_content">
+            <p>A Pool entity is shown in the above example, however this attribute will also appear on other entity types.</p>
+        </div>
+        <MadCap:snippetBlock src="NO Unexplained Value Formula.flsnp" />
+        <p MadCap:conditions="Note To Selfs.ScreenOnly">Please check the above formula, I have changed wording slightly from spec</p>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To add attachments </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Attachments can be added  within the Investment Summary panel and the Proposed Transactions panel.</p>
+                <ol class="stepList" start="1">
+                    <li class="noteInDiv">
+                        <p> Right click on the record in the panel and select Attachments. </p>
+                        <p>
+                            <img src="../../Images/Portfolio Management Images/PM_InvestmentSummaryAttachments.png" class="greyborder" />
+                        </p>
+                    </li>
+                    <li class="noteInDiv">
+                        <p>Complete the attachments form before uploading and attaching the file to the record. </p>
+                        <p class="zoom4Detail">
+                            <img src="../../Images/Portfolio Management Images/PM_InvestmentSummaryAttachmentsAdding.png" class="greyborder" />
+                        </p>
+                    </li>
+                    <li class="stepList">Once uploaded, the attachment will display in the left panel as follows.</li>
+                </ol>
+                <p class="zoom4Detail">
+                    <img src="../../Images/Portfolio Management Images/PM_AttachmentExample.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

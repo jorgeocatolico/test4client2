@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CatapultConditionTagSet>
+  <ConditionTag
+    Comment="Madcap"
+    Name="Online"
+    BackgroundColor="#abc944" />
+  <ConditionTag
+    Comment="Madcap"
+    Name="PDF"
+    BackgroundColor="#000000" />
+</CatapultConditionTagSet>

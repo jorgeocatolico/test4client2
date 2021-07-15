@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>DYAS Daily Backward Distribution Example</h1>
+        <p>The following example for the Milestone Group Fund, MGFUND_DYAS_01, shows the distribution yield analysis report for a 'Daily Backward' distribution frequency. <MadCap:snippetText src="../../../Resources/Snippets/Analysis Views/DailyForwardBackward.flsnp" /></p>
+        <p> Differences in Daily Forward and Daily Backward calculations are included in <MadCap:xref href="DYAS Specification Table.htm">DYAS Specification Tables.</MadCap:xref></p>
+        <h3 class="_orange">Worktables</h3>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Load import worktables </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The following worktables may be required. </p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">U104: General Ledger (shown below)</li>
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">U108: Units on Issue </li>
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">U101: External Unit Prices</li>
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">U350: Classification Hierarchy</li>
+                </ul>
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/Cash Allocation Images/DYAS_U104example.png" class="greyborder" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Load files for the static worktables:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">L184: Account Category (shown below)</li>
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">L315: Account Code Mapping </li>
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">L200: Tolerance</li>
+                </ul>
+                <p> <img src="../../../Resources/Images/Cash Allocation Images/DYAS_L184example.png" class="greyborder" /></p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Functions and Attributes </h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Select the required attributes and functions on the entity or process template: </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                        <MadCap:xref href="../../../AA_Library/Entities/NAV Process Phases and Functions.htm#DL190">[DL190] - Load General Ledgers  </MadCap:xref>
+                    </li>
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[DL120] - Load External Unit Prices</li>
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[DL070] - Load Units on Issue Balances</li>
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                        <MadCap:xref href="../../../AA_Library/Entities/NAV Process Phases and Functions.htm#VA860">[VA860] - Generate Distribution Yield Analysis Data </MadCap:xref> (shown below)</li>
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">[CAT015] - Yield Impact Check  </li>
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                        <MadCap:xref href="../../../AA_Library/Entities/NAV Process Phases and Functions.htm#EX093">[EX093] - Export Distribution Yield Attribution Data </MadCap:xref>
+                    </li>
+                </ul>
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/Cash Allocation Images/DYAS_PoolVA860.png" class="greyborder" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Request Processing</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Request daily pricing processing </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Run the process and the <b class="BufferandFunctionBold">A09: Account Balance Validation</b> worktable will populated as follows. </p>
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/NAV Oversight Images/DYAS_AO9_16Nov.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Exception Events</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Review the Exceptions Dashboard on Monday 19th November</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>A [CAT015] Yield Impact Check will raise an exception for categories that have exceeded the specified tolerance in the L200: Tolerance worktable. These exceptions require review before transitioning. Selecting the row will display some further detail on the exception. </p>
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/NAV Oversight Images/DYAS_Exceptions19Nov.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">The DYAS&#160;View</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Navigate to the DYAS </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Navigate to the DYAS view using the ellipsis and selecting Analysis.</p>
+                <p>
+                    <img src="../../../Resources/Images/NAV Oversight Images/DYAS_AnalysisView.png" class="greyborder" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>The DYAS view/report and  the U783: Distribution Yield Analysis Data worktable</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The information in the DYAS view/report is used to analyse the yield impact. Selecting the Related Funds tab displays other funds that have encountered the same exception for this asset. </p>
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/NAV Oversight Images/DYAS_View19Nov.png" />
+                </p>
+                <p>The data from the DYAS view is available in the U783: Distribution Yield Analysis, as shown below.</p>
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/NAV Oversight Images/DYAS_U78319thNov.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

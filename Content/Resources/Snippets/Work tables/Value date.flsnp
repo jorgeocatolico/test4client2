@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>pControl calculates the value date by applying the relevant subscription attributes for an add on and redemption attributes for a sell off. The value date can be overridden if required and assuming appropriate security permissions.</body>
+</html>

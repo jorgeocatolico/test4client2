@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Identifies the state of acknowledgement&#160;, i.e. "Acknowledged" signifies acknowledged and "Not Acknowledged" signifies a failure to acknowledge for some reason.</body>
+</html>

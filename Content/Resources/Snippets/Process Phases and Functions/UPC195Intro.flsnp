@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>This function contains the ‘Price Impact Calculation Rules’
+ table which is used to define the rules segments to be executed when creating
+ the Share Class Impacts (CPAS) report. Each segment and price type listed here will appear as
+ components of the Share Class Impacts view.</body>
+</html>

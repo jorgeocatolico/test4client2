@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>If 'Daily Backward' distribution on Value Current: </p>
+        <p>
+            <MadCap:equation>$\small 
+Backward\ days\ =\ number\ of\ days\ from\ previous\ business\ day\ of\ the\ current\ day$</MadCap:equation>
+        </p>
+        <p>For example, if current day = Monday, then Backward Days = 2</p>
+        <p>If Monday is a bank holiday and current day = Tuesday, Backward Days = 3.</p>
+    </body>
+</html>

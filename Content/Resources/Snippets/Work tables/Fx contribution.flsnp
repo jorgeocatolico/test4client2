@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This is the amount of the impact that can be attributed to the movement in FX Rates for the values present in the specific category (the FX contribution is included in the Total contribution so this is the amount of the total contribution due to FX Rate changes).	&#160;</p>
+        <p>The specific calculation 	used for the FX impact is:</p>
+        <p>FX Contribution =  [ (Value Previous (local) * Current FX Rate) – (Value Previous (local) * Previous FX Rate) ] / Previous NAV</p>
+    </body>
+</html>

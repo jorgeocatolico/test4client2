@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Worktables, or buffers as they are sometimes referred to, are used to store data received from external sources (which will be used as the inputs to a process); hold static reference data; and store the output data of a process. </p>
+    </body>
+</html>

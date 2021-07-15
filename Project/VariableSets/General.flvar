@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CatapultVariableSet>
+  <Variable
+    Comment=""
+    Name="CompanyName"
+    EvaluatedDefinition="Milestone Group">Milestone Group</Variable>
+  <Variable
+    Comment=""
+    Name="PhoneNumber"
+    EvaluatedDefinition="+61 2 8224 2600">+61 2 8224 2600</Variable>
+  <Variable
+    Name="StreetAddress"
+    Comment=""
+    Definition="Some text"
+    OriginalName="StreetAddress"
+    EvaluatedDefinition="9 Castlereagh Street">9 Castlereagh Street</Variable>
+  <Variable
+    Name="ProductName"
+    Comment=""
+    OriginalName="ProductName"
+    EvaluatedDefinition="pControl">pControl</Variable>
+  <Variable
+    Name="CityStateZip"
+    Comment=""
+    Definition="Some text"
+    EvaluatedDefinition="Sydney 2000">Sydney 2000</Variable>
+  <Variable
+    Name="UserGuideTitle"
+    Comment=""
+    EvaluatedDefinition="pControl">pControl</Variable>
+  <Variable
+    Name="VersionNumber"
+    OriginalName="VersionNumberDot">1.0</Variable>
+  <Variable
+    Name="Year"
+    Comment=""
+    Type="DateTime"
+    LastUpdated="2015-12-31T09:28:31.1216229-08:00"
+    EvaluatedDefinition="yyyy">yyyy</Variable>
+</CatapultVariableSet>

@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="MG Staff Only.ScreenOnly,Note To Selfs.ScreenOnly">
+    <head>
+        <link href="../../Resources/TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>[MLH057] - Multi Leg Basis Point Impact and PUI </h1>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/All/NewContentforReview.flsnp" />
+        </p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/MultiLegIntro.flsnp" />
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/MLH057Intro.flsnp" />
+        </p>
+        <p>Similarly, the [MLH057-PUI] check tests the <i>Per Unit Impact</i> to the fund or the pool of the value change from prior day to current day for multi leg assets in aggregate. The validation check can be applied to an entity by selecting the appropriate [MLH057] validation entity to the Post-Calc User Defined Valuations table on the oversight pool process template, as shown below.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Multi Leg Derivatives</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <MadCap:snippetBlock src="../../Resources/Snippets/MultiLegIntro.flsnp" />
+                <p>There are many types of financial instruments that can be classified as multi-leg derivatives, the majority of which can be classified as either forwards or swaps.</p>
+                <h2 class="indropdown">Forwards</h2>
+                <p>A forward contract is a non-standard contract between two parties to buy or sell an asset at a specified price on a future date. A forward contract can be used for hedging or speculation. The party agreeing to buy the underlying asset in the future assumes a long position, and the party agreeing to sell the asset in the future assumes a short position. The price agreed upon is called the delivery price, which is equal to the forward price at the time the contract is entered into. Types of forwards include:</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                        <MadCap:xref href="#FX">FX Forward Example</MadCap:xref>
+                    </li>
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">NDFs</li>
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Forward Rate Agreements</li>
+                </ul>
+                <h2 class="indropdown">Swaps</h2>
+                <p>Swaps are instruments whereby two parties exchange a series of cash flows over a period of time. Examples of swaps include:</p>
+                <ul class="FirstLevelBlueBullet">
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Interest Rate Swap Example</li>
+                    <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Total Return Swap</li>
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Currency Swap</li>
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Equity Swap </li>
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Volatility Swap</li>
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Variance Swap</li>
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Commodity Swap</li>
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Dividend Swap</li>
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Asset Swap</li>
+                    <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">Inflation Linked Swap</li>
+                </ul>
+                <p>&#160;</p>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>There is a difference between multi-leg derivatives and multi-leg transactions. Multi-leg transactions typically form part of an overall trade strategy which contains more than one leg associated with a given order. Strips, Packs, Bundles and Calendar Spreads are examples of multi-leg transactions. In pControl, only multi-leg derivatives are catered for at this time.</p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="zoom4Detail">
+            <img src="../../Resources/Images/NAV Oversight Images/MLH057.png" />
+        </p>
+        <h2 class="_orange"><a name="FX"></a>Examples</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>[MLH057] Multi Leg Holding Validation - FX Forward Example Calculation</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <div class="example_label">Example </div>
+                <div class="example_content">
+                    <p>To calculate an unrealised gain on a position, the formula is:</p>
+                    <p>
+                        <MadCap:equation>$Market\ Value\ -\ Cost\ =\ Unrealised\ Gain/Loss$</MadCap:equation>
+                    </p>
+                    <p> As an FX Forward has no cost, the formula is simplified to: </p>
+                    <p>
+                        <MadCap:equation>$Market\ Value\ =\ Unrealised\ Gain/Loss$</MadCap:equation>
+                    </p>
+                    <p>The below table represents data available in the U100:&#160;Investment Holdings worktable for an FX Forward. In this example, the fund manager has agreed a forward contract EUR vs USD to sell 1,000,000EUR for USD at a contractual price of 1.35 USD per EUR to settle in 6 months. At NAV date, the current EUR&#160;for USD forward rate to settle in 6 months is 1.3965 (the USD-EUR&#160;rate = 0.7160736).</p>
+                    <p>The U100: Investment Holdings worktable holds two records that represent that FX forward position. One asset, or leg, with a corresponding long position of 1,350,000USD and another asset with a short position of -1,000,000EUR.</p>
+                    <p>With a USD&#160;base currency at NAV date, the formula to calculate the Base Market Value of FX Forward is:</p>
+                    <p>
+                        <MadCap:equation>$Base\ Unrealised\ Gain/Loss\ = Trade\ Currency\ Quantity\ \times \left ( Contractual\ Forward\ Rate\ -\ Current\ Forward\ Rate \right )$</MadCap:equation>
+                    </p>
+                    <p>
+                        <MadCap:equation>$1,000,000\ \times \left ( 1.34\ -\ 1.3965 \right )
+\\
+=\ -46,504$</MadCap:equation>
+                    </p>
+                    <p>Therefore, the Base Market Value of FX Forward = -46,504USD</p>
+                    <table class="TableStyle-MG_TableStyle01Grey" style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');" cellspacing="0">
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <thead>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Base Currency</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Asset Code</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Local Currency</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Unit Holding</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Base Cost</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Base Unrealised P&amp;L</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Base MV&#160;Close</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Local Cost </p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                    <p>Current Fwd Rate</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>USD</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>CCTUSD-00122320-EUR</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>EUR</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>-1,000,000</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>-1,350,000</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>-46,504</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>-1,396,504</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>-1,000,000</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>0.716073663</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                    <p>USD</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                    <p>CCTUSD-00122320-USD</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                    <p>EUR</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                    <p>1,350,000</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                    <p>1,350,000</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                    <p>0</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                    <p>1,350,000</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                    <p>1,350,000</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1" style="text-align: right;">
+                                    <p>1</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>&#160;</p>
+                    <p>The Base Market Value of the FX Forward is also the sum of the base market values of the two legs represented in pControl:</p>
+                    <p>
+                        <MadCap:equation>$1,350,000\ +\ \left ( -1,396,504 \right )\ =\ -46,504$</MadCap:equation>
+                    </p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>[MLH057] Multi Leg Holding Validation - Interest Rate Swap Example Calculation</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <div class="example_label">Example</div>
+                <div class="example_content">
+                    <p>The market value of each of the swap is calculated as the present value of the future discounted cash flows:</p>
+                    <p>
+                        <MadCap:equation>$Market\ Price\ \times Pricing\ Factor\ \times Notional\ Amount$</MadCap:equation>
+                    </p>
+                    <p>The overall value of the swap instrument is the Net Present Value of two legs, where the short leg is the pay leg and long leg is the receive leg:</p>
+                    <p>
+                        <MadCap:equation>$Swap\ Base\ Market\ Value\ = Short\ Leg\ Base\ Market\ Value\ +\ Long\ Leg\ Base\ Market\ Value$</MadCap:equation>
+                    </p>
+                    <p>Fund Base Currency is USD.</p>
+                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <thead>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Leg Type</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Asset Code</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Currency</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Notional</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Market Price</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Exchange Rate</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Pricing Factor</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Local Market Value</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                    <p>Base Market Value</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>Short (Pay Leg)</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>DA70683</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                    <p>BRL</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>-26,230,000.00</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>1.0025</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>3.2683</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>1</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1" style="text-align: right;">
+                                    <p>-26,295,575.00</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1" style="text-align: right;">
+                                    <p>-8,045,642.99</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                    <p>Long (Receive Leg)</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                    <p>DA70683</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                    <p>USD</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                    <p>8,000,000.00</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                    <p>1.079</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                    <p>1</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                    <p>1</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                    <p>8,632,000.00</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1" style="text-align: right;">
+                                    <p>8,632,000.00</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>The two records are combined and displayed as a single security in the A17: Multi Leg Master Holding:</p>
+                    <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                        <thead>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">&#160;</th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Master ID</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Base Currency</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Local Currency</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Notional</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Local Market Price</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                    <p>Exchange Rate</p>
+                                </th>
+                                <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                    <p>Base Market Value</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">Master Security </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                    <p>XXXXX</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                    <p>USD</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                    <p>BRL</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                    <p>26,230,000.00</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                    <p>-0.20000</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1" style="text-align: right;">
+                                    <p>3.2683</p>
+                                </td>
+                                <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1" style="text-align: right;">
+                                    <p>586,357.01</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>The MLH057 validation is performed on the security record in the A17 worktable and where the validation is greater than a tolerance, an exception is raised.</p>
+                </div>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>[MLH057] Multi Leg Holding Validation - Data Mapping Example </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The following image demonstrates the data set up required for a [MLH057] validation to occur and the output to the Exceptions view.</p>
+                <p class="zoom4Detail">
+                    <img src="../../Resources/Images/NAV Oversight Images/MLH057_DataMapping.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Details of Validation</h2>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/MG_TableStyle01Grey.css');" class="TableStyle-MG_TableStyle01Grey" cellspacing="0">
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                        <p>Component</p>
+                    </th>
+                    <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Business Description</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>Provides a net impact value of all legs of a multi leg asset and validates that impact against a tolerance. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Processing Detail</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>The following is required as part of the data set up:</p>
+                        <ul class="TableListBullets">
+                            <li class="BlueBulletLessIndentation" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">L220: Instrument Type Mappings: Multi-Leg Instrument field to be selected in order to create the record in the A03: Holding Validation and the A17: Multi Leg Master Holding</li>
+                        </ul>
+                        <ul class="TableListBullets">
+                            <li class="BlueBulletLessIndentation" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">U100: Investment Holdings: Multi-Leg Asset Code which is the common identifier for the security.</li>
+                        </ul>
+                        <p>Other data requirements:</p>
+                        <p>A17: Multi Leg Master Holding worktable</p>
+                        <ul class="TableListBullets">
+                            <li class="BlueBulletLessIndentation" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"> Asset Holding Impact Basis Points (Pm Adj Imp)</li>
+                        </ul>
+                        <p>
+                            <MadCap:equation>$Asset\ Hld\ Imp\ BP\ =\ 
+
+\frac{Value\ Mvt\ -\ Purchases\ Value\ -\ Sales\ Value }{NAV}$</MadCap:equation>
+                        </p>
+                        <ul class="TableListBullets">
+                            <li class="BlueBulletLessIndentation" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;"> Asset Holding Impact Per Unit Impact (Pm Adj Imp PUI)</li>
+                        </ul>
+                        <p>
+                            <MadCap:equation>$Asset\ Hld\ Imp\ PUI\ =\ 
+
+\frac{Value\ Mvt\ -\ Purchases\ Value\ -\ Sales\ Value }{Total\ Units\ on\ Issue}$</MadCap:equation>
+                        </p>
+                        <p><i>Note: The A17: Multi Leg Master Holding worktable supports the multi leg framework, where the A03:&#160;Holding Validation worktable lists each leg of the security separately, the A17: Multi Leg Master Holding worktable combines the legs and therefore the values and movements and displays a net impact. </i>
+                        </p>
+                        <p>The validation fails where A17.pm_adj_imp &gt; L200.tolerance.</p>
+                        <p>The validation fails where A17.pm_adj_imp_pui &gt; L200.tolerance  </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Entity Data Attributes used</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">Interdependencies with other Functions</td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">None</td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                        <p>Prerequisite Functions</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                        <p>None</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                        <p>Outputs</p>
+                    </td>
+                    <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                        <p>An exception is raised where the impact exceeds tolerance.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p> </p>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Client code for the asset, held (owned) by the pControl entity.</p>
+        <p style="font-style: italic;">Note: Assets may or may not be stored as an entity within pControl. </p>
+    </body>
+</html>

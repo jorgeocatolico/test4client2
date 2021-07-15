@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="MG Staff Only.ScreenOnly">
+    <head><title>Share Price Impacts (CPAS)</title>
+    </head>
+    <body>
+        <h1>Share Class Impacts (CPAS)</h1>
+        <p>
+            <MadCap:snippetText src="../../../Resources/Snippets/All/NewContentforReview.flsnp" MadCap:conditions="MG Staff Only.ScreenOnly" /> </p>
+        <MadCap:snippetBlock src="../../../Resources/Snippets/NAV Oversight/NO_Clean Price Analysis.flsnp" />
+        <p>However, all class movements should be able to be attributed to factors such as different fee levels, distributions, capital flow dilution, rounding of prices, or different local currency class or hedging and if all of these impacts are stripped out to generate a ‘clean return’, that clean return across the classes should be the same. The Share Class Impacts view details the impacts that affect each class’ return along with each class’ clean return so that comparisons can be made against a nominated master class.</p>
+        <p>The Share Class Impacts view relies on rules segments for defining the comparison criteria used for individual price components. These rules segments can be found in the [UPC195] - Calculate Price Impacts  function on the process template. Any differences calculated are then compared to tolerances defined in the <b class="BufferandFunctionBold">L200: Tolerances</b> worktable.</p>
+        <h2 class="_orange">The Share Class Impacts view</h2>
+        <p>The Share Class Impacts view is accessible via the navigation described in <MadCap:xref href="../../../C_Process/Exceptions.htm#Using">Using the Analysis Views</MadCap:xref> from the <MadCap:xref href="../../../C_Process/Exceptions.htm">Exceptions </MadCap:xref>screen, or via the <MadCap:xref href="../../../C_Process/Fund Sign Off.htm#Fund">Fund Overview</MadCap:xref> ellipsis on the <MadCap:xref href="../../../C_Process/Fund Sign Off.htm">Fund Sign Off</MadCap:xref> screen.</p>
+        <p class="zoom4Detail">
+            <img src="../../../Resources/Images/NAV Oversight Images/CPAS_View.png" />
+        </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Share Price Comparison</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../../Resources/Images/NAV Oversight Images/NO_CPAS_components.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Worktables</h2>
+        <p>The Share Class Impacts report utilises NAV prices as well as values and mappings from the following worktables. Examples of data mappings are provided in <MadCap:xref href="Data Mapping for Analysis Views.htm">Data Mapping for Analysis Views</MadCap:xref>.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>U101: External Unit Prices</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The <b class="BufferandFunctionBold">U101: External Unit Prices</b> worktable provides the NAV price for the Share Class Impacts calculations.</p>
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/NAV Oversight Images/CPAS_U101.png" class="greyborder" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>U104: General Ledger</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The <MadCap:xref href="../../../G_Data/Worktables/Import/U104 General Ledger.htm">U104: General Ledger</MadCap:xref> worktable contains items and values that will be loaded to pControl accounts. </p>
+                <p>
+                    <img src="../../../Resources/Images/NAV Oversight Images/CPAS_U104.png" class="greyborder" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>L315: Account Code Mapping</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/L315AccountCodeMappingIntro.flsnp" />
+                <p>
+                    <img src="../../../Resources/Images/NAV Oversight Images/CPAS_L315.png" class="greyborder" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>L184: Account Category</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <MadCap:snippetText src="../../../Resources/Snippets/Analysis Views/DYAS_L184intro.flsnp" /> Further information is provided in <MadCap:xref href="../../../G_Data/Worktables/L184 Account Category.htm">L184: Account Category.</MadCap:xref></p>
+                <p>
+                    <img src="../../../Resources/Images/NAV Oversight Images/CPAS_L184.png" class="greyborder" />
+                </p>
+                <p>The <b class="BufferandFunctionBold">L184: Account Category</b> maps the account group to the Share Class Impacts category. Only categories that have "Clean Price Analysis" identified in the L184 category field, will be included in the Share Class Impacts (CPAS) view. Setting the category field associates the account groups and linked category codes to CPAS.</p>
+                <p>
+                    <img src="../../../Resources/Images/NAV Oversight Images/CPAS_L184worktable.png" class="greyborder" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>U350: Category Hierarchy</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The <b class="BufferandFunctionBold">U350: Classification Hierarchy</b> worktable requires to be configured with asset categories and their hierarchies.</p>
+                <p>
+                    <img src="../../../Resources/Images/NAV Oversight Images/CPAS_U350.png" class="greyborder" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>A14: Category Detail Validation</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>One record for each price type calculated by the [UPC195] - Calculate Price Impacts   and validated by the  is output to the <b class="BufferandFunctionBold">A14: Category Detail Validation</b> worktable. </p>
+                <p class="zoom4Detail">
+                    <img src="../../../Resources/Images/NAV Oversight Images/CPAS_A14.png" />
+                </p>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Functions </h2>
+        <MadCap:snippetBlock src="../../../Resources/Snippets/Analysis Views/AnalysisViewsDLsnippet.flsnp" />
+        <p>The following functions determine whether the Share Class Impacts report is produced and exported the analysis view; and define which rules segments to be executed when creating the CPAS</p>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../AA_Library/Entities/NAV Process Phases and Functions.htm#UPC540">[UPC540] - Calculate Clean Price ROR  </MadCap:xref>
+            </li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../AA_Library/Entities/NAV Process Phases and Functions.htm#UPC195">[UPC195] - Calculate Price Impacts  </MadCap:xref> </li>
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../AA_Library/Entities/NAV Process Phases and Functions.htm#VA590">[VA590] - Generate Clean Price Analysis Data  </MadCap:xref>
+            </li>
+        </ul>
+        <p>The following are validation checks that can be performed to check the impacts does not exceed a specified tolerance.</p>
+        <ul class="FirstLevelBlueBullet">
+            <li class="FirstLevelBlueBullet" MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../AA_Library/Entities/NAV Process Phases and Functions.htm#CAT008">[CAT008] - Impact Difference  </MadCap:xref>
+            </li>
+            <li MadCap:autonum="&lt;span style=&quot;color: #5688ad;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;b&gt;• &#160;&#160;&lt;/b&gt;&lt;span style=&quot;color: Black;&quot; class=&quot;mcFormatColor&quot; /&gt;&lt;/span&gt;">
+                <MadCap:xref href="../../../AA_Library/Entities/NAV Process Phases and Functions.htm#CAT009">[CAT009] - Price Impacts Check  </MadCap:xref>
+            </li>
+        </ul>
+        <h2 class="_orange">Calculations</h2>
+        <p>The <MadCap:xref href="Share Class Impacts Specification Table.htm">Share Class Impacts Specification Table</MadCap:xref> details the data, calculations and categories used, in addition to information on column definitions.</p>
+    </body>
+</html>

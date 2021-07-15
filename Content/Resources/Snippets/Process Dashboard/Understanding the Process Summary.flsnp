@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../TableStyles/MG_TableStyle01Grey.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Process Summary</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The Process Summary view shows the progress and status of all processes for the specified filter criteria, (i.e. the entity/ies selected, and date range). The colour coding refers to the relationship between the process completion time and its <MadCap:glossaryTerm glossTerm="Glossary.Term14">SLA</MadCap:glossaryTerm> time. This view is also known as the RAG  (red, amber, green) summary.</p>
+                <p class="zoom4Detail">
+                    <img src="../../Images/Process Dashboard Images/Process Summary Images/PD_PS_ProcessSummary_callouts.png" alt="" title="" />
+                </p>
+                <table class="TableStyle-MG_TableStyle01Grey" style="mc-table-style: url('../../TableStyles/MG_TableStyle01Grey.css'); margin-left: 0; margin-right: auto;" cellspacing="0">
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <col class="TableStyle-MG_TableStyle01Grey-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Head-Header1">
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadE-Regular-Header1">
+                                <p>Colour</p>
+                            </th>
+                            <th class="TableStyle-MG_TableStyle01Grey-HeadD-Regular-Header1">
+                                <p>Description</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Red</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The process will complete or has been completed after the SLA time.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Amber</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The process is approaching the SLA time.</p>
+                                <p><i>Note: The period of time defined as amber, (usually 30mins or 60mins) is configured in a pControl lookup at the time of implementation.</i>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyE-Regular-Row1">
+                                <p>Green</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyD-Regular-Row1">
+                                <p>The process has completed.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-MG_TableStyle01Grey-Body-Row1">
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyB-Regular-Row1">
+                                <p>Grey</p>
+                            </td>
+                            <td class="TableStyle-MG_TableStyle01Grey-BodyA-Regular-Row1">
+                                <p>The process has either not started, or is in progress.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>SLA times are configured in the '<a href="../../../AA_Library/Entities/Entity Types.htm#process_entity_attributes">pricing schedule</a>' attributes on the fund entity.</p>
+                </div>
+                <p>&#160;</p>
+                <p>Processes are grouped by entity and price run type. Where several processes for the same entity are in different states, the highest severity status, and earliest SLA time will be displayed.</p>
+                <p>Hovering over any of the coloured bar charts will display the count of processes remaining, i.e. not yet completed. This may be due to a process still in progress, or with prerequisite items or exceptions requiring user attention. Selecting the coloured bars will navigate to the relevant view, i.e. <MadCap:xref href="../../../C_Process/Fund Sign Off.htm">Fund Sign Off</MadCap:xref>, <MadCap:xref href="../../../C_Process/Exceptions.htm">Exceptions.</MadCap:xref></p>
+                <h2 class="_orange">Process Detail</h2>
+                <p>Selecting the expand button,<img src="../../Images/ProcessDetailOpenIcon.png" class="Aligned_with_Centre_of_Row" />will open the Process Detail view which displays the Process Summary in full screen mode, providing the ability to drill down into entities as required. the Process Detail table can be filtered by price run type, as outlined below.</p>
+                <h3>To filter by price run type:</h3>
+                <ol class="stepList" start="1">
+                    <li class="stepList">
+                        <p>From the menu bar, select expand<img src="../../Images/ProcessDetailOpenIcon.png" class="Aligned_with_Centre_of_Row" />at the top right of the Process Summary.</p>
+                        <p>The process detail view will open with the option to select more filter items <img src="../../Images/Process Dashboard Images/More filter.png" /></p>
+                    </li>
+                    <li class="stepList">
+                        <p>Select &lt;Price Run Type&gt; and select the check boxes to display, i.e. Distribution Payment and Distribution Reinvestment.</p>
+                        <p>
+                            <img src="../../Images/NAV Oversight Images/Process Detail Menu.png" class="greyborder" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Select &lt;Apply&gt; to run the query.</p>
+                        <p>The results displayed will be updated to match the filter criteria, and the filter criteria will be displayed on the quick filter row:</p>
+                        <p>
+                            <img src="../../Images/Process Dashboard Images/Process Summary Images/PD_QuickFilter.png" alt="" title="" class="greyborder">
+                            </img>
+                        </p>
+                    </li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

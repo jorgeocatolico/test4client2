@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>A field that calculates the 'Units to'  <MadCap:equation>$Rollup\ factor\ \times\  Units\ from\ = \ Units\ to$</MadCap:equation> </p>
+        <p>This field can be edited assuming appropriate user security permissions.</p>
+    </body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Transactions validations include both Source Data Validations and Valuation Data Validations, both of which test the quality of data or valuation that are supplied by external systems. For example, checking an exchange rate on each transaction record to ensure that the rate delivered on the record is consistent with that held in pControl. </body>
+</html>

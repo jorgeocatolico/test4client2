@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Charges notes field associated to the order. This field should only be populated where the charge amount field is not blank or zero.</body>
+</html>

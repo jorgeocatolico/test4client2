@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Validation checks are made available via the process template which is attached to a fund entity. The following image shows a Unit Pricing/ALV Merged process template with a sample of the pre-calculation holding validations available. The checked boxes indicate validation checks that will be performed when the process is run.</p>
+        <p>
+            <p class="zoom4Detail">
+                <img src="../../Images/Library Images/LY_ValidationEntities.png" alt="" title="" class="greyborder">
+                </img>
+            </p>
+        </p>
+        <p>The validation entities are stored under the COMMON_ENTITIES / VALIDATIONS group in the library tree and are further organised by the type of validation i.e. Holding Validations, Benchmark Validations etc.</p>
+        <p>An example validation entity is shown below.</p>
+        <p>
+            <img src="../../Images/Library Images/LY_ValidationEntities2.png" alt="" title="" />
+        </p>
+        <p>Validation entities have a unique reference id, e.g. BMK001, HLD003, FXR003 etc. In addition to identifying the entity, these codes are also used on the process template, entity attributes, and pControl rules.</p>
+        <p>Validation entities hold several data attributes which are used to configure how the validation is performed and the results produced.</p>
+        <p>&#160;</p>
+    </body>
+</html>

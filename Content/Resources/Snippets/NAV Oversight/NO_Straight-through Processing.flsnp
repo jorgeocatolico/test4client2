@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>An STP Process may be used to submit processes for a number of entities or groups of entities. This is achieved by:</p>
+        <ol class="stepList">
+            <li class="stepList">
+                <p> Creating a general process entity, as shown below: </p>
+                <p class="zoom4Detail">
+                    <img src="../../Images/NAV Oversight Images/MG_STP.png" />
+                </p>
+                <p>&#160;</p>
+            </li>
+            <li class="stepList">and then listing the entities and processes in the <b class="BufferandFunctionBold">P400: STP Configuration</b>  worktable, that are to be initiated by the above general process entity.</li>
+        </ol>
+        <p>
+            <img src="../../Images/NAV Oversight Images/MG_STP2.png" class="greyborder" />
+        </p>
+        <p MadCap:conditions="Note To Selfs.ScreenOnly">
+            <img src="../../Images/NAV Oversight Images/NO_P400_worktable.png" />
+        </p>
+        <div class="note_label">Note</div>
+        <div class="note_content">
+            <p>For further details on configuring the P400: STP Configuration worktable, refer to: <MadCap:xref href="../../../C_Process/Straight Through Processing (STP).htm">Straight Through Processing (STP)</MadCap:xref></p>
+        </div>
+        <p>When the STP process is requested, the entities and processes defined in the <b class="BufferandFunctionBold">P400: STP Configuration</b> worktable are retrieved and those processes are automatically initiated.</p>
+        <p>In the above example, the STP_NAV_OVERSIGHT general process will submit Expected pricing for all pool and class entities within the 'NAV_OVERSIGHT' group, followed by 'Oversight Pricing' for all pool and class entities within this group.</p>
+    </body>
+</html>

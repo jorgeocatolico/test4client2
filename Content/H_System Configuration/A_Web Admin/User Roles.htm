@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>User Roles</h1>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/User Permissions/UPs_User Roles.flsnp" />
+        </p>
+        <p>'User Roles', or user groups as they are also known, are established for ease of administration. Where several users have similar security requirements, they are grouped together using a ‘User Role’ so that changes can be applied to the group as a whole, rather than to each individual user. A user can undertake several roles, i.e. belong to several groups. </p>
+        <p>
+            <img src="../../Resources/Images/Work tables/WebAdminScreen.png" />
+        </p>
+        <h2 class="_orange">The User Roles Matrix </h2>
+        <p>User Roles are a matrix of <MadCap:xref href="Functionality Scope.htm">Functionality Scope</MadCap:xref>, <MadCap:xref href="Entity Sets.htm">Entity Sets </MadCap:xref> and Processes.</p>
+        <p class="zoom4Detail">
+            <img src="../../Resources/Images/User Permissions Images/UP_UserRoles.png" />
+        </p>
+        <MadCap:dropDown MadCap:conditions="MG Staff Only.ScreenOnly">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="EntitySecurity"></a>Entity Security and Processes tabs <MadCap:snippetText src="../../Resources/Snippets/All/NewContentforReview.flsnp" /></MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h3>Entity Security</h3>
+                <p>Entity security refers to the entity sets a user has access to view within pControl web. For the user role being configured, entity sets can be selected that are considered appropriate.  Entity security can be configured via the creation of entity sets (in System Administration). Further information is available under <MadCap:xref href="Entity Sets.htm">Entity Sets.</MadCap:xref></p>
+                <p>
+                    <img src="../../Resources/Images/User Permissions Images/UPs_entitysecurity.png" class="greyborder" />
+                </p>
+                <h3>Processes</h3>
+                <p>The Processes tab lists all processes  and could be selected, according role requirements. </p>
+                <p>
+                    <img src="../../Resources/Images/User Permissions Images/UPs_Processes.png" class="greyborder" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="_orange">Configuring User Roles</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Create a user role</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <div class="note_label">Note</div>
+                <div class="note_content">
+                    <p>User Roles are created in an 'inactive' state. At the completion of the wizard creation process, the role must be activated by selecting the toggle, <img src="../../Resources/Images/User Permissions Images/UPs_ToggleOff.png" style="width: 27px; height: 23px;" class="Aligned_with_Centre_of_Row" />to change it to active <img src="../../Resources/Images/User Permissions Images/UPs_ToggleOn.png" style="width: 30px; height: 24px;" class="Aligned_with_Centre_of_Row" /></p>
+                </div>
+                <ol class="stepList">
+                    <li class="stepList">Copy an existing user role by selecting the duplicate icon <img src="../../Resources/Images/User Permissions Images/UPs_CopyIcon.png" class="Aligned_with_Centre_of_Row" />, or create a new role by selecting  <img src="../../Resources/Images/User Permissions Images/UPs_CreateNewUserRole.png" style="width: 175px; height: 33px;" class="Aligned_with_Centre_of_Row" /></li>
+                    <li class="stepList">Enter a title for the user role into the field at the top, for example, "Defined Benefit Manager" or "Fund Accountant Australian Equities". The name should represent  the entity/process sets and functional scope. </li>
+                    <li class="stepList">Select the checkboxes next to the required entity sets and processes on both tabs. This selection will form a matrix. </li>
+                    <li class="stepList">
+                        <p>Select the required matrix combinations to change the  <img src="../../Resources/Images/User Permissions Images/UPs_MatrixDeselect.png" style="width: 108px; height: 21px;" class="Aligned_with_Centre_of_Row" /> into a green check mark <img src="../../Resources/Images/User Permissions Images/UPs_MatrixTick.png" style="width: 113px; height: 23px;" class="Aligned_with_Centre_of_Row" /></p>
+                        <p>Multiple cells can be selected, where required.</p>
+                    </li>
+                    <li class="stepList">When all required combinations have been enabled, select <img src="../../Resources/Images/User Permissions Images/UPs_SaveAndExit.png" style="width: 88px; height: 29px;" class="Aligned_with_Centre_of_Row" /></li>
+                    <li class="stepList">When saved, a message will appear to confirm the changes have been saved.</li>
+                    <li>The first page of the 'User Roles' will reopen. Activate the newly created user role by selecting the grey toggle, <img src="../../Resources/Images/User Permissions Images/UPs_ToggleOff.png" class="Aligned_with_Centre_of_Row" style="width: 36px;height: 30px;" /> in the 'Active' column next to the user role. The toggle will turn green, <img src="../../Resources/Images/User Permissions Images/UPs_ToggleOn.png" class="Aligned_with_Centre_of_Row" />to indicate it is active.</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>View or edit a user role</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList">
+                    <li class="stepList">From the alphabetical list of role names under the User Roles tab, find the required user role in the list, or use the search box. Select the edit icon <img src="../../Resources/Images/User Permissions Images/UPs_EditIcon.png" class="Aligned_with_Centre_of_Row" />, or select anywhere on the row. </li>
+                    <li class="stepList">The matrix of entity sets and functional roles will be displayed. The combinations selected can be changed by selecting / deselecting the matrix cells. </li>
+                    <li>When all changes have been made, select <img src="../../Resources/Images/User Permissions Images/UPs_SaveArrowButton.png" class="Aligned_with_Centre_of_Row" /></li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Activate or deactivate a user role</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList">
+                    <li class="stepList">From the list of role names under the User Roles tab, find the required user role and select the toggle <img src="../../Resources/Images/User Permissions Images/UPs_ToggleOn.png" class="Aligned_with_Centre_of_Row" /> (activate)<img src="../../Resources/Images/User Permissions Images/UPs_ToggleOff.png" class="Aligned_with_Centre_of_Row" />(deactivate).</li>
+                    <li class="stepList">
+                        <p>A confirmation prompt will appear. Select <span class="ButtonArrows">Activate</span>, <span class="ButtonArrows">Deactivate</span> or <span class="ButtonArrows">Cancel</span> as appropriate.</p>
+                        <p>
+                            <img src="../../Resources/Images/User Permissions Images/UPS_ActivatePrompt.png" style="width: 477px;height: 111px;" />
+                        </p>
+                    </li>
+                </ol>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Delete a user role</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol class="stepList">
+                    <li class="stepList">From the list of role names under the User Roles tab, find the required user role and select the  delete icon <img src="../../Resources/Images/User Permissions Images/UPs_DeleteIcon.png" class="Aligned_with_Centre_of_Row" />.</li>
+                    <li class="stepList">
+                        <p>A confirmation prompt will appear. Select <span class="ButtonArrows">Delete</span> or <span class="ButtonArrows">Cancel</span> as appropriate.</p>
+                        <p>
+                            <img src="../../Resources/Images/User Permissions Images/UPS_DeletePrompt.png" style="width: 484px;height: 113px;" />
+                        </p>
+                    </li>
+                </ol>
+                <MadCap:snippetBlock src="../../Resources/Snippets/User Permissions/UP_Delete warning.flsnp" />
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:snippetBlock src="../../Resources/Snippets/User Permissions/UPs_Audit.flsnp" />
+        <p>&#160;</p>
+    </body>
+</html>

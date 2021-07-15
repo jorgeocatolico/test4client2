@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>User Roles are the means by which users are granted different levels of access (view / edit / delete) to different functions, across different entities and processes within pControl. User Roles are a combination or matrix of <MadCap:xref href="../../../H_System Configuration/A_Web Admin/Functionality Scope.htm">Functionality Scope</MadCap:xref> and <MadCap:xref href="../../../H_System Configuration/A_Web Admin/User Roles.htm#EntitySecurity">Entity Security and Processes</MadCap:xref>.</p>
+    </body>
+</html>

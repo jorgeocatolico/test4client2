@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>[PRQ002] - Prices Prerequisite will check if valid prices have been loaded to the standard import worktable for current effective date and price run type. Validations requiring Security Prices will be prevented from running if Security Prices have not been loaded.</p>
+    </body>
+</html>

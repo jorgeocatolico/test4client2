@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>A count of the number of Transaction Validation checks that have breached their tolerances for this entity and processes run on the nominated effective date.</p>
+        <p>
+            <i>Note:Transaction Validation checks are listed under the 'Pre-Calc Transaction Validations' tab of the UP/ALV&#160;Merged Process Template.</i>
+        </p>
+    </body>
+</html>

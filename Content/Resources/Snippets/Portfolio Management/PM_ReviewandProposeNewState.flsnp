@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <ol class="stepList">
+            <li class="stepList">Select the record with pending changes.</li>
+            <li>
+                <p>Where available use the expand/collapse icon <img src="../../Images/Portfolio Management Images/PM_DualAuthExpandCollapseIcon.png" alt="" title="" /> to display edited record. Review the pending changes. </p>
+                <p>It is possible to progress to step 4 at this point, any record that has dual authorisation active will automatically be marked as 'In Progress'. </p>
+            </li>
+            <li>
+                <p>To propose a transition to a new state, select the ellipsis and choose the new state from the options available. </p>
+                <p>&#160;</p>
+                <p class="zoom4Detail">
+                    <img src="../../Images/Portfolio Management Images/PM_DualAuthStateOptions.png" />
+                </p>
+            </li>
+            <li>
+                <p>Select <span class="ButtonArrows">Save</span> to transition the record, or <span class="ButtonArrows">Cancel</span> to exit without saving changes. </p>
+                <p MadCap:conditions="Note To Selfs.ScreenOnly">check this in pControl as i haven't seen the save function as yet </p>
+            </li>
+        </ol>
+        <div class="note_label">Note</div>
+        <div class="note_content">
+            <p>Selecting a state on the pending changes status stream does not transition the record. This only occurs during the save function <img src="../../Images/Portfolio Management Images/PM_Save.png" alt="" title="" />.</p>
+        </div>
+        <p>&#160;</p>
+    </body>
+</html>
